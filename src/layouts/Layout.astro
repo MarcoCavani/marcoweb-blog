@@ -49,6 +49,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
   <body class="bg-gray-50 text-gray-900 antialiased">
     <slot />
     <script>
+      // Forward identity tokens to the custom reset page
+      var _hash = window.location.hash
+      if (_hash.includes('recovery_token') || _hash.includes('invite_token')) {
+        window.location.replace('/reset-password/' + _hash)
+      }
       // Redirect to /admin after Netlify Identity login
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on('init', (user) => {
