@@ -42,8 +42,23 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
       3. Uncomment the script below
     -->
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+
+    <!-- Netlify Identity (required for /admin CMS login) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body class="bg-gray-50 text-gray-900 antialiased">
     <slot />
+    <script>
+      // Redirect to /admin after Netlify Identity login
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', (user) => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/'
+            })
+          }
+        })
+      }
+    </script>
   </body>
 </html>

@@ -3,7 +3,7 @@ title: "Information Security Analysis for Western Power"
 description: "A comprehensive assessment and strategic roadmap for Western Power, addressing key challenges in cybersecurity, insider threats, and climate change resilience for one of Australia's largest electricity distributors."
 pubDate: 2024-02-20
 updatedDate: 2024-09-03
-heroImage: "https://marcoweb.org/wp-content/uploads/2024/02/wpCover.jpg"
+heroImage: "/images/western-power-cover.svg"
 category: "Digital Report"
 author: "Marco Cavani"
 tags: ["Cybersecurity", "Critical Infrastructure", "Information Security", "Australia", "Energy Sector"]

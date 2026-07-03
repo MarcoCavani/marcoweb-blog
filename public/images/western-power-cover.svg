@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08111e"/>
+      <stop offset="100%" stop-color="#152540"/>
+    </linearGradient>
+    <linearGradient id="shield-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e73be" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0a3560" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="tower-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5a623"/>
+      <stop offset="100%" stop-color="#c87d0a"/>
+    </linearGradient>
+    <filter id="glow-blue" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-orange" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="text-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle grid overlay -->
+  <g stroke="#4a9edd" stroke-width="0.5" opacity="0.06">
+    <line x1="120" y1="0" x2="120" y2="630"/>
+    <line x1="240" y1="0" x2="240" y2="630"/>
+    <line x1="360" y1="0" x2="360" y2="630"/>
+    <line x1="480" y1="0" x2="480" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="720" y1="0" x2="720" y2="630"/>
+    <line x1="840" y1="0" x2="840" y2="630"/>
+    <line x1="960" y1="0" x2="960" y2="630"/>
+    <line x1="1080" y1="0" x2="1080" y2="630"/>
+    <line x1="0" y1="90" x2="1200" y2="90"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+  </g>
+
+  <!-- Accent horizontal glow lines (power grid) -->
+  <line x1="0" y1="195" x2="1200" y2="195" stroke="#f5a623" stroke-width="1" opacity="0.18"/>
+  <line x1="0" y1="305" x2="1200" y2="305" stroke="#f5a623" stroke-width="1" opacity="0.12"/>
+
+  <!-- === POWER TRANSMISSION TOWER (left side, centred x=215) === -->
+  <!-- Main vertical mast -->
+  <line x1="215" y1="155" x2="215" y2="525" stroke="url(#tower-grad)" stroke-width="4.5"/>
+  <!-- Top peaked cap -->
+  <line x1="215" y1="155" x2="193" y2="198" stroke="#f5a623" stroke-width="3"/>
+  <line x1="215" y1="155" x2="237" y2="198" stroke="#f5a623" stroke-width="3"/>
+  <!-- Top crossarm -->
+  <line x1="95" y1="198" x2="335" y2="198" stroke="#f5a623" stroke-width="5.5"/>
+  <!-- Mid crossarm -->
+  <line x1="118" y1="310" x2="312" y2="310" stroke="#f5a623" stroke-width="4.5"/>
+  <!-- Low crossarm -->
+  <line x1="142" y1="405" x2="288" y2="405" stroke="#f5a623" stroke-width="4"/>
+  <!-- Insulators at arm ends -->
+  <circle cx="95" cy="198" r="7" fill="#f5a623" opacity="0.9" filter="url(#glow-orange)"/>
+  <circle cx="335" cy="198" r="7" fill="#f5a623" opacity="0.9" filter="url(#glow-orange)"/>
+  <circle cx="118" cy="310" r="6" fill="#f5a623" opacity="0.8"/>
+  <circle cx="312" cy="310" r="6" fill="#f5a623" opacity="0.8"/>
+  <circle cx="142" cy="405" r="5" fill="#f5a623" opacity="0.7"/>
+  <circle cx="288" cy="405" r="5" fill="#f5a623" opacity="0.7"/>
+  <!-- Diagonal bracing — top section -->
+  <line x1="95" y1="198" x2="142" y2="310" stroke="#f5a623" stroke-width="2.5" opacity="0.85"/>
+  <line x1="335" y1="198" x2="312" y2="310" stroke="#f5a623" stroke-width="2.5" opacity="0.85"/>
+  <line x1="215" y1="198" x2="118" y2="310" stroke="#f5a623" stroke-width="2" opacity="0.65"/>
+  <line x1="215" y1="198" x2="312" y2="310" stroke="#f5a623" stroke-width="2" opacity="0.65"/>
+  <line x1="118" y1="310" x2="215" y2="252" stroke="#f5a623" stroke-width="1.5" opacity="0.5"/>
+  <line x1="312" y1="310" x2="215" y2="252" stroke="#f5a623" stroke-width="1.5" opacity="0.5"/>
+  <!-- Diagonal bracing — mid section -->
+  <line x1="118" y1="310" x2="142" y2="405" stroke="#f5a623" stroke-width="2.5" opacity="0.85"/>
+  <line x1="312" y1="310" x2="288" y2="405" stroke="#f5a623" stroke-width="2.5" opacity="0.85"/>
+  <line x1="215" y1="310" x2="142" y2="405" stroke="#f5a623" stroke-width="2" opacity="0.65"/>
+  <line x1="215" y1="310" x2="288" y2="405" stroke="#f5a623" stroke-width="2" opacity="0.65"/>
+  <line x1="142" y1="405" x2="215" y2="358" stroke="#f5a623" stroke-width="1.5" opacity="0.5"/>
+  <line x1="288" y1="405" x2="215" y2="358" stroke="#f5a623" stroke-width="1.5" opacity="0.5"/>
+  <!-- Base section -->
+  <line x1="142" y1="405" x2="148" y2="525" stroke="#f5a623" stroke-width="3" opacity="0.9"/>
+  <line x1="288" y1="405" x2="282" y2="525" stroke="#f5a623" stroke-width="3" opacity="0.9"/>
+  <line x1="215" y1="420" x2="148" y2="525" stroke="#f5a623" stroke-width="1.8" opacity="0.55"/>
+  <line x1="215" y1="420" x2="282" y2="525" stroke="#f5a623" stroke-width="1.8" opacity="0.55"/>
+  <!-- Ground feet -->
+  <line x1="148" y1="525" x2="120" y2="570" stroke="#f5a623" stroke-width="3.5"/>
+  <line x1="148" y1="525" x2="175" y2="570" stroke="#f5a623" stroke-width="3.5"/>
+  <line x1="282" y1="525" x2="255" y2="570" stroke="#f5a623" stroke-width="3.5"/>
+  <line x1="282" y1="525" x2="308" y2="570" stroke="#f5a623" stroke-width="3.5"/>
+  <!-- Lightning bolt at top -->
+  <polygon points="210,118 200,158 215,143 205,180 225,143 215,158 225,118" fill="#FFD700" opacity="0.95" filter="url(#glow-orange)"/>
+
+  <!-- Transmission wires extending right from the tower -->
+  <path d="M 95 198 Q 300 208 450 205" stroke="#f5a623" stroke-width="1.8" fill="none" opacity="0.45"/>
+  <path d="M 335 198 Q 390 205 450 205" stroke="#f5a623" stroke-width="1.8" fill="none" opacity="0.45"/>
+  <path d="M 118 310 Q 290 320 430 316" stroke="#f5a623" stroke-width="1.5" fill="none" opacity="0.35"/>
+  <path d="M 312 310 Q 370 316 430 316" stroke="#f5a623" stroke-width="1.5" fill="none" opacity="0.35"/>
+
+  <!-- Arc/connection from tower to shield area -->
+  <path d="M 335 195 Q 440 185 500 300" stroke="#00b4ff" stroke-width="2" fill="none" opacity="0.5" stroke-dasharray="10,5"/>
+
+  <!-- === SHIELD (centre, right-leaning) === -->
+  <!-- Outer glow -->
+  <path d="M 755 90 L 960 90 L 960 370 Q 960 425 755 495 Q 550 425 550 370 L 550 90 Z" fill="#1e73be" opacity="0.12" filter="url(#glow-blue)"/>
+  <!-- Shield shape fill -->
+  <path d="M 755 100 L 950 100 L 950 368 Q 950 418 755 490 Q 560 418 560 368 L 560 100 Z" fill="url(#shield-fill)"/>
+  <!-- Shield border -->
+  <path d="M 755 100 L 950 100 L 950 368 Q 950 418 755 490 Q 560 418 560 368 L 560 100 Z" fill="none" stroke="#4a9edd" stroke-width="2.5" opacity="0.9"/>
+  <!-- Shield inner border line -->
+  <path d="M 755 118 L 930 118 L 930 362 Q 930 408 755 475 Q 580 408 580 362 L 580 118 Z" fill="none" stroke="#4a9edd" stroke-width="1" opacity="0.3"/>
+
+  <!-- Lock body -->
+  <rect x="692" y="265" width="126" height="105" rx="14" fill="#061322" stroke="#90e0ef" stroke-width="2.5"/>
+  <!-- Lock shackle -->
+  <path d="M 712 268 L 712 238 Q 712 208 755 208 Q 798 208 798 238 L 798 268" fill="none" stroke="#90e0ef" stroke-width="8" stroke-linecap="round"/>
+  <!-- Keyhole circle -->
+  <circle cx="755" cy="307" r="16" fill="#4a9edd" opacity="0.95" filter="url(#glow-blue)"/>
+  <!-- Keyhole slot -->
+  <rect x="749" y="316" width="12" height="28" rx="4" fill="#4a9edd" opacity="0.95"/>
+
+  <!-- === TEXT (bottom band) === -->
+  <rect x="0" y="530" width="1200" height="100" fill="#000" opacity="0.5"/>
+
+  <!-- DIGITAL REPORT badge top-right -->
+  <rect x="980" y="26" rx="5" width="182" height="32" fill="#1e73be" opacity="0.9"/>
+  <text x="1071" y="48" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="900" fill="white" text-anchor="middle" letter-spacing="1.5">DIGITAL REPORT</text>
+
+  <!-- MarcoWeb.org — top left -->
+  <circle cx="54" cy="52" r="28" fill="none" stroke="#4a9edd" stroke-width="2" opacity="0.85"/>
+  <text x="54" y="58" font-family="'Arial Black', Arial, sans-serif" font-size="20" font-weight="900" fill="white" text-anchor="middle" opacity="0.9">M</text>
+  <text x="92" y="56" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="white" opacity="0.8">Marcoweb.org</text>
+
+  <!-- Main title -->
+  <text x="600" y="575" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-0.5" filter="url(#text-shadow)">INFORMATION SECURITY ANALYSIS</text>
+  <text x="600" y="614" font-family="'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="400" fill="#4a9edd" text-anchor="middle" letter-spacing="2">for Western Power — Critical Infrastructure</text>
+</svg>

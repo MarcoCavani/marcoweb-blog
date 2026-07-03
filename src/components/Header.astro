@@ -7,7 +7,13 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" class="flex items-center gap-3 group">
-        <div class="w-9 h-9 rounded-full bg-brand-blue border-2 border-brand-light flex items-center justify-center font-bold text-lg text-white group-hover:border-white transition-colors">
+        <img
+          src="/images/marco.jpg"
+          alt="Marco Cavani"
+          class="w-9 h-9 rounded-full border-2 border-brand-light object-cover group-hover:border-white transition-colors"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="w-9 h-9 rounded-full bg-brand-blue border-2 border-brand-light items-center justify-center font-bold text-lg text-white group-hover:border-white transition-colors hidden">
           M
         </div>
         <span class="text-xl font-bold tracking-tight group-hover:text-brand-light transition-colors">MarcoWeb</span>
@@ -21,7 +27,7 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
           Blog
         </a>
         <a
-          href="https://racm-itgc-saas.netlify.app"
+          href="https://marcoweb-itgc-saas.netlify.app"
           target="_blank"
           rel="noopener noreferrer"
           class="bg-brand-blue hover:bg-brand-light text-white px-4 py-1.5 rounded-full transition-colors text-sm font-semibold"
@@ -34,7 +40,7 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
       <div class="md:hidden flex items-center gap-4">
         <a href="/blog" class="text-gray-300 hover:text-white text-sm">Blog</a>
         <a
-          href="https://racm-itgc-saas.netlify.app"
+          href="https://marcoweb-itgc-saas.netlify.app"
           target="_blank"
           rel="noopener noreferrer"
           class="bg-brand-blue hover:bg-brand-light text-white px-3 py-1 rounded-full text-xs font-semibold transition-colors"

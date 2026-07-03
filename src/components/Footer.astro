@@ -8,7 +8,13 @@ import NewsletterSignup from './NewsletterSignup.astro'
       <!-- Brand -->
       <div>
         <div class="flex items-center gap-3 mb-4">
-          <div class="w-8 h-8 rounded-full bg-brand-blue border-2 border-brand-light flex items-center justify-center font-bold text-white">M</div>
+          <img
+            src="/images/marco.jpg"
+            alt="Marco Cavani"
+            class="w-10 h-10 rounded-full border-2 border-brand-light object-cover"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="w-10 h-10 rounded-full bg-brand-blue border-2 border-brand-light items-center justify-center font-bold text-white hidden">M</div>
           <span class="text-lg font-bold text-white">MarcoWeb</span>
         </div>
         <p class="text-sm leading-relaxed">
@@ -23,7 +29,7 @@ import NewsletterSignup from './NewsletterSignup.astro'
           <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
           <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
           <li>
-            <a href="https://racm-itgc-saas.netlify.app" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+            <a href="https://marcoweb-itgc-saas.netlify.app" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
               ITGC Audit Tool ↗
             </a>
           </li>

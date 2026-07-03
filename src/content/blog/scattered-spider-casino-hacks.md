@@ -3,7 +3,7 @@ title: "Scattered Spider: The Casino Hacks"
 description: "In 2023, a hacking group known as Scattered Spider or UNC3944 made headlines for its sophisticated cyberattacks on two of the largest casino companies in the United States: Caesars Entertainment and MGM Resorts International."
 pubDate: 2024-09-03
 updatedDate: 2024-09-14
-heroImage: "https://marcoweb.org/wp-content/uploads/2024/09/a_hacker_simple_image_such_a_icon_with_graphic_elements_such_as_gambling_and_spiders.png"
+heroImage: "/images/scattered-spider-cover.png"
 category: "Digital Report"
 author: "Marco Cavani"
 tags: ["Cybersecurity", "Ransomware", "Social Engineering", "Threat Intelligence", "Casino Security"]

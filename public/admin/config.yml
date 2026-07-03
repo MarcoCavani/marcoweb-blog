@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Publish Date, name: pubDate, widget: datetime, date_format: YYYY-MM-DD, time_format: false }
+      - { label: Updated Date, name: updatedDate, widget: datetime, date_format: YYYY-MM-DD, time_format: false, required: false }
+      - { label: Hero Image URL, name: heroImage, widget: string, required: false, hint: "Paste the image URL (e.g. /images/my-image.jpg or a full URL)" }
+      - { label: Category, name: category, widget: string, default: Digital Report }
+      - { label: Author, name: author, widget: string, default: Marco Cavani }
+      - { label: Read Time, name: readTime, widget: string, required: false, hint: "e.g. 10 min read" }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Body, name: body, widget: markdown }

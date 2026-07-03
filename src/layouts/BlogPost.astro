@@ -61,14 +61,22 @@ const formattedUpdatedDate = updatedDate
         {description}
       </p>
 
+      <!-- Author bar -->
       <div class="flex items-center gap-4 text-sm text-gray-400 border-t border-gray-100 pt-4">
         <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-full bg-brand-blue flex items-center justify-center text-white font-bold text-sm">
-            M
+          <img
+            src="/images/marco.jpg"
+            alt={author}
+            class="w-10 h-10 rounded-full border-2 border-brand-blue object-cover"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="w-10 h-10 rounded-full bg-brand-blue items-center justify-center text-white font-bold text-sm hidden">M</div>
+          <div>
+            <p class="font-semibold text-gray-800 text-sm">{author}</p>
+            <p class="text-xs text-gray-400">Cybersecurity Analyst</p>
           </div>
-          <span class="font-medium text-gray-700">{author}</span>
         </div>
-        <span>·</span>
+        <span class="text-gray-200">|</span>
         <time datetime={pubDate.toISOString()}>{formattedDate}</time>
         {formattedUpdatedDate && formattedUpdatedDate !== formattedDate && (
           <>
@@ -85,7 +93,7 @@ const formattedUpdatedDate = updatedDate
         <img
           src={heroImage}
           alt={title}
-          class="w-full h-auto max-h-80 object-cover"
+          class="w-full h-auto max-h-96 object-cover"
         />
       </div>
     )}
@@ -127,6 +135,24 @@ const formattedUpdatedDate = updatedDate
         </div>
       </div>
     )}
+
+    <!-- Author card -->
+    <div class="mt-10 pt-8 border-t border-gray-100 flex items-start gap-5">
+      <img
+        src="/images/marco.jpg"
+        alt={author}
+        class="w-16 h-16 rounded-full border-2 border-brand-blue object-cover shrink-0"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      />
+      <div class="w-16 h-16 rounded-full bg-brand-blue items-center justify-center text-white font-bold text-xl shrink-0 hidden">M</div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-brand-blue mb-1">Written by</p>
+        <p class="font-bold text-gray-900 text-lg">{author}</p>
+        <p class="text-gray-500 text-sm leading-relaxed mt-1">
+          Cybersecurity analyst and IT governance professional. Author of digital reports on threat intelligence, critical infrastructure security, and IT audit frameworks.
+        </p>
+      </div>
+    </div>
 
     <!-- Newsletter CTA -->
     <div class="mt-12">
