@@ -72,10 +72,12 @@
   <script>
     var hash   = window.location.hash.replace(/^#/, '')
     var params = new URLSearchParams(hash)
-    var token  = params.get('recovery_token') || params.get('invite_token')
-    var type   = params.get('recovery_token') ? 'recovery' : 'invite'
+    var recoveryToken = params.get('recovery_token')
+    var inviteToken   = params.get('invite_token')
+    var rawToken      = recoveryToken || inviteToken
+    var tokenType     = recoveryToken ? 'recovery' : 'invite'
 
-    if (!token) {
+    if (!rawToken) {
       document.getElementById('msg').textContent = 'Invalid or expired link — request a new one.'
       document.getElementById('msg').className = 'msg error'
       document.getElementById('form').style.display = 'none'
@@ -104,23 +106,47 @@
       msg.textContent = ''
 
       try {
-        var res = await fetch('/.netlify/identity/user', {
+        // Step 1: exchange raw token for a JWT access token
+        var exchangeEndpoint = tokenType === 'recovery'
+          ? '/.netlify/identity/recover'
+          : '/.netlify/identity/invite'
+
+        var exchangeRes = await fetch(exchangeEndpoint, {
+          method: 'GET',
+          headers: { 'Authorization': 'Bearer ' + rawToken },
+        })
+
+        if (!exchangeRes.ok) {
+          var errData = {}
+          try { errData = await exchangeRes.json() } catch (_) {}
+          msg.textContent = errData.msg || 'Link expired — please request a new password reset.'
+          msg.className = 'msg error'
+          btn.disabled = false
+          btn.textContent = 'Set Password'
+          return
+        }
+
+        var tokenData = await exchangeRes.json()
+        var accessToken = tokenData.access_token
+
+        // Step 2: set the new password using the JWT
+        var setRes = await fetch('/.netlify/identity/user', {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + token,
+            'Authorization': 'Bearer ' + accessToken,
           },
           body: JSON.stringify({ password: pwd }),
         })
 
-        if (res.ok) {
+        if (setRes.ok) {
           msg.textContent = 'Password set! Redirecting to admin…'
           msg.className = 'msg success'
           setTimeout(function () { window.location.href = '/admin/' }, 1800)
         } else {
-          var data = {}
-          try { data = await res.json() } catch (_) {}
-          msg.textContent = data.msg || 'Link expired — request a new password reset.'
+          var setErr = {}
+          try { setErr = await setRes.json() } catch (_) {}
+          msg.textContent = setErr.msg || 'Failed to set password.'
           msg.className = 'msg error'
           btn.disabled = false
           btn.textContent = 'Set Password'
