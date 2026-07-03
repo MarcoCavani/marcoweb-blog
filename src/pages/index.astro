@@ -20,19 +20,20 @@ const recentPosts = posts.slice(1)
 
   <main>
     <!-- Hero -->
-    <section class="bg-gradient-to-br from-brand-navy via-brand-navy to-blue-900 text-white py-20 px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <div class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-light bg-white/10 px-4 py-1.5 rounded-full mb-6">
+    <section class="bg-gradient-to-br from-brand-navy via-brand-navy to-blue-900 text-white py-20 px-4 relative overflow-hidden">
+      <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+      <div class="max-w-4xl mx-auto text-center relative">
+        <div class="hero-anim inline-block text-xs font-semibold uppercase tracking-widest text-brand-light bg-white/10 px-4 py-1.5 rounded-full mb-6">
           Cybersecurity · IT Governance · Digital Reports
         </div>
-        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
-          Cyber Threats Don't Wait.<br />
+        <h1 class="hero-anim text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
+          <span id="hero-headline">Cyber Threats Don't Wait.</span><br />
           <span class="text-brand-light">Neither Should You.</span>
         </h1>
-        <p class="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto mb-8">
+        <p class="hero-anim text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto mb-8">
           In-depth cybersecurity analysis, threat intelligence, and IT governance insights from Marco Cavani — helping professionals understand and manage digital risk.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <div class="hero-anim flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/blog" class="px-8 py-3 bg-brand-blue hover:bg-brand-light text-white font-semibold rounded-xl transition-colors">
             Read the Blog
           </a>
@@ -137,3 +138,94 @@ const recentPosts = posts.slice(1)
 
   <Footer />
 </Layout>
+
+<style>
+  .hero-anim {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+</style>
+
+<script is:inline>
+(function () {
+  // Particle network canvas
+  var cv = document.getElementById('hero-canvas');
+  if (cv) {
+    var cx = cv.getContext('2d');
+    var pts = [];
+    function initCv() {
+      cv.width = cv.offsetWidth;
+      cv.height = cv.offsetHeight;
+      pts = Array.from({ length: 35 }, function () {
+        return {
+          x: Math.random() * cv.width,
+          y: Math.random() * cv.height,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+          r: Math.random() * 1.5 + 0.7,
+        };
+      });
+    }
+    function drawCv() {
+      cx.clearRect(0, 0, cv.width, cv.height);
+      for (var i = 0; i < pts.length; i++) {
+        for (var j = i + 1; j < pts.length; j++) {
+          var dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
+          var d = Math.sqrt(dx * dx + dy * dy);
+          if (d < 110) {
+            cx.beginPath();
+            cx.strokeStyle = 'rgba(100,180,255,' + (1 - d / 110) * 0.35 + ')';
+            cx.lineWidth = 0.5;
+            cx.moveTo(pts[i].x, pts[i].y);
+            cx.lineTo(pts[j].x, pts[j].y);
+            cx.stroke();
+          }
+        }
+      }
+      pts.forEach(function (p) {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > cv.width) p.vx *= -1;
+        if (p.y < 0 || p.y > cv.height) p.vy *= -1;
+        cx.beginPath();
+        cx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        cx.fillStyle = 'rgba(120,190,255,0.55)';
+        cx.fill();
+      });
+      requestAnimationFrame(drawCv);
+    }
+    initCv();
+    drawCv();
+    window.addEventListener('resize', initCv);
+  }
+
+  // Stagger fade-up
+  document.querySelectorAll('.hero-anim').forEach(function (el, i) {
+    setTimeout(function () {
+      el.style.transition = 'opacity 0.65s ease, transform 0.65s ease';
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    }, 100 + i * 170);
+  });
+
+  // Glitch on headline
+  var gEl = document.getElementById('hero-headline');
+  if (gEl) {
+    var orig = gEl.textContent;
+    var chars = '!<>-_\\/[]{}=+*^?#';
+    function doGlitch() {
+      var iter = 0;
+      var iv = setInterval(function () {
+        gEl.textContent = orig.split('').map(function (c, idx) {
+          if (idx < iter) return orig[idx];
+          if (c === ' ') return ' ';
+          return chars[Math.floor(Math.random() * chars.length)];
+        }).join('');
+        iter += 2;
+        if (iter >= orig.length) { gEl.textContent = orig; clearInterval(iv); }
+      }, 35);
+    }
+    setTimeout(doGlitch, 1800);
+    setInterval(doGlitch, 7000);
+  }
+})();
+</script>
