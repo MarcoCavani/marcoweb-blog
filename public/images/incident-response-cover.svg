@@ -1,0 +1,139 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#08111e"/>
+      <stop offset="100%" style="stop-color:#0d1a2e"/>
+    </linearGradient>
+    <radialGradient id="cycleGlow" cx="72%" cy="48%" r="32%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#08111e;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#cycleGlow)"/>
+  <!-- Grid -->
+  <g stroke="#1e3a5f" stroke-width="1" opacity="0.2">
+    <line x1="0" y1="90" x2="1200" y2="90"/><line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/><line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="530"/><line x1="400" y1="0" x2="400" y2="530"/>
+    <line x1="600" y1="0" x2="600" y2="530"/>
+    <line x1="800" y1="0" x2="800" y2="530"/><line x1="1000" y1="0" x2="1000" y2="530"/>
+  </g>
+  <!-- NIST IR Lifecycle wheel - right side -->
+  <!-- Outer ring -->
+  <circle cx="860" cy="285" r="195" fill="none" stroke="#1e3a5f" stroke-width="2" opacity="0.6"/>
+  <circle cx="860" cy="285" r="155" fill="none" stroke="#1e3a5f" stroke-width="1" opacity="0.3"/>
+  <!-- Center circle -->
+  <circle cx="860" cy="285" r="60" fill="#0a1520" stroke="#6366f1" stroke-width="2.5"/>
+  <text x="860" y="278" text-anchor="middle" fill="#a5b4fc" font-size="11" font-weight="700" font-family="system-ui">NIST SP</text>
+  <text x="860" y="293" text-anchor="middle" fill="#a5b4fc" font-size="11" font-weight="700" font-family="system-ui">800-61r2</text>
+  <text x="860" y="308" text-anchor="middle" fill="#6366f1" font-size="9" font-family="system-ui">IR Lifecycle</text>
+  <!-- Phase 1: Preparation (top) -->
+  <!-- Arc sector top - 270° to 360°+45° = 315°-45° -->
+  <path d="M860,285 L860,90 A195,195 0 0,1 998,148 Z" fill="#10b981" opacity="0.18"/>
+  <path d="M860,285 L860,130 A155,155 0 0,1 970,163 Z" fill="#10b981" opacity="0.1"/>
+  <circle cx="930" cy="115" r="30" fill="#0a2010" stroke="#10b981" stroke-width="2"/>
+  <text x="930" y="109" text-anchor="middle" fill="#6ee7b7" font-size="9" font-weight="700">PREP-</text>
+  <text x="930" y="121" text-anchor="middle" fill="#6ee7b7" font-size="9" font-weight="700">ARATION</text>
+  <text x="930" y="155" text-anchor="middle" fill="#94a3b8" font-size="8">IR policy · team</text>
+  <text x="930" y="167" text-anchor="middle" fill="#94a3b8" font-size="8">tools · training</text>
+  <!-- Phase 2: Detection & Analysis (right) -->
+  <path d="M860,285 L998,148 A195,195 0 0,1 998,422 Z" fill="#3b82f6" opacity="0.18"/>
+  <circle cx="1060" cy="285" r="30" fill="#0a1520" stroke="#3b82f6" stroke-width="2"/>
+  <text x="1060" y="276" text-anchor="middle" fill="#93c5fd" font-size="8" font-weight="700">DETECT</text>
+  <text x="1060" y="288" text-anchor="middle" fill="#93c5fd" font-size="7">&amp; ANALYSE</text>
+  <text x="1065" y="328" text-anchor="middle" fill="#94a3b8" font-size="7">SIEM · logs</text>
+  <text x="1065" y="340" text-anchor="middle" fill="#94a3b8" font-size="7">IOC · triage</text>
+  <!-- Phase 3: Containment / Eradication / Recovery (bottom) -->
+  <path d="M860,285 L998,422 A195,195 0 0,1 722,422 Z" fill="#f97316" opacity="0.18"/>
+  <circle cx="860" cy="455" r="30" fill="#150a00" stroke="#f97316" stroke-width="2"/>
+  <text x="860" y="447" text-anchor="middle" fill="#fdba74" font-size="8" font-weight="700">CONTAIN</text>
+  <text x="860" y="459" text-anchor="middle" fill="#fdba74" font-size="7">ERAD / REC</text>
+  <text x="860" y="497" text-anchor="middle" fill="#94a3b8" font-size="7">isolate · clean</text>
+  <text x="860" y="509" text-anchor="middle" fill="#94a3b8" font-size="7">restore ops</text>
+  <!-- Phase 4: Post-Incident (left) -->
+  <path d="M860,285 L722,422 A195,195 0 0,1 722,148 Z" fill="#a855f7" opacity="0.18"/>
+  <circle cx="660" cy="285" r="30" fill="#0f0a1a" stroke="#a855f7" stroke-width="2"/>
+  <text x="660" y="276" text-anchor="middle" fill="#d8b4fe" font-size="8" font-weight="700">POST-</text>
+  <text x="660" y="288" text-anchor="middle" fill="#d8b4fe" font-size="7">INCIDENT</text>
+  <text x="660" y="328" text-anchor="middle" fill="#94a3b8" font-size="7">lessons</text>
+  <text x="660" y="340" text-anchor="middle" fill="#94a3b8" font-size="7">learned</text>
+  <!-- Top-left arc back to start -->
+  <path d="M860,285 L722,148 A195,195 0 0,1 860,90 Z" fill="#10b981" opacity="0.09"/>
+  <!-- Cycle arrows around the wheel -->
+  <path d="M893,92 Q980,75 1010,148" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arr1)"/>
+  <path d="M1050,250 Q1065,285 1050,320" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M1010,422 Q960,490 860,488" fill="none" stroke="#f97316" stroke-width="2"/>
+  <path d="M760,488 Q680,460 658,380" fill="none" stroke="#a855f7" stroke-width="2"/>
+  <path d="M658,192 Q720,108 828,92" fill="none" stroke="#10b981" stroke-width="2"/>
+  <!-- Left panel - IR details -->
+  <rect x="40" y="65" width="520" height="460" rx="8" fill="#050d1a" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="300" y="100" text-anchor="middle" fill="#a5b4fc" font-size="14" font-weight="700" font-family="system-ui">Incident Response Framework</text>
+  <!-- Prioritisation table -->
+  <text x="55" y="128" fill="#60a5fa" font-size="11" font-weight="700" font-family="system-ui">PRIORITISATION CRITERIA:</text>
+  <rect x="55" y="135" width="490" height="24" rx="3" fill="#1e3a5f" opacity="0.5"/>
+  <text x="60" y="152" fill="#94a3b8" font-size="9" font-weight="700">CATEGORY</text>
+  <text x="280" y="152" fill="#94a3b8" font-size="9" font-weight="700">LEVEL</text>
+  <text x="400" y="152" fill="#94a3b8" font-size="9" font-weight="700">DESCRIPTION</text>
+  <!-- Functional Impact -->
+  <g font-family="system-ui" font-size="9">
+    <rect x="55" y="159" width="490" height="22" rx="2" fill="#0a1520"/>
+    <text x="60" y="174" fill="#60a5fa">Functional Impact</text>
+    <rect x="265" y="162" width="70" height="16" rx="8" fill="#ef4444" opacity="0.8"/>
+    <text x="300" y="174" text-anchor="middle" fill="white">HIGH</text>
+    <text x="400" y="174" fill="#94a3b8">Core ops disrupted</text>
+    <rect x="55" y="181" width="490" height="22" rx="2" fill="#050d1a"/>
+    <text x="60" y="196" fill="#60a5fa">Functional Impact</text>
+    <rect x="265" y="184" width="70" height="16" rx="8" fill="#f97316" opacity="0.8"/>
+    <text x="300" y="196" text-anchor="middle" fill="white">MED</text>
+    <text x="400" y="196" fill="#94a3b8">Minimal capability loss</text>
+    <!-- Information Impact -->
+    <rect x="55" y="203" width="490" height="22" rx="2" fill="#0a1520"/>
+    <text x="60" y="218" fill="#60a5fa">Information Impact</text>
+    <rect x="265" y="206" width="70" height="16" rx="8" fill="#ef4444" opacity="0.8"/>
+    <text x="300" y="218" text-anchor="middle" fill="white">PRIV</text>
+    <text x="400" y="218" fill="#94a3b8">PII / classified data</text>
+    <rect x="55" y="225" width="490" height="22" rx="2" fill="#050d1a"/>
+    <text x="60" y="240" fill="#60a5fa">Information Impact</text>
+    <rect x="265" y="228" width="70" height="16" rx="8" fill="#eab308" opacity="0.8"/>
+    <text x="300" y="240" text-anchor="middle" fill="white">PROP</text>
+    <text x="400" y="240" fill="#94a3b8">Proprietary info accessed</text>
+    <!-- Recoverability -->
+    <rect x="55" y="247" width="490" height="22" rx="2" fill="#0a1520"/>
+    <text x="60" y="262" fill="#60a5fa">Recoverability</text>
+    <rect x="265" y="250" width="70" height="16" rx="8" fill="#ef4444" opacity="0.8"/>
+    <text x="300" y="262" text-anchor="middle" fill="white">NOT</text>
+    <text x="400" y="262" fill="#94a3b8">Irrecoverable — accept loss</text>
+    <rect x="55" y="269" width="490" height="22" rx="2" fill="#050d1a"/>
+    <text x="60" y="284" fill="#60a5fa">Recoverability</text>
+    <rect x="265" y="272" width="70" height="16" rx="8" fill="#10b981" opacity="0.8"/>
+    <text x="300" y="284" text-anchor="middle" fill="white">REG</text>
+    <text x="400" y="284" fill="#94a3b8">Predictable time to recover</text>
+  </g>
+  <!-- IR Policy requirements -->
+  <text x="55" y="316" fill="#60a5fa" font-size="11" font-weight="700" font-family="system-ui">IR POLICY MUST INCLUDE:</text>
+  <g font-family="system-ui" font-size="10" fill="#94a3b8">
+    <text x="55" y="336">▸ Statement of management commitment</text>
+    <text x="55" y="354">▸ Purpose and scope of IR activities</text>
+    <text x="55" y="372">▸ Roles, responsibilities and authority</text>
+    <text x="55" y="390">▸ Incident definition and prioritisation criteria</text>
+    <text x="55" y="408">▸ Performance metrics and reporting intervals</text>
+    <text x="55" y="426">▸ Roadmap for future program maturity</text>
+  </g>
+  <!-- Information sharing -->
+  <rect x="55" y="440" width="490" height="68" rx="4" fill="#0a1520" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="70" y="460" fill="#d8b4fe" font-size="11" font-weight="700" font-family="system-ui">Information Sharing Partners</text>
+  <text x="70" y="477" fill="#94a3b8" font-size="9" font-family="system-ui">ISACs · US-CERT · CISA · ASD ACSC · vendor PSIRTS</text>
+  <text x="70" y="493" fill="#94a3b8" font-size="9" font-family="system-ui">Share IOCs, TTPs, and lessons learned to strengthen community</text>
+  <!-- MarcoWeb watermark -->
+  <text x="30" y="38" fill="#6366f1" font-size="14" font-weight="700" font-family="system-ui, sans-serif" opacity="0.9">MarcoWeb.org</text>
+  <!-- Category badge -->
+  <rect x="1040" y="18" width="140" height="28" rx="14" fill="#0f0a1a" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="1110" y="37" text-anchor="middle" fill="#d8b4fe" font-size="12" font-weight="600">CYBER SECURITY</text>
+  <!-- Bottom band -->
+  <rect x="0" y="530" width="1200" height="100" fill="#03060f" opacity="0.97"/>
+  <rect x="0" y="528" width="1200" height="3" fill="#6366f1"/>
+  <text x="50" y="576" fill="white" font-size="26" font-weight="800" font-family="system-ui, sans-serif">Mastering Incident Response with NIST</text>
+  <text x="50" y="612" fill="#a5b4fc" font-size="17" font-family="system-ui, sans-serif">NIST SP 800-61r2 · IR Lifecycle · Prioritisation · Policy</text>
+</svg>

@@ -173,6 +173,22 @@ Scattered Spider has been observed registering typosquatted domains impersonatin
 
 These domains are used to host phishing pages that closely replicate the target company's internal authentication systems. Employees directed to these pages unknowingly provide their credentials and MFA tokens to the attackers.
 
+---
+
+## Full Report Available on Request
+
+This post is a summary of the full **Scattered Spider: The Casino Hacks** digital report, which includes:
+
+- Complete threat actor profile and TTP breakdown (MITRE ATT&CK mapped)
+- Detailed timeline of both the Caesars Entertainment and MGM Resorts incidents
+- Full kill chain analysis with evidence from FBI/CISA advisories
+- Strategic recommendations for large enterprises in hospitality and entertainment
+- Applicability assessment for Australian organisations
+
+**To request the full report, contact me directly:**
+
+📧 [cavaniaustralia@gmail.com](mailto:cavaniaustralia@gmail.com?subject=Request%3A%20Scattered%20Spider%20Full%20Report&body=Hi%20Marco%2C%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20the%20full%20Scattered%20Spider%3A%20The%20Casino%20Hacks%20report.%0A%0AName%3A%20%0AOrganisation%3A%20%0APurpose%3A%20)
+
 *(FBI & CISA, 2023)*
 
 ---

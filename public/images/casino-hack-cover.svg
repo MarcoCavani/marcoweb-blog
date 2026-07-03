@@ -1,0 +1,111 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#08111e"/>
+      <stop offset="100%" style="stop-color:#1a0808"/>
+    </linearGradient>
+    <radialGradient id="redGlow" cx="60%" cy="45%" r="40%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#08111e;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#redGlow)"/>
+  <!-- Grid -->
+  <g stroke="#2a1010" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="90" x2="1200" y2="90"/><line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/><line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="530"/><line x1="400" y1="0" x2="400" y2="530"/>
+    <line x1="600" y1="0" x2="600" y2="530"/><line x1="800" y1="0" x2="800" y2="530"/>
+    <line x1="1000" y1="0" x2="1000" y2="530"/>
+  </g>
+  <!-- Attack flow diagram -->
+  <!-- Step 1: LinkedIn Recon -->
+  <rect x="40" y="80" width="160" height="70" rx="8" fill="#0f1a2a" stroke="#4a9edd" stroke-width="2"/>
+  <text x="120" y="108" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="700">1. RECON</text>
+  <text x="120" y="124" text-anchor="middle" fill="#93c5fd" font-size="9">LinkedIn scan</text>
+  <text x="120" y="138" text-anchor="middle" fill="#93c5fd" font-size="9">Okta targets</text>
+  <!-- Arrow -->
+  <line x1="200" y1="115" x2="240" y2="115" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="240,110 252,115 240,120" fill="#ef4444"/>
+  <!-- Step 2: Vishing -->
+  <rect x="252" y="80" width="160" height="70" rx="8" fill="#1a0f0f" stroke="#ef4444" stroke-width="2"/>
+  <text x="332" y="108" text-anchor="middle" fill="#fca5a5" font-size="11" font-weight="700">2. VISHING</text>
+  <text x="332" y="124" text-anchor="middle" fill="#fca5a5" font-size="9">Impersonate staff</text>
+  <text x="332" y="138" text-anchor="middle" fill="#fca5a5" font-size="9">Reset MFA</text>
+  <!-- Arrow -->
+  <line x1="412" y1="115" x2="452" y2="115" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="452,110 464,115 452,120" fill="#ef4444"/>
+  <!-- Step 3: Okta takeover -->
+  <rect x="464" y="80" width="160" height="70" rx="8" fill="#1a0f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="544" y="104" text-anchor="middle" fill="#fdba74" font-size="11" font-weight="700">3. IDENTITY</text>
+  <text x="544" y="118" text-anchor="middle" fill="#fdba74" font-size="11" font-weight="700">TAKEOVER</text>
+  <text x="544" y="134" text-anchor="middle" fill="#fdba74" font-size="9">New IdP in Okta</text>
+  <text x="544" y="148" text-anchor="middle" fill="#fdba74" font-size="9">Azure access</text>
+  <!-- Arrow -->
+  <line x1="624" y1="115" x2="664" y2="115" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="664,110 676,115 664,120" fill="#ef4444"/>
+  <!-- Step 4: Ransomware -->
+  <rect x="676" y="80" width="160" height="70" rx="8" fill="#1a0a0a" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="756" y="104" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="700">4. BLACKCAT</text>
+  <text x="756" y="118" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="700">RANSOMWARE</text>
+  <text x="756" y="134" text-anchor="middle" fill="#fca5a5" font-size="9">ESXi servers</text>
+  <text x="756" y="148" text-anchor="middle" fill="#fca5a5" font-size="9">VMs encrypted</text>
+  <!-- Impact box -->
+  <rect x="880" y="60" width="290" height="110" rx="8" fill="#100808" stroke="#ef4444" stroke-width="2"/>
+  <text x="1025" y="88" text-anchor="middle" fill="#ef4444" font-size="13" font-weight="900">IMPACT</text>
+  <text x="890" y="108" fill="#fca5a5" font-size="11">💰 $100M estimated losses</text>
+  <text x="890" y="126" fill="#fca5a5" font-size="11">🎰 Slot machines offline</text>
+  <text x="890" y="144" fill="#fca5a5" font-size="11">🔑 Room keys failed</text>
+  <text x="890" y="162" fill="#fca5a5" font-size="11">💳 Booking systems down</text>
+  <!-- MGM building silhouette -->
+  <rect x="40" y="200" width="40" height="160" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="90" y="230" width="35" height="130" fill="#150808" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="135" y="215" width="45" height="145" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5"/>
+  <!-- MGM sign -->
+  <rect x="40" y="195" width="145" height="22" rx="3" fill="#ef4444" opacity="0.8"/>
+  <text x="113" y="210" text-anchor="middle" fill="white" font-size="12" font-weight="900">MGM RESORTS</text>
+  <!-- Windows in buildings (dark) -->
+  <g fill="#0a0505" stroke="#2a1010" stroke-width="0.5">
+    <rect x="48" y="215" width="10" height="10" rx="1"/>
+    <rect x="64" y="215" width="10" height="10" rx="1"/>
+    <rect x="48" y="235" width="10" height="10" rx="1"/>
+    <rect x="64" y="235" width="10" height="10" rx="1"/>
+    <rect x="98" y="245" width="10" height="10" rx="1"/>
+    <rect x="113" y="245" width="10" height="10" rx="1"/>
+    <rect x="143" y="228" width="10" height="10" rx="1"/>
+    <rect x="158" y="228" width="10" height="10" rx="1"/>
+  </g>
+  <!-- Scattered Spider label -->
+  <rect x="40" y="375" width="360" height="50" rx="6" fill="#0f1020" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="220" y="397" text-anchor="middle" fill="#d8b4fe" font-size="13" font-weight="700">SCATTERED SPIDER (UNC3944)</text>
+  <text x="220" y="415" text-anchor="middle" fill="#a78bfa" font-size="10">Social Engineering · SIM Swap · Vishing · BlackCat TTPs</text>
+  <!-- Caesars revenue info -->
+  <rect x="430" y="200" width="720" height="165" rx="8" fill="#0a0a12" stroke="#4a9edd" stroke-width="1.5"/>
+  <text x="790" y="230" text-anchor="middle" fill="#93c5fd" font-size="14" font-weight="700">MGM Resorts International</text>
+  <text x="790" y="255" text-anchor="middle" fill="#60a5fa" font-size="12">S&amp;P 500 · Nevada · $16.16B Global Revenue (2023)</text>
+  <!-- Stats -->
+  <g font-size="11" font-family="system-ui">
+    <rect x="450" y="270" width="180" height="50" rx="6" fill="#150808" stroke="#ef4444" stroke-width="1"/>
+    <text x="540" y="292" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="900">$100M</text>
+    <text x="540" y="310" text-anchor="middle" fill="#fca5a5" font-size="9">Estimated Losses</text>
+    <rect x="650" y="270" width="180" height="50" rx="6" fill="#150808" stroke="#f97316" stroke-width="1"/>
+    <text x="740" y="292" text-anchor="middle" fill="#f97316" font-size="22" font-weight="900">$10M</text>
+    <text x="740" y="310" text-anchor="middle" fill="#fdba74" font-size="9">Remediation Cost</text>
+    <rect x="850" y="270" width="180" height="50" rx="6" fill="#0a1505" stroke="#22c55e" stroke-width="1"/>
+    <text x="940" y="292" text-anchor="middle" fill="#22c55e" font-size="16" font-weight="900">NO RANSOM</text>
+    <text x="940" y="310" text-anchor="middle" fill="#86efac" font-size="9">MGM did not pay</text>
+    <text x="790" y="358" text-anchor="middle" fill="#64748b" font-size="10">Source: SEC 8-K filing, September 2023</text>
+  </g>
+  <!-- MarcoWeb watermark -->
+  <text x="30" y="38" fill="#ef4444" font-size="14" font-weight="700" font-family="system-ui, sans-serif" opacity="0.9">MarcoWeb.org</text>
+  <!-- Category badge -->
+  <rect x="1040" y="18" width="140" height="28" rx="14" fill="#1a0808" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="1110" y="37" text-anchor="middle" fill="#fca5a5" font-size="12" font-weight="600">CYBER SECURITY</text>
+  <!-- Bottom band -->
+  <rect x="0" y="530" width="1200" height="100" fill="#060202" opacity="0.97"/>
+  <rect x="0" y="528" width="1200" height="3" fill="#ef4444"/>
+  <text x="50" y="576" fill="white" font-size="28" font-weight="800" font-family="system-ui, sans-serif">The Casino Hack: MGM Resorts</text>
+  <text x="50" y="612" fill="#fca5a5" font-size="17" font-family="system-ui, sans-serif">Scattered Spider · Vishing · BlackCat Ransomware · 2023</text>
+</svg>

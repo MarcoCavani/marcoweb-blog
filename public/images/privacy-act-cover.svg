@@ -1,0 +1,96 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#08111e"/>
+      <stop offset="100%" style="stop-color:#0d1a2e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="25%" cy="50%" r="35%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#08111e;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <!-- Grid -->
+  <g stroke="#1e3a5f" stroke-width="1" opacity="0.2">
+    <line x1="0" y1="90" x2="1200" y2="90"/><line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/><line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="530"/><line x1="400" y1="0" x2="400" y2="530"/>
+    <line x1="600" y1="0" x2="600" y2="530"/><line x1="800" y1="0" x2="800" y2="530"/>
+    <line x1="1000" y1="0" x2="1000" y2="530"/>
+  </g>
+  <!-- Australian flag simplified - left panel -->
+  <rect x="40" y="65" width="360" height="220" rx="6" fill="#00008b" stroke="#1e3a5f" stroke-width="2"/>
+  <!-- Union Jack top-left quadrant -->
+  <rect x="40" y="65" width="180" height="110" fill="#00008b"/>
+  <!-- Red cross -->
+  <rect x="120" y="65" width="20" height="110" fill="#CC0000"/>
+  <rect x="40" y="110" width="180" height="20" fill="#CC0000"/>
+  <!-- White diagonals top-left quadrant (simplified) -->
+  <line x1="40" y1="65" x2="220" y2="175" stroke="white" stroke-width="8"/>
+  <line x1="220" y1="65" x2="40" y2="175" stroke="white" stroke-width="8"/>
+  <line x1="40" y1="65" x2="220" y2="175" stroke="#CC0000" stroke-width="4"/>
+  <line x1="220" y1="65" x2="40" y2="175" stroke="#CC0000" stroke-width="4"/>
+  <!-- Mask the union jack to quadrant -->
+  <rect x="220" y="65" width="180" height="110" fill="#00008b"/>
+  <rect x="40" y="175" width="360" height="110" fill="#00008b"/>
+  <!-- Southern Cross stars (simplified) -->
+  <polygon points="310,110 315,125 330,125 318,134 323,150 310,141 297,150 302,134 290,125 305,125" fill="white" transform="scale(0.7) translate(155,60)"/>
+  <polygon points="380,160 384,172 396,172 386,179 390,191 380,184 370,191 374,179 364,172 376,172" fill="white" transform="scale(0.5) translate(330,135)"/>
+  <!-- Flag label -->
+  <text x="220" y="308" text-anchor="middle" fill="#93c5fd" font-size="11" font-weight="700" font-family="system-ui">AUSTRALIA</text>
+  <!-- Lock icon -->
+  <rect x="140" y="330" width="60" height="50" rx="6" fill="#0f2540" stroke="#3b82f6" stroke-width="2.5"/>
+  <path d="M155,330 Q155,310 170,310 Q185,310 185,330" fill="none" stroke="#3b82f6" stroke-width="3"/>
+  <circle cx="170" cy="355" r="8" fill="#3b82f6" opacity="0.8"/>
+  <line x1="170" y1="360" x2="170" y2="370" stroke="#1e3a5f" stroke-width="3"/>
+  <text x="220" y="408" text-anchor="middle" fill="#60a5fa" font-size="12" font-weight="700" font-family="system-ui">Privacy Act 1988</text>
+  <text x="220" y="426" text-anchor="middle" fill="#60a5fa" font-size="10" font-weight="700" font-family="system-ui">Review 2024</text>
+  <!-- Right panel - reform details -->
+  <rect x="440" y="65" width="720" height="460" rx="8" fill="#050d1a" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text x="800" y="100" text-anchor="middle" fill="#93c5fd" font-size="14" font-weight="700" font-family="system-ui">Australia Privacy Act Reform</text>
+  <rect x="455" y="108" width="690" height="2" rx="1" fill="#3b82f6" opacity="0.4"/>
+  <!-- Key reform areas -->
+  <g font-family="system-ui">
+    <!-- AI Threat -->
+    <rect x="455" y="118" width="690" height="52" rx="4" fill="#0a1520" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="470" y="139" fill="#fca5a5" font-size="11" font-weight="700">AI-Enabled Cybercriminals</text>
+    <text x="470" y="157" fill="#94a3b8" font-size="10">CrowdStrike: adversaries leverage AI to automate attacks,</text>
+    <text x="470" y="170" fill="#94a3b8" font-size="10">generate deepfakes, and accelerate credential theft at scale</text>
+    <!-- Cloud attacks -->
+    <rect x="455" y="178" width="690" height="52" rx="4" fill="#0a1520" stroke="#f97316" stroke-width="1.5"/>
+    <text x="470" y="199" fill="#fdba74" font-size="11" font-weight="700">Cloud Attack Surface</text>
+    <text x="470" y="217" fill="#94a3b8" font-size="10">Cloud intrusion activity surged as organisations migrate.</text>
+    <text x="470" y="230" fill="#94a3b8" font-size="10">Misconfigurations remain #1 cause of cloud breaches</text>
+    <!-- Data retention -->
+    <rect x="455" y="238" width="690" height="52" rx="4" fill="#0a1520" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="470" y="259" fill="#93c5fd" font-size="11" font-weight="700">Data Retention Policy</text>
+    <text x="470" y="277" fill="#94a3b8" font-size="10">Organisations must define minimum necessary retention periods.</text>
+    <text x="470" y="290" fill="#94a3b8" font-size="10">Data held beyond purpose = increased breach liability</text>
+    <!-- Employee training -->
+    <rect x="455" y="298" width="690" height="52" rx="4" fill="#0a1520" stroke="#10b981" stroke-width="1.5"/>
+    <text x="470" y="319" fill="#6ee7b7" font-size="11" font-weight="700">Employee Training Requirements</text>
+    <text x="470" y="337" fill="#94a3b8" font-size="10">Mandatory privacy awareness training for all staff handling</text>
+    <text x="470" y="350" fill="#94a3b8" font-size="10">personal information — included in APP entity obligations</text>
+    <!-- Notifiable data breaches -->
+    <rect x="455" y="358" width="690" height="52" rx="4" fill="#0a1520" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="470" y="379" fill="#d8b4fe" font-size="11" font-weight="700">Notifiable Data Breaches (NDB) Scheme</text>
+    <text x="470" y="397" fill="#94a3b8" font-size="10">72-hour notification window to OAIC + affected individuals.</text>
+    <text x="470" y="410" fill="#94a3b8" font-size="10">Penalties up to $50M for serious or repeated breaches</text>
+    <!-- Penalties highlight -->
+    <rect x="455" y="418" width="690" height="50" rx="4" fill="#1a0808" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="800" y="440" text-anchor="middle" fill="#ef4444" font-size="22" font-weight="900">$50M PENALTY</text>
+    <text x="800" y="460" text-anchor="middle" fill="#fca5a5" font-size="11">Maximum fine for serious or repeated Privacy Act violations</text>
+  </g>
+  <!-- MarcoWeb watermark -->
+  <text x="30" y="38" fill="#3b82f6" font-size="14" font-weight="700" font-family="system-ui, sans-serif" opacity="0.9">MarcoWeb.org</text>
+  <!-- Category badge -->
+  <rect x="1020" y="18" width="160" height="28" rx="14" fill="#0c2340" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="1100" y="37" text-anchor="middle" fill="#7dd3fc" font-size="12" font-weight="600">INFO SECURITY</text>
+  <!-- Bottom band -->
+  <rect x="0" y="530" width="1200" height="100" fill="#030a14" opacity="0.97"/>
+  <rect x="0" y="528" width="1200" height="3" fill="#3b82f6"/>
+  <text x="50" y="576" fill="white" font-size="25" font-weight="800" font-family="system-ui, sans-serif">Australia Privacy Act &amp; Data Security</text>
+  <text x="50" y="612" fill="#93c5fd" font-size="17" font-family="system-ui, sans-serif">Privacy Act Reform · AI Threats · NDB Scheme · $50M Penalties</text>
+</svg>

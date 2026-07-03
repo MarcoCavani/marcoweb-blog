@@ -192,6 +192,22 @@ Information assets are prioritised based on three factors:
 
 *Indirect Cyber Risk:* Emergency response and recovery periods create windows of elevated cybersecurity risk. Staff focus on restoration rather than security monitoring, incident response procedures may be deprioritised, and emergency remote access may be extended without adequate security controls.
 
+---
+
+## Full Report Available on Request
+
+This post is a summary of the full **Information Security Analysis for Western Power** digital report, which includes:
+
+- Comprehensive stakeholder analysis and Power & Interest Grid
+- Detailed information asset inventory and data flow mapping
+- Full threat assessments: cyberattacks, insider threats, and climate change
+- Strategic recommendations across governance, access control, and resilience
+- Implementation roadmap and KPIs for cybersecurity maturity
+
+**To request the full report, contact me directly:**
+
+📧 [cavaniaustralia@gmail.com](mailto:cavaniaustralia@gmail.com?subject=Request%3A%20Western%20Power%20Information%20Security%20Report&body=Hi%20Marco%2C%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20the%20full%20Information%20Security%20Analysis%20for%20Western%20Power%20report.%0A%0AName%3A%20%0AOrganisation%3A%20%0APurpose%3A%20)
+
 *Supply Chain Disruption:* Climate-related disruptions to supply chains can affect the availability of critical spare parts and equipment, extending recovery times following physical infrastructure damage.
 
 **Risk Level:** Medium and growing — climate risk intersects with cybersecurity and operational risk in ways that require integrated planning.
