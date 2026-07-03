@@ -1,0 +1,141 @@
+---
+import Layout from './Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import AdBanner from '../components/AdBanner.astro'
+import CTABox from '../components/CTABox.astro'
+import NewsletterSignup from '../components/NewsletterSignup.astro'
+
+interface Props {
+  title: string
+  description: string
+  pubDate: Date
+  updatedDate?: Date
+  heroImage?: string
+  category: string
+  author: string
+  readTime?: string
+  tags?: string[]
+}
+
+const { title, description, pubDate, updatedDate, heroImage, category, author, readTime, tags } = Astro.props
+
+const formattedDate = new Intl.DateTimeFormat('en-AU', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}).format(pubDate)
+
+const formattedUpdatedDate = updatedDate
+  ? new Intl.DateTimeFormat('en-AU', { year: 'numeric', month: 'long', day: 'numeric' }).format(updatedDate)
+  : null
+---
+
+<Layout title={`${title} — MarcoWeb`} description={description} image={heroImage}>
+  <Header />
+
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-400 mb-6">
+      <a href="/" class="hover:text-brand-blue transition-colors">Home</a>
+      <span class="mx-2">›</span>
+      <a href="/blog" class="hover:text-brand-blue transition-colors">Blog</a>
+      <span class="mx-2">›</span>
+      <span class="text-gray-600">{title}</span>
+    </nav>
+
+    <!-- Header -->
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1 rounded-full">
+          {category}
+        </span>
+        {readTime && <span class="text-xs text-gray-400">{readTime}</span>}
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
+        {title}
+      </h1>
+
+      <p class="text-lg text-gray-500 leading-relaxed mb-6">
+        {description}
+      </p>
+
+      <div class="flex items-center gap-4 text-sm text-gray-400 border-t border-gray-100 pt-4">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-brand-blue flex items-center justify-center text-white font-bold text-sm">
+            M
+          </div>
+          <span class="font-medium text-gray-700">{author}</span>
+        </div>
+        <span>·</span>
+        <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+        {formattedUpdatedDate && formattedUpdatedDate !== formattedDate && (
+          <>
+            <span>·</span>
+            <span>Updated {formattedUpdatedDate}</span>
+          </>
+        )}
+      </div>
+    </header>
+
+    <!-- Hero image -->
+    {heroImage && (
+      <div class="mb-8 rounded-2xl overflow-hidden shadow-md">
+        <img
+          src={heroImage}
+          alt={title}
+          class="w-full h-auto max-h-80 object-cover"
+        />
+      </div>
+    )}
+
+    <!-- Top ad -->
+    <AdBanner slot="leaderboard" />
+
+    <!-- Article content -->
+    <div class="prose prose-gray prose-lg max-w-none
+      prose-headings:font-bold prose-headings:text-gray-900
+      prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-gray-100 prose-h2:pb-2
+      prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-brand-navy
+      prose-p:text-gray-700 prose-p:leading-relaxed
+      prose-strong:text-gray-900
+      prose-a:text-brand-blue prose-a:no-underline hover:prose-a:underline
+      prose-ul:my-4 prose-li:my-1
+      prose-table:text-sm prose-th:bg-brand-navy prose-th:text-white prose-th:font-semibold prose-th:py-3 prose-th:px-4 prose-td:py-2 prose-td:px-4
+      prose-blockquote:border-brand-blue prose-blockquote:text-gray-600
+      prose-code:text-brand-blue prose-code:bg-blue-50 prose-code:px-1 prose-code:rounded
+      prose-hr:border-gray-200">
+      <slot />
+    </div>
+
+    <!-- Mid-article CTA -->
+    <CTABox variant="inline" />
+
+    <!-- Mid-article ad -->
+    <AdBanner slot="rectangle" />
+
+    <!-- Tags -->
+    {tags && tags.length > 0 && (
+      <div class="mt-10 pt-6 border-t border-gray-100">
+        <div class="flex flex-wrap gap-2">
+          {tags.map(tag => (
+            <span class="text-xs text-gray-500 bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-full transition-colors">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Newsletter CTA -->
+    <div class="mt-12">
+      <NewsletterSignup />
+    </div>
+
+    <!-- Full CTA -->
+    <CTABox variant="full" />
+  </main>
+
+  <Footer />
+</Layout>

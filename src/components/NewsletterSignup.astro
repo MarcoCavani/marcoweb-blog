@@ -1,0 +1,65 @@
+---
+interface Props {
+  compact?: boolean
+}
+const { compact = false } = Astro.props
+---
+
+{compact ? (
+  <!-- Compact footer version -->
+  <form
+    name="newsletter"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    class="flex gap-2"
+  >
+    <input type="hidden" name="form-name" value="newsletter" />
+    <input type="hidden" name="bot-field" />
+    <input
+      type="email"
+      name="email"
+      placeholder="your@email.com"
+      required
+      class="flex-1 px-3 py-2 rounded-lg bg-gray-800 border border-gray-600 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-brand-blue"
+    />
+    <button
+      type="submit"
+      class="px-3 py-2 bg-brand-blue hover:bg-brand-light text-white rounded-lg text-sm font-medium transition-colors whitespace-nowrap"
+    >
+      Subscribe
+    </button>
+  </form>
+) : (
+  <!-- Full section version -->
+  <div class="bg-brand-navy rounded-2xl p-8 text-white text-center">
+    <h3 class="text-2xl font-bold mb-2">Stay ahead of cyber threats</h3>
+    <p class="text-gray-300 mb-6 max-w-md mx-auto">
+      Get the latest cybersecurity reports, threat intelligence, and IT governance insights delivered straight to your inbox. No spam — unsubscribe any time.
+    </p>
+    <form
+      name="newsletter"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+    >
+      <input type="hidden" name="form-name" value="newsletter" />
+      <input type="hidden" name="bot-field" />
+      <input
+        type="email"
+        name="email"
+        placeholder="your@email.com"
+        required
+        class="flex-1 px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-brand-light focus:bg-white/20 transition-all"
+      />
+      <button
+        type="submit"
+        class="px-6 py-3 bg-brand-blue hover:bg-brand-light text-white font-semibold rounded-xl transition-colors whitespace-nowrap"
+      >
+        Subscribe Free
+      </button>
+    </form>
+    <p class="text-xs text-gray-500 mt-3">No spam. Unsubscribe at any time.</p>
+  </div>
+)}

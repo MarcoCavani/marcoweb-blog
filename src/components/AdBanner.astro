@@ -1,0 +1,43 @@
+---
+interface Props {
+  slot?: 'leaderboard' | 'rectangle' | 'sidebar'
+}
+const { slot: adSlot = 'rectangle' } = Astro.props
+
+/*
+  Google AdSense Setup:
+  1. Sign up at https://adsense.google.com
+  2. Add your site and wait for approval (usually 1–2 weeks)
+  3. Create ad units in your AdSense dashboard
+  4. Replace the values below:
+     - data-ad-client: your publisher ID (e.g. ca-pub-1234567890123456)
+     - data-ad-slot: your individual ad unit slot ID
+  5. Uncomment the <ins> block and remove the placeholder div
+*/
+
+const dimensions = {
+  leaderboard: 'h-24 w-full',
+  rectangle: 'h-64 w-full max-w-sm mx-auto',
+  sidebar: 'h-96 w-full',
+}
+---
+
+<!-- Ad placeholder — replace with real AdSense unit once approved -->
+<div class={`bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center text-gray-400 text-xs text-center p-4 my-6 ${dimensions[adSlot]}`}>
+  <span>
+    Advertisement<br />
+    <span class="text-gray-300">(AdSense unit goes here)</span>
+  </span>
+</div>
+
+<!--
+  Once your AdSense account is approved, replace the div above with:
+  <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+    data-ad-slot="XXXXXXXXXX"
+    data-ad-format="auto"
+    data-full-width-responsive="true">
+  </ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+-->

@@ -1,0 +1,51 @@
+---
+import NewsletterSignup from './NewsletterSignup.astro'
+---
+
+<footer class="bg-brand-navy text-gray-400 mt-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-full bg-brand-blue border-2 border-brand-light flex items-center justify-center font-bold text-white">M</div>
+          <span class="text-lg font-bold text-white">MarcoWeb</span>
+        </div>
+        <p class="text-sm leading-relaxed">
+          Cybersecurity insights, digital reports, and IT governance analysis from Marco Cavani — helping organisations understand and manage cyber risk.
+        </p>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+          <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
+          <li>
+            <a href="https://racm-itgc-saas.netlify.app" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+              ITGC Audit Tool ↗
+            </a>
+          </li>
+          <li>
+            <a href="https://marcoweb.org" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+              marcoweb.org ↗
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Stay Updated</h3>
+        <p class="text-sm mb-4">Get cybersecurity insights delivered to your inbox.</p>
+        <NewsletterSignup compact={true} />
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs">
+      <p>© {new Date().getFullYear()} marcoweb.org — All rights reserved.</p>
+      <p>Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-brand-light hover:text-white transition-colors">Astro</a> · Hosted on Netlify</p>
+    </div>
+  </div>
+</footer>

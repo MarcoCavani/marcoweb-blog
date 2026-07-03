@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import PostCard from '../components/PostCard.astro'
+import CTABox from '../components/CTABox.astro'
+import NewsletterSignup from '../components/NewsletterSignup.astro'
+import AdBanner from '../components/AdBanner.astro'
+import { getCollection } from 'astro:content'
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+
+const featuredPost = posts[0]
+const recentPosts = posts.slice(1)
+---
+
+<Layout title="MarcoWeb — Cybersecurity Insights & Digital Reports">
+  <Header />
+
+  <main>
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-brand-navy via-brand-navy to-blue-900 text-white py-20 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-light bg-white/10 px-4 py-1.5 rounded-full mb-6">
+          Cybersecurity · IT Governance · Digital Reports
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
+          Cyber Threats Don't Wait.<br />
+          <span class="text-brand-light">Neither Should You.</span>
+        </h1>
+        <p class="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto mb-8">
+          In-depth cybersecurity analysis, threat intelligence, and IT governance insights from Marco Cavani — helping professionals understand and manage digital risk.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/blog" class="px-8 py-3 bg-brand-blue hover:bg-brand-light text-white font-semibold rounded-xl transition-colors">
+            Read the Blog
+          </a>
+          <a
+            href="https://racm-itgc-saas.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-colors"
+          >
+            ITGC Audit Tool ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+      <!-- Ad -->
+      <AdBanner slot="leaderboard" />
+
+      <!-- Featured post -->
+      {featuredPost && (
+        <section class="mb-16">
+          <div class="flex items-center gap-3 mb-6">
+            <h2 class="text-2xl font-bold text-gray-900">Featured Report</h2>
+            <div class="flex-1 h-px bg-gray-200"></div>
+          </div>
+          <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden md:flex group hover:shadow-md transition-shadow">
+            {featuredPost.data.heroImage && (
+              <a href={`/blog/${featuredPost.slug}`} class="md:w-80 shrink-0">
+                <img
+                  src={featuredPost.data.heroImage}
+                  alt={featuredPost.data.title}
+                  class="w-full h-56 md:h-full object-cover group-hover:opacity-95 transition-opacity"
+                />
+              </a>
+            )}
+            <div class="p-8 flex flex-col justify-center">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-2.5 py-1 rounded-full">
+                  {featuredPost.data.category}
+                </span>
+                {featuredPost.data.readTime && (
+                  <span class="text-xs text-gray-400">{featuredPost.data.readTime}</span>
+                )}
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand-blue transition-colors">
+                <a href={`/blog/${featuredPost.slug}`}>{featuredPost.data.title}</a>
+              </h3>
+              <p class="text-gray-500 leading-relaxed mb-5">{featuredPost.data.description}</p>
+              <a
+                href={`/blog/${featuredPost.slug}`}
+                class="self-start px-5 py-2 bg-brand-blue hover:bg-brand-navy text-white rounded-xl text-sm font-semibold transition-colors"
+              >
+                Read Report →
+              </a>
+            </div>
+          </article>
+        </section>
+      )}
+
+      <!-- CTA inline -->
+      <CTABox variant="inline" />
+
+      <!-- More posts -->
+      {recentPosts.length > 0 && (
+        <section class="mt-16">
+          <div class="flex items-center gap-3 mb-6">
+            <h2 class="text-2xl font-bold text-gray-900">More Reports</h2>
+            <div class="flex-1 h-px bg-gray-200"></div>
+            <a href="/blog" class="text-sm text-brand-blue hover:text-brand-navy font-medium transition-colors">View all →</a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {recentPosts.map(post => (
+              <PostCard
+                title={post.data.title}
+                description={post.data.description}
+                slug={post.slug}
+                pubDate={post.data.pubDate}
+                category={post.data.category}
+                readTime={post.data.readTime}
+                heroImage={post.data.heroImage}
+                tags={post.data.tags}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      <!-- Newsletter -->
+      <div class="mt-16">
+        <NewsletterSignup />
+      </div>
+
+      <!-- Full CTA -->
+      <CTABox variant="full" />
+
+      <!-- Bottom ad -->
+      <AdBanner slot="leaderboard" />
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
