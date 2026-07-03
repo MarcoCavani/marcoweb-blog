@@ -20,33 +20,34 @@
     <line x1="600" y1="0" x2="600" y2="530"/><line x1="800" y1="0" x2="800" y2="530"/>
     <line x1="1000" y1="0" x2="1000" y2="530"/>
   </g>
-  <!-- Australian flag simplified - left panel -->
-  <rect x="40" y="65" width="360" height="220" rx="6" fill="#00008b" stroke="#1e3a5f" stroke-width="2"/>
-  <!-- Union Jack top-left quadrant -->
-  <rect x="40" y="65" width="180" height="110" fill="#00008b"/>
-  <!-- Red cross -->
-  <rect x="120" y="65" width="20" height="110" fill="#CC0000"/>
-  <rect x="40" y="110" width="180" height="20" fill="#CC0000"/>
-  <!-- White diagonals top-left quadrant (simplified) -->
-  <line x1="40" y1="65" x2="220" y2="175" stroke="white" stroke-width="8"/>
-  <line x1="220" y1="65" x2="40" y2="175" stroke="white" stroke-width="8"/>
-  <line x1="40" y1="65" x2="220" y2="175" stroke="#CC0000" stroke-width="4"/>
-  <line x1="220" y1="65" x2="40" y2="175" stroke="#CC0000" stroke-width="4"/>
-  <!-- Mask the union jack to quadrant -->
-  <rect x="220" y="65" width="180" height="110" fill="#00008b"/>
-  <rect x="40" y="175" width="360" height="110" fill="#00008b"/>
-  <!-- Southern Cross stars (simplified) -->
-  <polygon points="310,110 315,125 330,125 318,134 323,150 310,141 297,150 302,134 290,125 305,125" fill="white" transform="scale(0.7) translate(155,60)"/>
-  <polygon points="380,160 384,172 396,172 386,179 390,191 380,184 370,191 374,179 364,172 376,172" fill="white" transform="scale(0.5) translate(330,135)"/>
-  <!-- Flag label -->
-  <text x="220" y="308" text-anchor="middle" fill="#93c5fd" font-size="11" font-weight="700" font-family="system-ui">AUSTRALIA</text>
-  <!-- Lock icon -->
-  <rect x="140" y="330" width="60" height="50" rx="6" fill="#0f2540" stroke="#3b82f6" stroke-width="2.5"/>
-  <path d="M155,330 Q155,310 170,310 Q185,310 185,330" fill="none" stroke="#3b82f6" stroke-width="3"/>
-  <circle cx="170" cy="355" r="8" fill="#3b82f6" opacity="0.8"/>
-  <line x1="170" y1="360" x2="170" y2="370" stroke="#1e3a5f" stroke-width="3"/>
-  <text x="220" y="408" text-anchor="middle" fill="#60a5fa" font-size="12" font-weight="700" font-family="system-ui">Privacy Act 1988</text>
-  <text x="220" y="426" text-anchor="middle" fill="#60a5fa" font-size="10" font-weight="700" font-family="system-ui">Review 2024</text>
+  <!-- Left panel - Australia data shield -->
+  <rect x="40" y="65" width="360" height="460" rx="8" fill="#050d1a" stroke="#1e3a5f" stroke-width="1.5"/>
+  <!-- Large shield icon -->
+  <path d="M220,100 L330,140 L330,230 Q330,300 220,330 Q110,300 110,230 L110,140 Z" fill="#0a1520" stroke="#3b82f6" stroke-width="2.5"/>
+  <path d="M220,120 L315,154 L315,230 Q315,290 220,314 Q125,290 125,230 L125,154 Z" fill="none" stroke="#1e4a8a" stroke-width="1" opacity="0.5"/>
+  <!-- Lock body inside shield -->
+  <rect x="196" y="210" width="48" height="40" rx="6" fill="#0f2540" stroke="#60a5fa" stroke-width="2"/>
+  <path d="M206,210 Q206,188 220,188 Q234,188 234,210" fill="none" stroke="#60a5fa" stroke-width="2.5"/>
+  <circle cx="220" cy="232" r="7" fill="#3b82f6"/>
+  <line x1="220" y1="237" x2="220" y2="244" stroke="#1e3a5f" stroke-width="2.5"/>
+  <!-- AUS text -->
+  <text x="220" y="170" text-anchor="middle" fill="#93c5fd" font-size="13" font-weight="700" font-family="system-ui">AUSTRALIA</text>
+  <!-- Act title -->
+  <rect x="80" y="350" width="280" height="42" rx="6" fill="#0a1520" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="220" y="368" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="700" font-family="system-ui">Privacy Act 1988</text>
+  <text x="220" y="385" text-anchor="middle" fill="#93c5fd" font-size="10" font-family="system-ui">Amended · Review 2024</text>
+  <!-- Key stats -->
+  <rect x="60" y="405" width="115" height="50" rx="4" fill="#0a1520" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="117" y="426" text-anchor="middle" fill="#d8b4fe" font-size="18" font-weight="900" font-family="system-ui">13</text>
+  <text x="117" y="443" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="system-ui">APPs</text>
+  <rect x="185" y="405" width="115" height="50" rx="4" fill="#0a1520" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="242" y="426" text-anchor="middle" fill="#fca5a5" font-size="14" font-weight="900" font-family="system-ui">$50M</text>
+  <text x="242" y="443" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="system-ui">Max penalty</text>
+  <rect x="310" y="405" width="70" height="50" rx="4" fill="#0a1520" stroke="#10b981" stroke-width="1.5"/>
+  <text x="345" y="424" text-anchor="middle" fill="#6ee7b7" font-size="10" font-weight="900" font-family="system-ui">72hr</text>
+  <text x="345" y="440" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="system-ui">NDB notify</text>
+  <!-- OAIC label -->
+  <text x="220" y="477" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui">Office of the Australian Information Commissioner</text>
   <!-- Right panel - reform details -->
   <rect x="440" y="65" width="720" height="460" rx="8" fill="#050d1a" stroke="#1e3a5f" stroke-width="1.5"/>
   <text x="800" y="100" text-anchor="middle" fill="#93c5fd" font-size="14" font-weight="700" font-family="system-ui">Australia Privacy Act Reform</text>
