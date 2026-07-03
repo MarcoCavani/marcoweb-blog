@@ -1,4 +1,4 @@
-const https = require('https')
+import https from 'https'
 
 function post(payload, apiKey) {
   return new Promise(function (resolve, reject) {
@@ -27,7 +27,7 @@ function post(payload, apiKey) {
   })
 }
 
-exports.handler = async function (event) {
+export const handler = async function (event) {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' }
   }
