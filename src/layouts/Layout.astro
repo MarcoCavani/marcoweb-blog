@@ -35,13 +35,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
     <meta name="twitter:description" content={description} />
     {image && <meta name="twitter:image" content={image} />}
 
-    <!--
-      Google AdSense — to activate:
-      1. Sign up at https://adsense.google.com and get approved
-      2. Replace ca-pub-XXXXXXXXXXXXXXXX with your actual publisher ID
-      3. Uncomment the script below
-    -->
-    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3362770372572725" crossorigin="anonymous"></script>
 
     <!-- Netlify Identity (required for /admin CMS login) -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
