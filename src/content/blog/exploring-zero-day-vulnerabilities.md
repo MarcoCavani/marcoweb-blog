@@ -1,6 +1,6 @@
----
+﻿---
 title: "Exploring Zero-Day Vulnerabilities"
-description: "A vendor-based analysis of zero-day vulnerabilities from 2006 to 2023, revealing which companies are most associated with exploitable weaknesses — and what organisations can learn from the patterns."
+description: "A vendor-based analysis of zero-day vulnerabilities from 2006 to 2023, revealing which companies are most associated with exploitable weaknesses  -  and what organisations can learn from the patterns."
 pubDate: 2023-05-17
 heroImage: "/images/zero-day-cover.svg"
 category: "Cybersecurity"
@@ -17,9 +17,9 @@ It is important to notice that the majority of total zero-day vulnerabilities be
 
 The distribution of zero-day vulnerabilities across vendors reveals which companies are most associated with high-risk exposure:
 
-- **Microsoft — 39.72%**: The largest share, unsurprising given the widespread use of Microsoft products and the complexity of their software ecosystem.
-- **Adobe — 11.3%**: Adobe's software suite, including Acrobat Reader and Photoshop, accounts for a significant portion.
-- **Apple — 6.75%** and **Google — 6.59%**: Both attract consistent attention from malicious actors.
+- **Microsoft  -  39.72%**: The largest share, unsurprising given the widespread use of Microsoft products and the complexity of their software ecosystem.
+- **Adobe  -  11.3%**: Adobe's software suite, including Acrobat Reader and Photoshop, accounts for a significant portion.
+- **Apple  -  6.75%** and **Google  -  6.59%**: Both attract consistent attention from malicious actors.
 - Smaller percentages are attributed to Cisco, Oracle, Mozilla, and JustSystems Corporation.
 
 ## Exploitation Example
@@ -32,7 +32,7 @@ The vulnerability enabled attackers to escalate privileges by exploiting a bound
 
 As reported by Google Project Zero (2022), many zero-day vulnerabilities had close associations with previously disclosed weaknesses. This suggests that more thorough investigation and patching efforts could have potentially prevented a significant portion of these exploits.
 
-> Addressing the **root cause** of vulnerabilities — not just the symptoms — is critical to reducing zero-day exposure.
+> Addressing the **root cause** of vulnerabilities  -  not just the symptoms  -  is critical to reducing zero-day exposure.
 
 ---
 

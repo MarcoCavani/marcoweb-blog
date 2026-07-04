@@ -6,7 +6,7 @@ import type { CollectionEntry } from 'astro:content'
 export async function getStaticPaths() {
   const posts = await getCollection('blog')
   return posts
-    .filter(p => p.data.category !== 'Digital Report')
+    .filter(p => p.data.category === 'Digital Report')
     .map(post => ({
       params: { slug: post.slug },
       props: post,
@@ -29,6 +29,7 @@ const { Content } = await post.render()
   author={post.data.author}
   readTime={post.data.readTime}
   tags={post.data.tags}
+  section="reports"
 >
   <Content />
 </BlogPost>

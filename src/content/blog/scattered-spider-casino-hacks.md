@@ -1,4 +1,4 @@
----
+﻿---
 title: "Scattered Spider: The Casino Hacks"
 description: "In 2023, a hacking group known as Scattered Spider or UNC3944 made headlines for its sophisticated cyberattacks on two of the largest casino companies in the United States: Caesars Entertainment and MGM Resorts International."
 pubDate: 2024-09-03
@@ -241,7 +241,7 @@ By compromising a third-party vendor, the attackers gained entry to Caesars' env
 - Stolen data included driver's licence numbers and Social Security numbers for a large proportion of members
 - Unlike MGM, Caesars did not suffer significant operational disruption
 
-**Caesars' Response:** Caesars Entertainment opted to **pay approximately USD $15 million** in ransom — reportedly half of the USD $30 million initially demanded. The payment allowed Caesars to obtain assurances that the stolen data would be deleted, though the verifiability of such assurances in ransomware scenarios is inherently limited. Caesars disclosed the breach in an SEC filing in September 2023.
+**Caesars' Response:** Caesars Entertainment opted to **pay approximately USD $15 million** in ransom  -  reportedly half of the USD $30 million initially demanded. The payment allowed Caesars to obtain assurances that the stolen data would be deleted, though the verifiability of such assurances in ransomware scenarios is inherently limited. Caesars disclosed the breach in an SEC filing in September 2023.
 
 ---
 

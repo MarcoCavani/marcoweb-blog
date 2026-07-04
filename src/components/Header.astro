@@ -26,6 +26,9 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
         <a href="/blog" class={`transition-colors hover:text-brand-light ${isActive('/blog') ? 'text-brand-light' : 'text-gray-300'}`}>
           Blog
         </a>
+        <a href="/reports" class={`transition-colors hover:text-brand-light ${isActive('/reports') ? 'text-brand-light' : 'text-gray-300'}`}>
+          Reports
+        </a>
         <a href="/about" class={`transition-colors hover:text-brand-light ${isActive('/about') ? 'text-brand-light' : 'text-gray-300'}`}>
           About
         </a>

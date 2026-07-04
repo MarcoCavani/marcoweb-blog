@@ -1,6 +1,6 @@
----
+﻿---
 title: "Governance: A Cybersecurity Lifeline for SMEs"
-description: "How cybersecurity governance frameworks help small and medium enterprises identify, assess, and manage risks — and why the most impacted businesses in Australia are often the ones with the least protection."
+description: "How cybersecurity governance frameworks help small and medium enterprises identify, assess, and manage risks  -  and why the most impacted businesses in Australia are often the ones with the least protection."
 pubDate: 2023-03-02
 heroImage: "/images/governance-smes-cover.svg"
 category: "Cybersecurity"
@@ -17,7 +17,7 @@ According to the Australian Cyber Security Centre (ACSC) and the Australian Sign
 
 According to the NIST case study on Small Enterprises (*Hotel CEO Finds Unwelcome Guests in Email Account*, n.d.), we can determine that small businesses can avoid risks that can potentially cause harm by embracing cybersecurity.
 
-In conclusion, governance is important for medium and small enterprises as it could potentially save businesses from possible disasters — providing guidance on how to protect, mitigate, or recover from cyber-attacks.
+In conclusion, governance is important for medium and small enterprises as it could potentially save businesses from possible disasters  -  providing guidance on how to protect, mitigate, or recover from cyber-attacks.
 
 ---
 

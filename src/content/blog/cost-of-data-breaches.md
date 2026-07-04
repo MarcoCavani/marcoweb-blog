@@ -1,6 +1,6 @@
----
+﻿---
 title: "Understanding the Cost of Data Breaches"
-description: "Key insights from IBM's Cost of a Data Breach report — healthcare leads at $10.1M per breach, while AI platforms, DevSecOps, and incident response teams can significantly cut costs."
+description: "Key insights from IBM's Cost of a Data Breach report  -  healthcare leads at $10.1M per breach, while AI platforms, DevSecOps, and incident response teams can significantly cut costs."
 pubDate: 2025-01-15
 heroImage: "/images/data-breach-cost-cover.svg"
 category: "Cybersecurity"
@@ -11,7 +11,7 @@ readTime: "6 min read"
 
 Businesses must recognise the cybersecurity risks they face and implement strategies to prevent data breaches, which can lead to significant disruptions and financial losses. By understanding the factors that influence costs, companies of all sizes can effectively reduce their expenditures related to data breaches.
 
-This analysis draws from IBM's [Cost of a Data Breach](https://www.ibm.com/reports/data-breach) report — based on data from **604 organisations** and feedback from **3,556 cybersecurity and business leaders** affected by breaches, compiled by IBM and the Ponemon Institute.
+This analysis draws from IBM's [Cost of a Data Breach](https://www.ibm.com/reports/data-breach) report  -  based on data from **604 organisations** and feedback from **3,556 cybersecurity and business leaders** affected by breaches, compiled by IBM and the Ponemon Institute.
 
 ---
 
@@ -24,8 +24,8 @@ The report highlights significant variation in breach costs across different ind
 | Healthcare | $9.23M | $10.10M | +9.4% |
 | Financial | $5.72M | $5.97M | +4.4% |
 | Pharmaceutical | $4.97M | $5.01M | +0.8% |
-| Technology | — | — | ↑ slight |
-| Energy | — | — | ↑ slight |
+| Technology |  -  |  -  | ↑ slight |
+| Energy |  -  |  -  | ↑ slight |
 
 Healthcare's high cost reflects the sensitivity of patient data and the operational impact of system downtime.
 

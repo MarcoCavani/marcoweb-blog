@@ -1,6 +1,6 @@
----
+﻿---
 title: "Mastering Incident Response: Key Insights from the NIST Guide"
-description: "A strategic deep-dive into NIST's Computer Security Incident Handling Guide — covering the full IR lifecycle, team structure, detection methods, prioritisation frameworks, and the power of post-incident learning."
+description: "A strategic deep-dive into NIST's Computer Security Incident Handling Guide  -  covering the full IR lifecycle, team structure, detection methods, prioritisation frameworks, and the power of post-incident learning."
 pubDate: 2026-06-15
 heroImage: "/images/incident-response-cover.svg"
 category: "Cybersecurity"
@@ -9,13 +9,13 @@ tags: ["Incident Response", "NIST", "SOC", "Blue Team", "Detection", "Containmen
 readTime: "7 min read"
 ---
 
-Understanding how to effectively handle security incidents is vital for any cybersecurity professional. The National Institute of Standards and Technology (NIST) has published one of the most authoritative guides on computer security incident handling — not just a dry manual, but a **strategic playbook** packed with practical wisdom and actionable frameworks.
+Understanding how to effectively handle security incidents is vital for any cybersecurity professional. The National Institute of Standards and Technology (NIST) has published one of the most authoritative guides on computer security incident handling  -  not just a dry manual, but a **strategic playbook** packed with practical wisdom and actionable frameworks.
 
 ---
 
 ## Why Incident Response Matters More Than Ever
 
-In our hyperconnected world, cyber threats continue to evolve — becoming more frequent, sophisticated, and disruptive. Despite best efforts to prevent breaches, no system is impervious. That's why having a robust incident response capability is non-negotiable.
+In our hyperconnected world, cyber threats continue to evolve  -  becoming more frequent, sophisticated, and disruptive. Despite best efforts to prevent breaches, no system is impervious. That's why having a robust incident response capability is non-negotiable.
 
 NIST emphasises a **formalised incident response program** that is both reactive and proactive: spotting threats early, prioritising responses wisely, and working seamlessly with internal teams and external partners like law enforcement.
 
@@ -23,10 +23,10 @@ NIST emphasises a **formalised incident response program** that is both reactive
 
 NIST frames incident response as a **continuous lifecycle**:
 
-1. **Preparation** — Build policies, plans, procedures, and team capabilities
-2. **Detection & Analysis** — Identify and confirm incidents quickly
-3. **Containment, Eradication & Recovery** — Stop the spread, remove threats, restore operations
-4. **Post-Incident Activity** — Learn, document, and improve
+1. **Preparation**  -  Build policies, plans, procedures, and team capabilities
+2. **Detection & Analysis**  -  Identify and confirm incidents quickly
+3. **Containment, Eradication & Recovery**  -  Stop the spread, remove threats, restore operations
+4. **Post-Incident Activity**  -  Learn, document, and improve
 
 This cyclical approach ensures organisations are continuously improving their defences, rather than just patching holes after damage occurs.
 
@@ -37,12 +37,12 @@ This cyclical approach ensures organisations are continuously improving their de
 NIST provides detailed advice on assembling the right team and infrastructure:
 
 ### Key Documents
-- **Incident Response Policy** — Clear rules on what constitutes an incident, roles, authority, and communication protocols
-- **Incident Response Plan** — A roadmap that aligns with your organisation's mission, outlining how the team operates, communicates, and measures effectiveness
-- **Standard Operating Procedures (SOPs)** — Step-by-step processes that minimise errors during the heat of an incident
+- **Incident Response Policy**  -  Clear rules on what constitutes an incident, roles, authority, and communication protocols
+- **Incident Response Plan**  -  A roadmap that aligns with your organisation's mission, outlining how the team operates, communicates, and measures effectiveness
+- **Standard Operating Procedures (SOPs)**  -  Step-by-step processes that minimise errors during the heat of an incident
 
 ### External Communication
-NIST highlights the nuanced need to interact with external parties — media, law enforcement, vendors, and peer response teams — each requiring tailored approaches to information sharing.
+NIST highlights the nuanced need to interact with external parties  -  media, law enforcement, vendors, and peer response teams  -  each requiring tailored approaches to information sharing.
 
 > A single point of contact for media and law enforcement helps maintain message consistency and legal compliance.
 
@@ -60,7 +60,7 @@ Detection is often the hardest part. Organisations must quickly distinguish fals
 
 **Key tools**: intrusion detection/prevention systems, antivirus alerts, file integrity checkers, and third-party monitoring services.
 
-> Technology alone isn't enough. Skilled analysts — well-versed in normal network behaviour — are essential to spot subtle anomalies.
+> Technology alone isn't enough. Skilled analysts  -  well-versed in normal network behaviour  -  are essential to spot subtle anomalies.
 
 ---
 
@@ -78,7 +78,7 @@ Not all incidents are equal. NIST advises prioritising based on:
 
 ## Containment Strategies
 
-Containment approaches vary widely — from isolating infected systems to redirecting attackers to controlled environments — always balancing **damage control with evidence preservation** for potential legal action.
+Containment approaches vary widely  -  from isolating infected systems to redirecting attackers to controlled environments  -  always balancing **damage control with evidence preservation** for potential legal action.
 
 ---
 
@@ -95,7 +95,7 @@ The guide stresses "lessons learned" meetings after incidents. Key outputs:
 
 ## Collaboration and Information Sharing
 
-No organisation is an island in cybersecurity. NIST highlights the power of information sharing networks — with industry peers, ISACs, or federal bodies like US-CERT. Coordinated responses enable:
+No organisation is an island in cybersecurity. NIST highlights the power of information sharing networks  -  with industry peers, ISACs, or federal bodies like US-CERT. Coordinated responses enable:
 
 - Faster detection
 - Shared threat intelligence

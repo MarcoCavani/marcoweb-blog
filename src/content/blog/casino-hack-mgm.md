@@ -1,6 +1,6 @@
----
+﻿---
 title: "The Casino Hack: How Scattered Spider Took Down MGM Resorts"
-description: "MGM Resorts International suffered a $100M cyberattack in 2023 — slot machines went dark, room keys failed, booking systems crashed. Here's exactly how Scattered Spider did it."
+description: "MGM Resorts International suffered a $100M cyberattack in 2023  -  slot machines went dark, room keys failed, booking systems crashed. Here's exactly how Scattered Spider did it."
 pubDate: 2024-09-03
 heroImage: "/images/casino-hack-cover.svg"
 category: "Cybersecurity"
@@ -9,7 +9,7 @@ tags: ["Scattered Spider", "MGM Resorts", "Ransomware", "Social Engineering", "B
 readTime: "6 min read"
 ---
 
-MGM Resorts International is a Nevada-based gaming and hospitality company listed on the S&P 500, operating globally. In the previous year, MGM generated approximately **$16.16 billion** in global revenue — a substantial growth curve over the past 15 years (Statista Research Department, 2024).
+MGM Resorts International is a Nevada-based gaming and hospitality company listed on the S&P 500, operating globally. In the previous year, MGM generated approximately **$16.16 billion** in global revenue  -  a substantial growth curve over the past 15 years (Statista Research Department, 2024).
 
 The scale of the enterprise and the size of its attacking surface made MGM a prime target for **Scattered Spider** (UNC3944), who in 2023 breached through the company network.
 
@@ -21,7 +21,7 @@ The scale of the enterprise and the size of its attacking surface made MGM a pri
 Scattered Spider gathered publicly accessible information on **LinkedIn** about MGM personnel, targeting employees with high Okta privileges.
 
 ### 2. Vishing (Voice Phishing)
-The adversary engaged in a **vishing campaign** — impersonating personnel to lure IT help desk employees into resetting the MFA of targeted accounts.
+The adversary engaged in a **vishing campaign**  -  impersonating personnel to lure IT help desk employees into resetting the MFA of targeted accounts.
 
 ### 3. Identity Provider Takeover
 Scattered Spider gained access to Okta and configured a **new Identity Provider (IdP)** in MGM's Okta Tenant, securing permanent access within the company system. The new IdP granted highly privileged access to MGM's **Azure environment**.
@@ -52,9 +52,9 @@ On **September 12th, 2023**, MGM announced the breach in a [K-8 SEC filing](http
 
 ## Read the Full Report
 
-For a comprehensive deep-dive into Scattered Spider's tactics, techniques, and procedures — including their attack on Caesars Entertainment — read the full intelligence report:
+For a comprehensive deep-dive into Scattered Spider's tactics, techniques, and procedures  -  including their attack on Caesars Entertainment  -  read the full intelligence report:
 
-→ [Scattered Spider: The Casino Hacks — Full Report](/blog/scattered-spider-casino-hacks)
+→ [Scattered Spider: The Casino Hacks  -  Full Report](/blog/scattered-spider-casino-hacks)
 
 ---
 

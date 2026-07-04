@@ -1,6 +1,6 @@
----
+﻿---
 title: "The Growing Threat of Phishing in 2024: A Gateway Crime"
-description: "Nearly 1.9 million phishing attacks in a single year, $4.5M average breach recovery cost, and seniors losing $3.4B — the data on phishing in 2024 is staggering. Here's what organisations must do."
+description: "Nearly 1.9 million phishing attacks in a single year, $4.5M average breach recovery cost, and seniors losing $3.4B  -  the data on phishing in 2024 is staggering. Here's what organisations must do."
 pubDate: 2024-12-28
 heroImage: "/images/phishing-cover.svg"
 category: "Cybersecurity"
@@ -15,9 +15,9 @@ Phishing continues to be one of the most insidious and widespread forms of cyber
 
 ## The Rise in Phishing Attacks
 
-In 2023, the world saw an increase of **47,560 phishing attacks** over the previous year. While this is the smallest increase since monitoring began in May 2020, the sheer scale is staggering — **1,897,952 phishing attacks** reported between May 2023 and April 2024 (Aaron et al., 2024).
+In 2023, the world saw an increase of **47,560 phishing attacks** over the previous year. While this is the smallest increase since monitoring began in May 2020, the sheer scale is staggering  -  **1,897,952 phishing attacks** reported between May 2023 and April 2024 (Aaron et al., 2024).
 
-> **More than 90% of all cyberattacks begin with phishing** — making it the gateway to larger, more damaging attacks such as data breaches and financial fraud (CISA, n.d.).
+> **More than 90% of all cyberattacks begin with phishing**  -  making it the gateway to larger, more damaging attacks such as data breaches and financial fraud (CISA, n.d.).
 
 ---
 
@@ -25,11 +25,11 @@ In 2023, the world saw an increase of **47,560 phishing attacks** over the previ
 
 The cost of phishing attacks is enormous:
 
-- **$4.5 million** — average recovery cost of a single phishing-related data breach (IBM, 2024)
-- **$3 billion** — losses from Business Email Compromise (BEC) in the U.S. alone in 2022 (FBI, 2022)
-- **$3.4 billion** — losses suffered by U.S. seniors aged 60+ in 2023, three times higher than losses by adults aged 30–39 (Aaron et al., 2024)
+- **$4.5 million**  -  average recovery cost of a single phishing-related data breach (IBM, 2024)
+- **$3 billion**  -  losses from Business Email Compromise (BEC) in the U.S. alone in 2022 (FBI, 2022)
+- **$3.4 billion**  -  losses suffered by U.S. seniors aged 60+ in 2023, three times higher than losses by adults aged 30–39 (Aaron et al., 2024)
 
-The elderly are increasingly targeted due to limited online security knowledge — a growing public concern.
+The elderly are increasingly targeted due to limited online security knowledge  -  a growing public concern.
 
 ---
 
@@ -47,15 +47,15 @@ Phishing attacks target **human behaviour and psychological weaknesses**, often 
 
 ## Conclusion: The Path Forward
 
-The data is clear — this problem is only growing, and its impact is far-reaching. Phishers are becoming more sophisticated, and the cost of recovery continues to rise.
+The data is clear  -  this problem is only growing, and its impact is far-reaching. Phishers are becoming more sophisticated, and the cost of recovery continues to rise.
 
 To protect themselves, businesses and individuals must:
 
-1. **Remain vigilant** — question unexpected emails, links, and requests
-2. **Implement MFA** — reduce the impact of credential theft
-3. **Train employees** — human awareness is the most effective control
-4. **Use email filtering** — block phishing attempts before they reach inboxes
-5. **Monitor and respond** — detect phishing campaigns early
+1. **Remain vigilant**  -  question unexpected emails, links, and requests
+2. **Implement MFA**  -  reduce the impact of credential theft
+3. **Train employees**  -  human awareness is the most effective control
+4. **Use email filtering**  -  block phishing attempts before they reach inboxes
+5. **Monitor and respond**  -  detect phishing campaigns early
 
 ---
 
