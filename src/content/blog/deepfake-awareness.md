@@ -9,7 +9,7 @@ tags: ["Deepfake", "AI", "Social Engineering", "Fraud", "Machine Learning", "GAN
 readTime: "5 min read"
 ---
 
-Fake content has existed for several years, and in the past, detecting forged content was relatively easy. Today, however, due to advancements in **Artificial Intelligence (AI)** and **Machine Learning (ML)**, it is becoming increasingly difficult to distinguish between fiction and reality  -  raising concerns about the potential weaponisation of deepfakes (Gil et al., 2023).
+Fake content has existed for several years, and in the past, detecting forged content was relatively easy. Today, however, due to advancements in **Artificial Intelligence (AI)** and **Machine Learning (ML)**, it is becoming increasingly difficult to distinguish between fiction and reality, raising concerns about the potential weaponisation of deepfakes (Gil et al., 2023).
 
 ---
 
@@ -17,10 +17,10 @@ Fake content has existed for several years, and in the past, detecting forged co
 
 Deepfakes use a combination of AI algorithms, including **Generative Adversarial Networks (GANs)**, to create synthetic media. The technology employs two competing AI algorithms:
 
-- **The Generator**  -  creates a fake video or audio clip
-- **The Discriminator**  -  tries to determine if it's real by comparing it against its training data
+- **The Generator**: creates a fake video or audio clip
+- **The Discriminator**: tries to determine if it's real by comparing it against its training data
 
-They continue this process until the Generator finally convinces the Discriminator that the fake is real. The algorithm is trained on images and/or audio files of the subject using ML models  -  the more accurate the dataset, the better the results (Wang et al., 2020, p. 2).
+They continue this process until the Generator finally convinces the Discriminator that the fake is real. The algorithm is trained on images and/or audio files of the subject using ML models; the more accurate the dataset, the better the results (Wang et al., 2020, p. 2).
 
 ---
 
@@ -28,7 +28,7 @@ They continue this process until the Generator finally convinces the Discriminat
 
 There is growing evidence that AI is being used by malicious actors in criminal activities at increasing rates (Sumsub, 2023).
 
-In early 2020, a phone call was made to the branch manager of a Japanese company in Hong Kong using the **cloned voice** of the parent business director based in the U.A.E. The branch manager was convinced that the company would acquire another firm and transferred **$35 million** to the criminal organisation  -  raising global concern about AI's potential for cybercrime (Brewster, 2021).
+In early 2020, a phone call was made to the branch manager of a Japanese company in Hong Kong using the **cloned voice** of the parent business director based in the U.A.E. The branch manager was convinced that the company would acquire another firm and transferred **$35 million** to the criminal organisation, raising global concern about AI's potential for cybercrime (Brewster, 2021).
 
 ---
 

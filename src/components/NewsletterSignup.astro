@@ -33,7 +33,7 @@ const { compact = false } = Astro.props
   <div class="bg-brand-navy rounded-2xl p-8 text-white text-center">
     <h3 class="text-2xl font-bold mb-2">Stay ahead of cyber threats</h3>
     <p class="text-gray-300 mb-6 max-w-md mx-auto">
-      Get the latest cybersecurity reports, threat intelligence, and IT governance insights delivered straight to your inbox. No spam — unsubscribe any time.
+      Get the latest cybersecurity reports, threat intelligence, and IT governance insights delivered straight to your inbox. No spam. Unsubscribe any time.
     </p>
 
     <div id="nl-form-wrap">
@@ -55,7 +55,7 @@ const { compact = false } = Astro.props
         </button>
       </form>
       <p id="nl-error" class="text-red-400 text-xs mt-3" style="display:none">
-        Something went wrong — please try again.
+        Something went wrong. Please try again.
       </p>
     </div>
 
@@ -106,7 +106,7 @@ const { compact = false } = Astro.props
     } catch {
       btn.disabled = false
       btn.textContent = 'Subscribe Free'
-      errorEl.textContent = 'Something went wrong — please try again.'
+      errorEl.textContent = 'Something went wrong. Please try again.'
       errorEl.style.display = 'block'
     }
   })

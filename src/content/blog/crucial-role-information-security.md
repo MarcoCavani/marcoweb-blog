@@ -1,6 +1,6 @@
 ﻿---
 title: "The Crucial Role of Information Security in Critical Infrastructure"
-description: "An in-depth analysis of why information security is vital for critical infrastructure operators  -  covering CIA triad principles, classification frameworks, and the real-world consequences of cyber disruptions."
+description: "An in-depth analysis of why information security is vital for critical infrastructure operators, covering CIA triad principles, classification frameworks, and the real-world consequences of cyber disruptions."
 pubDate: 2023-10-05
 heroImage: "/images/infosec-critical-cover.svg"
 category: "Information Security"
@@ -9,7 +9,7 @@ tags: ["Information Security", "Critical Infrastructure", "CIA Triad", "NIST", "
 readTime: "10 min read"
 ---
 
-In the digital age, information has become a valuable asset, and its protection is vital for individuals, businesses, and organizations. Information security  -  holding principles such as confidentiality, integrity, and availability  -  plays a crucial role in safeguarding sensitive data from unauthorized access, manipulation, or loss.
+In the digital age, information has become a valuable asset, and its protection is vital for individuals, businesses, and organizations. Information security, encompassing principles such as confidentiality, integrity, and availability, plays a crucial role in safeguarding sensitive data from unauthorized access, manipulation, or loss.
 
 As the world becomes increasingly connected through digital networks, the importance of information security cannot be overstated (Fruhlinger, 2020).
 
@@ -19,7 +19,7 @@ As the world becomes increasingly connected through digital networks, the import
 
 Information security, as defined by the National Institute of Standards and Technology (NIST), involves safeguarding information and information systems from unauthorized access, use, disclosure, disruption, modification, or destruction to ensure three key objectives: **confidentiality, integrity, and availability**.
 
-> "The protection of information and information systems from unauthorized access, use, disclosure, disruption, modification, or destruction to provide confidentiality, integrity, and availability."  -  NIST
+> "The protection of information and information systems from unauthorized access, use, disclosure, disruption, modification, or destruction to provide confidentiality, integrity, and availability." (NIST)
 
 ---
 
@@ -27,9 +27,9 @@ Information security, as defined by the National Institute of Standards and Tech
 
 The foundation of data security lies in the **CIA Triad**:
 
-- **Confidentiality**  -  defines what information is confidential and ensures it is accessible only to authorised individuals.
-- **Integrity**  -  ensures data remains unaltered from its original form and is authentic and accurate.
-- **Availability**  -  ensures authorised users can access information when needed.
+- **Confidentiality**: defines what information is confidential and ensures it is accessible only to authorised individuals.
+- **Integrity**: ensures data remains unaltered from its original form and is authentic and accurate.
+- **Availability**: ensures authorised users can access information when needed.
 
 ---
 
@@ -47,7 +47,7 @@ Critical infrastructure refers to the essential systems, assets, and services vi
 
 **Western Power**, for example, is responsible for providing electricity to 2.3 million individuals in Western Australia. Any operational problems or interruptions have the potential to impact millions of people and essential sectors that rely on reliable energy supply (Western Power, 2022).
 
-The interconnectedness between various critical infrastructure systems makes them susceptible to cascading effects  -  a single breach in one system can trigger disruptions across multiple sectors (Palleti et al., 2021).
+The interconnectedness between various critical infrastructure systems makes them susceptible to cascading effects; a single breach in one system can trigger disruptions across multiple sectors (Palleti et al., 2021).
 
 ---
 

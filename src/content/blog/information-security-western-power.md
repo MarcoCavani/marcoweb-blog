@@ -38,7 +38,7 @@ Western Power is a state-owned enterprise that operates in Western Australia (WA
 
 Western Power has a structured organisation consisting of seven distinct business units. Each of these units is led by an Executive Manager and is further composed of several Heads of Function. These roles collectively operate under the overarching leadership of the Chief Executive (Western Power, 2022).
 
-Western Power is responsible for constructing, up-keeping, and overseeing the electrical infrastructure in the Southwest Interconnect System (SWIS) area that covers a range of approximately 255,000 square kilometres, reaching from Perth to Albany in the south, Kalgoorlie in the east, and Kalbarri in the north  -  making Western Power the principal licenced distributor in the state (Australian Energy Council, 2018).
+Western Power is responsible for constructing, up-keeping, and overseeing the electrical infrastructure in the Southwest Interconnect System (SWIS) area that covers a range of approximately 255,000 square kilometres, reaching from Perth to Albany in the south, Kalgoorlie in the east, and Kalbarri in the north, making Western Power the principal licenced distributor in the state (Australian Energy Council, 2018).
 
 Their main goal is to ensure the proper functioning of their distribution network to supply energy continuously to well over 2 million customers, which are heavily relying on their operations and success (Western Power, 2023).
 
@@ -82,10 +82,10 @@ The table below shows the list of Western Power stakeholders along with the rela
 
 The Power & Interest Grid categorises stakeholders into four quadrants:
 
-- **Manage Closely (High Power / High Interest):** Minister for Energy  -  primary decision-maker with full oversight
-- **Keep Satisfied (High Power / Low Interest):** Suppliers, industrial customers  -  critical for operations, engaged on specific issues
-- **Keep Informed (Low Power / High Interest):** Workforce, communities, critical infrastructure  -  directly affected, require regular communication
-- **Monitor (Low Power / Low Interest):** General public, environmental groups  -  secondary stakeholders requiring periodic engagement
+- **Manage Closely (High Power / High Interest):** Minister for Energy: primary decision-maker with full oversight
+- **Keep Satisfied (High Power / Low Interest):** Suppliers, industrial customers: critical for operations, engaged on specific issues
+- **Keep Informed (Low Power / High Interest):** Workforce, communities, critical infrastructure: directly affected, require regular communication
+- **Monitor (Low Power / Low Interest):** General public, environmental groups: secondary stakeholders requiring periodic engagement
 
 #### Summary
 
@@ -134,7 +134,7 @@ Information flows within Western Power can be characterised along two primary ax
 
 Information assets are prioritised based on three factors:
 
-1. **Criticality to Operations:** SCADA and grid control data are the most critical  -  their compromise or disruption could directly affect power supply to 2 million customers
+1. **Criticality to Operations:** SCADA and grid control data are the most critical; their compromise or disruption could directly affect power supply to 2 million customers
 2. **Regulatory Obligation:** Customer personal information and regulatory compliance records carry significant legal obligations under the Privacy Act 1988 and sector-specific regulations
 3. **Commercial Sensitivity:** Financial forecasts, procurement strategies, and vendor contracts carry commercial sensitivity that could be exploited by competitors or bad actors
 
@@ -144,7 +144,7 @@ Information assets are prioritised based on three factors:
 
 ### Threat 1 – Cyberattacks
 
-**Description:** Western Power, as a critical infrastructure operator, represents a high-value target for both nation-state threat actors and financially motivated cybercriminals. The potential consequences of a successful cyberattack extend far beyond Western Power itself  -  a disruption to the SWIS power grid could affect hospitals, water treatment facilities, transport networks, and millions of Western Australian residents.
+**Description:** Western Power, as a critical infrastructure operator, represents a high-value target for both nation-state threat actors and financially motivated cybercriminals. The potential consequences of a successful cyberattack extend far beyond Western Power itself; a disruption to the SWIS power grid could affect hospitals, water treatment facilities, transport networks, and millions of Western Australian residents.
 
 **Key Attack Vectors:**
 
@@ -154,19 +154,19 @@ Information assets are prioritised based on three factors:
 
 *Phishing and Social Engineering:* As demonstrated by the Scattered Spider attacks on MGM and Caesars, social engineering remains highly effective. Employees with access to sensitive systems may be targeted through spear-phishing emails, SMS phishing, or voice phishing (vishing) attacks designed to harvest credentials.
 
-**Risk Level:** High  -  the combination of high-value target profile, expanding digital attack surface (smart meters, cloud integration), and potential for cascading societal impact places this threat at the highest priority tier.
+**Risk Level:** High, owing to the combination of high-value target profile, expanding digital attack surface (smart meters, cloud integration), and potential for cascading societal impact.
 
 ---
 
 ### Threat 2 – Insiders
 
-**Description:** Insider threats  -  whether malicious, negligent, or compromised  -  represent a persistent and difficult-to-detect risk for any large organisation. Western Power's distributed workforce, including contractors and third-party vendors with system access, amplifies this risk.
+**Description:** Insider threats, whether malicious, negligent, or compromised, represent a persistent and difficult-to-detect risk for any large organisation. Western Power's distributed workforce, including contractors and third-party vendors with system access, amplifies this risk.
 
 **Categories of Insider Threat:**
 
 *Malicious Insiders:* Employees or contractors who deliberately misuse their access for financial gain, sabotage, or espionage. This includes individuals who may be recruited by external threat actors or who act on personal grievances.
 
-*Negligent Insiders:* Staff who inadvertently create security risks through careless behaviour  -  such as falling victim to phishing attacks, using weak passwords, sharing credentials, or connecting unauthorised devices to corporate networks.
+*Negligent Insiders:* Staff who inadvertently create security risks through careless behaviour, such as falling victim to phishing attacks, using weak passwords, sharing credentials, or connecting unauthorised devices to corporate networks.
 
 *Compromised Insiders:* Legitimate employees whose credentials have been stolen by external attackers, who then operate within the organisation under the guise of a trusted identity.
 
@@ -176,7 +176,7 @@ Information assets are prioritised based on three factors:
 - Repeated failed login attempts followed by successful access
 - Accessing systems or data outside the scope of normal role requirements
 
-**Risk Level:** Medium-High  -  difficult to detect, can bypass perimeter controls, and may have access to both IT and OT environments.
+**Risk Level:** Medium-High, difficult to detect, can bypass perimeter controls, and may have access to both IT and OT environments.
 
 ---
 
@@ -210,13 +210,13 @@ This post is a summary of the full **Information Security Analysis for Western P
 
 *Supply Chain Disruption:* Climate-related disruptions to supply chains can affect the availability of critical spare parts and equipment, extending recovery times following physical infrastructure damage.
 
-**Risk Level:** Medium and growing  -  climate risk intersects with cybersecurity and operational risk in ways that require integrated planning.
+**Risk Level:** Medium and growing; climate risk intersects with cybersecurity and operational risk in ways that require integrated planning.
 
 ---
 
 ## Importance of Information Security
 
-Information security is not a peripheral concern for Western Power  -  it is foundational to the organisation's ability to fulfil its core mission of reliable energy delivery.
+Information security is not a peripheral concern for Western Power; it is foundational to the organisation's ability to fulfil its core mission of reliable energy delivery.
 
 The consequences of information security failures for Western Power are uniquely severe:
 
@@ -267,9 +267,9 @@ The consequences of information security failures for Western Power are uniquely
 **Objective:** Limit the blast radius of any successful intrusion by enforcing strict access control across IT and OT environments.
 
 **Actions:**
-- Implement the principle of **least privilege** across all systems  -  users should have access only to what is required for their specific role
+- Implement the principle of **least privilege** across all systems; users should have access only to what is required for their specific role
 - Deploy **Privileged Access Management (PAM)** solutions to monitor, record, and control privileged account usage
-- Enforce **phishing-resistant Multi-Factor Authentication (MFA)** for all remote access and privileged account logins  -  preferably using FIDO2 hardware tokens
+- Enforce **phishing-resistant Multi-Factor Authentication (MFA)** for all remote access and privileged account logins, preferably using FIDO2 hardware tokens
 - Implement **network segmentation** to isolate the OT/SCADA environment from the corporate IT network, with a clearly defined demilitarised zone (DMZ) for any necessary data exchange
 - Review and rationalise third-party vendor access, implementing just-in-time access provisioning for contractors
 
@@ -294,7 +294,7 @@ The consequences of information security failures for Western Power are uniquely
 
 ### Recommendation 5 – Enhance Resilience
 
-**Objective:** Build comprehensive resilience capabilities that enable Western Power to absorb, adapt to, and rapidly recover from major disruptions  -  whether cyber, physical, or natural.
+**Objective:** Build comprehensive resilience capabilities that enable Western Power to absorb, adapt to, and rapidly recover from major disruptions, whether cyber, physical, or natural.
 
 **Actions:**
 - Develop and maintain a **Cyber Incident Response Plan (CIRP)** aligned to the ACSC's Cyber Incident Response Planning Guide, with clearly defined roles, escalation paths, and communication protocols

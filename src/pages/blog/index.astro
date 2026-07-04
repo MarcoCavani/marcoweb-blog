@@ -13,7 +13,7 @@ const posts = (await getCollection('blog'))
 ---
 
 <Layout
-  title="Blog — MarcoWeb"
+  title="Blog | MarcoWeb"
   description="Cybersecurity reports, threat intelligence, and IT governance analysis from Marco Cavani."
 >
   <Header />
@@ -46,7 +46,7 @@ const posts = (await getCollection('blog'))
     </div>
 
     {posts.length === 0 && (
-      <p class="text-center text-gray-400 py-20">No posts yet — check back soon.</p>
+      <p class="text-center text-gray-400 py-20">No posts yet. Check back soon.</p>
     )}
 
     <!-- CTA -->

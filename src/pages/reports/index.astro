@@ -12,7 +12,7 @@ const reports = (await getCollection('blog'))
 ---
 
 <Layout
-  title="Digital Reports — MarcoWeb"
+  title="Digital Reports | MarcoWeb"
   description="In-depth cybersecurity and IT governance digital reports by Marco Cavani, available on request."
 >
   <Header />
@@ -42,7 +42,7 @@ const reports = (await getCollection('blog'))
     </div>
 
     {reports.length === 0 && (
-      <p class="text-center text-gray-400 py-20">No reports yet — check back soon.</p>
+      <p class="text-center text-gray-400 py-20">No reports yet. Check back soon.</p>
     )}
 
     <div class="mt-16">
