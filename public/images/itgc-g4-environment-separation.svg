@@ -1,0 +1,48 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a0f00"/>
+      <stop offset="100%" stop-color="#5c3200"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <!-- Three environment boxes: DEV TEST PROD -->
+  <rect x="85" y="220" width="70" height="60" fill="none" stroke="#22c55e" stroke-width="1.5" rx="4"/>
+  <text x="120" y="244" fill="#86efac" font-size="9" text-anchor="middle" font-weight="600">DEV</text>
+  <text x="120" y="256" fill="#86efac" font-size="8" text-anchor="middle">Test data</text>
+  <text x="120" y="266" fill="#86efac" font-size="8" text-anchor="middle">No prod</text>
+  <!-- Arrow DEV to TEST -->
+  <line x1="160" y1="250" x2="185" y2="250" stroke="#f59e0b" stroke-width="1.5"/>
+  <polygon points="185,246 195,250 185,254" fill="#f59e0b"/>
+  <rect x="195" y="220" width="70" height="60" fill="none" stroke="#f59e0b" stroke-width="1.5" rx="4"/>
+  <text x="230" y="244" fill="#fbbf24" font-size="9" text-anchor="middle" font-weight="600">UAT</text>
+  <text x="230" y="256" fill="#fbbf24" font-size="8" text-anchor="middle">Masked data</text>
+  <text x="230" y="266" fill="#fbbf24" font-size="8" text-anchor="middle">Approved</text>
+  <!-- Arrow UAT to PROD with warning -->
+  <line x1="270" y1="250" x2="295" y2="250" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+  <text x="282" y="244" fill="#ef4444" font-size="14">✗</text>
+  <rect x="300" y="220" width="70" height="60" fill="none" stroke="#ef4444" stroke-width="2" rx="4"/>
+  <text x="335" y="244" fill="#fca5a5" font-size="9" text-anchor="middle" font-weight="600">PROD</text>
+  <text x="335" y="256" fill="#fca5a5" font-size="8" text-anchor="middle">LIVE DATA</text>
+  <text x="335" y="266" fill="#fca5a5" font-size="8" text-anchor="middle">DIRECT!</text>
+  <!-- Separation gap marker -->
+  <rect x="85" y="302" width="285" height="24" fill="#ef4444" fill-opacity="0.1" rx="3"/>
+  <text x="227" y="317" fill="#fca5a5" font-size="9" text-anchor="middle" font-weight="600">DEVELOPER HAS DIRECT PROD ACCESS · CHANGE BYPASS</text>
+  <!-- Three labels below -->
+  <text x="120" y="350" fill="#86efac" font-size="8" text-anchor="middle">CONTROLLED</text>
+  <text x="230" y="350" fill="#fbbf24" font-size="8" text-anchor="middle">CONTROLLED</text>
+  <text x="335" y="350" fill="#ef4444" font-size="8" text-anchor="middle">UNSEPARATED</text>
+  <text x="310" y="180" fill="#fbbf24" font-size="13" font-weight="600" letter-spacing="4" opacity="0.9">GROUP G · CHANGE MANAGEMENT CONTROLS</text>
+  <text x="310" y="265" fill="#ffffff" font-size="43" font-weight="800" letter-spacing="-1">Environment Separation</text>
+  <text x="310" y="320" fill="#fde68a" font-size="20" font-weight="400" opacity="0.85">Dev, UAT and Production Environment Boundaries</text>
+  <rect x="310" y="352" width="60" height="4" fill="url(#accent)" rx="2"/>
+  <text x="310" y="403" fill="#fbbf24" font-size="15" font-weight="500" letter-spacing="2" opacity="0.8">IT GENERAL CONTROLS · IT AUDIT</text>
+  <text x="310" y="500" fill="#ffffff" font-size="16" opacity="0.5" letter-spacing="1">marcoweb.org</text>
+</svg>

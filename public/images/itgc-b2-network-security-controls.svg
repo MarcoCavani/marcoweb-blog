@@ -1,0 +1,36 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#051a1a"/>
+      <stop offset="100%" stop-color="#0d3d3d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <!-- Shield with rules -->
+  <path d="M190 195 L280 215 L280 285 Q280 340 190 360 Q100 340 100 285 L100 215 Z" fill="none" stroke="#14b8a6" stroke-width="2.5"/>
+  <line x1="120" y1="255" x2="260" y2="255" stroke="#14b8a6" stroke-opacity="0.4" stroke-width="1"/>
+  <line x1="120" y1="280" x2="260" y2="280" stroke="#14b8a6" stroke-opacity="0.4" stroke-width="1"/>
+  <line x1="120" y1="305" x2="260" y2="305" stroke="#14b8a6" stroke-opacity="0.4" stroke-width="1"/>
+  <!-- PERMIT -->
+  <rect x="120" y="243" width="55" height="12" fill="#14b8a6" fill-opacity="0.3" rx="2"/>
+  <text x="148" y="252" fill="#2dd4bf" font-size="8" text-anchor="middle">PERMIT</text>
+  <!-- PERMIT -->
+  <rect x="120" y="268" width="55" height="12" fill="#14b8a6" fill-opacity="0.3" rx="2"/>
+  <text x="148" y="277" fill="#2dd4bf" font-size="8" text-anchor="middle">PERMIT</text>
+  <!-- DENY -->
+  <rect x="120" y="293" width="55" height="12" fill="#ef4444" fill-opacity="0.3" rx="2"/>
+  <text x="148" y="302" fill="#fca5a5" font-size="8" text-anchor="middle">DENY</text>
+  <text x="310" y="180" fill="#2dd4bf" font-size="13" font-weight="600" letter-spacing="4" opacity="0.9">GROUP B · CONTROL B.2</text>
+  <text x="310" y="265" fill="#ffffff" font-size="46" font-weight="800" letter-spacing="-1">Network Security Controls</text>
+  <text x="310" y="320" fill="#99f6e4" font-size="22" font-weight="400" opacity="0.85">Firewalls, IDS/IPS and Egress Filtering</text>
+  <rect x="310" y="355" width="60" height="4" fill="url(#accent)" rx="2"/>
+  <text x="310" y="410" fill="#2dd4bf" font-size="15" font-weight="500" letter-spacing="2" opacity="0.8">IT GENERAL CONTROLS · IT AUDIT</text>
+  <text x="310" y="500" fill="#ffffff" font-size="16" opacity="0.5" letter-spacing="1">marcoweb.org</text>
+</svg>

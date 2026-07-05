@@ -1,0 +1,36 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#1a2f6e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <!-- App role assignment icon -->
+  <rect x="80" y="215" width="270" height="195" fill="none" stroke="#6366f1" stroke-width="1.5" rx="6" stroke-opacity="0.6"/>
+  <text x="215" y="235" fill="#818cf8" font-size="11" text-anchor="middle" font-weight="600">SAP ROLE ASSIGNMENT</text>
+  <line x1="80" y1="245" x2="350" y2="245" stroke="#6366f1" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="95" y="263" fill="#a5b4fc" font-size="10">User: J.SMITH</text>
+  <text x="95" y="281" fill="#a5b4fc" font-size="10">Org Unit: Finance</text>
+  <text x="95" y="299" fill="#a5b4fc" font-size="10" opacity="0.7">Roles Assigned:</text>
+  <rect x="95" y="308" width="120" height="14" fill="#6366f1" fill-opacity="0.2" rx="2"/>
+  <text x="103" y="319" fill="#818cf8" font-size="9">Z_FINREPORT_VIEW</text>
+  <rect x="95" y="328" width="130" height="14" fill="#6366f1" fill-opacity="0.2" rx="2"/>
+  <text x="103" y="339" fill="#818cf8" font-size="9">Z_AP_INVOICE_POST</text>
+  <rect x="95" y="348" width="145" height="14" fill="#ef4444" fill-opacity="0.2" rx="2"/>
+  <text x="103" y="359" fill="#fca5a5" font-size="9">Z_AP_INVOICE_APPROVE !</text>
+  <text x="95" y="383" fill="#fbbf24" font-size="9">SoD CONFLICT DETECTED</text>
+  <text x="310" y="180" fill="#818cf8" font-size="13" font-weight="600" letter-spacing="4" opacity="0.9">GROUPS D / E / F · APPLICATION CONTROLS</text>
+  <text x="310" y="265" fill="#ffffff" font-size="46" font-weight="800" letter-spacing="-1">App New User Access</text>
+  <text x="310" y="320" fill="#c7d2fe" font-size="20" font-weight="400" opacity="0.85">Role-Based Provisioning in Finance and ERP Systems</text>
+  <rect x="310" y="352" width="60" height="4" fill="url(#accent)" rx="2"/>
+  <text x="310" y="403" fill="#818cf8" font-size="15" font-weight="500" letter-spacing="2" opacity="0.8">IT GENERAL CONTROLS · IT AUDIT</text>
+  <text x="310" y="500" fill="#ffffff" font-size="16" opacity="0.5" letter-spacing="1">marcoweb.org</text>
+</svg>

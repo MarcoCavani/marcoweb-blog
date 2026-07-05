@@ -1,0 +1,40 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0a1e"/>
+      <stop offset="100%" stop-color="#2d1b5e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <!-- User with X / revoked access -->
+  <circle cx="170" cy="240" r="35" fill="none" stroke="#ef4444" stroke-width="2" stroke-opacity="0.8"/>
+  <circle cx="170" cy="230" r="16" fill="none" stroke="#fca5a5" stroke-width="2" stroke-opacity="0.7"/>
+  <path d="M134 272 Q134 252 170 252 Q206 252 206 272" fill="none" stroke="#fca5a5" stroke-width="2" stroke-opacity="0.7"/>
+  <!-- Revocation X -->
+  <line x1="140" y1="210" x2="200" y2="270" stroke="#ef4444" stroke-width="3"/>
+  <line x1="200" y1="210" x2="140" y2="270" stroke="#ef4444" stroke-width="3"/>
+  <!-- Checklist -->
+  <rect x="95" y="295" width="190" height="120" fill="none" stroke="#8b5cf6" stroke-width="1.5" rx="4" stroke-opacity="0.6"/>
+  <text x="190" y="313" fill="#c4b5fd" font-size="10" text-anchor="middle">OFFBOARDING CHECKLIST</text>
+  <circle cx="112" cy="328" r="6" fill="#22c55e" fill-opacity="0.5"/>
+  <text x="125" y="332" fill="#a78bfa" font-size="9">AD account disabled</text>
+  <circle cx="112" cy="346" r="6" fill="#22c55e" fill-opacity="0.5"/>
+  <text x="125" y="350" fill="#a78bfa" font-size="9">VPN access revoked</text>
+  <circle cx="112" cy="364" r="6" fill="#22c55e" fill-opacity="0.5"/>
+  <text x="125" y="368" fill="#a78bfa" font-size="9">Email disabled</text>
+  <circle cx="112" cy="382" r="6" fill="#ef4444" fill-opacity="0.5"/>
+  <text x="125" y="386" fill="#fca5a5" font-size="9">App access: PENDING</text>
+  <text x="310" y="180" fill="#a78bfa" font-size="13" font-weight="600" letter-spacing="4" opacity="0.9">GROUP C · CONTROL C.3</text>
+  <text x="310" y="265" fill="#ffffff" font-size="58" font-weight="800" letter-spacing="-1">Termination</text>
+  <text x="310" y="320" fill="#c4b5fd" font-size="22" font-weight="400" opacity="0.85">Timely Access Revocation and Offboarding Process</text>
+  <rect x="310" y="355" width="60" height="4" fill="url(#accent)" rx="2"/>
+  <text x="310" y="410" fill="#a78bfa" font-size="15" font-weight="500" letter-spacing="2" opacity="0.8">IT GENERAL CONTROLS · IT AUDIT</text>
+  <text x="310" y="500" fill="#ffffff" font-size="16" opacity="0.5" letter-spacing="1">marcoweb.org</text>
+</svg>

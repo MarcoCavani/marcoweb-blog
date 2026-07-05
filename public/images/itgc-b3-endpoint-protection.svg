@@ -1,0 +1,33 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#051a1a"/>
+      <stop offset="100%" stop-color="#0d3d3d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <!-- Laptop/endpoint icon -->
+  <rect x="100" y="240" width="180" height="110" fill="none" stroke="#14b8a6" stroke-width="2.5" rx="8"/>
+  <rect x="115" y="255" width="150" height="80" fill="#14b8a6" fill-opacity="0.08" rx="4"/>
+  <rect x="80" y="352" width="220" height="12" fill="none" stroke="#14b8a6" stroke-width="2" rx="3"/>
+  <!-- virus/alert on screen -->
+  <circle cx="190" cy="295" r="25" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444" stroke-width="2"/>
+  <text x="190" y="291" fill="#fca5a5" font-size="22" text-anchor="middle">!</text>
+  <text x="190" y="310" fill="#fca5a5" font-size="9" text-anchor="middle">THREAT</text>
+  <!-- blocked X -->
+  <line x1="180" y1="295" x2="200" y2="315" stroke="#14b8a6" stroke-width="2.5" opacity="0.8"/>
+  <line x1="200" y1="295" x2="180" y2="315" stroke="#14b8a6" stroke-width="2.5" opacity="0.8"/>
+  <text x="310" y="180" fill="#2dd4bf" font-size="13" font-weight="600" letter-spacing="4" opacity="0.9">GROUP B · CONTROL B.3</text>
+  <text x="310" y="265" fill="#ffffff" font-size="52" font-weight="800" letter-spacing="-1">Endpoint Protection</text>
+  <text x="310" y="320" fill="#99f6e4" font-size="22" font-weight="400" opacity="0.85">EDR, Patching and Endpoint Security Baselines</text>
+  <rect x="310" y="355" width="60" height="4" fill="url(#accent)" rx="2"/>
+  <text x="310" y="410" fill="#2dd4bf" font-size="15" font-weight="500" letter-spacing="2" opacity="0.8">IT GENERAL CONTROLS · IT AUDIT</text>
+  <text x="310" y="500" fill="#ffffff" font-size="16" opacity="0.5" letter-spacing="1">marcoweb.org</text>
+</svg>

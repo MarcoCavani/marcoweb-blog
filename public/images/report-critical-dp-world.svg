@@ -1,0 +1,46 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a0505"/>
+      <stop offset="100%" stop-color="#3d0f0f"/>
+    </linearGradient>
+    <linearGradient id="band" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="8" fill="url(#band)"/>
+  <rect width="1200" height="8" y="622" fill="url(#band)"/>
+  <text x="60" y="60" fill="#ef4444" font-size="13" font-weight="600" letter-spacing="4">CRITICAL INFRASTRUCTURE REPORT · PORT AND LOGISTICS</text>
+  <line x1="60" y1="70" x2="1140" y2="70" stroke="#ef4444" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="60" y="145" fill="#ffffff" font-size="44" font-weight="800" letter-spacing="-1">DP World Australia</text>
+  <text x="60" y="200" fill="#fecaca" font-size="24" font-weight="400">30,000 Containers Stranded · 4-Day Port Shutdown</text>
+  <rect x="60" y="225" width="50" height="4" fill="#ef4444" rx="2"/>
+  <text x="60" y="280" fill="#cbd5e1" font-size="16" opacity="0.85">A cyberattack forced DP World to disconnect its port systems,</text>
+  <text x="60" y="305" fill="#cbd5e1" font-size="16" opacity="0.85">stranding 30,000 containers at Australia's busiest ports.</text>
+  <rect x="60" y="345" width="200" height="100" fill="#450a0a" rx="6"/>
+  <text x="160" y="382" fill="#ef4444" font-size="24" font-weight="800" text-anchor="middle">30,000</text>
+  <text x="160" y="405" fill="#fecaca" font-size="12" text-anchor="middle">CONTAINERS STRANDED</text>
+  <rect x="280" y="345" width="200" height="100" fill="#450a0a" rx="6"/>
+  <text x="380" y="385" fill="#ef4444" font-size="24" font-weight="800" text-anchor="middle">4 Days</text>
+  <text x="380" y="408" fill="#fecaca" font-size="12" text-anchor="middle">PORT SHUTDOWN DURATION</text>
+  <rect x="500" y="345" width="200" height="100" fill="#450a0a" rx="6"/>
+  <text x="600" y="382" fill="#ef4444" font-size="18" font-weight="800" text-anchor="middle">Nov 2023</text>
+  <text x="600" y="402" fill="#fecaca" font-size="11" text-anchor="middle">MOST RECENT MAJOR PORT ATTACK</text>
+  <rect x="800" y="95" width="340" height="430" fill="#1c0a0a" rx="8"/>
+  <text x="970" y="130" fill="#ef4444" font-size="11" text-anchor="middle" letter-spacing="3">CRITICAL CONTROLS FAILED</text>
+  <line x1="820" y1="140" x2="1120" y2="140" stroke="#ef4444" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="820" y="170" fill="#e2e8f0" font-size="13">Network Perimeter Security</text>
+  <text x="820" y="192" fill="#e2e8f0" font-size="13">Incident Containment Procedures</text>
+  <text x="820" y="214" fill="#e2e8f0" font-size="13">Operational Technology Isolation</text>
+  <text x="820" y="236" fill="#e2e8f0" font-size="13">Business Continuity Planning</text>
+  <text x="820" y="258" fill="#e2e8f0" font-size="13">Supply Chain Resilience</text>
+  <line x1="820" y1="275" x2="1120" y2="275" stroke="#ef4444" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="970" y="305" fill="#ef4444" font-size="11" text-anchor="middle" letter-spacing="3">INFRASTRUCTURE CONTEXT</text>
+  <text x="820" y="335" fill="#fca5a5" font-size="12">DP World operates 40% of Australia's</text>
+  <text x="820" y="355" fill="#fca5a5" font-size="12">container port capacity. A 4-day</text>
+  <text x="820" y="375" fill="#fca5a5" font-size="12">shutdown triggers supply chain</text>
+  <text x="820" y="395" fill="#fca5a5" font-size="12">disruption across the national economy.</text>
+  <text x="970" y="480" fill="#ef4444" font-size="11" text-anchor="middle" letter-spacing="2">marcoweb.org</text>
+</svg>

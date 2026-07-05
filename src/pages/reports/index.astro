@@ -6,8 +6,10 @@ import PostCard from '../../components/PostCard.astro'
 import CTABox from '../../components/CTABox.astro'
 import { getCollection } from 'astro:content'
 
+const today = new Date()
+today.setHours(23, 59, 59, 999)
 const reports = (await getCollection('blog'))
-  .filter(p => p.data.category === 'Digital Report')
+  .filter(p => p.data.category === 'Digital Report' && p.data.pubDate <= today)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 ---
 

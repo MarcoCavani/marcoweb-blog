@@ -1,0 +1,35 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#1a3a6e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid lines -->
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <!-- Building icon -->
+  <rect x="90" y="220" width="160" height="180" fill="none" stroke="url(#accent)" stroke-width="2.5" rx="4"/>
+  <rect x="110" y="200" width="120" height="30" fill="none" stroke="url(#accent)" stroke-width="2" rx="2"/>
+  <line x1="110" y1="270" x2="240" y2="270" stroke="#3b82f6" stroke-opacity="0.5" stroke-width="1"/>
+  <line x1="110" y1="310" x2="240" y2="310" stroke="#3b82f6" stroke-opacity="0.5" stroke-width="1"/>
+  <line x1="110" y1="350" x2="240" y2="350" stroke="#3b82f6" stroke-opacity="0.5" stroke-width="1"/>
+  <rect x="145" y="360" width="50" height="40" fill="#3b82f6" fill-opacity="0.3" rx="2"/>
+  <!-- Shield overlay -->
+  <path d="M180 240 L210 250 L210 275 Q210 290 180 300 Q150 290 150 275 L150 250 Z" fill="none" stroke="#60a5fa" stroke-width="2"/>
+  <path d="M170 270 L178 278 L192 263" stroke="#60a5fa" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Label -->
+  <text x="310" y="180" fill="#60a5fa" font-size="13" font-weight="600" letter-spacing="4" opacity="0.9">GROUP A · CONTROL A.1</text>
+  <text x="310" y="265" fill="#ffffff" font-size="58" font-weight="800" letter-spacing="-1">IT Governance</text>
+  <text x="310" y="320" fill="#93c5fd" font-size="22" font-weight="400" opacity="0.85">Strategy, Oversight and Board-Level Accountability</text>
+  <rect x="310" y="355" width="60" height="4" fill="url(#accent)" rx="2"/>
+  <text x="310" y="410" fill="#60a5fa" font-size="15" font-weight="500" letter-spacing="2" opacity="0.8">IT GENERAL CONTROLS · IT AUDIT</text>
+  <text x="310" y="500" fill="#ffffff" font-size="16" opacity="0.5" letter-spacing="1">marcoweb.org</text>
+</svg>

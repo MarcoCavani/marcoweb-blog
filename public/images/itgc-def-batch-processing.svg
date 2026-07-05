@@ -1,0 +1,38 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#1a2f6e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <!-- Batch job scheduler panel -->
+  <rect x="80" y="205" width="280" height="210" fill="none" stroke="#6366f1" stroke-width="1.5" rx="6" stroke-opacity="0.6"/>
+  <text x="220" y="228" fill="#818cf8" font-size="11" text-anchor="middle">BATCH JOB SCHEDULER</text>
+  <line x1="80" y1="238" x2="360" y2="238" stroke="#6366f1" stroke-opacity="0.3" stroke-width="1"/>
+  <!-- Job entries -->
+  <rect x="95" y="248" width="250" height="18" fill="#22c55e" fill-opacity="0.1" rx="2"/>
+  <text x="100" y="260" fill="#86efac" font-size="9" font-family="monospace">02:00 PAYROLL_CALC     OK</text>
+  <rect x="95" y="270" width="250" height="18" fill="#22c55e" fill-opacity="0.1" rx="2"/>
+  <text x="100" y="282" fill="#86efac" font-size="9" font-family="monospace">02:30 GL_CLOSE         OK</text>
+  <rect x="95" y="292" width="250" height="18" fill="#ef4444" fill-opacity="0.15" rx="2"/>
+  <text x="100" y="304" fill="#fca5a5" font-size="9" font-family="monospace">03:00 PAYMENT_RUN   MODIF</text>
+  <rect x="95" y="314" width="250" height="18" fill="#ef4444" fill-opacity="0.15" rx="2"/>
+  <text x="100" y="326" fill="#fca5a5" font-size="9" font-family="monospace">03:30 RECONCILE     SKIP!</text>
+  <!-- Warning indicator -->
+  <text x="100" y="356" fill="#f59e0b" font-size="11" font-weight="600">UNAUTHORISED JOB CHANGE</text>
+  <text x="100" y="372" fill="#fbbf24" font-size="9">No change ticket · no approver</text>
+  <text x="310" y="180" fill="#818cf8" font-size="13" font-weight="600" letter-spacing="4" opacity="0.9">GROUPS D / E / F · APPLICATION CONTROLS</text>
+  <text x="310" y="265" fill="#ffffff" font-size="46" font-weight="800" letter-spacing="-1">App Batch Processing</text>
+  <text x="310" y="320" fill="#c7d2fe" font-size="20" font-weight="400" opacity="0.85">Scheduled Job Controls, Integrity and Monitoring</text>
+  <rect x="310" y="352" width="60" height="4" fill="url(#accent)" rx="2"/>
+  <text x="310" y="403" fill="#818cf8" font-size="15" font-weight="500" letter-spacing="2" opacity="0.8">IT GENERAL CONTROLS · IT AUDIT</text>
+  <text x="310" y="500" fill="#ffffff" font-size="16" opacity="0.5" letter-spacing="1">marcoweb.org</text>
+</svg>

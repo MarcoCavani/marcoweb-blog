@@ -1,0 +1,32 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0a1e"/>
+      <stop offset="100%" stop-color="#2d1b5e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <!-- Crown/admin icon -->
+  <path d="M120 290 L155 245 L185 275 L215 230 L245 275 L260 290 L240 330 L140 330 Z" fill="none" stroke="#8b5cf6" stroke-width="2.5"/>
+  <circle cx="155" cy="245" r="8" fill="#8b5cf6" fill-opacity="0.5"/>
+  <circle cx="215" cy="230" r="10" fill="#a78bfa" fill-opacity="0.7"/>
+  <circle cx="245" cy="275" r="7" fill="#8b5cf6" fill-opacity="0.5"/>
+  <!-- PAM vault icon -->
+  <rect x="140" y="340" width="100" height="55" fill="none" stroke="#8b5cf6" stroke-width="2" rx="4" stroke-opacity="0.7"/>
+  <circle cx="190" cy="367" r="12" fill="none" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="186" y="372" width="8" height="14" fill="#a78bfa" fill-opacity="0.6" rx="2"/>
+  <text x="190" y="408" fill="#c4b5fd" font-size="10" text-anchor="middle">PAM VAULT</text>
+  <text x="310" y="180" fill="#a78bfa" font-size="13" font-weight="600" letter-spacing="4" opacity="0.9">GROUP C · CONTROL C.5</text>
+  <text x="310" y="265" fill="#ffffff" font-size="52" font-weight="800" letter-spacing="-1">Privileged Access</text>
+  <text x="310" y="320" fill="#c4b5fd" font-size="22" font-weight="400" opacity="0.85">PAM, Just-in-Time Access and Admin Account Controls</text>
+  <rect x="310" y="355" width="60" height="4" fill="url(#accent)" rx="2"/>
+  <text x="310" y="410" fill="#a78bfa" font-size="15" font-weight="500" letter-spacing="2" opacity="0.8">IT GENERAL CONTROLS · IT AUDIT</text>
+  <text x="310" y="500" fill="#ffffff" font-size="16" opacity="0.5" letter-spacing="1">marcoweb.org</text>
+</svg>

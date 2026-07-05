@@ -1,0 +1,46 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#1a1208"/>
+    </linearGradient>
+    <linearGradient id="band" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="8" fill="url(#band)"/>
+  <rect width="1200" height="8" y="622" fill="url(#band)"/>
+  <text x="60" y="60" fill="#fb923c" font-size="13" font-weight="600" letter-spacing="4">DIGITAL INCIDENT REPORT · RETAIL SECTOR</text>
+  <line x1="60" y1="70" x2="1140" y2="70" stroke="#fb923c" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="60" y="145" fill="#ffffff" font-size="44" font-weight="800" letter-spacing="-1">Woolworths MyDeal</text>
+  <text x="60" y="200" fill="#fed7aa" font-size="24" font-weight="400">Credential Breach · 2.2 Million Customer Records</text>
+  <rect x="60" y="225" width="50" height="4" fill="#fb923c" rx="2"/>
+  <text x="60" y="280" fill="#cbd5e1" font-size="16" opacity="0.85">A compromised employee credential provided access to the</text>
+  <text x="60" y="305" fill="#cbd5e1" font-size="16" opacity="0.85">MyDeal e-commerce platform customer database.</text>
+  <rect x="60" y="345" width="200" height="100" fill="#2d1600" rx="6"/>
+  <text x="160" y="382" fill="#fb923c" font-size="24" font-weight="800" text-anchor="middle">2.2M</text>
+  <text x="160" y="405" fill="#fed7aa" font-size="12" text-anchor="middle">RECORDS EXPOSED</text>
+  <rect x="280" y="345" width="200" height="100" fill="#2d1600" rx="6"/>
+  <text x="380" y="385" fill="#fb923c" font-size="22" font-weight="800" text-anchor="middle">Oct 2022</text>
+  <text x="380" y="408" fill="#fed7aa" font-size="12" text-anchor="middle">INCIDENT DATE</text>
+  <rect x="500" y="345" width="200" height="100" fill="#2d1600" rx="6"/>
+  <text x="600" y="382" fill="#fb923c" font-size="18" font-weight="800" text-anchor="middle">Credentials</text>
+  <text x="600" y="402" fill="#fed7aa" font-size="11" text-anchor="middle">COMPROMISED EMPLOYEE LOGIN</text>
+  <rect x="800" y="95" width="340" height="430" fill="#111827" rx="8"/>
+  <text x="970" y="130" fill="#fb923c" font-size="11" text-anchor="middle" letter-spacing="3">ITGC CONTROLS IMPLICATED</text>
+  <line x1="820" y1="140" x2="1120" y2="140" stroke="#fb923c" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="820" y="170" fill="#e2e8f0" font-size="13">Multi-Factor Authentication</text>
+  <text x="820" y="192" fill="#e2e8f0" font-size="13">Credential Management</text>
+  <text x="820" y="214" fill="#e2e8f0" font-size="13">Data Loss Prevention</text>
+  <text x="820" y="236" fill="#e2e8f0" font-size="13">Row-Level Database Access Controls</text>
+  <text x="820" y="258" fill="#e2e8f0" font-size="13">Post-Acquisition Security Review</text>
+  <line x1="820" y1="275" x2="1120" y2="275" stroke="#fb923c" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="970" y="305" fill="#fb923c" font-size="11" text-anchor="middle" letter-spacing="3">SECTOR CONTEXT</text>
+  <text x="820" y="335" fill="#94a3b8" font-size="12">Retail sector breaches often follow</text>
+  <text x="820" y="355" fill="#94a3b8" font-size="12">M&amp;A activity, where acquired entities</text>
+  <text x="820" y="375" fill="#94a3b8" font-size="12">have not yet been subject to the</text>
+  <text x="820" y="395" fill="#94a3b8" font-size="12">acquirer's security baseline.</text>
+  <text x="970" y="480" fill="#fb923c" font-size="11" text-anchor="middle" letter-spacing="2">marcoweb.org</text>
+</svg>

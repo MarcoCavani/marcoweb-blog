@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#1a2f6e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  <!-- Database icon with query -->
+  <rect x="80" y="205" width="280" height="210" fill="none" stroke="#6366f1" stroke-width="1.5" rx="6" stroke-opacity="0.6"/>
+  <text x="220" y="228" fill="#818cf8" font-size="11" text-anchor="middle">DATABASE ACCESS AUDIT</text>
+  <line x1="80" y1="238" x2="360" y2="238" stroke="#6366f1" stroke-opacity="0.3" stroke-width="1"/>
+  <!-- DB cylinders -->
+  <ellipse cx="140" cy="268" rx="35" ry="10" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <rect x="105" y="268" width="70" height="30" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <ellipse cx="140" cy="298" rx="35" ry="10" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="140" y="285" fill="#818cf8" font-size="8" text-anchor="middle">CUSTOMER</text>
+  <text x="140" y="295" fill="#818cf8" font-size="8" text-anchor="middle">PAY DATA</text>
+  <!-- Query path to bad actor -->
+  <line x1="180" y1="283" x2="230" y2="283" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+  <text x="235" y="265" fill="#fca5a5" font-size="9" font-family="monospace">SELECT * FROM</text>
+  <text x="235" y="278" fill="#fca5a5" font-size="9" font-family="monospace">customer_pay</text>
+  <text x="235" y="291" fill="#fca5a5" font-size="9" font-family="monospace">WHERE 1=1;</text>
+  <text x="235" y="310" fill="#fbbf24" font-size="9">UNRESTRICTED DB ACCESS</text>
+  <!-- Insider figure -->
+  <circle cx="140" cy="350" r="10" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <text x="140" y="354" fill="#fca5a5" font-size="9" text-anchor="middle">DB</text>
+  <text x="140" y="370" fill="#fca5a5" font-size="9" text-anchor="middle">ADMIN</text>
+  <text x="200" y="370" fill="#f59e0b" font-size="9">NO RESTRICTION</text>
+  <text x="310" y="180" fill="#818cf8" font-size="13" font-weight="600" letter-spacing="4" opacity="0.9">GROUPS D / E / F · APPLICATION CONTROLS</text>
+  <text x="310" y="265" fill="#ffffff" font-size="46" font-weight="800" letter-spacing="-1">App Database Access</text>
+  <text x="310" y="320" fill="#c7d2fe" font-size="20" font-weight="400" opacity="0.85">Database Roles, Query Permissions and ERP Data Access</text>
+  <rect x="310" y="352" width="60" height="4" fill="url(#accent)" rx="2"/>
+  <text x="310" y="403" fill="#818cf8" font-size="15" font-weight="500" letter-spacing="2" opacity="0.8">IT GENERAL CONTROLS · IT AUDIT</text>
+  <text x="310" y="500" fill="#ffffff" font-size="16" opacity="0.5" letter-spacing="1">marcoweb.org</text>
+</svg>
