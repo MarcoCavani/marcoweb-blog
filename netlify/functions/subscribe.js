@@ -1,13 +1,15 @@
 import https from 'https'
 
-function post(payload, apiKey) {
+const BREVO_WELCOME_TEMPLATE_ID = 2
+
+function brevoRequest(method, path, payload, apiKey) {
   return new Promise(function (resolve, reject) {
     var data = JSON.stringify(payload)
     var req = https.request(
       {
         hostname: 'api.brevo.com',
-        path: '/v3/contacts',
-        method: 'POST',
+        path: path,
+        method: method,
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
@@ -52,20 +54,43 @@ export const handler = async function (event) {
   }
 
   try {
-    var result = await post({ email: email, listIds: [listId], updateEnabled: true }, apiKey)
+    var result = await brevoRequest(
+      'POST',
+      '/v3/contacts',
+      { email: email, listIds: [listId], updateEnabled: true },
+      apiKey
+    )
+
+    var isNew = result.status === 201
+    var isDuplicate = false
 
     if (result.status === 201 || result.status === 204) {
-      return { statusCode: 200, body: JSON.stringify({ success: true }) }
+      // success
+    } else {
+      var parsed = {}
+      try { parsed = JSON.parse(result.body) } catch (e) {}
+
+      if (parsed.code === 'duplicate_parameter') {
+        isDuplicate = true
+      } else {
+        return { statusCode: 500, body: JSON.stringify({ error: 'Brevo error', detail: result.body }) }
+      }
     }
 
-    var parsed = {}
-    try { parsed = JSON.parse(result.body) } catch (e) {}
-
-    if (parsed.code === 'duplicate_parameter') {
-      return { statusCode: 200, body: JSON.stringify({ success: true }) }
+    // Send welcome email only to brand-new subscribers
+    if (isNew) {
+      await brevoRequest(
+        'POST',
+        '/v3/smtp/email',
+        {
+          to: [{ email: email }],
+          templateId: BREVO_WELCOME_TEMPLATE_ID,
+        },
+        apiKey
+      )
     }
 
-    return { statusCode: 500, body: JSON.stringify({ error: 'Brevo error', detail: result.body }) }
+    return { statusCode: 200, body: JSON.stringify({ success: true }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
