@@ -187,7 +187,7 @@ This post is a summary of the full **Scattered Spider: The Casino Hacks** digita
 
 **To request the full report, contact me directly:**
 
-📧 [cavaniaustralia@gmail.com](mailto:cavaniaustralia@gmail.com?subject=Request%3A%20Scattered%20Spider%20Full%20Report&body=Hi%20Marco%2C%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20the%20full%20Scattered%20Spider%3A%20The%20Casino%20Hacks%20report.%0A%0AName%3A%20%0AOrganisation%3A%20%0APurpose%3A%20)
+📧 [marco@marcoweb.org](mailto:marco@marcoweb.org?subject=Request%3A%20Scattered%20Spider%20Full%20Report&body=Hi%20Marco%2C%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20the%20full%20Scattered%20Spider%3A%20The%20Casino%20Hacks%20report.%0A%0AName%3A%20%0AOrganisation%3A%20%0APurpose%3A%20)
 
 *(FBI & CISA, 2023)*
 

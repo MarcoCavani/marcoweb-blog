@@ -206,7 +206,7 @@ This post is a summary of the full **Information Security Analysis for Western P
 
 **To request the full report, contact me directly:**
 
-📧 [cavaniaustralia@gmail.com](mailto:cavaniaustralia@gmail.com?subject=Request%3A%20Western%20Power%20Information%20Security%20Report&body=Hi%20Marco%2C%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20the%20full%20Information%20Security%20Analysis%20for%20Western%20Power%20report.%0A%0AName%3A%20%0AOrganisation%3A%20%0APurpose%3A%20)
+📧 [marco@marcoweb.org](mailto:marco@marcoweb.org?subject=Request%3A%20Western%20Power%20Information%20Security%20Report&body=Hi%20Marco%2C%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20the%20full%20Information%20Security%20Analysis%20for%20Western%20Power%20report.%0A%0AName%3A%20%0AOrganisation%3A%20%0APurpose%3A%20)
 
 *Supply Chain Disruption:* Climate-related disruptions to supply chains can affect the availability of critical spare parts and equipment, extending recovery times following physical infrastructure damage.
 
