@@ -61,24 +61,23 @@ export const handler = async function (event) {
       apiKey
     )
 
-    var isNew = result.status === 201
-    var isDuplicate = false
+    var sendWelcome = false
 
     if (result.status === 201 || result.status === 204) {
-      // success
+      sendWelcome = true
     } else {
       var parsed = {}
       try { parsed = JSON.parse(result.body) } catch (e) {}
 
       if (parsed.code === 'duplicate_parameter') {
-        isDuplicate = true
+        // already subscribed, no welcome email
       } else {
         return { statusCode: 500, body: JSON.stringify({ error: 'Brevo error', detail: result.body }) }
       }
     }
 
-    // Send welcome email only to brand-new subscribers
-    if (isNew) {
+    // Send welcome email to anyone actively subscribing (new or returning)
+    if (sendWelcome) {
       await brevoRequest(
         'POST',
         '/v3/smtp/email',
