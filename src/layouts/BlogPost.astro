@@ -17,9 +17,10 @@ interface Props {
   readTime?: string
   tags?: string[]
   section?: 'blog' | 'reports'
+  gated?: boolean
 }
 
-const { title, description, pubDate, updatedDate, heroImage, category, author, readTime, tags, section = 'blog' } = Astro.props
+const { title, description, pubDate, updatedDate, heroImage, category, author, readTime, tags, section = 'blog', gated = false } = Astro.props
 const sectionLabel = section === 'reports' ? 'Reports' : 'Blog'
 const sectionHref = section === 'reports' ? '/reports' : '/blog'
 
@@ -105,19 +106,61 @@ const formattedUpdatedDate = updatedDate
     <AdBanner slot="leaderboard" />
 
     <!-- Article content -->
-    <div class="prose prose-gray prose-lg max-w-none
-      prose-headings:font-bold prose-headings:text-gray-900
-      prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-gray-100 prose-h2:pb-2
-      prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-brand-navy
-      prose-p:text-gray-700 prose-p:leading-relaxed
-      prose-strong:text-gray-900
-      prose-a:text-brand-blue prose-a:no-underline hover:prose-a:underline
-      prose-ul:my-4 prose-li:my-1
-      prose-table:text-sm prose-th:bg-brand-navy prose-th:text-white prose-th:font-semibold prose-th:py-3 prose-th:px-4 prose-td:py-2 prose-td:px-4
-      prose-blockquote:border-brand-blue prose-blockquote:text-gray-600
-      prose-code:text-brand-blue prose-code:bg-blue-50 prose-code:px-1 prose-code:rounded
-      prose-hr:border-gray-200">
-      <slot />
+    <div class="relative">
+      <div id="post-content" data-gated={gated ? 'true' : 'false'} class="prose prose-gray prose-lg max-w-none
+        prose-headings:font-bold prose-headings:text-gray-900
+        prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-gray-100 prose-h2:pb-2
+        prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-brand-navy
+        prose-p:text-gray-700 prose-p:leading-relaxed
+        prose-strong:text-gray-900
+        prose-a:text-brand-blue prose-a:no-underline hover:prose-a:underline
+        prose-ul:my-4 prose-li:my-1
+        prose-table:text-sm prose-th:bg-brand-navy prose-th:text-white prose-th:font-semibold prose-th:py-3 prose-th:px-4 prose-td:py-2 prose-td:px-4
+        prose-blockquote:border-brand-blue prose-blockquote:text-gray-600
+        prose-code:text-brand-blue prose-code:bg-blue-50 prose-code:px-1 prose-code:rounded
+        prose-hr:border-gray-200">
+        <slot />
+      </div>
+
+      {gated && (
+        <div id="report-gate" style="display:none">
+          <div class="h-32 -mt-32 bg-gradient-to-t from-white to-transparent pointer-events-none relative z-10" aria-hidden="true"></div>
+          <div class="relative z-20 border-2 border-brand-blue rounded-2xl p-8 bg-white shadow-xl text-center mt-0">
+            <p class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-2">Free report</p>
+            <h2 class="text-2xl font-extrabold text-gray-900 mb-2">Subscribe to read the full report</h2>
+            <p class="text-gray-500 text-sm mb-1">Join the MarcoWeb newsletter — IT audit and cybersecurity analysis, no spam.</p>
+            <p class="text-gray-500 text-sm mb-6">You'll also unlock the <strong class="text-gray-800">free ITGC Audit Workbook</strong> (38 controls, Excel template).</p>
+            <form id="gate-form" novalidate class="max-w-sm mx-auto">
+              <input
+                type="email"
+                id="gate-email"
+                placeholder="you@company.com"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm mb-3 focus:outline-none focus:border-brand-blue"
+              />
+              <button
+                id="gate-btn"
+                type="submit"
+                class="w-full bg-brand-blue hover:bg-brand-light text-white font-bold py-3 rounded-lg transition-colors text-sm"
+              >
+                Subscribe & Continue Reading →
+              </button>
+              <p id="gate-error" style="display:none" class="text-red-500 text-xs mt-2"></p>
+            </form>
+            <p class="text-xs text-gray-400 mt-4">Free · No spam · Unsubscribe any time.</p>
+          </div>
+          <div id="gate-success" style="display:none" class="mt-4 p-4 bg-green-50 border border-green-200 rounded-xl flex items-center justify-between gap-4">
+            <p class="font-semibold text-green-800 text-sm">You're subscribed — enjoy the full report.</p>
+            <a
+              href="https://lgyblltyytfmoovigdrj.supabase.co/storage/v1/object/public/templates/ITGC_Audit_Workbook.xlsx"
+              target="_blank"
+              class="shrink-0 bg-brand-blue text-white text-xs font-bold px-4 py-2 rounded-lg hover:bg-brand-light transition-colors"
+            >
+              Download Workbook →
+            </a>
+          </div>
+        </div>
+      )}
     </div>
 
     <!-- Mid-article CTA -->
@@ -168,3 +211,66 @@ const formattedUpdatedDate = updatedDate
 
   <Footer />
 </Layout>
+
+{gated && (
+  <script is:inline>
+  (function () {
+    var el = document.getElementById('post-content')
+    if (!el || el.dataset.gated !== 'true') return
+
+    if (localStorage.getItem('mw_sub') === '1') return
+
+    var kids = Array.from(el.children)
+    var SHOW = 6
+    kids.slice(SHOW).forEach(function (k) { k.style.display = 'none' })
+
+    var gate = document.getElementById('report-gate')
+    if (gate) gate.style.display = 'block'
+
+    var form = document.getElementById('gate-form')
+    if (!form) return
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault()
+      var email = document.getElementById('gate-email').value.trim()
+      var btn = document.getElementById('gate-btn')
+      var err = document.getElementById('gate-error')
+
+      if (!email || !email.includes('@')) {
+        err.textContent = 'Please enter a valid email.'
+        err.style.display = 'block'
+        return
+      }
+
+      btn.disabled = true
+      btn.textContent = 'Subscribing…'
+      err.style.display = 'none'
+
+      try {
+        var res = await fetch('/.netlify/functions/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        })
+        if (res.ok) {
+          localStorage.setItem('mw_sub', '1')
+          kids.forEach(function (k) { k.style.display = '' })
+          gate.style.display = 'none'
+          var success = document.getElementById('gate-success')
+          if (success) {
+            success.style.display = 'flex'
+            window.scrollBy({ top: 200, behavior: 'smooth' })
+          }
+        } else {
+          throw new Error()
+        }
+      } catch {
+        btn.disabled = false
+        btn.textContent = 'Subscribe & Continue Reading →'
+        err.textContent = 'Something went wrong. Please try again.'
+        err.style.display = 'block'
+      }
+    })
+  })()
+  </script>
+)}

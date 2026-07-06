@@ -12,6 +12,7 @@ const blog = defineCollection({
     author: z.string().default('Marco Cavani'),
     tags: z.array(z.string()).optional(),
     readTime: z.string().optional(),
+    gated: z.boolean().optional(),
   }),
 })
 

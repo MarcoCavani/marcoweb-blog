@@ -32,6 +32,7 @@ const { Content } = await post.render()
   readTime={post.data.readTime}
   tags={post.data.tags}
   section="reports"
+  gated={post.data.gated ?? true}
 >
   <Content />
 </BlogPost>
