@@ -6,8 +6,8 @@ export default {
       colors: {
         brand: {
           navy: '#111111',
-          blue: '#cc33cc',
-          light: '#dd55dd',
+          blue: '#3399cc',
+          light: '#55b8e0',
         },
       },
     },

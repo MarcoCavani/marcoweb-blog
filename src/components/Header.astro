@@ -3,29 +3,25 @@ const currentPath = Astro.url.pathname
 const isActive = (path: string) => currentPath === path || currentPath.startsWith(path + '/')
 ---
 
-<header class="bg-brand-navy text-white shadow-lg sticky top-0 z-50">
+<header class="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <a href="/" class="flex items-center gap-3 group">
-        <img
-          src="/logo.png"
-          alt="MarcoWeb"
-          class="w-9 h-9 rounded-lg"
-        />
-        <span class="text-xl font-bold tracking-tight group-hover:text-brand-light transition-colors">MarcoWeb</span>
+        <img src="/logo.png" alt="MarcoWeb" class="h-9 w-auto" />
+        <span class="text-xl font-bold tracking-tight text-gray-900 group-hover:text-brand-blue transition-colors">MarcoWeb</span>
       </a>
 
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="/" class={`transition-colors hover:text-brand-light ${isActive('/') && currentPath === '/' ? 'text-brand-light' : 'text-gray-300'}`}>
+        <a href="/" class={`transition-colors hover:text-brand-blue ${isActive('/') && currentPath === '/' ? 'text-brand-blue' : 'text-gray-500'}`}>
           Home
         </a>
-        <a href="/blog" class={`transition-colors hover:text-brand-light ${isActive('/blog') ? 'text-brand-light' : 'text-gray-300'}`}>
+        <a href="/blog" class={`transition-colors hover:text-brand-blue ${isActive('/blog') ? 'text-brand-blue' : 'text-gray-500'}`}>
           Blog
         </a>
-        <a href="/reports" class={`transition-colors hover:text-brand-light ${isActive('/reports') ? 'text-brand-light' : 'text-gray-300'}`}>
+        <a href="/reports" class={`transition-colors hover:text-brand-blue ${isActive('/reports') ? 'text-brand-blue' : 'text-gray-500'}`}>
           Reports
         </a>
-        <a href="/about" class={`transition-colors hover:text-brand-light ${isActive('/about') ? 'text-brand-light' : 'text-gray-300'}`}>
+        <a href="/about" class={`transition-colors hover:text-brand-blue ${isActive('/about') ? 'text-brand-blue' : 'text-gray-500'}`}>
           About
         </a>
 <a
@@ -40,7 +36,7 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
 
       <!-- Mobile nav -->
       <div class="md:hidden flex items-center gap-4">
-        <a href="/blog" class="text-gray-300 hover:text-white text-sm">Blog</a>
+        <a href="/blog" class="text-gray-500 hover:text-brand-blue text-sm">Blog</a>
         <a
           href="https://marcoweb-itgc-saas.netlify.app"
           target="_blank"

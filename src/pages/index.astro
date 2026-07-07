@@ -79,7 +79,7 @@ const recentPosts = blogPosts.slice(1, 5)
             )}
             <div class="p-8 flex flex-col justify-center">
               <div class="flex items-center gap-3 mb-3">
-                <span class="text-xs font-semibold uppercase tracking-widest text-brand-blue bg-fuchsia-50 px-2.5 py-1 rounded-full">
+                <span class="text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-2.5 py-1 rounded-full">
                   {featuredPost.data.category}
                 </span>
                 {featuredPost.data.readTime && (
@@ -207,7 +207,7 @@ const recentPosts = blogPosts.slice(1, 5)
           var d = Math.sqrt(dx * dx + dy * dy);
           if (d < 110) {
             cx.beginPath();
-            cx.strokeStyle = 'rgba(204,51,204,' + (1 - d / 110) * 0.35 + ')';
+            cx.strokeStyle = 'rgba(51,153,204,' + (1 - d / 110) * 0.35 + ')';
             cx.lineWidth = 0.5;
             cx.moveTo(pts[i].x, pts[i].y);
             cx.lineTo(pts[j].x, pts[j].y);
@@ -221,7 +221,7 @@ const recentPosts = blogPosts.slice(1, 5)
         if (p.y < 0 || p.y > cv.height) p.vy *= -1;
         cx.beginPath();
         cx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        cx.fillStyle = 'rgba(204,51,204,0.55)';
+        cx.fillStyle = 'rgba(51,153,204,0.55)';
         cx.fill();
       });
       requestAnimationFrame(drawCv);
