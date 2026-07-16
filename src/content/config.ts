@@ -13,6 +13,7 @@ const blog = defineCollection({
     tags: z.array(z.string()).optional(),
     readTime: z.string().optional(),
     gated: z.boolean().optional(),
+    youtubeId: z.string().optional(),
   }),
 })
 

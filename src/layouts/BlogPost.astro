@@ -18,9 +18,10 @@ interface Props {
   tags?: string[]
   section?: 'blog' | 'reports'
   gated?: boolean
+  youtubeId?: string
 }
 
-const { title, description, pubDate, updatedDate, heroImage, category, author, readTime, tags, section = 'blog', gated = false } = Astro.props
+const { title, description, pubDate, updatedDate, heroImage, category, author, readTime, tags, section = 'blog', gated = false, youtubeId } = Astro.props
 const sectionLabel = section === 'reports' ? 'Reports' : 'Blog'
 const sectionHref = section === 'reports' ? '/reports' : '/blog'
 
@@ -91,8 +92,20 @@ const formattedUpdatedDate = updatedDate
       </div>
     </header>
 
-    <!-- Hero image -->
-    {heroImage && (
+    <!-- Video (if present) — otherwise hero image -->
+    {youtubeId ? (
+      <div class="mb-8 rounded-2xl overflow-hidden shadow-md aspect-video bg-black">
+        <iframe
+          class="w-full h-full"
+          src={`https://www.youtube-nocookie.com/embed/${youtubeId}`}
+          title={title}
+          loading="lazy"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    ) : heroImage && (
       <div class="mb-8 rounded-2xl overflow-hidden shadow-md">
         <img
           src={heroImage}
