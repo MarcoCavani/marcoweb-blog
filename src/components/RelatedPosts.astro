@@ -1,0 +1,60 @@
+---
+import PostCard from './PostCard.astro'
+import { getCollection } from 'astro:content'
+
+interface Props {
+  currentSlug: string
+  tags?: string[]
+  section?: 'blog' | 'reports'
+}
+
+const { currentSlug, tags = [], section = 'blog' } = Astro.props
+
+const today = new Date()
+today.setHours(23, 59, 59, 999)
+
+const isReport = section === 'reports'
+const tagSet = new Set(tags)
+
+const candidates = (await getCollection('blog'))
+  .filter((p) => {
+    if (p.slug === currentSlug) return false
+    if (p.data.pubDate > today || p.data.draft) return false
+    return isReport
+      ? p.data.category === 'Digital Report'
+      : p.data.category !== 'Digital Report'
+  })
+  .map((p) => ({
+    post: p,
+    score: (p.data.tags || []).filter((t) => tagSet.has(t)).length,
+  }))
+  .sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score
+    return b.post.data.pubDate.valueOf() - a.post.data.pubDate.valueOf()
+  })
+
+// Prefer posts that share at least one tag; fall back to recent same-section posts.
+const related = candidates.slice(0, 3).map((c) => c.post)
+const basePath = isReport ? '/reports' : '/blog'
+---
+
+{related.length > 0 && (
+  <section class="mt-16 pt-10 border-t border-gray-200">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Related {isReport ? 'reports' : 'articles'}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {related.map((post) => (
+        <PostCard
+          title={post.data.title}
+          description={post.data.description}
+          slug={post.slug}
+          pubDate={post.data.pubDate}
+          category={post.data.category}
+          readTime={post.data.readTime}
+          heroImage={post.data.heroImage}
+          tags={post.data.tags}
+          basePath={basePath}
+        />
+      ))}
+    </div>
+  </section>
+)}

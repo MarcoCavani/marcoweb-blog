@@ -7,6 +7,40 @@ interface Props {
 
 const { title, description = 'Cybersecurity insights, digital reports, and IT governance from Marco Cavani.', image } = Astro.props
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+
+// Sitewide structured data (Organization + Person + WebSite). Individual
+// articles add their own Article schema and reference these nodes by @id.
+const siteUrl = (Astro.site?.href || 'https://marcoweb.org/').replace(/\/$/, '')
+const siteSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: 'MarcoWeb',
+      url: `${siteUrl}/`,
+      logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.png` },
+      founder: { '@id': `${siteUrl}/#marco` },
+    },
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/#marco`,
+      name: 'Marco Cavani',
+      url: `${siteUrl}/about/`,
+      jobTitle: 'Cybersecurity Professional & IT Governance Specialist',
+      worksFor: { '@id': `${siteUrl}/#organization` },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      name: 'MarcoWeb',
+      url: `${siteUrl}/`,
+      description: 'Cybersecurity analysis, digital reports, and IT governance from Marco Cavani.',
+      publisher: { '@id': `${siteUrl}/#organization` },
+      inLanguage: 'en-AU',
+    },
+  ],
+}
 ---
 
 <!doctype html>
@@ -20,6 +54,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" type="application/rss+xml" title="MarcoWeb RSS Feed" href="/rss.xml" />
+
+    <!-- Structured data: Organization + Person + WebSite -->
+    <script type="application/ld+json" set:html={JSON.stringify(siteSchema)} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />

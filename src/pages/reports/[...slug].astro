@@ -33,6 +33,7 @@ const { Content } = await post.render()
   tags={post.data.tags}
   section="reports"
   gated={post.data.gated ?? true}
+  slug={post.slug}
 >
   <Content />
 </BlogPost>
