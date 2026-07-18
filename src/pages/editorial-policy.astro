@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+const lastUpdated = '18 July 2026'
+---
+
+<Layout
+  title="Editorial Policy | MarcoWeb"
+  description="How MarcoWeb researches, writes, sources, and corrects its cybersecurity and IT governance content. Authored and reviewed by Marco Cavani."
+>
+  <Header />
+
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-2">Editorial Policy</h1>
+    <p class="text-gray-400 text-sm mb-10">Last updated: {lastUpdated}</p>
+
+    <div class="prose prose-lg max-w-none text-gray-700 space-y-8">
+
+      <section>
+        <p>
+          MarcoWeb publishes analysis of cybersecurity incidents, threat actors, and IT General Controls for auditors, security professionals, and the organisations they protect. This page explains who writes that content, the standards we hold it to, and how to flag a correction. We publish it because trustworthy security guidance depends on knowing where it comes from.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">Who writes and reviews this content</h2>
+        <p>
+          All content on this site is written and reviewed by <strong>Marco Cavani</strong>, a cybersecurity professional and IT governance specialist who works in IT audit and information security. Marco specialises in IT governance, threat intelligence, and information security risk management, and built the <a href="https://marcoweb-itgc-saas.netlify.app" target="_blank" rel="noopener noreferrer" class="text-brand-blue hover:underline">ITGC Audit Tool</a> used in IT audit and compliance engagements. Every article and report carries his byline because he stands behind its technical accuracy.
+        </p>
+        <p class="mt-3">
+          Where a post covers a control area or framework, it is written from the perspective of how an IT auditor would actually assess it in practice — not as abstract theory.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">Sourcing standards</h2>
+        <p>
+          Our breach case studies and control analyses are built on publicly available, reputable primary sources. Where we describe an incident or cite a standard, we draw on authorities such as:
+        </p>
+        <ul class="list-disc pl-6 space-y-1 mt-3">
+          <li><strong>Government and law enforcement</strong> — the FBI, CISA, the Australian Cyber Security Centre (ACSC), and equivalent agencies;</li>
+          <li><strong>Standards and frameworks</strong> — NIST, ISO/IEC 27001, COBIT, and the Australian Government's PSPF;</li>
+          <li><strong>Industry research</strong> — vendor and analyst reporting such as IBM Security's Cost of a Data Breach, and other well-documented, verifiable research;</li>
+          <li><strong>Official disclosures</strong> — regulatory findings, court records, and public statements from the affected organisations.</li>
+        </ul>
+        <p class="mt-3">
+          We prioritise primary and official sources over second-hand reporting, and we describe incidents based on what has been publicly established rather than speculation.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">Accuracy and review</h2>
+        <p>
+          Draft articles are reviewed for technical accuracy before publication. Because security details matter, we aim to represent how attacks actually happened and how controls are genuinely tested. Where the full picture of an incident is contested or still emerging, we say so rather than presenting uncertainty as fact.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">Corrections policy</h2>
+        <p>
+          We correct errors promptly and transparently. If you believe something we have published is inaccurate, incomplete, or out of date, email <a href="mailto:marco@marcoweb.org" class="text-brand-blue hover:underline">marco@marcoweb.org</a> with the page and the specifics. Substantive corrections that change the meaning of a piece are noted on the article itself; minor fixes (typos, broken links) are made without a formal note.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">Independence and advertising</h2>
+        <p>
+          Editorial decisions are made independently of any advertising shown on this site. This site displays advertising through Google AdSense and links to the author's own ITGC Audit Tool; neither of these influences the analysis or conclusions in our content. Where a post references our own tool, we say so plainly. We do not accept payment to alter the findings of a report or case study.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">A note on our breach reporting</h2>
+        <p>
+          Our incident case studies exist to help defenders and auditors learn from what went wrong. They explain the governance and control failures behind real breaches so that others can avoid them. They are written for defence, not offence, and are consistent with our <a href="/terms" class="text-brand-blue hover:underline">Terms of Service</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">Contact</h2>
+        <p>Questions about our editorial standards, or a correction to raise?</p>
+        <div class="mt-3 bg-gray-50 rounded-xl border border-gray-200 p-5">
+          <p class="font-semibold text-gray-900">Marco Cavani</p>
+          <p class="text-gray-600">MarcoWeb.org</p>
+          <p class="mt-1">
+            <a href="mailto:marco@marcoweb.org" class="text-brand-blue hover:underline">marco@marcoweb.org</a>
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

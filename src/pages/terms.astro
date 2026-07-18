@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+const lastUpdated = '18 July 2026'
+---
+
+<Layout
+  title="Terms of Service | MarcoWeb"
+  description="Terms of Service for MarcoWeb.org: the conditions that govern your use of this cybersecurity and IT governance publication."
+>
+  <Header />
+
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-2">Terms of Service</h1>
+    <p class="text-gray-400 text-sm mb-10">Last updated: {lastUpdated}</p>
+
+    <div class="prose prose-lg max-w-none text-gray-700 space-y-8">
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">1. Acceptance of these terms</h2>
+        <p>
+          MarcoWeb.org ("MarcoWeb", "we", "us", or "our") is an informational cybersecurity and IT governance publication operated by Marco Cavani. By accessing or using this website you agree to these Terms of Service. If you do not agree with them, please do not use the site.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">2. Informational purposes only</h2>
+        <p>
+          All content on this site — including articles, digital reports, breach case studies, IT General Controls (ITGC) analysis, checklists, and any tools we link to — is published for <strong>general information and educational purposes only</strong>. It reflects the author's analysis of publicly reported information at the time of writing.
+        </p>
+        <p class="mt-3">
+          Nothing on this site is professional security, legal, audit, financial, or compliance advice, and it is not a substitute for engaging a qualified professional who can assess your specific circumstances. IT and security environments differ; a control or recommendation that suits one organisation may be inappropriate for another. You should not act, or refrain from acting, solely on the basis of content published here. Any reliance you place on this material is strictly at your own risk.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">3. Intellectual property</h2>
+        <p>
+          Unless otherwise stated, all original content on this site — text, reports, graphics, and layout — is the intellectual property of Marco Cavani and is protected by applicable copyright laws. You are welcome to read, share links to, and quote brief excerpts of our content for non-commercial purposes, provided you give clear attribution to MarcoWeb.org and link back to the original page.
+        </p>
+        <p class="mt-3">
+          You may not republish, reproduce in full, resell, or systematically copy our content without prior written permission. Third-party names, logos, and trademarks referenced in our reporting remain the property of their respective owners and are used for identification and commentary only.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">4. Acceptable use</h2>
+        <p>When using this site, you agree not to:</p>
+        <ul class="list-disc pl-6 space-y-1 mt-3">
+          <li>Use any information here to attempt unauthorised access to, disrupt, or attack any system, network, or organisation;</li>
+          <li>Attempt to interfere with, overload, or compromise the security or proper functioning of this website;</li>
+          <li>Scrape, harvest, or systematically extract content except as permitted for standard search-engine indexing;</li>
+          <li>Misrepresent our content, or use it in a way that is unlawful, misleading, or defamatory.</li>
+        </ul>
+        <p class="mt-3">
+          Our breach case studies describe how real incidents unfolded so that defenders and auditors can learn from them. They are written to help organisations protect themselves — not to enable wrongdoing.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">5. Links to third-party sites and tools</h2>
+        <p>
+          This site links to external resources, including the <a href="https://marcoweb-itgc-saas.netlify.app" target="_blank" rel="noopener noreferrer" class="text-brand-blue hover:underline">ITGC Audit Tool</a> and cited sources such as the FBI, CISA, ACSC, NIST, and IBM Security. We provide these links for convenience and reference. We do not control, and are not responsible for, the content, availability, terms, or privacy practices of third-party sites. Accessing them is at your own discretion and risk.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">6. No warranties</h2>
+        <p>
+          This site and its content are provided on an "as is" and "as available" basis, without warranties of any kind, whether express or implied. While we take care to research and cite reputable sources, we do not warrant that the content is complete, current, accurate, or error-free, or that the site will be uninterrupted or free of harmful components.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">7. Limitation of liability</h2>
+        <p>
+          To the fullest extent permitted by law, Marco Cavani and MarcoWeb.org will not be liable for any direct, indirect, incidental, consequential, or special loss or damage arising out of or in connection with your use of, or inability to use, this site or its content — including any decision made or action taken in reliance on it. Nothing in these terms excludes or limits any liability that cannot lawfully be excluded, including certain rights under the Australian Consumer Law.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">8. Changes to these terms</h2>
+        <p>
+          We may update these Terms of Service from time to time. Changes take effect when posted on this page with a revised "last updated" date. Your continued use of the site after any change constitutes acceptance of the updated terms.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">9. Governing law</h2>
+        <p>
+          These terms are governed by the laws of the State of <strong>Western Australia</strong>, and the Commonwealth of Australia where applicable. You agree to submit to the non-exclusive jurisdiction of the courts of Western Australia in relation to any dispute arising from your use of this site.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-gray-900 mb-3">10. Contact</h2>
+        <p>Questions about these terms can be sent to:</p>
+        <div class="mt-3 bg-gray-50 rounded-xl border border-gray-200 p-5">
+          <p class="font-semibold text-gray-900">Marco Cavani</p>
+          <p class="text-gray-600">MarcoWeb.org</p>
+          <p class="mt-1">
+            <a href="mailto:marco@marcoweb.org" class="text-brand-blue hover:underline">marco@marcoweb.org</a>
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
