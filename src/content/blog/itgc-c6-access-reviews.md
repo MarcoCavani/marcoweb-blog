@@ -1,7 +1,7 @@
 ---
 title: "Wirecard's Fraud Required Access That Nobody Ever Challenged"
 description: "The EUR 1.9 billion Wirecard fraud was one of the largest accounting scandals in German corporate history. The employees who maintained the fraudulent records had access to financial systems that was never reviewed, never challenged, and never revoked. Access reviews are the periodic question: should this person still have this access?"
-pubDate: 2026-11-08
+pubDate: 2026-08-12
 heroImage: "/images/itgc-c6-access-reviews.svg"
 category: "IT Audit"
 author: "Marco Cavani"

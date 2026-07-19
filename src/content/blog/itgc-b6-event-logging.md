@@ -1,7 +1,7 @@
 ---
 title: "The Breach That Ran for Three Months Because Nobody Watched the Logs"
 description: "Capital One's 2019 breach exposed 100 million customer records. AWS CloudTrail logs captured every step of the attack in real time. Nobody was watching. Event Logging is the control that turns data into detection."
-pubDate: 2026-09-06
+pubDate: 2026-07-22
 heroImage: "/images/itgc-b6-event-logging.svg"
 category: "IT Audit"
 author: "Marco Cavani"

@@ -1,7 +1,7 @@
 ---
 title: "Access From Day One: Why New User Provisioning Is a Security Decision, Not an IT Task"
 description: "The moment a new user is granted access is the moment risk enters the system. Overprovisioning at onboarding is one of the most common and most consequential access control failures in modern organisations. Here is what it looks like, why it happens, and how auditors test it."
-pubDate: 2026-10-11
+pubDate: 2026-08-03
 heroImage: "/images/itgc-c2-new-user-access.svg"
 category: "IT Audit"
 author: "Marco Cavani"

@@ -1,7 +1,7 @@
 ---
 title: "When SWIFT Payments Have No Individual Owner: The Bangladesh Bank Heist"
 description: "In 2016, attackers sent fraudulent SWIFT payment messages from Bangladesh Bank and stole USD $81 million. The SWIFT terminal operated with limited individual attribution controls. In finance and ERP systems, generic and shared accounts are not just an audit issue: they are a fraud enabler."
-pubDate: 2026-12-13
+pubDate: 2026-08-24
 heroImage: "/images/itgc-def-generic-accounts.svg"
 category: "IT Audit"
 author: "Marco Cavani"

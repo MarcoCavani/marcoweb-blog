@@ -1,7 +1,7 @@
 ---
 title: "When HR Access Enables Tax Fraud: The UPMC Insider Breach"
 description: "At UPMC, the personal data of 62,000 employees was stolen through the HR and payroll system by an insider with excessive access. The data was used to file fraudulent tax returns. Application new user access controls determine who reaches what, and whether that combination can be used for harm."
-pubDate: 2026-11-22
+pubDate: 2026-08-17
 heroImage: "/images/itgc-def-new-user-access.svg"
 category: "IT Audit"
 author: "Marco Cavani"

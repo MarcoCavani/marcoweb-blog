@@ -1,7 +1,7 @@
 ---
 title: "He Was Fired on a Friday. His Credentials Still Worked on Monday."
 description: "Christopher Dobbins was terminated by Stradis Healthcare and used retained credentials to delete thousands of records needed to ship personal protective equipment during a global pandemic. Access termination is not an HR process. It is a security control."
-pubDate: 2026-10-18
+pubDate: 2026-08-05
 heroImage: "/images/itgc-c3-termination.svg"
 category: "IT Audit"
 author: "Marco Cavani"

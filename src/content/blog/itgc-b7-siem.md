@@ -1,7 +1,7 @@
 ---
 title: "Uber Paid $100,000 to Cover Up a Breach That a SIEM Should Have Caught"
 description: "In 2016, attackers accessed Uber's GitHub, found AWS credentials in plain text, and downloaded 57 million user records. The entire attack was detectable. The signals existed. No system was watching and correlating them. That is what a SIEM is for."
-pubDate: 2026-09-13
+pubDate: 2026-07-24
 heroImage: "/images/itgc-b7-siem.svg"
 category: "IT Audit"
 author: "Marco Cavani"

@@ -1,7 +1,7 @@
 ---
 title: "Kaseya VSA and the Patch That Came Too Late: How Patch Management Protects 1,500 Businesses"
 description: "On 2 July 2021, the REvil ransomware group exploited zero-day vulnerabilities in Kaseya VSA to push ransomware to up to 1,500 businesses through their managed service providers. Kaseya was already working on patches. They were not deployed before the attack. Patch management is not just a technical process: it is a race with a deadline."
-pubDate: 2027-01-24
+pubDate: 2026-09-07
 heroImage: "/images/itgc-g2-patch-management.svg"
 category: "IT Audit"
 author: "Marco Cavani"

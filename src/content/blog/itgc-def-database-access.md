@@ -1,7 +1,7 @@
 ---
 title: "The Bupa Employee Who Downloaded 500,000 Customer Records and Sold Them"
 description: "In 2017, a Bupa Global employee with broad database access downloaded the health insurance data of half a million customers and attempted to sell it. Application database access controls determine whether a single authorised user can reach every record in your finance and health systems, or only the records they need."
-pubDate: 2026-12-27
+pubDate: 2026-08-28
 heroImage: "/images/itgc-def-database-access.svg"
 category: "IT Audit"
 author: "Marco Cavani"

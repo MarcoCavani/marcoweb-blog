@@ -1,7 +1,7 @@
 ---
 title: "Lapsus$ Bypassed MFA. Cloudflare Did Not Let Them. Here Is the Difference."
 description: "In 2022, the Lapsus$ group compromised Microsoft, Okta, Samsung, and Nvidia by spamming push MFA notifications until tired users approved. Cloudflare was also targeted. Their FIDO2 hardware keys made the attack irrelevant. Authentication is the control that decides which outcome you get."
-pubDate: 2026-10-04
+pubDate: 2026-07-31
 heroImage: "/images/itgc-c1-authentication.svg"
 category: "IT Audit"
 author: "Marco Cavani"

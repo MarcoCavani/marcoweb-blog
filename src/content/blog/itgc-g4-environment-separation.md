@@ -1,7 +1,7 @@
 ---
 title: "GitLab Deleted Its Own Production Database: What Environment Separation Prevents"
 description: "In January 2017, a GitLab.com database administrator accidentally deleted the primary production database while attempting to remove data from a replica. The mistake cost approximately 6 hours of customer data and took 18 hours to restore from a backup that was not complete. The incident is a case study in what happens when production access is routine."
-pubDate: 2027-02-07
+pubDate: 2026-09-11
 heroImage: "/images/itgc-g4-environment-separation.svg"
 category: "IT Audit"
 author: "Marco Cavani"

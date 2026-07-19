@@ -1,12 +1,15 @@
-name: Weekly Publish Rebuild
+name: Scheduled Publish Rebuild
 
-# Posts go live when a build runs on/after their pubDate, so a weekly build
-# is what actually publishes the scheduled queue. Netlify auto-builds on every
-# push to master, so pushing an empty commit is enough — no build-hook secret.
+# Posts go live when a build runs on/after their pubDate, so this build is what
+# actually publishes the scheduled queue. Netlify auto-builds on every push to
+# master, so pushing an empty commit is enough — no build-hook secret.
+#
+# Runs DAILY: the queue publishes Mon/Wed/Fri, so a weekly Sunday build would
+# leave mid-week posts sitting unpublished for days.
 
 on:
   schedule:
-    - cron: '0 2 * * 0'
+    - cron: '0 2 * * *'
   workflow_dispatch:
 
 permissions:

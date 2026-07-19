@@ -1,7 +1,7 @@
 ---
 title: "Samsung Engineers Sent Proprietary Source Code to ChatGPT. Three Times."
 description: "In April 2023, Samsung discovered that employees had pasted confidential source code, test sequences, and internal meeting notes into ChatGPT in three separate incidents. The data cannot be retrieved. AI Controls exist to prevent exactly this scenario."
-pubDate: 2026-09-27
+pubDate: 2026-07-29
 heroImage: "/images/itgc-b9-ai-controls.svg"
 category: "IT Audit"
 author: "Marco Cavani"

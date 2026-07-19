@@ -1,7 +1,7 @@
 ---
 title: "SolarWinds and the Firewall Rules Nobody Reviewed"
 description: "The SolarWinds SUNBURST attack compromised 18,000 organisations. The malware called home for months. Egress filtering and network security controls should have caught it. Here is what was missing and what auditors check."
-pubDate: 2026-08-09
+pubDate: 2026-07-20
 heroImage: "/images/itgc-b2-network-security-controls.svg"
 category: "IT Audit"
 author: "Marco Cavani"

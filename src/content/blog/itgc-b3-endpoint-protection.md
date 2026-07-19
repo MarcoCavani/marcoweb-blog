@@ -1,7 +1,7 @@
 ---
 title: "WannaCry Didn't Need a Zero-Day: It Needed Unpatched Endpoints"
 description: "In May 2017, WannaCry ransomware spread across 150 countries in hours. The NHS lost 19,000 appointments. The vulnerability it exploited had been patched two months earlier. Endpoint protection is the control that closes that gap."
-pubDate: 2026-08-16
+pubDate: 2026-07-20
 heroImage: "/images/itgc-b3-endpoint-protection.svg"
 category: "IT Audit"
 author: "Marco Cavani"

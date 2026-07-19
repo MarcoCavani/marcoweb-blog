@@ -1,7 +1,7 @@
 ---
 title: "Twitter's God Mode: How Privileged Access Became a $120,000 Bitcoin Scam"
 description: "In July 2020, a teenager convinced Twitter employees to hand over access to an internal admin tool that could control any account on the platform. Obama, Biden, Musk, and Apple were among the victims. Privileged access management is the control that limits the blast radius when an insider is compromised."
-pubDate: 2026-11-01
+pubDate: 2026-08-10
 heroImage: "/images/itgc-c5-privileged-access.svg"
 category: "IT Audit"
 author: "Marco Cavani"

@@ -1,7 +1,7 @@
 ---
 title: "NotPetya Hit Maersk on a Thursday. By Sunday, 45,000 PCs Were Being Rebuilt from Scratch."
 description: "In June 2017, the NotPetya wiper attacked Maersk's global network and encrypted virtually every Windows system in the company's infrastructure. Maersk survived because of a single backup domain controller in Ghana that happened to be offline during the attack. Backup and recovery controls are not optional insurance: they are the difference between recovery and collapse."
-pubDate: 2027-02-21
+pubDate: 2026-09-16
 heroImage: "/images/itgc-h1-backup-recovery.svg"
 category: "IT Audit"
 author: "Marco Cavani"

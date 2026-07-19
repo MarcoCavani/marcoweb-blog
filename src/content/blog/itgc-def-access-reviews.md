@@ -1,7 +1,7 @@
 ---
 title: "The Access That Nobody Reviewed: How Accumulated Entitlement Becomes Fraud Risk"
 description: "Application access reviews are the periodic process of certifying that every active user in a finance, payroll, or ERP system still needs the access they have. When reviews are skipped, rubber-stamped, or incomplete, former employees retain access, role creep accumulates, and segregation of duties violations persist undetected."
-pubDate: 2027-01-10
+pubDate: 2026-09-02
 heroImage: "/images/itgc-def-access-reviews.svg"
 category: "IT Audit"
 author: "Marco Cavani"

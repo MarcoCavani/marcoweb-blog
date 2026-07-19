@@ -1,7 +1,7 @@
 ---
 title: "The Rogue Trader and the Approval He Gave Himself: Why SoD Matters in Every ERP"
 description: "Jérôme Kerviel lost Société Générale EUR 4.9 billion because he had access to both trading and the back-office confirmation systems that should have caught him. Segregation of duties is the control that requires two hands on the transaction. When one person can do it all, fraud becomes possible."
-pubDate: 2026-11-29
+pubDate: 2026-08-19
 heroImage: "/images/itgc-def-segregation-of-duties.svg"
 category: "IT Audit"
 author: "Marco Cavani"

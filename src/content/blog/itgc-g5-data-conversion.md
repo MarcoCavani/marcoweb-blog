@@ -1,7 +1,7 @@
 ---
 title: "Hershey's Halloween Disaster: What a Failed ERP Migration Costs in Chocolate"
 description: "In 1999, Hershey's Foods Corporation went live with an SAP R/3 implementation on 9 July, during the peak season for Halloween candy orders. The system was not ready. Hershey's could not fill 100 million dollars worth of orders. Data conversion and migration controls exist to ensure that when you move to a new system, your business can still run."
-pubDate: 2027-02-14
+pubDate: 2026-09-14
 heroImage: "/images/itgc-g5-data-conversion.svg"
 category: "IT Audit"
 author: "Marco Cavani"

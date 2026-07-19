@@ -1,7 +1,7 @@
 ---
 title: "The Equifax Breach Was On the Risk Register: The IT Risk Management Failure Nobody Talks About"
 description: "Equifax knew about the Apache Struts vulnerability. A patch existed. The risk was real and documented. The breach happened anyway. That is the definitive case for why IT Risk Management is an audit control, not a planning exercise."
-pubDate: 2026-07-26
+pubDate: 2026-07-20
 heroImage: "/images/itgc-a3-it-risk-management.svg"
 category: "IT Audit"
 author: "Marco Cavani"

@@ -1,7 +1,7 @@
 ---
 title: "The Batch Job That Nobody Approved: How Uncontrolled Automated Processing Creates Financial Risk"
 description: "Automated batch processing runs payroll, closes the general ledger, executes payment runs, and feeds financial statements. When batch job configurations can be changed without authorisation controls or output validation, a single modification can corrupt financial data at scale, silently and at speed."
-pubDate: 2027-01-03
+pubDate: 2026-08-31
 heroImage: "/images/itgc-def-batch-processing.svg"
 category: "IT Audit"
 author: "Marco Cavani"

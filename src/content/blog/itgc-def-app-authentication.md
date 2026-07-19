@@ -1,7 +1,7 @@
 ---
 title: "JBS Foods Paid $11 Million Because Their ERP Had No MFA"
 description: "In 2021, the world's largest meat processor paid USD $11 million in ransomware to protect operations that feed millions. The attack entered through weak authentication on remote access into their production ERP environment. Application authentication is not an afterthought. It is the first line of defence for your most sensitive business data."
-pubDate: 2026-11-15
+pubDate: 2026-08-14
 heroImage: "/images/itgc-def-app-authentication.svg"
 category: "IT Audit"
 author: "Marco Cavani"
