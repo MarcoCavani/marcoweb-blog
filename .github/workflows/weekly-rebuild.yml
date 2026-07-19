@@ -1,13 +1,26 @@
 name: Weekly Publish Rebuild
 
+# Posts go live when a build runs on/after their pubDate, so a weekly build
+# is what actually publishes the scheduled queue. Netlify auto-builds on every
+# push to master, so pushing an empty commit is enough — no build-hook secret.
+
 on:
   schedule:
     - cron: '0 2 * * 0'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  trigger-netlify-rebuild:
+  publish-scheduled-posts:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Netlify build hook
-        run: curl -X POST -d '{}' "${{ secrets.NETLIFY_BUILD_HOOK_URL }}"
+      - uses: actions/checkout@v4
+
+      - name: Push an empty commit to trigger the Netlify deploy
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: weekly rebuild to publish scheduled posts"
+          git push
