@@ -1,7 +1,7 @@
 ---
 title: "730,000 Client Records on a Home Server: The Morgan Stanley DLP Failure"
 description: "A Morgan Stanley financial adviser downloaded the details of 730,000 clients to a personal device over 18 months. Data Loss Prevention controls should have caught it. When they did not, the cost was a $1 million regulatory fine and a breach affecting nearly a million people."
-pubDate: 2026-07-20
+pubDate: 2026-07-19
 heroImage: "/images/itgc-b4-data-loss-prevention.svg"
 category: "IT Audit"
 author: "Marco Cavani"

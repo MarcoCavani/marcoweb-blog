@@ -1,7 +1,7 @@
 ---
 title: "How a Flat Network Let Attackers Hide in Marriott for Four Years"
 description: "When Marriott acquired Starwood in 2016, they inherited a compromised network. Because the two environments were poorly segmented, attackers moved freely for four years. Network Architecture is the control that determines how far a breach can travel."
-pubDate: 2026-07-20
+pubDate: 2026-07-19
 heroImage: "/images/itgc-b1-network-architecture.svg"
 category: "IT Audit"
 author: "Marco Cavani"
