@@ -119,4 +119,4 @@ Access reviews in ERP environments are rarely the most visible control. They are
 
 The MarcoWeb ITGC Tool covers Application Access Reviews across Groups D, E, and F, with structured assessment templates for review completeness, SoD detection, and remediation tracking.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

@@ -119,4 +119,4 @@ Samsung's situation was not unique. In the same period, legal firm partners were
 
 The MarcoWeb ITGC Tool covers AI Controls as part of the Group B control set, with structured assessment templates for AI usage policy, approved tool governance, and technical control review.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

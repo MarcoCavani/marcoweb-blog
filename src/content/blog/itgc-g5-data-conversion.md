@@ -119,4 +119,4 @@ Hershey's 1999 migration failure is one of the most cited ERP implementation cas
 
 The MarcoWeb ITGC Tool covers Data Conversion across Group G, with structured assessment templates for migration reconciliation, testing completeness, and go-live sign-off governance.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

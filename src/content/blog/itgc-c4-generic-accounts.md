@@ -121,4 +121,4 @@ Nikolas Sharp's conviction was only possible because of an accidental VPN failur
 
 The MarcoWeb ITGC Tool covers Generic and Service Accounts as part of the Group C control set, with structured assessment templates for shared account identification, service account review, and default account testing.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

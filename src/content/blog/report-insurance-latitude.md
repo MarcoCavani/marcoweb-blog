@@ -125,4 +125,4 @@ The ITGC controls most directly implicated in this incident map to the following
 - Data retention policy compliance and minimisation opportunities
 - Privileged access management extension to service provider accounts
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

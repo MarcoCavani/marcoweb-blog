@@ -117,4 +117,4 @@ The Kaseya case is a reminder that even organisations with competent security te
 
 The MarcoWeb ITGC Tool covers Patch Management across Group G, with structured assessment templates for patch currency testing, response time compliance, and end-of-life system management.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

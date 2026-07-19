@@ -113,4 +113,4 @@ WannaCry is nearly a decade old and remains one of the most studied attacks in c
 
 The MarcoWeb ITGC Tool covers the full Group B control set including Endpoint Protection, with structured assessment templates for patch management, EDR, and baseline verification.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

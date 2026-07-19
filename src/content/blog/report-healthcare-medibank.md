@@ -125,4 +125,4 @@ The ITGC controls most directly implicated in this incident map to the following
 - Dark web credential monitoring and alerting programs
 - Privacy Act compliance assessment and data retention policy review
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

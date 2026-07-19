@@ -131,4 +131,4 @@ The ITGC controls most directly implicated in this incident map to the following
 - DLP controls for bulk file transfer detection and blocking
 - Third-party security assessment from the client perspective (law firm vendor risk)
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

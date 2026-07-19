@@ -107,4 +107,4 @@ The ITGC controls most directly implicated in this incident map to the following
 - Data classification and retention policy compliance
 - Security awareness training coverage and effectiveness measurement
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

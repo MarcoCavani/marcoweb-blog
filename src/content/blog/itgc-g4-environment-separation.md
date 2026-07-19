@@ -122,4 +122,4 @@ GitLab's post-incident review is worth reading in full. Its transparency about t
 
 The MarcoWeb ITGC Tool covers Environment Separation across Group G, with structured assessment templates for access control differentiation, deployment pathway controls, and production data management.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

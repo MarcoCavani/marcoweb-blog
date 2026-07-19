@@ -111,4 +111,4 @@ LastPass conducted security assessments of its corporate environment. The attack
 
 The MarcoWeb ITGC Tool covers the full Group B control set including Periodic Security Assessment, with structured assessment templates for test scope, findings management, and remediation tracking.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

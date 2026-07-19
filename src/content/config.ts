@@ -14,6 +14,7 @@ const blog = defineCollection({
     readTime: z.string().optional(),
     gated: z.boolean().optional(),
     youtubeId: z.string().optional(),
+    draft: z.boolean().default(false),
   }),
 })
 

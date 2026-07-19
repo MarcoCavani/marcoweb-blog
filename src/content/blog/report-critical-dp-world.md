@@ -149,4 +149,4 @@ The ITGC controls most directly implicated in this incident map to the following
 - Stakeholder communication planning for multi-party incidents
 - Network segmentation and detection capabilities for managed logistics environments
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

@@ -119,4 +119,4 @@ The Bangladesh Bank case is frequently cited in discussions of SWIFT security an
 
 The MarcoWeb ITGC Tool covers Application Generic Accounts across Groups D, E, and F, with structured assessment templates for shared account identification, default account testing, and transaction attribution.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

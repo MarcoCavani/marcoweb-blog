@@ -120,4 +120,4 @@ Uber's breach did not require advanced persistent threat tools or zero-day explo
 
 The MarcoWeb ITGC Tool covers the full Group B control set including SIEM, with structured assessment templates for log source integration, use case coverage, and alert management.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

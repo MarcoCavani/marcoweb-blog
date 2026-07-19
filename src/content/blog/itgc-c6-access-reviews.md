@@ -113,4 +113,4 @@ The Wirecard fraud illustrates a broader principle: access reviews are not just 
 
 The MarcoWeb ITGC Tool covers Access Reviews as part of the Group C control set, with structured assessment templates for review completeness, SoD analysis, and revocation tracking.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

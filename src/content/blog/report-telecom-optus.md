@@ -124,4 +124,4 @@ The ITGC controls most directly implicated in this incident map to the following
 - Data retention policy compliance for regulatory identity verification data
 - Configuration management for legacy and test environment endpoints
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

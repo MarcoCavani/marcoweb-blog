@@ -117,4 +117,4 @@ The Société Générale case is nearly two decades old and remains the textbook
 
 The MarcoWeb ITGC Tool covers Segregation of Duties across Groups D, E, and F, with structured assessment templates for SoD matrix review, conflict identification, and compensating control testing.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

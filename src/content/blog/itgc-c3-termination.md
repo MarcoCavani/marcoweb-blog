@@ -117,4 +117,4 @@ The Stradis Healthcare case is a definitive example of a high-probability, high-
 
 The MarcoWeb ITGC Tool covers Access Termination as part of the Group C control set, with structured assessment templates for leaver testing, checklist review, and HR-to-IT notification.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

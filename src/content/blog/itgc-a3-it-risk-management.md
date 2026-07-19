@@ -109,4 +109,4 @@ The Equifax breach is studied in security programs and boardrooms globally. Its 
 
 The MarcoWeb ITGC Tool covers IT Risk Management as part of the Group A control set, with structured templates for risk register assessment, treatment plan verification, and board reporting adequacy.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

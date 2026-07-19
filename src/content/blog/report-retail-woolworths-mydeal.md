@@ -127,4 +127,4 @@ The ITGC controls most directly implicated in this incident map to the following
 - Credential hygiene monitoring and dark web alerting
 - Data minimisation and retention compliance review
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

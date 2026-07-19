@@ -125,4 +125,4 @@ The ITGC controls most directly implicated in this incident map to the following
 - Business continuity planning for complete IT system failure
 - IT/OT network separation controls and approved connection pathways
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

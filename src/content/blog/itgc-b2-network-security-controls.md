@@ -122,4 +122,4 @@ The SolarWinds attack changed how the security industry thinks about trusted sof
 
 The MarcoWeb ITGC Tool covers the full Group B control set including Network Security Controls, with firewall review templates and structured workpapers for auditors.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

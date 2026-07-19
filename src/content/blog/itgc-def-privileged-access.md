@@ -118,4 +118,4 @@ Sage's breach was enabled by internal administrative access that was broader tha
 
 The MarcoWeb ITGC Tool covers Application Privileged Access across Groups D, E, and F, with structured assessment templates for superuser identification, firecall process review, and session monitoring.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

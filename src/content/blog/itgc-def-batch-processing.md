@@ -119,4 +119,4 @@ The speed and scale of batch processing is what makes it valuable. It is also wh
 
 The MarcoWeb ITGC Tool covers Application Batch Processing across Groups D, E, and F, with structured assessment templates for job change control, output reconciliation, and completion monitoring.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

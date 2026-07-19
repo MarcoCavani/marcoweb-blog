@@ -119,4 +119,4 @@ The Morgan Stanley case remains instructive because it is not primarily a techno
 
 The MarcoWeb ITGC Tool covers the full Group B control set including Data Loss Prevention, with structured assessment templates for DLP policy, technical deployment, and alert review.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

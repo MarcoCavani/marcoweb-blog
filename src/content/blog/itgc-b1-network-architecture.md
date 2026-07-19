@@ -114,4 +114,4 @@ The Marriott breach is the definitive case for why network architecture cannot b
 
 The MarcoWeb ITGC Tool covers the complete Group B control set including Network Architecture, with structured assessment templates and workpaper support.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

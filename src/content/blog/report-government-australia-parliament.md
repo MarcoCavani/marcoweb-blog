@@ -123,4 +123,4 @@ The ITGC controls most directly implicated in this incident map to the following
 - Network segmentation between parliamentary, executive, and party systems
 - Security awareness and phishing simulation programs targeting high-value users
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

@@ -121,4 +121,4 @@ Twitter's God Mode was well-named. Unconstrained privileged access over a large 
 
 The MarcoWeb ITGC Tool covers Privileged Access as part of the Group C control set, with structured assessment templates for PAM implementation, JIT access, session recording, and privileged user review.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

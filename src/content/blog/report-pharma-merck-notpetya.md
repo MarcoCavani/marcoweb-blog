@@ -115,4 +115,4 @@ The ITGC controls most directly implicated in this incident map to the following
 - Backup architecture isolation and recovery time testing
 - Disaster recovery planning inclusive of GxP re-validation timelines
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

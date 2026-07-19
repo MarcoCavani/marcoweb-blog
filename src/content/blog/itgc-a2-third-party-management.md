@@ -111,4 +111,4 @@ Third party risk is not a procurement problem or an IT problem. It is an enterpr
 
 The MarcoWeb ITGC Tool covers the full Group A control set including Third Party Management, with structured assessment templates and workpaper generation.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

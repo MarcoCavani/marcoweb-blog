@@ -119,4 +119,4 @@ British Airways' 2017 IT failure illustrated that disaster recovery failures are
 
 The MarcoWeb ITGC Tool covers Disaster Recovery across Group H, with structured assessment templates for DR plan currency, RTO testing, and failover architecture review.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

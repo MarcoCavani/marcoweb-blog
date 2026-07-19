@@ -123,4 +123,4 @@ The ITGC controls most directly implicated in this incident map to the following
 - OT/IT network segmentation adequacy
 - Active Directory offline recovery capability and testing
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

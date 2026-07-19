@@ -106,4 +106,4 @@ The ITGC controls most directly implicated in this incident map to the following
 - Medical device patch management and network isolation
 - Business continuity plan review including IT failure scenarios and paper-based fallback rehearsal
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

@@ -117,4 +117,4 @@ The Lapsus$ campaign is the clearest possible demonstration that push-based MFA,
 
 The MarcoWeb ITGC Tool covers Authentication as part of the Group C control set, with structured assessment templates for MFA deployment, helpdesk procedures, and conditional access.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

@@ -109,4 +109,4 @@ JBS paid USD $11 million because a password was not enough protection for the re
 
 The MarcoWeb ITGC Tool covers Application Authentication across Groups D, E, and F, with structured assessment templates for ERP password policy, MFA verification, and default account testing.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

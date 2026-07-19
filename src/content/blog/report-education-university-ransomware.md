@@ -115,4 +115,4 @@ The ITGC controls most directly implicated in this sector pattern map to the fol
 - Legacy system inventory and network isolation controls
 - Patch management across decentralised department IT environments
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

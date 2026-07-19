@@ -115,4 +115,4 @@ The Bupa case is not unusual. Insurance, healthcare, finance, and retail organis
 
 The MarcoWeb ITGC Tool covers Application Database Access across Groups D, E, and F, with structured assessment templates for DBA separation, row-level security, and data volume monitoring.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

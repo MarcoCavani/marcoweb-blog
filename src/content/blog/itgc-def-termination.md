@@ -119,4 +119,4 @@ The Cisco case is the argument that application termination is not complete unti
 
 The MarcoWeb ITGC Tool covers Application Termination across Groups D, E, and F, with structured assessment templates for checklist completeness, SLA testing, and cloud access reconciliation.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)

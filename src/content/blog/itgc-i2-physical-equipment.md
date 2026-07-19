@@ -121,4 +121,4 @@ The Coca-Cola case is a reminder that data breaches do not require network intru
 
 The MarcoWeb ITGC Tool covers Physical Equipment across Group I, with structured assessment templates for asset inventory accuracy, encryption compliance, and disposal certification.
 
-[Open the ITGC Audit Tool](https://marcoweb-itgc-saas.netlify.app/)
+[Open the ITGC Audit Tool](https://itgc.marcoweb.org/)
