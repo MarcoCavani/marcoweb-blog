@@ -69,7 +69,7 @@ const recentPosts = blogPosts.slice(1, 5)
           </div>
           <article class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden md:flex group hover:shadow-md transition-shadow">
             {featuredPost.data.heroImage && (
-              <a href={`/blog/${featuredPost.slug}`} class="md:w-80 shrink-0">
+              <a href={`/blog/${featuredPost.slug}/`} class="md:w-80 shrink-0">
                 <img
                   src={featuredPost.data.heroImage}
                   alt={featuredPost.data.title}
@@ -87,11 +87,11 @@ const recentPosts = blogPosts.slice(1, 5)
                 )}
               </div>
               <h3 class="text-2xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand-blue transition-colors">
-                <a href={`/blog/${featuredPost.slug}`}>{featuredPost.data.title}</a>
+                <a href={`/blog/${featuredPost.slug}/`}>{featuredPost.data.title}</a>
               </h3>
               <p class="text-gray-500 leading-relaxed mb-5">{featuredPost.data.description}</p>
               <a
-                href={`/blog/${featuredPost.slug}`}
+                href={`/blog/${featuredPost.slug}/`}
                 class="self-start px-5 py-2 bg-brand-blue hover:bg-brand-navy text-white rounded-xl text-sm font-semibold transition-colors"
               >
                 Read more →
