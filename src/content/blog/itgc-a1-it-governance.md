@@ -7,7 +7,7 @@ category: "IT Audit"
 author: "Marco Cavani"
 tags: ["IT Governance", "ITGC", "COBIT", "Board Accountability", "Colonial Pipeline", "IT Audit"]
 readTime: "8 min read"
-youtubeId: "ZkJyjVlRQqo"
+youtubeId: "dCmt4S8f7as"
 ---
 
 In May 2021, a ransomware group called DarkSide shut down the largest fuel pipeline in the United States. Colonial Pipeline, supplying roughly 45% of the East Coast's fuel, paid USD $4.4 million in ransom and halted operations for six days. Petrol stations ran dry. States declared emergencies.

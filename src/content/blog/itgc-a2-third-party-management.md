@@ -7,6 +7,7 @@ category: "IT Audit"
 author: "Marco Cavani"
 tags: ["Third Party Management", "ITGC", "Vendor Risk", "Supply Chain Security", "Target Breach", "IT Audit"]
 readTime: "8 min read"
+youtubeId: "Lia7MdPMFPo"
 ---
 
 In November 2013, attackers entered one of the largest retail networks in the United States through a heating, ventilation and air conditioning contractor. Fazio Mechanical Services had network access to Target Corporation for remote monitoring of refrigeration units. That access became the entry point for a breach that exposed 40 million credit card numbers and the personal data of 70 million customers.
