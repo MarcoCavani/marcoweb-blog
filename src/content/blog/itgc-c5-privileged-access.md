@@ -4,6 +4,7 @@ description: "In July 2020, a teenager convinced Twitter employees to hand over 
 pubDate: 2026-08-10
 heroImage: "/images/itgc-c5-privileged-access.svg"
 category: "IT Audit"
+control: "C.5"
 author: "Marco Cavani"
 tags: ["Privileged Access", "ITGC", "PAM", "Twitter Breach", "Admin Access", "Insider Threat", "IT Audit"]
 readTime: "8 min read"

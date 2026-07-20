@@ -1,9 +1,10 @@
 ---
 title: "Government Incident Report: The Australian Parliament House Network Breach and the Nation-State Threat to Democratic Institutions"
 description: "In February 2019, three weeks before the Australian federal election, the Australian Signals Directorate disclosed that the Parliament House network had been breached by a sophisticated state actor. This report examines the threat context, the ITGC implications for government networks, and the broader challenge of defending democratic institutions from nation-state espionage."
-pubDate: 2027-04-11
+pubDate: 2026-07-23
 heroImage: "/images/report-government-australia-parliament.svg"
 category: "Digital Report"
+industry: "Government"
 author: "Marco Cavani"
 tags: ["Government", "Australia Parliament", "State-Sponsored", "Nation-State", "Espionage", "Incident Report"]
 readTime: "9 min read"

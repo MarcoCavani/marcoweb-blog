@@ -4,6 +4,7 @@ description: "When Marriott acquired Starwood in 2016, they inherited a compromi
 pubDate: 2026-07-19
 heroImage: "/images/itgc-b1-network-architecture.svg"
 category: "IT Audit"
+control: "B.1"
 author: "Marco Cavani"
 tags: ["Network Architecture", "ITGC", "Network Segmentation", "Marriott Breach", "Defence in Depth", "IT Audit"]
 readTime: "8 min read"

@@ -4,6 +4,7 @@ description: "A Morgan Stanley financial adviser downloaded the details of 730,0
 pubDate: 2026-07-19
 heroImage: "/images/itgc-b4-data-loss-prevention.svg"
 category: "IT Audit"
+control: "B.4"
 author: "Marco Cavani"
 tags: ["Data Loss Prevention", "ITGC", "DLP", "Insider Threat", "Morgan Stanley", "IT Audit"]
 readTime: "8 min read"

@@ -4,6 +4,7 @@ description: "LastPass was breached twice in 2022. The second breach exploited a
 pubDate: 2026-07-27
 heroImage: "/images/itgc-b8-periodic-security-assessment.svg"
 category: "IT Audit"
+control: "B.8"
 author: "Marco Cavani"
 tags: ["Periodic Security Assessment", "ITGC", "Penetration Testing", "LastPass", "Cloud Security", "IT Audit"]
 readTime: "8 min read"

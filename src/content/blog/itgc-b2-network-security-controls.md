@@ -4,6 +4,7 @@ description: "The SolarWinds SUNBURST attack compromised 18,000 organisations. T
 pubDate: 2026-07-19
 heroImage: "/images/itgc-b2-network-security-controls.svg"
 category: "IT Audit"
+control: "B.2"
 author: "Marco Cavani"
 tags: ["Network Security Controls", "ITGC", "Firewall", "SolarWinds", "Egress Filtering", "IT Audit"]
 readTime: "8 min read"

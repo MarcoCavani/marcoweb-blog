@@ -1,9 +1,10 @@
 ---
 title: "Mining Incident Report: Norsk Hydro, LockerGoga, and the Aluminium Smelter That Ran on Paper"
 description: "In March 2019, LockerGoga ransomware encrypted Norsk Hydro's global IT systems, forcing aluminium smelters to switch to manual operations and costing the company approximately USD $71 million. This report examines how a credential compromise became a production shutdown, and what IT/OT convergence means for mining sector cybersecurity controls."
-pubDate: 2027-04-04
+pubDate: 2026-07-21
 heroImage: "/images/report-mining-norsk-hydro.svg"
 category: "Digital Report"
+industry: "Mining & Industrial"
 author: "Marco Cavani"
 tags: ["Mining", "Norsk Hydro", "LockerGoga", "OT Security", "Ransomware", "Incident Report"]
 readTime: "9 min read"

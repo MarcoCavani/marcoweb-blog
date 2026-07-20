@@ -4,6 +4,7 @@ description: "IT Governance sets the tone from the top. When boards and executiv
 pubDate: 2026-07-12
 heroImage: "/images/itgc-a1-it-governance.svg"
 category: "IT Audit"
+control: "A.1"
 author: "Marco Cavani"
 tags: ["IT Governance", "ITGC", "COBIT", "Board Accountability", "Colonial Pipeline", "IT Audit"]
 readTime: "8 min read"

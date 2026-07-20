@@ -4,6 +4,7 @@ description: "In 2022, the Lapsus$ group compromised Microsoft, Okta, Samsung, a
 pubDate: 2026-07-31
 heroImage: "/images/itgc-c1-authentication.svg"
 category: "IT Audit"
+control: "C.1"
 author: "Marco Cavani"
 tags: ["Authentication", "ITGC", "MFA", "Lapsus$", "FIDO2", "Identity Security", "IT Audit"]
 readTime: "8 min read"

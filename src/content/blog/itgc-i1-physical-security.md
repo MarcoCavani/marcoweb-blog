@@ -4,6 +4,7 @@ description: "In May 2006, a Veterans Affairs employee took home a laptop contai
 pubDate: 2026-09-21
 heroImage: "/images/itgc-i1-physical-security.svg"
 category: "IT Audit"
+control: "I.1"
 author: "Marco Cavani"
 tags: ["Physical Security", "ITGC", "VA Data Breach", "Data Centre Access", "Physical Controls", "IT Audit"]
 readTime: "7 min read"

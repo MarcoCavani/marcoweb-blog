@@ -4,6 +4,7 @@ description: "In April 2023, Samsung discovered that employees had pasted confid
 pubDate: 2026-07-29
 heroImage: "/images/itgc-b9-ai-controls.svg"
 category: "IT Audit"
+control: "B.9"
 author: "Marco Cavani"
 tags: ["AI Controls", "ITGC", "Generative AI", "Data Security", "Samsung", "ChatGPT", "IT Audit"]
 readTime: "7 min read"

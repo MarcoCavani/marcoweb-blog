@@ -4,6 +4,7 @@ description: "Equifax knew about the Apache Struts vulnerability. A patch existe
 pubDate: 2026-07-19
 heroImage: "/images/itgc-a3-it-risk-management.svg"
 category: "IT Audit"
+control: "A.3"
 author: "Marco Cavani"
 tags: ["IT Risk Management", "ITGC", "Risk Register", "Equifax", "Vulnerability Management", "IT Audit"]
 readTime: "8 min read"

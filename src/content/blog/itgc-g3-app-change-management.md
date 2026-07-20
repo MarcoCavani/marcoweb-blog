@@ -4,6 +4,7 @@ description: "In April 2018, TSB Bank attempted to migrate 5.4 million customer 
 pubDate: 2026-09-09
 heroImage: "/images/itgc-g3-app-change-management.svg"
 category: "IT Audit"
+control: "G.3"
 author: "Marco Cavani"
 tags: ["Application Change Management", "ITGC", "TSB Bank", "IT Migration", "Release Management", "IT Audit"]
 readTime: "8 min read"

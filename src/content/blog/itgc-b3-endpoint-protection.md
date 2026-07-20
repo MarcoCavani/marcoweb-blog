@@ -4,6 +4,7 @@ description: "In May 2017, WannaCry ransomware spread across 150 countries in ho
 pubDate: 2026-07-19
 heroImage: "/images/itgc-b3-endpoint-protection.svg"
 category: "IT Audit"
+control: "B.3"
 author: "Marco Cavani"
 tags: ["Endpoint Protection", "ITGC", "WannaCry", "EDR", "Patch Management", "NHS", "IT Audit"]
 readTime: "8 min read"

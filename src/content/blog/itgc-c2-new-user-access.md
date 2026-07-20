@@ -4,6 +4,7 @@ description: "The moment a new user is granted access is the moment risk enters 
 pubDate: 2026-08-03
 heroImage: "/images/itgc-c2-new-user-access.svg"
 category: "IT Audit"
+control: "C.2"
 author: "Marco Cavani"
 tags: ["New User Access", "ITGC", "Access Provisioning", "Least Privilege", "Identity Management", "IT Audit"]
 readTime: "8 min read"

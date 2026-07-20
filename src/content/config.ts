@@ -15,6 +15,10 @@ const blog = defineCollection({
     gated: z.boolean().optional(),
     youtubeId: z.string().optional(),
     draft: z.boolean().default(false),
+    // Sector a report analyses — drives the industry filter on /reports.
+    industry: z.string().optional(),
+    // ITGC control reference, e.g. "B.3" or "D.1 · E.1 · F.1" — drives /itgc-series.
+    control: z.string().optional(),
   }),
 })
 

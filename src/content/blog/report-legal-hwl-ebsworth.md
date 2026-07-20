@@ -1,9 +1,10 @@
 ---
 title: "Legal Sector Incident Report: The HWL Ebsworth Breach and the Law Firm as a Government Data Aggregator"
 description: "In April 2023, ALPHV/BlackCat ransomware exfiltrated 4 terabytes of data from HWL Ebsworth, one of Australia's largest law firms, including data belonging to 65 federal government agency clients. This report examines how law firms function as unintended data aggregators for their clients, and why the legal sector's cybersecurity posture creates systemic risk for governments and corporations alike."
-pubDate: 2027-05-23
+pubDate: 2026-08-13
 heroImage: "/images/report-legal-hwl-ebsworth.svg"
 category: "Digital Report"
+industry: "Legal"
 author: "Marco Cavani"
 tags: ["Legal", "HWL Ebsworth", "ALPHV BlackCat", "Law Firm Security", "Government Data", "Incident Report"]
 readTime: "9 min read"

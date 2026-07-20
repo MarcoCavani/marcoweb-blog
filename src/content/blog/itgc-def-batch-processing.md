@@ -4,6 +4,7 @@ description: "Automated batch processing runs payroll, closes the general ledger
 pubDate: 2026-08-31
 heroImage: "/images/itgc-def-batch-processing.svg"
 category: "IT Audit"
+control: "D.8"
 author: "Marco Cavani"
 tags: ["Application Batch Processing", "ITGC", "ERP Automation", "Payroll Batch", "IT Audit", "Financial Controls"]
 readTime: "7 min read"

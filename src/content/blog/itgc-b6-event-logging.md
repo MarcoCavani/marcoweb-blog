@@ -4,6 +4,7 @@ description: "Capital One's 2019 breach exposed 100 million customer records. AW
 pubDate: 2026-07-22
 heroImage: "/images/itgc-b6-event-logging.svg"
 category: "IT Audit"
+control: "B.6"
 author: "Marco Cavani"
 tags: ["Event Logging", "ITGC", "Log Management", "Capital One Breach", "Audit Trail", "IT Audit"]
 readTime: "8 min read"

@@ -1,9 +1,10 @@
 ---
 title: "Critical Infrastructure Report: The DP World Port Shutdown and 30,000 Stranded Containers"
 description: "In November 2023, a cyberattack forced DP World Australia to take its port operations offline for four days, stranding 30,000 containers at four major Australian ports. The incident demonstrated that a single managed logistics provider's security posture could be leveraged to disrupt 40 percent of Australia's container port capacity."
-pubDate: 2027-06-27
+pubDate: 2026-09-01
 heroImage: "/images/report-critical-dp-world.svg"
 category: "Digital Report"
+industry: "Critical Infrastructure"
 author: "Marco Cavani"
 tags: ["Critical Infrastructure", "DP World", "Maritime", "Supply Chain", "Port Operations", "Incident Report"]
 readTime: "10 min read"

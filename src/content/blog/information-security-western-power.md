@@ -5,6 +5,7 @@ pubDate: 2024-02-20
 updatedDate: 2024-09-03
 heroImage: "/images/western-power-cover.svg"
 category: "Digital Report"
+industry: "Energy & Utilities"
 author: "Marco Cavani"
 tags: ["Cybersecurity", "Critical Infrastructure", "Information Security", "Australia", "Energy Sector"]
 readTime: "25 min read"

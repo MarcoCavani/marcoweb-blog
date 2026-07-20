@@ -4,6 +4,7 @@ description: "Christopher Dobbins was terminated by Stradis Healthcare and used 
 pubDate: 2026-08-05
 heroImage: "/images/itgc-c3-termination.svg"
 category: "IT Audit"
+control: "C.3"
 author: "Marco Cavani"
 tags: ["Termination", "ITGC", "Access Revocation", "Insider Threat", "Offboarding", "IT Audit"]
 readTime: "8 min read"

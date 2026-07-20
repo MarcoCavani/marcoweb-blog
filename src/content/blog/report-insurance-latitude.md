@@ -1,9 +1,10 @@
 ---
 title: "Financial Services Incident Report: The Latitude Financial Breach and 14 Million Records Through a Service Provider"
 description: "In March 2023, attackers used stolen employee credentials from a service provider to access Latitude Financial's systems, ultimately stealing 14 million customer records including 7.9 million identity document numbers. This report examines the largest confirmed data theft in Australian history, the systemic third-party access failure, and the insurance and consumer finance sector's data retention exposure."
-pubDate: 2027-05-09
+pubDate: 2026-08-06
 heroImage: "/images/report-insurance-latitude.svg"
 category: "Digital Report"
+industry: "Insurance"
 author: "Marco Cavani"
 tags: ["Financial Services", "Latitude Financial", "Third-Party Breach", "Identity Documents", "Incident Report"]
 readTime: "9 min read"

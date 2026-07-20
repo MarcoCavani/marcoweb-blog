@@ -4,6 +4,7 @@ description: "In 2016, attackers accessed Uber's GitHub, found AWS credentials i
 pubDate: 2026-07-24
 heroImage: "/images/itgc-b7-siem.svg"
 category: "IT Audit"
+control: "B.7"
 author: "Marco Cavani"
 tags: ["SIEM", "ITGC", "Security Monitoring", "Uber Breach", "Threat Detection", "IT Audit"]
 readTime: "8 min read"

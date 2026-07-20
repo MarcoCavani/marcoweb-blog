@@ -4,6 +4,7 @@ description: "In May 2017, a power supply failure at British Airways' data centr
 pubDate: 2026-09-18
 heroImage: "/images/itgc-h2-disaster-recovery.svg"
 category: "IT Audit"
+control: "H.2"
 author: "Marco Cavani"
 tags: ["Disaster Recovery", "ITGC", "British Airways IT Failure", "RTO", "Business Continuity", "IT Audit"]
 readTime: "7 min read"

@@ -4,6 +4,7 @@ description: "In 1999, Hershey's Foods Corporation went live with an SAP R/3 imp
 pubDate: 2026-09-14
 heroImage: "/images/itgc-g5-data-conversion.svg"
 category: "IT Audit"
+control: "G.5"
 author: "Marco Cavani"
 tags: ["Data Conversion", "ITGC", "Hershey ERP Migration", "SAP Implementation", "Data Migration", "IT Audit"]
 readTime: "7 min read"

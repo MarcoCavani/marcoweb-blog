@@ -4,6 +4,7 @@ description: "At UPMC, the personal data of 62,000 employees was stolen through 
 pubDate: 2026-08-17
 heroImage: "/images/itgc-def-new-user-access.svg"
 category: "IT Audit"
+control: "D.2 · E.2 · F.2"
 author: "Marco Cavani"
 tags: ["Application New User Access", "ITGC", "HR System", "UPMC Breach", "Payroll Security", "IT Audit"]
 readTime: "7 min read"

@@ -4,6 +4,7 @@ description: "The EUR 1.9 billion Wirecard fraud was one of the largest accounti
 pubDate: 2026-08-12
 heroImage: "/images/itgc-c6-access-reviews.svg"
 category: "IT Audit"
+control: "C.6"
 author: "Marco Cavani"
 tags: ["Access Reviews", "ITGC", "User Access Review", "Wirecard", "Recertification", "IT Audit"]
 readTime: "8 min read"

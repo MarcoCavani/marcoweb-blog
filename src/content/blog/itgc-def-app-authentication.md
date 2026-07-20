@@ -4,6 +4,7 @@ description: "In 2021, the world's largest meat processor paid USD $11 million i
 pubDate: 2026-08-14
 heroImage: "/images/itgc-def-app-authentication.svg"
 category: "IT Audit"
+control: "D.1 · E.1 · F.1"
 author: "Marco Cavani"
 tags: ["Application Authentication", "ITGC", "ERP Security", "JBS Ransomware", "MFA", "SAP", "IT Audit"]
 readTime: "7 min read"

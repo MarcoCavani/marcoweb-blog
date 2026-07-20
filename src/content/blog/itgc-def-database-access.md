@@ -4,6 +4,7 @@ description: "In 2017, a Bupa Global employee with broad database access downloa
 pubDate: 2026-08-28
 heroImage: "/images/itgc-def-database-access.svg"
 category: "IT Audit"
+control: "D.7 · E.8 · F.7"
 author: "Marco Cavani"
 tags: ["Application Database Access", "ITGC", "Bupa Breach", "Insider Threat", "ERP Data Access", "IT Audit"]
 readTime: "7 min read"

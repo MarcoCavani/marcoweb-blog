@@ -4,6 +4,7 @@ description: "A Ubiquiti employee used shared cloud admin credentials to steal g
 pubDate: 2026-08-07
 heroImage: "/images/itgc-c4-generic-accounts.svg"
 category: "IT Audit"
+control: "C.4"
 author: "Marco Cavani"
 tags: ["Generic Accounts", "ITGC", "Shared Credentials", "Service Accounts", "Insider Threat", "IT Audit"]
 readTime: "7 min read"

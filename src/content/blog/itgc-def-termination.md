@@ -4,6 +4,7 @@ description: "A former Cisco engineer's cloud application access was never revok
 pubDate: 2026-08-21
 heroImage: "/images/itgc-def-termination.svg"
 category: "IT Audit"
+control: "D.4 · E.4 · F.4"
 author: "Marco Cavani"
 tags: ["Application Termination", "ITGC", "Access Revocation", "Cisco Breach", "Offboarding", "Cloud Security", "IT Audit"]
 readTime: "7 min read"

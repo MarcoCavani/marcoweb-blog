@@ -4,6 +4,7 @@ description: "Attackers do not always break through your front door. Sometimes t
 pubDate: 2026-07-19
 heroImage: "/images/itgc-a2-third-party-management.svg"
 category: "IT Audit"
+control: "A.2"
 author: "Marco Cavani"
 tags: ["Third Party Management", "ITGC", "Vendor Risk", "Supply Chain Security", "Target Breach", "IT Audit"]
 readTime: "8 min read"

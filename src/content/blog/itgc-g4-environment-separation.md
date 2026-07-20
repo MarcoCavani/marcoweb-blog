@@ -4,6 +4,7 @@ description: "In January 2017, a GitLab.com database administrator accidentally 
 pubDate: 2026-09-11
 heroImage: "/images/itgc-g4-environment-separation.svg"
 category: "IT Audit"
+control: "G.4"
 author: "Marco Cavani"
 tags: ["Environment Separation", "ITGC", "GitLab Incident", "Production Access", "Dev UAT Prod", "IT Audit"]
 readTime: "7 min read"

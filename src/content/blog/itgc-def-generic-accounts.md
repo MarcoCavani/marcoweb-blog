@@ -4,6 +4,7 @@ description: "In 2016, attackers sent fraudulent SWIFT payment messages from Ban
 pubDate: 2026-08-24
 heroImage: "/images/itgc-def-generic-accounts.svg"
 category: "IT Audit"
+control: "D.5 · E.6 · F.5"
 author: "Marco Cavani"
 tags: ["Application Generic Accounts", "ITGC", "Shared Accounts", "Bangladesh Bank", "SWIFT Fraud", "ERP Security", "IT Audit"]
 readTime: "7 min read"

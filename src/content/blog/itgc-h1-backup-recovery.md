@@ -4,6 +4,7 @@ description: "In June 2017, the NotPetya wiper attacked Maersk's global network 
 pubDate: 2026-09-16
 heroImage: "/images/itgc-h1-backup-recovery.svg"
 category: "IT Audit"
+control: "H.1"
 author: "Marco Cavani"
 tags: ["Backup and Recovery", "ITGC", "Maersk NotPetya", "Business Continuity", "RTO RPO", "IT Audit"]
 readTime: "8 min read"

@@ -4,6 +4,7 @@ description: "On 1 August 2012, a software deployment error at Knight Capital Gr
 pubDate: 2026-09-04
 heroImage: "/images/itgc-g1-change-management.svg"
 category: "IT Audit"
+control: "G.1"
 author: "Marco Cavani"
 tags: ["Change Management", "ITGC", "Knight Capital", "IT Change Control", "Deployment Controls", "IT Audit"]
 readTime: "8 min read"

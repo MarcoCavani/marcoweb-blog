@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import CTABox from '../components/CTABox.astro'
+import NewsletterSignup from '../components/NewsletterSignup.astro'
+import { getCollection } from 'astro:content'
+
+const today = new Date()
+today.setHours(23, 59, 59, 999)
+
+const GROUPS = [
+  { key: 'A', name: 'Governance and Strategy Management' },
+  { key: 'B', name: 'Operations and Network Security' },
+  { key: 'C', name: 'Network and Remote Access Management' },
+  { key: 'D', name: 'Application Access Management' },
+  { key: 'G', name: 'Change Management' },
+  { key: 'H', name: 'Business Continuity Management' },
+  { key: 'I', name: 'Physical Environment Security' },
+]
+
+// Every ITGC post, published or not — unpublished ones show as scheduled rather
+// than being hidden, so the page reads as a complete syllabus from day one.
+const posts = (await getCollection('blog'))
+  .filter(p => p.data.control && p.slug.startsWith('itgc-'))
+  .map(p => ({
+    control: p.data.control,
+    group: p.data.control.trim()[0],
+    title: p.data.title,
+    description: p.data.description,
+    slug: p.slug,
+    youtubeId: p.data.youtubeId,
+    pubDate: p.data.pubDate,
+    live: p.data.pubDate <= today && !p.data.draft,
+  }))
+  .sort((a, b) => a.control.localeCompare(b.control, undefined, { numeric: true }))
+
+const liveCount = posts.filter(p => p.live).length
+const videoCount = posts.filter(p => p.live && p.youtubeId).length
+const fmt = d => d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short' })
+---
+
+<Layout
+  title="The ITGC Series | MarcoWeb"
+  description="Every IT General Control explained through the real breach that proves why it matters. Articles, videos, and a free self-assessment tool."
+>
+  <Header />
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-10 text-center">
+      <div class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-4 py-1.5 rounded-full mb-4">
+        The ITGC Series
+      </div>
+      <h1 class="text-4xl font-extrabold text-gray-900 mb-4">One control. One breach. Every week.</h1>
+      <p class="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+        Every IT General Control, explained through the real-world breach that proves why it matters —
+        what failed, what good looks like, and exactly how auditors test it.
+      </p>
+      <div class="flex flex-wrap justify-center gap-8 mt-8 text-center">
+        <div>
+          <div class="text-3xl font-extrabold text-brand-blue">{posts.length}</div>
+          <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">controls covered</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-brand-blue">{liveCount}</div>
+          <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">published</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-brand-blue">{videoCount}</div>
+          <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">with video</div>
+        </div>
+      </div>
+    </div>
+
+    {GROUPS.map(g => {
+      const items = posts.filter(p => p.group === g.key)
+      if (!items.length) return null
+      return (
+        <section class="mt-14">
+          <div class="flex items-baseline gap-3 mb-5">
+            <span class="text-2xl font-extrabold text-brand-blue">{g.key}</span>
+            <h2 class="text-xl font-bold text-gray-900">{g.name}</h2>
+            <div class="flex-1 h-px bg-gray-200"></div>
+            <span class="text-xs text-gray-400">{items.filter(i => i.live).length}/{items.length} live</span>
+          </div>
+
+          <ul class="space-y-3">
+            {items.map(p => (
+              <li class={`rounded-xl border p-5 transition-shadow ${p.live ? 'bg-white border-gray-100 shadow-sm hover:shadow-md' : 'bg-gray-50 border-dashed border-gray-200'}`}>
+                <div class="flex items-start gap-4">
+                  <span class={`shrink-0 text-xs font-bold px-2.5 py-1 rounded-lg ${p.live ? 'text-brand-blue bg-blue-50' : 'text-gray-400 bg-gray-100'}`}>
+                    {p.control}
+                  </span>
+                  <div class="flex-1 min-w-0">
+                    {p.live ? (
+                      <a href={`/blog/${p.slug}/`} class="font-semibold text-gray-900 hover:text-brand-blue transition-colors">
+                        {p.title}
+                      </a>
+                    ) : (
+                      <span class="font-semibold text-gray-400">{p.title}</span>
+                    )}
+                    <p class={`text-sm mt-1 leading-relaxed ${p.live ? 'text-gray-500' : 'text-gray-400'}`}>
+                      {p.description}
+                    </p>
+                    <div class="flex flex-wrap items-center gap-4 mt-3 text-xs">
+                      {p.live && (
+                        <a href={`/blog/${p.slug}/`} class="text-brand-blue font-semibold hover:text-brand-navy">Read the article →</a>
+                      )}
+                      {p.live && p.youtubeId && (
+                        <a href={`https://www.youtube.com/watch?v=${p.youtubeId}`} target="_blank" rel="noopener noreferrer"
+                           class="text-brand-blue font-semibold hover:text-brand-navy">Watch the video ↗</a>
+                      )}
+                      {!p.live && (
+                        <span class="text-gray-400 font-medium">Publishing {fmt(p.pubDate)}</span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    })}
+
+    <div class="mt-16">
+      <NewsletterSignup />
+    </div>
+
+    <CTABox variant="full" />
+  </main>
+
+  <Footer />
+</Layout>

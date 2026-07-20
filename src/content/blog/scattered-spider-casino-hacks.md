@@ -5,6 +5,7 @@ pubDate: 2024-09-03
 updatedDate: 2024-09-14
 heroImage: "/images/scattered-spider-cover.svg"
 category: "Digital Report"
+industry: "Gaming & iGaming"
 author: "Marco Cavani"
 tags: ["Cybersecurity", "Ransomware", "Social Engineering", "Threat Intelligence", "Casino Security"]
 readTime: "14 min read"

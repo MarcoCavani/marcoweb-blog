@@ -4,6 +4,7 @@ description: "In 2016, a Sage Group employee used unauthorised internal applicat
 pubDate: 2026-08-26
 heroImage: "/images/itgc-def-privileged-access.svg"
 category: "IT Audit"
+control: "D.6 · E.7 · F.6"
 author: "Marco Cavani"
 tags: ["Application Privileged Access", "ITGC", "ERP Superuser", "Sage Breach", "SAP_ALL", "IT Audit"]
 readTime: "7 min read"

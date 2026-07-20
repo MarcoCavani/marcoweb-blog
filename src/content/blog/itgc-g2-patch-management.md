@@ -4,6 +4,7 @@ description: "On 2 July 2021, the REvil ransomware group exploited zero-day vuln
 pubDate: 2026-09-07
 heroImage: "/images/itgc-g2-patch-management.svg"
 category: "IT Audit"
+control: "G.2"
 author: "Marco Cavani"
 tags: ["Patch Management", "ITGC", "Kaseya VSA", "REvil Ransomware", "Vulnerability Remediation", "IT Audit"]
 readTime: "7 min read"

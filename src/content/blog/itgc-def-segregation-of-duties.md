@@ -4,6 +4,7 @@ description: "Jérôme Kerviel lost Société Générale EUR 4.9 billion because
 pubDate: 2026-08-19
 heroImage: "/images/itgc-def-segregation-of-duties.svg"
 category: "IT Audit"
+control: "D.3 · E.3 · F.3"
 author: "Marco Cavani"
 tags: ["Segregation of Duties", "ITGC", "SoD", "Société Générale", "ERP Controls", "Fraud Prevention", "IT Audit"]
 readTime: "8 min read"

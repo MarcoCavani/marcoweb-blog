@@ -4,6 +4,7 @@ description: "In 2014, a former Coca-Cola employee stole 55 company laptops over
 pubDate: 2026-09-23
 heroImage: "/images/itgc-i2-physical-equipment.svg"
 category: "IT Audit"
+control: "I.2"
 author: "Marco Cavani"
 tags: ["Physical Equipment", "ITGC", "Asset Management", "Equipment Disposal", "Coca-Cola Data Breach", "IT Audit"]
 readTime: "7 min read"

@@ -4,6 +4,7 @@ description: "Application access reviews are the periodic process of certifying 
 pubDate: 2026-09-02
 heroImage: "/images/itgc-def-access-reviews.svg"
 category: "IT Audit"
+control: "D.9 · E.5 · F.8"
 author: "Marco Cavani"
 tags: ["Application Access Reviews", "ITGC", "User Certification", "Segregation of Duties", "ERP Access", "IT Audit"]
 readTime: "7 min read"
