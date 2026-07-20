@@ -1,0 +1,91 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.astro'
+import Footer from '../../components/Footer.astro'
+import Quiz from '../../components/Quiz.astro'
+import NewsletterSignup from '../../components/NewsletterSignup.astro'
+import { getCollection } from 'astro:content'
+
+export async function getStaticPaths() {
+  const lessons = await getCollection('lessons')
+  return lessons.map(lesson => {
+    const siblings = lessons
+      .filter(l => l.data.course === lesson.data.course)
+      .sort((a, b) => a.data.order - b.data.order)
+    const i = siblings.findIndex(l => l.slug === lesson.slug)
+    return {
+      params: { slug: lesson.slug },
+      props: { lesson, prev: siblings[i - 1], next: siblings[i + 1], position: i + 1, total: siblings.length },
+    }
+  })
+}
+
+const { lesson, prev, next, position, total } = Astro.props
+const { Content } = await lesson.render()
+---
+
+<Layout title={`${lesson.data.title} | IT Audit Training`} description={lesson.data.description}>
+  <Header />
+
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <nav class="text-xs text-gray-400 mb-6">
+      <a href="/training" class="hover:text-brand-blue">Training</a>
+      <span class="mx-2">›</span>
+      <span>{lesson.data.module}</span>
+      <span class="mx-2">›</span>
+      <span class="text-gray-500">Lesson {position} of {total}</span>
+    </nav>
+
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-2.5 py-1 rounded-full">
+          {lesson.data.module}
+        </span>
+        <span class="text-xs text-gray-400">{lesson.data.minutes} min</span>
+        {lesson.data.control && (
+          <a href="/itgc-series" class="text-xs text-gray-400 hover:text-brand-blue">Control {lesson.data.control}</a>
+        )}
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">{lesson.data.title}</h1>
+      <p class="text-lg text-gray-500 mt-4 leading-relaxed">{lesson.data.description}</p>
+    </header>
+
+    <div class="h-1 bg-gray-100 rounded-full mb-10">
+      <div class="h-1 bg-brand-blue rounded-full" style={`width:${(position / total) * 100}%`}></div>
+    </div>
+
+    <article class="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-brand-blue prose-strong:text-gray-900">
+      <Content />
+    </article>
+
+    {lesson.data.quiz && lesson.data.quiz.length > 0 && (
+      <Quiz questions={lesson.data.quiz} id={`quiz-${lesson.slug}`} />
+    )}
+
+    <nav class="mt-12 pt-8 border-t border-gray-200 flex justify-between gap-4">
+      {prev ? (
+        <a href={`/training/${prev.slug}/`} class="group flex-1 text-left">
+          <div class="text-xs text-gray-400 mb-1">← Previous</div>
+          <div class="text-sm font-semibold text-gray-700 group-hover:text-brand-blue transition-colors">{prev.data.title}</div>
+        </a>
+      ) : <div class="flex-1"></div>}
+      {next ? (
+        <a href={`/training/${next.slug}/`} class="group flex-1 text-right">
+          <div class="text-xs text-gray-400 mb-1">Next →</div>
+          <div class="text-sm font-semibold text-gray-700 group-hover:text-brand-blue transition-colors">{next.data.title}</div>
+        </a>
+      ) : (
+        <div class="flex-1 text-right">
+          <div class="text-xs text-gray-400 mb-1">End of module</div>
+          <a href="/training" class="text-sm font-semibold text-brand-blue hover:text-brand-navy">Back to the course →</a>
+        </div>
+      )}
+    </nav>
+
+    <div class="mt-16">
+      <NewsletterSignup />
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

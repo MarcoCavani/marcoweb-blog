@@ -4,7 +4,8 @@ import sitemap from '@astrojs/sitemap'
 import remarkControlLinks from './src/lib/remark-control-links.mjs'
 
 // Pages that set `noindex` in Layout.astro. Add a path here when you add one.
-const NOINDEX_PATHS = ['/training', '/threat-report-2026']
+// /training now hosts the free Foundations module, so it is indexable.
+const NOINDEX_PATHS = ['/threat-report-2026']
 
 export default defineConfig({
   site: 'https://marcoweb.org',
