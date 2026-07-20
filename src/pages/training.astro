@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import ComingSoon from '../components/ComingSoon.astro'
+
+// Placeholder launch date — change this one line to move the countdown.
+const RELEASE = '2026-12-01'
+---
+
+<Layout
+  title="IT Audit Training | MarcoWeb"
+  description="Structured IT audit and IT general controls training with lessons, worked examples and quizzes. Launching soon."
+  noindex
+>
+  <Header />
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <ComingSoon
+      eyebrow="In development"
+      title="IT Audit Training"
+      intro="Structured, self-paced training built on the same material as the ITGC series — short lessons, worked examples from real breaches, and quizzes that check you actually understood the control rather than just read about it."
+      releaseDate={RELEASE}
+      features={[
+        'Short lessons you can finish in a coffee break',
+        'Quizzes after every module, with explained answers',
+        'Worked examples drawn from real, documented breaches',
+        'Exam-style practice aligned to IT audit fundamentals',
+        'Progress tracking across the full control framework',
+        'Included with an ITGC Tool subscription',
+      ]}
+      note="Independent training produced by Marco Cavani. Not affiliated with, endorsed by, or sponsored by ISACA. CISA is a registered trademark of ISACA."
+    />
+
+    <div class="mt-16 text-center">
+      <p class="text-sm text-gray-500">
+        In the meantime, the full
+        <a href="/itgc-series" class="text-brand-blue font-semibold hover:text-brand-navy">ITGC series</a>
+        is free to read, and the
+        <a href="https://itgc.marcoweb.org" target="_blank" rel="noopener noreferrer" class="text-brand-blue font-semibold hover:text-brand-navy">ITGC Audit Tool ↗</a>
+        is live today.
+      </p>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

@@ -3,9 +3,13 @@ interface Props {
   title: string
   description?: string
   image?: string
+  // Keep a page out of the index while still letting crawlers follow its links.
+  // Used by the pre-launch countdown pages: thin "coming soon" pages are exactly
+  // the low-value-content signal that gets AdSense applications rejected.
+  noindex?: boolean
 }
 
-const { title, description = 'Cybersecurity insights, digital reports, and IT governance from Marco Cavani.', image } = Astro.props
+const { title, description = 'Cybersecurity insights, digital reports, and IT governance from Marco Cavani.', image, noindex = false } = Astro.props
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 // Sitewide structured data (Organization + Person + WebSite). Individual
@@ -54,6 +58,7 @@ const siteSchema = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="alternate" type="application/rss+xml" title="MarcoWeb RSS Feed" href="/rss.xml" />
 
     <!-- Structured data: Organization + Person + WebSite -->

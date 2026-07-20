@@ -1,0 +1,106 @@
+---
+import NewsletterSignup from './NewsletterSignup.astro'
+
+interface Props {
+  eyebrow?: string
+  title: string
+  intro: string
+  releaseDate: string   // ISO date, e.g. "2026-10-01"
+  features?: string[]
+  note?: string
+}
+
+const { eyebrow = 'Coming soon', title, intro, releaseDate, features = [], note } = Astro.props
+
+// Rendered server-side so the page is meaningful with JavaScript disabled and to
+// crawlers; the script below only makes it tick.
+const target = new Date(`${releaseDate}T00:00:00Z`)
+const released = target.getTime() <= Date.now()
+const readable = target.toLocaleDateString('en-AU', {
+  day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
+})
+const units = [
+  { key: 'days', label: 'days' },
+  { key: 'hours', label: 'hours' },
+  { key: 'minutes', label: 'minutes' },
+  { key: 'seconds', label: 'seconds' },
+]
+---
+
+<section class="max-w-3xl mx-auto text-center">
+  <div class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-4 py-1.5 rounded-full mb-5">
+    {eyebrow}
+  </div>
+
+  <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-5">{title}</h1>
+  <p class="text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto">{intro}</p>
+
+  <div
+    class="mt-10 rounded-2xl bg-gradient-to-r from-brand-navy to-brand-blue text-white p-8"
+    data-countdown={releaseDate}
+  >
+    {released ? (
+      <p class="text-2xl font-bold">Available now</p>
+    ) : (
+      <>
+        <div class="text-xs uppercase tracking-widest text-blue-200 mb-5">Releasing {readable}</div>
+        <div class="flex justify-center gap-4 sm:gap-8" data-countdown-clock>
+          {units.map(u => (
+            <div class="min-w-[64px]">
+              <div class="text-3xl sm:text-4xl font-extrabold tabular-nums" data-unit={u.key}>--</div>
+              <div class="text-[11px] uppercase tracking-wider text-blue-200 mt-1">{u.label}</div>
+            </div>
+          ))}
+        </div>
+      </>
+    )}
+  </div>
+
+  {features.length > 0 && (
+    <ul class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
+      {features.map(f => (
+        <li class="flex items-start gap-3 bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
+          <span class="shrink-0 mt-1 w-2 h-2 rounded-full bg-brand-blue"></span>
+          <span class="text-sm text-gray-600 leading-relaxed">{f}</span>
+        </li>
+      ))}
+    </ul>
+  )}
+
+  <div class="mt-12 text-left">
+    <NewsletterSignup />
+  </div>
+
+  {note && <p class="mt-6 text-xs text-gray-400 max-w-xl mx-auto leading-relaxed">{note}</p>}
+</section>
+
+<script is:inline>
+  (function () {
+    document.querySelectorAll('[data-countdown]').forEach(function (box) {
+      var clock = box.querySelector('[data-countdown-clock]')
+      if (!clock) return
+      var target = new Date(box.dataset.countdown + 'T00:00:00Z').getTime()
+      var slots = {}
+      clock.querySelectorAll('[data-unit]').forEach(function (el) { slots[el.dataset.unit] = el })
+
+      function pad(n) { return String(n).padStart(2, '0') }
+
+      function tick() {
+        var diff = target - Date.now()
+        if (diff <= 0) {
+          box.innerHTML = '<p class="text-2xl font-bold">Available now</p>'
+          clearInterval(timer)
+          return
+        }
+        var s = Math.floor(diff / 1000)
+        slots.days.textContent = Math.floor(s / 86400)
+        slots.hours.textContent = pad(Math.floor(s / 3600) % 24)
+        slots.minutes.textContent = pad(Math.floor(s / 60) % 60)
+        slots.seconds.textContent = pad(s % 60)
+      }
+
+      tick()
+      var timer = setInterval(tick, 1000)
+    })
+  })()
+</script>

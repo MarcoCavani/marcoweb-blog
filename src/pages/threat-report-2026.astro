@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import ComingSoon from '../components/ComingSoon.astro'
+import { getCollection } from 'astro:content'
+
+// Placeholder launch date — change this one line to move the countdown.
+// Set after the individual sector reports finish publishing (1 September).
+const RELEASE = '2026-10-01'
+
+const today = new Date()
+today.setHours(23, 59, 59, 999)
+const reports = (await getCollection('blog'))
+  .filter(p => p.data.category === 'Digital Report' && !p.data.draft)
+const industries = [...new Set(reports.map(p => p.data.industry).filter(Boolean))].sort()
+const live = reports.filter(p => p.data.pubDate <= today).length
+---
+
+<Layout
+  title="Threat Report 2026 | MarcoWeb"
+  description="The 2026 consolidated threat report — breach analysis across every sector covered, with the control failures behind each incident."
+  noindex
+>
+  <Header />
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <ComingSoon
+      eyebrow="In production"
+      title="Threat Report 2026"
+      intro={`One consolidated report pulling together every sector analysis of the year — what was breached, how, and which control would have stopped it. Built from ${reports.length} incident analyses across ${industries.length} sectors.`}
+      releaseDate={RELEASE}
+      features={[
+        'Cross-sector comparison of the year’s breaches',
+        'Every incident mapped to the ITGC control that failed',
+        'Sector chapters: ' + industries.slice(0, 4).join(', ') + ' and more',
+        'Patterns and repeat failures across industries',
+        'Drawn entirely from publicly documented incidents',
+        'Free to download for subscribers',
+      ]}
+      note="Every analysis is based on publicly reported information about incidents that have already been disclosed. Nothing here identifies undisclosed weaknesses in any named organisation."
+    />
+
+    <div class="mt-16 text-center">
+      <p class="text-sm text-gray-500">
+        {live} sector {live === 1 ? 'report is' : 'reports are'} already published —
+        <a href="/reports" class="text-brand-blue font-semibold hover:text-brand-navy">read them by industry</a>
+        while you wait.
+      </p>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
