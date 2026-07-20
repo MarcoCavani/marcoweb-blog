@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro'
 import Footer from '../../components/Footer.astro'
 import PostCard from '../../components/PostCard.astro'
 import CTABox from '../../components/CTABox.astro'
+import FilterChips from '../../components/FilterChips.astro'
 import { getCollection } from 'astro:content'
 
 const today = new Date()
@@ -12,8 +13,10 @@ const reports = (await getCollection('blog'))
   .filter(p => p.data.category === 'Digital Report' && p.data.pubDate <= today && !p.data.draft)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 
-// Filter chips are built from the data, so a new industry needs no code change.
 const industries = [...new Set(reports.map(p => p.data.industry).filter(Boolean))].sort()
+const counts = Object.fromEntries(
+  industries.map(i => [i, reports.filter(p => p.data.industry === i).length])
+)
 ---
 
 <Layout
@@ -31,30 +34,18 @@ const industries = [...new Set(reports.map(p => p.data.industry).filter(Boolean)
       </p>
     </div>
 
-    {industries.length > 0 && (
-      <div class="flex flex-wrap justify-center gap-2 mb-10" id="filters">
-        <button
-          type="button"
-          data-industry="all"
-          class="filter-chip text-xs font-semibold px-4 py-2 rounded-full border transition-colors bg-brand-blue text-white border-brand-blue"
-        >
-          All sectors <span class="opacity-70">({reports.length})</span>
-        </button>
-        {industries.map(ind => (
-          <button
-            type="button"
-            data-industry={ind}
-            class="filter-chip text-xs font-semibold px-4 py-2 rounded-full border transition-colors bg-white text-gray-600 border-gray-200 hover:border-brand-blue hover:text-brand-blue"
-          >
-            {ind} <span class="opacity-60">({reports.filter(p => p.data.industry === ind).length})</span>
-          </button>
-        ))}
-      </div>
-    )}
+    <FilterChips
+      values={industries}
+      counts={counts}
+      total={reports.length}
+      allLabel="All sectors"
+      param="sector"
+      gridId="report-grid"
+    />
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="report-grid">
       {reports.map(post => (
-        <div class="report-item" data-industry={post.data.industry || 'Other'}>
+        <div class="filter-item" data-value={post.data.industry || 'Other'}>
           <PostCard
             title={post.data.title}
             description={post.data.description}
@@ -70,7 +61,7 @@ const industries = [...new Set(reports.map(p => p.data.industry).filter(Boolean)
       ))}
     </div>
 
-    <p id="empty-state" class="hidden text-center text-gray-400 py-16">
+    <p id="report-grid-empty" class="hidden text-center text-gray-400 py-16">
       No reports in that sector yet.
     </p>
 
@@ -85,40 +76,3 @@ const industries = [...new Set(reports.map(p => p.data.industry).filter(Boolean)
 
   <Footer />
 </Layout>
-
-<script is:inline>
-  (function () {
-    var chips = document.querySelectorAll('.filter-chip')
-    var items = document.querySelectorAll('.report-item')
-    var empty = document.getElementById('empty-state')
-    var ON = ['bg-brand-blue', 'text-white', 'border-brand-blue']
-    var OFF = ['bg-white', 'text-gray-600', 'border-gray-200']
-
-    function apply(industry) {
-      var shown = 0
-      items.forEach(function (el) {
-        var match = industry === 'all' || el.dataset.industry === industry
-        el.classList.toggle('hidden', !match)
-        if (match) shown++
-      })
-      if (empty) empty.classList.toggle('hidden', shown > 0)
-      chips.forEach(function (c) {
-        var active = c.dataset.industry === industry
-        ON.forEach(function (k) { c.classList.toggle(k, active) })
-        OFF.forEach(function (k) { c.classList.toggle(k, !active) })
-      })
-      // Keep the choice in the URL so a sector view can be linked and shared.
-      var url = new URL(window.location)
-      if (industry === 'all') url.searchParams.delete('sector')
-      else url.searchParams.set('sector', industry)
-      history.replaceState({}, '', url)
-    }
-
-    chips.forEach(function (c) {
-      c.addEventListener('click', function () { apply(c.dataset.industry) })
-    })
-
-    var initial = new URLSearchParams(window.location.search).get('sector')
-    if (initial) apply(initial)
-  })()
-</script>

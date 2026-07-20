@@ -1,0 +1,99 @@
+---
+// Client-side filter chips shared by /blog and /reports.
+//
+// Usage: render this, then wrap each card in
+//   <div class="filter-item" data-value={someValue}>…</div>
+// inside an element with id={gridId}. The selection is mirrored into the URL as
+// ?<param>= so a filtered view can be linked and shared.
+
+interface Props {
+  values: string[]
+  counts: Record<string, number>
+  total: number
+  allLabel?: string
+  param?: string
+  gridId?: string
+}
+
+const { values, counts, total, allLabel = 'All', param = 'filter', gridId = 'filter-grid' } = Astro.props
+---
+
+{values.length > 0 && (
+  <div class="flex flex-wrap justify-center gap-2 mb-10" data-filter-group={gridId} data-filter-param={param}>
+    <button
+      type="button"
+      data-value="all"
+      class="filter-chip text-xs font-semibold px-4 py-2 rounded-full border transition-colors bg-brand-blue text-white border-brand-blue"
+    >
+      {allLabel} <span class="opacity-70">({total})</span>
+    </button>
+    {values.map(v => (
+      <button
+        type="button"
+        data-value={v}
+        class="filter-chip text-xs font-semibold px-4 py-2 rounded-full border transition-colors bg-white text-gray-600 border-gray-200 hover:border-brand-blue hover:text-brand-blue"
+      >
+        {v} <span class="opacity-60">({counts[v]})</span>
+      </button>
+    ))}
+  </div>
+)}
+
+<script is:inline>
+  // This component renders ABOVE the grid it filters, so the script runs before
+  // that grid has been parsed. Wait for the document before wiring anything up,
+  // or getElementById returns null and the chips silently do nothing.
+  (function () {
+    function init() {
+    document.querySelectorAll('[data-filter-group]').forEach(function (group) {
+      var gridId = group.dataset.filterGroup
+      var param = group.dataset.filterParam || 'filter'
+      var grid = document.getElementById(gridId)
+      if (!grid) return
+
+      var chips = group.querySelectorAll('.filter-chip')
+      var items = grid.querySelectorAll('.filter-item')
+      var empty = document.getElementById(gridId + '-empty')
+      var ON = ['bg-brand-blue', 'text-white', 'border-brand-blue']
+      var OFF = ['bg-white', 'text-gray-600', 'border-gray-200']
+
+      function apply(value, push) {
+        var shown = 0
+        items.forEach(function (el) {
+          var match = value === 'all' || el.dataset.value === value
+          el.classList.toggle('hidden', !match)
+          if (match) shown++
+        })
+        if (empty) empty.classList.toggle('hidden', shown > 0)
+        chips.forEach(function (c) {
+          var active = c.dataset.value === value
+          ON.forEach(function (k) { c.classList.toggle(k, active) })
+          OFF.forEach(function (k) { c.classList.toggle(k, !active) })
+        })
+        if (push) {
+          var url = new URL(window.location)
+          if (value === 'all') url.searchParams.delete(param)
+          else url.searchParams.set(param, value)
+          history.replaceState({}, '', url)
+        }
+      }
+
+      chips.forEach(function (c) {
+        c.addEventListener('click', function () { apply(c.dataset.value, true) })
+      })
+
+      var initial = new URLSearchParams(window.location.search).get(param)
+      // Only honour a value that exists, so a stale link cannot blank the page.
+      if (initial && [...chips].some(function (c) { return c.dataset.value === initial })) {
+        apply(initial, false)
+      }
+    })
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init)
+    } else {
+      init()
+    }
+  })()
+</script>

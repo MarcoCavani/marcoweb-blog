@@ -5,24 +5,29 @@ import Footer from '../../components/Footer.astro'
 import PostCard from '../../components/PostCard.astro'
 import AdBanner from '../../components/AdBanner.astro'
 import CTABox from '../../components/CTABox.astro'
+import FilterChips from '../../components/FilterChips.astro'
 import { getCollection } from 'astro:content'
 
 const today = new Date()
 today.setHours(23, 59, 59, 999)
 const posts = (await getCollection('blog'))
-  .filter(p => p.data.category !== 'Digital Report' && p.data.pubDate <= today)
+  .filter(p => p.data.category !== 'Digital Report' && p.data.pubDate <= today && !p.data.draft)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+
+const categories = [...new Set(posts.map(p => p.data.category).filter(Boolean))].sort()
+const counts = Object.fromEntries(
+  categories.map(c => [c, posts.filter(p => p.data.category === c).length])
+)
 ---
 
 <Layout
   title="Blog | MarcoWeb"
-  description="Cybersecurity reports, threat intelligence, and IT governance analysis from Marco Cavani."
+  description="Cybersecurity analysis, threat intelligence, and IT governance insights — filter by category."
 >
   <Header />
 
   <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <!-- Page header -->
-    <div class="mb-12 text-center">
+    <div class="mb-10 text-center">
       <h1 class="text-4xl font-extrabold text-gray-900 mb-3">Blog</h1>
       <p class="text-lg text-gray-500 max-w-xl mx-auto">
         Cybersecurity analysis, threat intelligence, and IT governance insights.
@@ -31,27 +36,40 @@ const posts = (await getCollection('blog'))
 
     <AdBanner slot="leaderboard" />
 
-    <!-- Posts grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+    <FilterChips
+      values={categories}
+      counts={counts}
+      total={posts.length}
+      allLabel="All categories"
+      param="category"
+      gridId="blog-grid"
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="blog-grid">
       {posts.map(post => (
-        <PostCard
-          title={post.data.title}
-          description={post.data.description}
-          slug={post.slug}
-          pubDate={post.data.pubDate}
-          category={post.data.category}
-          readTime={post.data.readTime}
-          heroImage={post.data.heroImage}
-          tags={post.data.tags}
-        />
+        <div class="filter-item" data-value={post.data.category}>
+          <PostCard
+            title={post.data.title}
+            description={post.data.description}
+            slug={post.slug}
+            pubDate={post.data.pubDate}
+            category={post.data.category}
+            readTime={post.data.readTime}
+            heroImage={post.data.heroImage}
+            tags={post.data.tags}
+          />
+        </div>
       ))}
     </div>
+
+    <p id="blog-grid-empty" class="hidden text-center text-gray-400 py-16">
+      No posts in that category yet.
+    </p>
 
     {posts.length === 0 && (
       <p class="text-center text-gray-400 py-20">No posts yet. Check back soon.</p>
     )}
 
-    <!-- CTA -->
     <div class="mt-16">
       <CTABox variant="full" />
     </div>

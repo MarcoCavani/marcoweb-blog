@@ -5,6 +5,12 @@
 [functions]
   directory = "netlify/functions"
 
+# /itgc-series was removed; keep the URL alive for anything already linking to it.
+[[redirects]]
+  from = "/itgc-series"
+  to = "/blog"
+  status = 301
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
