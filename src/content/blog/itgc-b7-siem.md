@@ -8,6 +8,7 @@ control: "B.7"
 author: "Marco Cavani"
 tags: ["SIEM", "ITGC", "Security Monitoring", "Uber Breach", "Threat Detection", "IT Audit"]
 readTime: "8 min read"
+youtubeId: "GlMPtGatkyY"
 ---
 
 In late 2016, two attackers accessed Uber's private GitHub repositories, discovered AWS access keys embedded in source code, used those keys to access an AWS S3 bucket containing a backup of Uber's rider and driver database, and downloaded the personal information of 57 million Uber users and 600,000 driver's licence numbers for US-based drivers.

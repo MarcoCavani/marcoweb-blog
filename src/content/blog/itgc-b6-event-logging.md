@@ -8,6 +8,7 @@ control: "B.6"
 author: "Marco Cavani"
 tags: ["Event Logging", "ITGC", "Log Management", "Capital One Breach", "Audit Trail", "IT Audit"]
 readTime: "8 min read"
+youtubeId: "EjK_JNyE64s"
 ---
 
 On 22 July 2019, Capital One Financial Corporation disclosed that a former Amazon Web Services employee had exploited a misconfigured Web Application Firewall (WAF) to access Capital One's AWS environment and exfiltrate data belonging to approximately 100 million individuals in the United States and 6 million in Canada.

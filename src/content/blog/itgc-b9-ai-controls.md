@@ -8,6 +8,7 @@ control: "B.9"
 author: "Marco Cavani"
 tags: ["AI Controls", "ITGC", "Generative AI", "Data Security", "Samsung", "ChatGPT", "IT Audit"]
 readTime: "7 min read"
+youtubeId: "yPSm5KUmMWk"
 ---
 
 In March 2023, Samsung Electronics lifted its internal ban on ChatGPT for semiconductor engineers, responding to pressure from staff who wanted access to generative AI tools for productivity. The policy change came with instructions to use the tool carefully with company information.

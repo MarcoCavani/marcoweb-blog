@@ -8,6 +8,7 @@ control: "B.8"
 author: "Marco Cavani"
 tags: ["Periodic Security Assessment", "ITGC", "Penetration Testing", "LastPass", "Cloud Security", "IT Audit"]
 readTime: "8 min read"
+youtubeId: "j5_3SMaXw58"
 ---
 
 In August 2022, LastPass, the widely used password management company, disclosed that an attacker had accessed a developer's account and stolen source code and proprietary technical information. The company stated that no customer data had been accessed and no passwords were compromised.

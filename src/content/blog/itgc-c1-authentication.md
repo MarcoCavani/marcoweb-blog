@@ -8,6 +8,7 @@ control: "C.1"
 author: "Marco Cavani"
 tags: ["Authentication", "ITGC", "MFA", "Lapsus$", "FIDO2", "Identity Security", "IT Audit"]
 readTime: "8 min read"
+youtubeId: "Kt7QGT_L6qg"
 ---
 
 In the first half of 2022, a threat group known as Lapsus$ (tracked by Microsoft as DEV-0537) compromised a remarkable list of large organisations in rapid succession: NVIDIA, Samsung, Ubisoft, Okta, Microsoft, T-Mobile, and Uber. The group's members were largely teenagers and young adults. Their primary technique was not a zero-day vulnerability. It was not advanced malware. It was a telephone call and a notification.
