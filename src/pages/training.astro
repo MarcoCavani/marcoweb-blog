@@ -3,16 +3,33 @@ import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import ComingSoon from '../components/ComingSoon.astro'
+import LessonVideo from '../components/LessonVideo.astro'
+import CourseSidebar from '../components/CourseSidebar.astro'
 import NewsletterSignup from '../components/NewsletterSignup.astro'
 import { getCollection } from 'astro:content'
 
 // Placeholder launch date for the paid modules, change this one line.
+// Keep it in step with RELEASE_LABEL in CourseSidebar.astro.
 const RELEASE = '2026-12-01'
+const TRAINING_PLAYLIST = 'PLQVFknVNfL1c'
 
 const lessons = (await getCollection('lessons')).sort((a, b) => a.data.order - b.data.order)
 const modules = [...new Set(lessons.map(l => l.data.module))]
 const freeMinutes = lessons.filter(l => !l.data.gated).reduce((n, l) => n + l.data.minutes, 0)
 const quizCount = lessons.reduce((n, l) => n + (l.data.quiz?.length || 0), 0)
+
+// The course opens on its first lesson, so arriving at /training puts a
+// playable video on screen with no clicks. The transcript deliberately stays on
+// the lesson's own page: repeating it here would publish the same text at two
+// URLs and split the ranking between them.
+const opener = lessons[0]
+const playlistItems = lessons.map(l => ({
+  slug: l.slug,
+  title: l.data.title,
+  minutes: l.data.minutes,
+  hasVideo: !!l.data.videoId,
+  questions: l.data.quiz?.length || 0,
+}))
 ---
 
 <Layout
@@ -21,77 +38,112 @@ const quizCount = lessons.reduce((n, l) => n + (l.data.quiz?.length || 0), 0)
 >
   <Header />
 
-  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="text-center mb-12">
-      <div class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-4 py-1.5 rounded-full mb-5">
-        Free foundations module
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_20rem] gap-8 lg:gap-10 items-start">
+      <div class="min-w-0">
+        <div class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1.5 rounded-full mb-4">
+          Free foundations module
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+          IT Audit Training
+        </h1>
+        <p class="text-lg text-gray-500 leading-relaxed mb-8 max-w-2xl">
+          The reasoning behind IT general controls, not just the checklist, short lessons with
+          knowledge checks that tell you whether it actually landed.
+        </p>
+
+        {opener?.data.videoId && (
+          <LessonVideo videoId={opener.data.videoId} title={opener.data.title} />
+        )}
+
+        {opener && (
+          <div class="flex flex-wrap items-center justify-between gap-4 -mt-4 mb-10">
+            <div class="min-w-0">
+              <p class="text-xs uppercase tracking-widest text-gray-400 mb-1">Starts with lesson 1</p>
+              <p class="text-lg font-bold text-gray-900 leading-snug">{opener.data.title}</p>
+            </div>
+            <a
+              href={`/training/${opener.slug}/`}
+              class="shrink-0 inline-flex items-center gap-2 rounded-xl bg-brand-blue px-5 py-3 text-sm font-bold text-white hover:bg-brand-navy transition-colors"
+            >
+              Open lesson 1
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        )}
+
+        <div class="flex flex-wrap gap-8 sm:gap-12 py-6 border-y border-gray-100 mb-10">
+          <div>
+            <div class="text-3xl font-extrabold text-brand-blue tabular-nums">{lessons.length}</div>
+            <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">lessons free</div>
+          </div>
+          <div>
+            <div class="text-3xl font-extrabold text-brand-blue tabular-nums">{quizCount}</div>
+            <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">quiz questions</div>
+          </div>
+          <div>
+            <div class="text-3xl font-extrabold text-brand-blue tabular-nums">{freeMinutes}</div>
+            <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">minutes</div>
+          </div>
+        </div>
+
+        {modules.map(mod => (
+          <section class="mb-10">
+            <div class="flex items-baseline gap-3 mb-5">
+              <h2 class="text-xl font-bold text-gray-900">{mod}</h2>
+              <div class="flex-1 h-px bg-gray-200"></div>
+              <span class="text-xs text-gray-400">Free</span>
+            </div>
+            <ol class="space-y-3">
+              {lessons.filter(l => l.data.module === mod).map((l, i) => (
+                <li>
+                  <a href={`/training/${l.slug}/`}
+                     class="flex items-start gap-4 rounded-xl border border-gray-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow group">
+                    <span class="shrink-0 w-7 h-7 rounded-lg bg-blue-50 text-brand-blue text-xs font-bold flex items-center justify-center">
+                      {i + 1}
+                    </span>
+                    <span class="flex-1 min-w-0">
+                      <span class="block font-semibold text-gray-900 group-hover:text-brand-blue transition-colors">{l.data.title}</span>
+                      <span class="block text-sm text-gray-500 mt-1 leading-relaxed">{l.data.description}</span>
+                      <span class="block text-xs text-gray-400 mt-2 tabular-nums">
+                        {l.data.minutes} min{l.data.quiz ? ` · ${l.data.quiz.length} questions` : ''}
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </section>
+        ))}
+
+        <div id="full-course" class="mt-14 pt-12 border-t border-gray-200 scroll-mt-8">
+          <ComingSoon
+            eyebrow="Next modules in development"
+            title="The full course"
+            intro="Foundations is free and stays free. The complete course walks every control group in the framework the same way, worked examples, testing procedures, and quizzes throughout."
+            releaseDate={RELEASE}
+            features={[
+              'Every control group from A through I',
+              'Sampling and evidence workshops with real scenarios',
+              'Exam-style practice aligned to IT audit fundamentals',
+              'Progress tracking across the whole framework',
+              'Downloadable working papers and test templates',
+              'Included with an ITGC Tool subscription',
+            ]}
+            note="Independent training produced by Marco Cavani. Not affiliated with, endorsed by, or sponsored by ISACA. CISA is a registered trademark of ISACA."
+          />
+        </div>
       </div>
-      <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-5">IT Audit Training</h1>
-      <p class="text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto">
-        The reasoning behind IT general controls, not just the checklist, short lessons with
-        knowledge checks that tell you whether it actually landed.
-      </p>
-      <div class="flex flex-wrap justify-center gap-8 mt-8">
-        <div>
-          <div class="text-3xl font-extrabold text-brand-blue">{lessons.length}</div>
-          <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">lessons free</div>
-        </div>
-        <div>
-          <div class="text-3xl font-extrabold text-brand-blue">{quizCount}</div>
-          <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">quiz questions</div>
-        </div>
-        <div>
-          <div class="text-3xl font-extrabold text-brand-blue">{freeMinutes}</div>
-          <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">minutes</div>
-        </div>
-      </div>
+
+      <CourseSidebar
+        items={playlistItems}
+        module={modules[0] ?? 'Foundations'}
+        playlistUrl={`https://www.youtube.com/playlist?list=${TRAINING_PLAYLIST}`}
+      />
     </div>
 
-    {modules.map(mod => (
-      <section class="mb-12">
-        <div class="flex items-baseline gap-3 mb-5">
-          <h2 class="text-xl font-bold text-gray-900">{mod}</h2>
-          <div class="flex-1 h-px bg-gray-200"></div>
-          <span class="text-xs text-gray-400">Free</span>
-        </div>
-        <ol class="space-y-3">
-          {lessons.filter(l => l.data.module === mod).map((l, i) => (
-            <li>
-              <a href={`/training/${l.slug}/`}
-                 class="flex items-start gap-4 rounded-xl border border-gray-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow group">
-                <span class="shrink-0 w-7 h-7 rounded-lg bg-blue-50 text-brand-blue text-xs font-bold flex items-center justify-center">
-                  {i + 1}
-                </span>
-                <span class="flex-1 min-w-0">
-                  <span class="block font-semibold text-gray-900 group-hover:text-brand-blue transition-colors">{l.data.title}</span>
-                  <span class="block text-sm text-gray-500 mt-1 leading-relaxed">{l.data.description}</span>
-                  <span class="block text-xs text-gray-400 mt-2">
-                    {l.data.minutes} min{l.data.quiz ? ` · ${l.data.quiz.length} questions` : ''}
-                  </span>
-                </span>
-              </a>
-            </li>
-          ))}
-        </ol>
-      </section>
-    ))}
-
-    <div class="mt-16 pt-12 border-t border-gray-200">
-      <ComingSoon
-        eyebrow="Next modules in development"
-        title="The full course"
-        intro="Foundations is free and stays free. The complete course walks every control group in the framework the same way, worked examples, testing procedures, and quizzes throughout."
-        releaseDate={RELEASE}
-        features={[
-          'Every control group from A through I',
-          'Sampling and evidence workshops with real scenarios',
-          'Exam-style practice aligned to IT audit fundamentals',
-          'Progress tracking across the whole framework',
-          'Downloadable working papers and test templates',
-          'Included with an ITGC Tool subscription',
-        ]}
-        note="Independent training produced by Marco Cavani. Not affiliated with, endorsed by, or sponsored by ISACA. CISA is a registered trademark of ISACA."
-      />
+    <div class="mt-16">
+      <NewsletterSignup />
     </div>
   </main>
 

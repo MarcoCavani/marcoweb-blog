@@ -1,0 +1,181 @@
+---
+// The course outline, docked beside the player so the next lesson is always in
+// view. This is the defining piece of the course-player layout: it replaces the
+// old LessonPlaylist block that sat at the foot of a lesson, where you only saw
+// it after scrolling past everything else.
+//
+// Progress is per-browser and lives in localStorage under COURSE_PROGRESS_KEY.
+// There is no Supabase on the blog (see src/lib/entitlement.ts), so this is
+// deliberately local-only: it makes the outline honest without pretending to be
+// an account system. A visitor on a second device starts fresh, which is the
+// right trade for a free module.
+
+interface Item {
+  slug: string
+  title: string
+  minutes: number
+  hasVideo: boolean
+  questions: number
+}
+
+interface Props {
+  items: Item[]
+  module: string
+  currentSlug?: string
+  playlistUrl?: string
+}
+
+const { items, module, currentSlug, playlistUrl } = Astro.props
+
+// Paid groups previewed under the free module. Titles and counts come from the
+// ITGC framework groups; update alongside the release date in training.astro.
+const LOCKED = [
+  { code: 'B', title: 'Network and security controls', lessons: 9 },
+  { code: 'C', title: 'Access management', lessons: 6 },
+  { code: 'G', title: 'Change management', lessons: 5 },
+]
+const RELEASE_LABEL = '1 Dec 2026'
+
+const totalMinutes = items.reduce((n, l) => n + l.minutes, 0)
+---
+
+<aside class="lg:sticky lg:top-6" data-course-outline>
+  <div class="rounded-2xl border border-gray-100 bg-white shadow-sm p-4">
+    <div class="flex items-baseline justify-between mb-2 px-1">
+      <h2 class="text-sm font-bold text-gray-900">Course contents</h2>
+      <span class="text-xs text-gray-400 tabular-nums" data-progress-count>0 / {items.length}</span>
+    </div>
+
+    <div class="h-1 rounded-full bg-gray-100 overflow-hidden mx-1 mb-4">
+      <div class="h-full bg-brand-blue rounded-full transition-[width] duration-500" style="width:0%" data-progress-bar></div>
+    </div>
+
+    <ol class="space-y-1">
+      {items.map((l, i) => {
+        const current = l.slug === currentSlug
+        return (
+          <li>
+            <a
+              href={`/training/${l.slug}/`}
+              aria-current={current ? 'page' : undefined}
+              data-lesson={l.slug}
+              class={`flex items-start gap-3 rounded-lg p-2.5 transition-colors group ${
+                current ? 'bg-blue-50 shadow-[inset_2px_0_0_theme(colors.brand.blue)]' : 'hover:bg-gray-50'
+              }`}
+            >
+              <span class={`shrink-0 w-5 h-5 mt-0.5 rounded-md text-[11px] font-bold flex items-center justify-center ${
+                current ? 'bg-brand-blue text-white' : 'bg-blue-50 text-brand-blue'
+              }`} data-lesson-marker>
+                {i + 1}
+              </span>
+              <span class="flex-1 min-w-0">
+                <span class={`block text-[13px] font-semibold leading-snug ${
+                  current ? 'text-brand-navy' : 'text-gray-900 group-hover:text-brand-blue'
+                } transition-colors`}>{l.title}</span>
+                <span class="block text-[11px] text-gray-400 mt-0.5 tabular-nums">
+                  {l.minutes} min{l.hasVideo ? ' · video' : ''}{l.questions > 0 ? ` · ${l.questions} questions` : ''}
+                </span>
+              </span>
+            </a>
+          </li>
+        )
+      })}
+    </ol>
+
+    <p class="text-[11px] text-gray-400 mt-3 px-1 tabular-nums">{module} · {totalMinutes} min total</p>
+
+    {playlistUrl && (
+      <a
+        href={playlistUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-3 flex items-center justify-center gap-2 rounded-lg border border-gray-200 py-2 text-xs font-semibold text-gray-600 hover:text-brand-blue hover:border-brand-blue transition-colors"
+      >
+        Watch the playlist on YouTube
+      </a>
+    )}
+  </div>
+
+  <div class="rounded-2xl border border-gray-100 bg-gray-50/70 p-4 mt-3">
+    <div class="flex items-baseline justify-between mb-3 px-1">
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-400">The full course</h2>
+      <span class="text-[11px] text-gray-400">{RELEASE_LABEL}</span>
+    </div>
+    <ul class="space-y-1">
+      {LOCKED.map(g => (
+        <li class="flex items-center gap-3 p-2.5 rounded-lg">
+          <span class="shrink-0 w-5 h-5 rounded-md bg-gray-200/70 text-gray-400 text-[11px] font-bold flex items-center justify-center">
+            {g.code}
+          </span>
+          <span class="flex-1 min-w-0">
+            <span class="block text-[13px] font-medium text-gray-400 leading-snug">{g.title}</span>
+            <span class="block text-[11px] text-gray-300 tabular-nums">{g.lessons} lessons</span>
+          </span>
+          <svg class="shrink-0 w-3.5 h-3.5 text-gray-300" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 1a3.5 3.5 0 0 0-3.5 3.5V6H4a1.5 1.5 0 0 0-1.5 1.5v5A1.5 1.5 0 0 0 4 14h8a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 12 6h-.5V4.5A3.5 3.5 0 0 0 8 1Zm2 5H6V4.5a2 2 0 1 1 4 0V6Z"/>
+          </svg>
+        </li>
+      ))}
+    </ul>
+    <a href="/training#full-course" class="mt-3 block text-center text-xs font-semibold text-brand-blue hover:text-brand-navy">
+      What is included
+    </a>
+  </div>
+</aside>
+
+<script>
+  // Marks lessons you have opened, and fills the progress bar. Runs on every
+  // page that shows the outline, so opening a lesson updates the outline you
+  // are looking at as well as the one on the next page.
+  const KEY = 'marcoweb:training:foundations:seen'
+
+  function read(): string[] {
+    try {
+      const raw = localStorage.getItem(KEY)
+      return raw ? JSON.parse(raw) : []
+    } catch {
+      return []   // private mode, or a value we did not write
+    }
+  }
+
+  function paint() {
+    const outline = document.querySelector('[data-course-outline]')
+    if (!outline) return
+
+    const seen = new Set(read())
+    const links = [...outline.querySelectorAll<HTMLAnchorElement>('[data-lesson]')]
+    let done = 0
+
+    for (const link of links) {
+      const slug = link.dataset.lesson
+      if (!slug || !seen.has(slug)) continue
+      done++
+      const marker = link.querySelector('[data-lesson-marker]')
+      // Leave the current lesson's marker alone; it is already highlighted, and
+      // swapping it for a tick mid-lesson reads as "finished" too early.
+      if (!marker || link.getAttribute('aria-current') === 'page') continue
+      marker.classList.remove('bg-blue-50', 'text-brand-blue')
+      marker.classList.add('bg-brand-blue', 'text-white')
+      marker.innerHTML =
+        '<svg viewBox="0 0 12 12" class="w-2.5 h-2.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5 5 9l4.5-5"/></svg>'
+      link.setAttribute('title', 'Opened')
+    }
+
+    const bar = outline.querySelector<HTMLElement>('[data-progress-bar]')
+    const count = outline.querySelector('[data-progress-count]')
+    if (bar) bar.style.width = links.length ? `${(done / links.length) * 100}%` : '0%'
+    if (count) count.textContent = `${done} / ${links.length}`
+  }
+
+  // Record the lesson being viewed, if this page is one.
+  const here = document.querySelector('[data-current-lesson]')
+  const slug = here instanceof HTMLElement ? here.dataset.currentLesson : null
+  if (slug) {
+    try {
+      const seen = read()
+      if (!seen.includes(slug)) localStorage.setItem(KEY, JSON.stringify([...seen, slug]))
+    } catch { /* storage unavailable, the outline still renders */ }
+  }
+
+  paint()
+</script>
