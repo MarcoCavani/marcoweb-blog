@@ -1,6 +1,16 @@
 ---
 const currentPath = Astro.url.pathname
-const isActive = (path: string) => currentPath === path || currentPath.startsWith(path + '/')
+const isActive = (path: string) =>
+  path === '/' ? currentPath === '/' : currentPath === path || currentPath.startsWith(path + '/')
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/reports', label: 'Reports' },
+  { href: '/training', label: 'Training' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+]
 ---
 
 <header class="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
@@ -11,26 +21,14 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
         <span class="text-xl font-bold tracking-tight text-gray-900 group-hover:text-brand-blue transition-colors">MarcoWeb</span>
       </a>
 
+      <!-- Desktop nav -->
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="/" class={`transition-colors hover:text-brand-blue ${isActive('/') && currentPath === '/' ? 'text-brand-blue' : 'text-gray-500'}`}>
-          Home
-        </a>
-        <a href="/blog" class={`transition-colors hover:text-brand-blue ${isActive('/blog') ? 'text-brand-blue' : 'text-gray-500'}`}>
-          Blog
-        </a>
-        <a href="/reports" class={`transition-colors hover:text-brand-blue ${isActive('/reports') ? 'text-brand-blue' : 'text-gray-500'}`}>
-          Reports
-        </a>
-        <a href="/training" class={`transition-colors hover:text-brand-blue ${isActive('/training') ? 'text-brand-blue' : 'text-gray-500'}`}>
-          Training
-        </a>
-        <a href="/about" class={`transition-colors hover:text-brand-blue ${isActive('/about') ? 'text-brand-blue' : 'text-gray-500'}`}>
-          About
-        </a>
-        <a href="/contact" class={`transition-colors hover:text-brand-blue ${isActive('/contact') ? 'text-brand-blue' : 'text-gray-500'}`}>
-          Contact
-        </a>
-<a
+        {links.map(l => (
+          <a href={l.href} class={`transition-colors hover:text-brand-blue ${isActive(l.href) ? 'text-brand-blue' : 'text-gray-500'}`}>
+            {l.label}
+          </a>
+        ))}
+        <a
           href="https://itgc.marcoweb.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -40,18 +38,90 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
         </a>
       </nav>
 
-      <!-- Mobile nav -->
-      <div class="md:hidden flex items-center gap-4">
-        <a href="/blog" class="text-gray-500 hover:text-brand-blue text-sm">Blog</a>
-        <a
-          href="https://itgc.marcoweb.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="bg-brand-blue hover:bg-brand-light text-white px-3 py-1 rounded-full text-xs font-semibold transition-colors"
-        >
-          ITGC ↗
-        </a>
-      </div>
+      <!-- Mobile: hamburger. Previously only Blog and the tool were reachable on
+           a phone, which left Reports, Training, About and Contact with no route. -->
+      <button
+        type="button"
+        id="nav-toggle"
+        class="md:hidden inline-flex items-center justify-center w-10 h-10 -mr-2 rounded-lg text-gray-600 hover:text-brand-blue hover:bg-gray-50 transition-colors"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <svg id="nav-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        <svg id="nav-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
     </div>
   </div>
+
+  <!-- Mobile panel -->
+  <nav
+    id="mobile-nav"
+    class="md:hidden hidden border-t border-gray-100 bg-white"
+    aria-label="Mobile navigation"
+  >
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3">
+      <ul class="flex flex-col">
+        {links.map(l => (
+          <li>
+            <a
+              href={l.href}
+              class={`block py-3 text-base font-medium border-b border-gray-50 transition-colors ${isActive(l.href) ? 'text-brand-blue' : 'text-gray-700 hover:text-brand-blue'}`}
+              aria-current={isActive(l.href) ? 'page' : undefined}
+            >
+              {l.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a
+        href="https://itgc.marcoweb.org"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-4 mb-2 block text-center bg-brand-blue hover:bg-brand-light text-white px-4 py-3 rounded-xl transition-colors text-sm font-semibold"
+      >
+        ITGC Tool ↗
+      </a>
+    </div>
+  </nav>
 </header>
+
+<script is:inline>
+  (function () {
+    var btn = document.getElementById('nav-toggle')
+    var panel = document.getElementById('mobile-nav')
+    if (!btn || !panel) return
+    var iconOpen = document.getElementById('nav-icon-open')
+    var iconClose = document.getElementById('nav-icon-close')
+
+    function setOpen(open) {
+      panel.classList.toggle('hidden', !open)
+      iconOpen.classList.toggle('hidden', open)
+      iconClose.classList.toggle('hidden', !open)
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false')
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu')
+    }
+
+    btn.addEventListener('click', function () {
+      setOpen(panel.classList.contains('hidden'))
+    })
+
+    // Close on Escape, and return focus to the control that opened it.
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !panel.classList.contains('hidden')) {
+        setOpen(false)
+        btn.focus()
+      }
+    })
+
+    // If the viewport grows past the md breakpoint the desktop nav takes over;
+    // leaving the panel open would strand it visible under the header.
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 768) setOpen(false)
+    })
+  })()
+</script>
