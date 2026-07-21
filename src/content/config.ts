@@ -15,9 +15,9 @@ const blog = defineCollection({
     gated: z.boolean().optional(),
     youtubeId: z.string().optional(),
     draft: z.boolean().default(false),
-    // Sector a report analyses — drives the industry filter on /reports.
+    // Sector a report analyses, drives the industry filter on /reports.
     industry: z.string().optional(),
-    // ITGC control reference, e.g. "B.3" or "D.1 · E.1 · F.1" — drives /itgc-series.
+    // ITGC control reference, e.g. "B.3" or "D.1 · E.1 · F.1", drives /itgc-series.
     control: z.string().optional(),
   }),
 })
@@ -33,10 +33,15 @@ const lessons = defineCollection({
     module: z.string(),
     order: z.number(),
     minutes: z.number().default(5),
-    // Free lessons render statically. Gated ones require an active subscription —
+    // Free lessons render statically. Gated ones require an active subscription,
     // see the entitlement note in src/lib/entitlement.ts before changing this.
     gated: z.boolean().default(false),
     control: z.string().optional(),
+    // Video lesson: the YouTube id, plus the second at which playback pauses to
+    // ask each question. checkpoints[i] belongs to quiz[i], so the questions stay
+    // defined once and are reused by both the video and the written lesson.
+    videoId: z.string().optional(),
+    checkpoints: z.array(z.number()).optional(),
     quiz: z.array(z.object({
       question: z.string(),
       options: z.array(z.string()).min(2),

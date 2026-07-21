@@ -1,4 +1,4 @@
-// Entitlement notes for paid training. NOTHING CALLS THIS YET — it is a decision
+// Entitlement notes for paid training. NOTHING CALLS THIS YET, it is a decision
 // record, kept next to the code it would affect.
 //
 // ─── CURRENT STATE ───────────────────────────────────────────────────────────
@@ -8,7 +8,7 @@
 // architecture question below is settled.
 //
 // ─── WHAT ALREADY EXISTS (in the tool, not here) ─────────────────────────────
-// itgc.marcoweb.org (racm-itgc-saas — Vue + Supabase + Stripe) already owns:
+// itgc.marcoweb.org (racm-itgc-saas, Vue + Supabase + Stripe) already owns:
 //   · Supabase Auth, with login / signup / forgot-password / reset-password
 //   · a `subscriptions` table keyed by user_id; entitled === status 'active'
 //   · `is_admin` on the users table for unlimited access
@@ -27,7 +27,7 @@
 //
 // B. EVERYTHING HERE. Install @supabase/supabase-js, set PUBLIC_SUPABASE_URL and
 //    PUBLIC_SUPABASE_ANON_KEY in Netlify (same public values as the tool's VITE_
-//    ones — the anon key is meant to be public; a service-role key must NEVER be
+// ones, the anon key is meant to be public; a service-role key must NEVER be
 //    used client side), and store paid lesson bodies in a Supabase table with
 //    row-level security so entitlement is enforced in the database.
 //    · Keeps one domain, but adds a second place auth can break.
@@ -39,7 +39,7 @@
 // A client-side check can decide what the UI OFFERS. It cannot protect content.
 // Anything rendered into a static page is readable via view-source by anyone,
 // signed in or not. If a lesson is worth money, its body must be fetched at
-// runtime behind a real check (option A or B) — never shipped in the build.
+// runtime behind a real check (option A or B), never shipped in the build.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export type Entitlement = {

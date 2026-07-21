@@ -3,7 +3,7 @@
 // The ITGC posts cross-reference each other constantly but only in prose, so the
 // series had almost no internal linking. This rewrites those mentions at build
 // time. It deliberately skips references whose target post has not published yet
-// (the series is scheduled into 2027) so we never emit a link to a 404 — as more
+// (the series is scheduled into 2027) so we never emit a link to a 404, as more
 // posts go live, more of these mentions light up on their own.
 
 import { readdirSync, readFileSync } from 'node:fs'
@@ -37,7 +37,7 @@ function buildIndex() {
     const src = readFileSync(join(BLOG_DIR, file), 'utf8')
     const pub = src.match(/^pubDate:\s*(\S+)/m)
     if (!pub) continue
-    if (new Date(pub[1]) > today) continue // not published yet — do not link
+    if (new Date(pub[1]) > today) continue // not published yet, do not link
     if (/^draft:\s*true/m.test(src)) continue
 
     const refs = DEF_REFS[slug] || (() => {
@@ -73,7 +73,7 @@ export default function remarkControlLinks() {
         let m
         while ((m = PATTERN.exec(value)) !== null) {
           const slug = index.get(m[1])
-          // Skip unpublished targets and self-references — leave the text as-is.
+          // Skip unpublished targets and self-references, leave the text as-is.
           if (!slug || slug === currentSlug) continue
           if (m.index > last) out.push({ type: 'text', value: value.slice(last, m.index) })
           out.push({

@@ -8,7 +8,7 @@ export async function GET(context) {
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 
   return rss({
-    title: 'MarcoWeb — Cybersecurity & IT Governance',
+    title: 'MarcoWeb, Cybersecurity & IT Governance',
     description:
       'Cybersecurity analysis, breach case studies, and IT General Controls insights from Marco Cavani.',
     site: context.site,

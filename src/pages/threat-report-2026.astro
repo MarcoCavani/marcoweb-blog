@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro'
 import ComingSoon from '../components/ComingSoon.astro'
 import { getCollection } from 'astro:content'
 
-// Placeholder launch date — change this one line to move the countdown.
+// Placeholder launch date, change this one line to move the countdown.
 // Set after the individual sector reports finish publishing (1 September).
 const RELEASE = '2026-10-01'
 
@@ -19,7 +19,7 @@ const live = reports.filter(p => p.data.pubDate <= today).length
 
 <Layout
   title="Threat Report 2026 | MarcoWeb"
-  description="The 2026 consolidated threat report — breach analysis across every sector covered, with the control failures behind each incident."
+  description="The 2026 consolidated threat report, breach analysis across every sector covered, with the control failures behind each incident."
   noindex
 >
   <Header />
@@ -28,7 +28,7 @@ const live = reports.filter(p => p.data.pubDate <= today).length
     <ComingSoon
       eyebrow="In production"
       title="Threat Report 2026"
-      intro={`One consolidated report pulling together every sector analysis of the year — what was breached, how, and which control would have stopped it. Built from ${reports.length} incident analyses across ${industries.length} sectors.`}
+      intro={`One consolidated report pulling together every sector analysis of the year, what was breached, how, and which control would have stopped it. Built from ${reports.length} incident analyses across ${industries.length} sectors.`}
       releaseDate={RELEASE}
       features={[
         'Cross-sector comparison of the year’s breaches',
@@ -43,7 +43,7 @@ const live = reports.filter(p => p.data.pubDate <= today).length
 
     <div class="mt-16 text-center">
       <p class="text-sm text-gray-500">
-        {live} sector {live === 1 ? 'report is' : 'reports are'} already published —
+        {live} sector {live === 1? 'report is': 'reports are'} already published, 
         <a href="/reports" class="text-brand-blue font-semibold hover:text-brand-navy">read them by industry</a>
         while you wait.
       </p>

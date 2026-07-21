@@ -13,7 +13,7 @@ interface Props {
 
 const { questions, id = 'quiz' } = Astro.props
 // The answer key is rendered into the markup, so a determined reader can find it.
-// That is an acceptable trade for a knowledge check — it is not an exam, and the
+// That is an acceptable trade for a knowledge check, it is not an exam, and the
 // explanations are the point. Do not reuse this component for anything assessed.
 ---
 
@@ -122,7 +122,7 @@ const { questions, id = 'quiz' } = Astro.props
             if (answered === total) {
               scoreEl.textContent = correct + ' out of ' + total
               msgEl.textContent = correct === total
-                ? 'Full marks — you can explain this control to an auditor.'
+                ? 'Full marks, you can explain this control to an auditor.'
                 : correct >= Math.ceil(total * 0.7)
                   ? 'Solid. Re-read the explanations you missed.'
                   : 'Worth another pass through the lesson before moving on.'

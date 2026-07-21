@@ -30,7 +30,7 @@ quiz:
       - "Evaluate whether the emergency process was followed, and treat it as an exception if it was not"
       - "Increase the sample to 40 and retest"
     answer: 2
-    explanation: "An explanation is not a resolution. Emergency changes usually have their own defined path with retrospective approval. If that path was followed, it is not an exception. If it was not, it is — and a plausible story does not change that."
+    explanation: "An explanation is not a resolution. Emergency changes usually have their own defined path with retrospective approval. If that path was followed, it is not an exception. If it was not, it is, and a plausible story does not change that."
 ---
 
 Two auditors test the same control and reach the same conclusion. One conclusion survives review, a regulator and a change of audit firm. The other falls apart the first time someone asks a hard question.
@@ -41,7 +41,7 @@ The difference is almost never the conclusion. It is the evidence behind it.
 
 Every piece of evidence in a workpaper should answer these without anyone needing to ask:
 
-**Where did this come from?** Not "the client provided it" — which system, extracted by whom, when, and did you watch it happen?
+**Where did this come from?** Not "the client provided it", which system, extracted by whom, when, and did you watch it happen?
 
 **Is it complete?** Could items be missing, and how would you know if they were?
 
@@ -59,7 +59,7 @@ The problem: your entire population came from the person whose access you are au
 
 There are three ways out, in order of strength:
 
-1. **Observe the extraction.** Sit with them — in person or on a call — and watch the query run against production.
+1. **Observe the extraction.** Sit with them, in person or on a call, and watch the query run against production.
 2. **Reconcile to an independent source.** Compare the total against a system-generated count, a licence report, or the identity platform.
 3. **Test in the other direction.** Take a sample from the system itself and confirm each item appears in the population you were given.
 
@@ -79,7 +79,7 @@ When you find an exception, you will usually be offered an explanation. That is 
 
 The test is simple: *does the explanation change what the evidence shows?*
 
-If a change was deployed without approval and the emergency process was documented and followed — with retrospective approval on file — then it was not an exception. The evidence changed.
+If a change was deployed without approval and the emergency process was documented and followed, with retrospective approval on file, then it was not an exception. The evidence changed.
 
 If the response is "that was urgent, we approved it verbally," the evidence has not changed at all. The control requires documented approval. It did not happen. A reasonable business justification for a control failure is still a control failure.
 

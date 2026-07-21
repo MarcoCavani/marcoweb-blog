@@ -1,0 +1,200 @@
+---
+// A lesson video that stops and asks you something.
+//
+// Playback pauses at each checkpoint second, the matching question appears, and
+// the video only resumes once it has been answered. The point is that you cannot
+// coast through it: the question lands right after the idea that answers it.
+//
+// Progressive enhancement: without JavaScript, or if the YouTube API fails to
+// load, the written lesson below remains fully usable and the quiz at the bottom
+// still works. Nothing here is the only route to the content.
+
+interface Question {
+  question: string
+  options: string[]
+  answer: number
+  explanation: string
+}
+
+interface Props {
+  videoId: string
+  checkpoints: number[]
+  quiz: Question[]
+  title: string
+}
+
+const { videoId, checkpoints, quiz, title } = Astro.props
+
+// Pair each checkpoint with its question and drop any that has no counterpart,
+// so a mismatched list degrades to fewer stops rather than breaking playback.
+const stops = checkpoints
+  .map((at, i) => (quiz[i] ? { at, i, ...quiz[i] } : null))
+  .filter(Boolean)
+  .sort((a, b) => a.at - b.at)
+
+const fmt = s => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, '0')}`
+---
+
+<section
+  class="mb-12"
+  data-lesson-player
+  data-video-id={videoId}
+  data-stops={JSON.stringify(stops.map(s => ({ at: s.at, i: s.i })))}
+>
+  <div class="relative rounded-2xl overflow-hidden bg-gray-900 shadow-sm" style="aspect-ratio:16/9">
+    <div id={`yt-${videoId}`} class="absolute inset-0 w-full h-full"></div>
+
+    <!-- Question overlay -->
+    <div
+      data-lesson-overlay
+      class="hidden absolute inset-0 bg-brand-navy/97 backdrop-blur-sm p-5 sm:p-8 overflow-y-auto"
+    >
+      <div class="max-w-2xl mx-auto">
+        <div class="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-3">
+          Checkpoint <span data-stop-n>1</span> of {stops.length}
+        </div>
+        <p class="text-white text-lg sm:text-xl font-semibold leading-snug mb-5" data-stop-question></p>
+        <div class="space-y-2" data-stop-options></div>
+        <div class="hidden mt-4 text-sm leading-relaxed rounded-xl p-4" data-stop-explanation></div>
+        <button
+          type="button"
+          data-stop-continue
+          class="hidden mt-5 px-6 py-3 rounded-xl bg-white text-brand-navy font-semibold text-sm hover:bg-blue-50 transition-colors"
+        >
+          Continue the lesson →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkpoint markers, also usable as a contents list -->
+  <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mt-4 text-xs text-gray-500">
+    <span class="font-semibold text-gray-700">{stops.length} checkpoints:</span>
+    {stops.map((s, n) => (
+      <span data-stop-marker={n} class="inline-flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-gray-300" data-stop-dot></span>
+        {fmt(s.at)}
+      </span>
+    ))}
+    <span class="text-gray-400">· the video pauses and asks a question at each</span>
+  </div>
+
+  <noscript>
+    <p class="mt-4 text-sm text-gray-500">
+      The interactive checkpoints need JavaScript. The full lesson is written out below,
+      and the questions are at the end.
+    </p>
+  </noscript>
+</section>
+
+<script is:inline define:vars={{ quiz }}>
+  (function () {
+    var root = document.querySelector('[data-lesson-player]')
+    if (!root) return
+
+    var videoId = root.dataset.videoId
+    var stops = JSON.parse(root.dataset.stops)
+    if (!stops.length) return
+
+    var overlay = root.querySelector('[data-lesson-overlay]')
+    var qEl = root.querySelector('[data-stop-question]')
+    var optsEl = root.querySelector('[data-stop-options]')
+    var explEl = root.querySelector('[data-stop-explanation]')
+    var contBtn = root.querySelector('[data-stop-continue]')
+    var nEl = root.querySelector('[data-stop-n]')
+    var markers = root.querySelectorAll('[data-stop-marker]')
+
+    var player, timer, current = null
+    var done = stops.map(function () { return false })
+
+    function show(idx) {
+      var stop = stops[idx]
+      var q = quiz[stop.i]
+      current = idx
+      nEl.textContent = idx + 1
+      qEl.textContent = q.question
+      explEl.className = 'hidden mt-4 text-sm leading-relaxed rounded-xl p-4'
+      contBtn.classList.add('hidden')
+      optsEl.innerHTML = ''
+
+      q.options.forEach(function (text, oi) {
+        var b = document.createElement('button')
+        b.type = 'button'
+        b.textContent = text
+        b.className = 'w-full text-left text-sm px-4 py-3 rounded-xl border border-white/25 bg-white/10 text-white hover:bg-white/20 transition-colors'
+        b.addEventListener('click', function () {
+          if (b.disabled) return
+          var right = oi === q.answer
+          Array.prototype.forEach.call(optsEl.children, function (el, i) {
+            el.disabled = true
+            if (i === q.answer) el.className = 'w-full text-left text-sm px-4 py-3 rounded-xl border-2 border-green-400 bg-green-500/20 text-white font-medium'
+            else if (i === oi) el.className = 'w-full text-left text-sm px-4 py-3 rounded-xl border-2 border-red-400 bg-red-500/20 text-white'
+            else el.className = 'w-full text-left text-sm px-4 py-3 rounded-xl border border-white/15 bg-white/5 text-white/50'
+          })
+          explEl.textContent = q.explanation
+          explEl.className = 'mt-4 text-sm leading-relaxed rounded-xl p-4 ' +
+            (right ? 'bg-green-500/15 text-green-50 border border-green-400/40'
+                   : 'bg-white/10 text-blue-50 border border-white/20')
+          contBtn.classList.remove('hidden')
+          contBtn.focus()
+        })
+        optsEl.appendChild(b)
+      })
+
+      overlay.classList.remove('hidden')
+    }
+
+    contBtn.addEventListener('click', function () {
+      overlay.classList.add('hidden')
+      if (current !== null) {
+        done[current] = true
+        var dot = markers[current] && markers[current].querySelector('[data-stop-dot]')
+        if (dot) dot.className = 'w-1.5 h-1.5 rounded-full bg-brand-blue'
+        current = null
+      }
+      if (player && player.playVideo) player.playVideo()
+    })
+
+    function watch() {
+      clearInterval(timer)
+      timer = setInterval(function () {
+        if (!player || !player.getCurrentTime || current !== null) return
+        var t = player.getCurrentTime()
+        for (var i = 0; i < stops.length; i++) {
+          // Fire once, within a short window after the mark, so a seek past it
+          // does not trap the viewer in a question they already skipped.
+          if (!done[i] && t >= stops[i].at && t < stops[i].at + 2) {
+            player.pauseVideo()
+            show(i)
+            return
+          }
+        }
+      }, 250)
+    }
+
+    function init() {
+      player = new YT.Player('yt-' + videoId, {
+        videoId: videoId,
+        playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
+        events: {
+          onReady: watch,
+          onStateChange: function (e) {
+            if (e.data === YT.PlayerState.ENDED) clearInterval(timer)
+          },
+        },
+      })
+    }
+
+    if (window.YT && window.YT.Player) init()
+    else {
+      // The API calls this global when it finishes loading.
+      var prev = window.onYouTubeIframeAPIReady
+      window.onYouTubeIframeAPIReady = function () { if (prev) prev(); init() }
+      if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
+        var s = document.createElement('script')
+        s.src = 'https://www.youtube.com/iframe_api'
+        document.head.appendChild(s)
+      }
+    }
+  })()
+</script>

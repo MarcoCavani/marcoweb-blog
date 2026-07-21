@@ -37,7 +37,7 @@ const formattedUpdatedDate = updatedDate
   ? new Intl.DateTimeFormat('en-AU', { year: 'numeric', month: 'long', day: 'numeric' }).format(updatedDate)
   : null
 
-// Article structured data — references the sitewide Person/Organization by @id.
+// Article structured data, references the sitewide Person/Organization by @id.
 const siteUrl = (Astro.site?.href || 'https://marcoweb.org/').replace(/\/$/, '')
 const articleUrl = new URL(Astro.url.pathname, Astro.site).href
 const articleSchema = {
@@ -117,7 +117,7 @@ const articleSchema = {
       </div>
     </header>
 
-    <!-- Video (if present) — otherwise hero image -->
+    <!-- Video (if present), otherwise hero image -->
     {youtubeId ? (
       <div class="mb-8 rounded-2xl overflow-hidden shadow-md aspect-video bg-black">
         <iframe
@@ -166,7 +166,7 @@ const articleSchema = {
           <div class="relative z-20 border-2 border-brand-blue rounded-2xl p-8 bg-white shadow-xl text-center mt-0">
             <p class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-2">Free report</p>
             <h2 class="text-2xl font-extrabold text-gray-900 mb-2">Subscribe to read the full report</h2>
-            <p class="text-gray-500 text-sm mb-1">Join the MarcoWeb newsletter — IT audit and cybersecurity analysis, no spam.</p>
+            <p class="text-gray-500 text-sm mb-1">Join the MarcoWeb newsletter, IT audit and cybersecurity analysis, no spam.</p>
             <p class="text-gray-500 text-sm mb-6">You'll also unlock the <strong class="text-gray-800">free ITGC Audit Workbook</strong> (38 controls, Excel template).</p>
             <form id="gate-form" novalidate class="max-w-sm mx-auto">
               <input
@@ -188,7 +188,7 @@ const articleSchema = {
             <p class="text-xs text-gray-400 mt-4">Free · No spam · Unsubscribe any time.</p>
           </div>
           <div id="gate-success" style="display:none" class="mt-4 p-4 bg-green-50 border border-green-200 rounded-xl flex items-center justify-between gap-4">
-            <p class="font-semibold text-green-800 text-sm">You're subscribed — enjoy the full report.</p>
+            <p class="font-semibold text-green-800 text-sm">You're subscribed, enjoy the full report.</p>
             <a
               href="https://lgyblltyytfmoovigdrj.supabase.co/storage/v1/object/public/templates/ITGC_Audit_Workbook.xlsx"
               target="_blank"

@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro'
 import Header from '../../components/Header.astro'
 import Footer from '../../components/Footer.astro'
 import Quiz from '../../components/Quiz.astro'
+import InteractiveLesson from '../../components/InteractiveLesson.astro'
 import NewsletterSignup from '../../components/NewsletterSignup.astro'
 import { getCollection } from 'astro:content'
 
@@ -54,7 +55,19 @@ const { Content } = await lesson.render()
       <div class="h-1 bg-brand-blue rounded-full" style={`width:${(position / total) * 100}%`}></div>
     </div>
 
+    {lesson.data.videoId && lesson.data.checkpoints?.length && lesson.data.quiz?.length && (
+      <InteractiveLesson
+        videoId={lesson.data.videoId}
+        checkpoints={lesson.data.checkpoints}
+        quiz={lesson.data.quiz}
+        title={lesson.data.title}
+      />
+    )}
+
     <article class="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-brand-blue prose-strong:text-gray-900">
+      {lesson.data.videoId && (
+        <p class="text-sm text-gray-400 not-prose mb-6">Prefer to read? The full lesson follows.</p>
+      )}
       <Content />
     </article>
 

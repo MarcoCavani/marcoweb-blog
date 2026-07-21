@@ -1,11 +1,13 @@
 ---
 title: "What IT General Controls Actually Are"
-description: "ITGC is not a checklist of security tools. It is the set of controls that make everything else in an audit trustworthy — and knowing why changes how you test them."
+description: "ITGC is not a checklist of security tools. It is the set of controls that make everything else in an audit trustworthy, and knowing why changes how you test them."
 course: "itgc-foundations"
 module: "Foundations"
 order: 1
 minutes: 6
 gated: false
+videoId: "rzl5B2pq43w"
+checkpoints: [56, 97, 160]
 quiz:
   - question: "An auditor tests an application's automated three-way match and finds it works perfectly. Why might they still not rely on it?"
     options:
@@ -22,7 +24,7 @@ quiz:
       - "Developers cannot deploy code to production without a second approval"
       - "The system requires a cost centre on every journal entry"
     answer: 2
-    explanation: "The other three are application controls — rules inside the business process. Deployment approval governs the environment those rules live in, which makes it a general control."
+    explanation: "The other three are application controls, rules inside the business process. Deployment approval governs the environment those rules live in, which makes it a general control."
   - question: "Why do auditors describe weak IT governance as a pervasive deficiency?"
     options:
       - "Because it is expensive to remediate"
@@ -30,7 +32,7 @@ quiz:
       - "Because it undermines the reliability of every other control that depends on it"
       - "Because regulators require it to be reported separately"
     answer: 2
-    explanation: "Pervasive means the effect is not contained. A governance failure does not break one control — it weakens the basis for relying on all of them, which is why it changes the audit approach rather than producing a single finding."
+    explanation: "Pervasive means the effect is not contained. A governance failure does not break one control, it weakens the basis for relying on all of them, which is why it changes the audit approach rather than producing a single finding."
 ---
 
 Most people meet IT General Controls as a list. Access management, change management, backups, physical security. The list is accurate and almost completely useless, because it tells you what to test without telling you why any of it matters.
@@ -63,7 +65,7 @@ If a developer can quietly alter the three-way match logic on a Tuesday afternoo
 
 Once you internalise that dependency, audit strategy follows from it.
 
-When general controls are **strong**, you can test an automated application control once and rely on it for the whole period. The system cannot have changed underneath you without leaving a trace. This is why ITGC work is so valuable — it is what makes efficient testing defensible.
+When general controls are **strong**, you can test an automated application control once and rely on it for the whole period. The system cannot have changed underneath you without leaving a trace. This is why ITGC work is so valuable, it is what makes efficient testing defensible.
 
 When general controls are **weak**, that efficiency disappears. You cannot assume consistency, so you fall back to testing individual transactions in volume, which costs far more and gives you less assurance.
 

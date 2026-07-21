@@ -6,7 +6,7 @@ import ComingSoon from '../components/ComingSoon.astro'
 import NewsletterSignup from '../components/NewsletterSignup.astro'
 import { getCollection } from 'astro:content'
 
-// Placeholder launch date for the paid modules — change this one line.
+// Placeholder launch date for the paid modules, change this one line.
 const RELEASE = '2026-12-01'
 
 const lessons = (await getCollection('lessons')).sort((a, b) => a.data.order - b.data.order)
@@ -17,7 +17,7 @@ const quizCount = lessons.reduce((n, l) => n + (l.data.quiz?.length || 0), 0)
 
 <Layout
   title="IT Audit Training | MarcoWeb"
-  description="Structured IT audit and IT general controls training — short lessons, worked examples from real breaches, and quizzes that check you understood the control."
+  description="Structured IT audit and IT general controls training, short lessons, worked examples from real breaches, and quizzes that check you understood the control."
 >
   <Header />
 
@@ -28,7 +28,7 @@ const quizCount = lessons.reduce((n, l) => n + (l.data.quiz?.length || 0), 0)
       </div>
       <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-5">IT Audit Training</h1>
       <p class="text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto">
-        The reasoning behind IT general controls, not just the checklist — short lessons with
+        The reasoning behind IT general controls, not just the checklist, short lessons with
         knowledge checks that tell you whether it actually landed.
       </p>
       <div class="flex flex-wrap justify-center gap-8 mt-8">
@@ -80,7 +80,7 @@ const quizCount = lessons.reduce((n, l) => n + (l.data.quiz?.length || 0), 0)
       <ComingSoon
         eyebrow="Next modules in development"
         title="The full course"
-        intro="Foundations is free and stays free. The complete course walks every control group in the framework the same way — worked examples, testing procedures, and quizzes throughout."
+        intro="Foundations is free and stays free. The complete course walks every control group in the framework the same way, worked examples, testing procedures, and quizzes throughout."
         releaseDate={RELEASE}
         features={[
           'Every control group from A through I',
