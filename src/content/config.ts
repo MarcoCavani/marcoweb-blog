@@ -37,11 +37,9 @@ const lessons = defineCollection({
     // see the entitlement note in src/lib/entitlement.ts before changing this.
     gated: z.boolean().default(false),
     control: z.string().optional(),
-    // Video lesson: the YouTube id, plus the second at which playback pauses to
-    // ask each question. checkpoints[i] belongs to quiz[i], so the questions stay
-    // defined once and are reused by both the video and the written lesson.
+    // YouTube id for the lesson video. The written lesson doubles as its
+    // transcript. Questions live in `quiz` and are asked at the foot of the page.
     videoId: z.string().optional(),
-    checkpoints: z.array(z.number()).optional(),
     quiz: z.array(z.object({
       question: z.string(),
       options: z.array(z.string()).min(2),

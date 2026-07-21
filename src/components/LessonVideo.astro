@@ -1,0 +1,32 @@
+---
+// The lesson video, played straight through with no interruptions.
+//
+// This replaced an earlier version that paused at checkpoints to ask questions.
+// Marco found the interruptions unwelcome, so the questions all live in the quiz
+// at the foot of the page instead and the video plays uninterrupted.
+
+interface Props {
+  videoId: string
+  title: string
+}
+
+const { videoId, title } = Astro.props
+
+// Deliberately no `list=` parameter. If the video is unavailable (private, for
+// instance) YouTube falls back to playing the playlist from its first item, so
+// the page silently shows a completely different lesson. The playlist is linked
+// from the lesson list below instead.
+const src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1`
+---
+
+<div class="mb-10 rounded-2xl overflow-hidden shadow-sm bg-black" style="aspect-ratio:16/9">
+  <iframe
+    class="w-full h-full"
+    src={src}
+    title={title}
+    loading="lazy"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+</div>

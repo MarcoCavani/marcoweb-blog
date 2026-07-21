@@ -3,9 +3,13 @@ import Layout from '../../layouts/Layout.astro'
 import Header from '../../components/Header.astro'
 import Footer from '../../components/Footer.astro'
 import Quiz from '../../components/Quiz.astro'
-import InteractiveLesson from '../../components/InteractiveLesson.astro'
+import LessonVideo from '../../components/LessonVideo.astro'
+import LessonPlaylist from '../../components/LessonPlaylist.astro'
 import NewsletterSignup from '../../components/NewsletterSignup.astro'
 import { getCollection } from 'astro:content'
+
+// The training videos live in their own YouTube playlist.
+const TRAINING_PLAYLIST = 'PLQVFknVNfL1c'
 
 export async function getStaticPaths() {
   const lessons = await getCollection('lessons')
@@ -16,13 +20,21 @@ export async function getStaticPaths() {
     const i = siblings.findIndex(l => l.slug === lesson.slug)
     return {
       params: { slug: lesson.slug },
-      props: { lesson, prev: siblings[i - 1], next: siblings[i + 1], position: i + 1, total: siblings.length },
+      props: { lesson, siblings, prev: siblings[i - 1], next: siblings[i + 1], position: i + 1, total: siblings.length },
     }
   })
 }
 
-const { lesson, prev, next, position, total } = Astro.props
+const { lesson, siblings, prev, next, position, total } = Astro.props
 const { Content } = await lesson.render()
+
+const playlistItems = siblings.map(l => ({
+  slug: l.slug,
+  title: l.data.title,
+  minutes: l.data.minutes,
+  hasVideo: !!l.data.videoId,
+  questions: l.data.quiz?.length || 0,
+}))
 ---
 
 <Layout title={`${lesson.data.title} | IT Audit Training`} description={lesson.data.description}>
@@ -55,21 +67,24 @@ const { Content } = await lesson.render()
       <div class="h-1 bg-brand-blue rounded-full" style={`width:${(position / total) * 100}%`}></div>
     </div>
 
-    {lesson.data.videoId && lesson.data.checkpoints?.length && lesson.data.quiz?.length && (
-      <InteractiveLesson
-        videoId={lesson.data.videoId}
-        checkpoints={lesson.data.checkpoints}
-        quiz={lesson.data.quiz}
-        title={lesson.data.title}
-      />
+    {lesson.data.videoId && (
+      <LessonVideo videoId={lesson.data.videoId} title={lesson.data.title} />
+    )}
+
+    {lesson.data.videoId && (
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Video transcript</h2>
     )}
 
     <article class="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-brand-blue prose-strong:text-gray-900">
-      {lesson.data.videoId && (
-        <p class="text-sm text-gray-400 not-prose mb-6">Prefer to read? The full lesson follows.</p>
-      )}
       <Content />
     </article>
+
+    <LessonPlaylist
+      items={playlistItems}
+      currentSlug={lesson.slug}
+      module={lesson.data.module}
+      playlistUrl={`https://www.youtube.com/playlist?list=${TRAINING_PLAYLIST}`}
+    />
 
     {lesson.data.quiz && lesson.data.quiz.length > 0 && (
       <Quiz questions={lesson.data.quiz} id={`quiz-${lesson.slug}`} />

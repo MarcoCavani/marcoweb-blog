@@ -7,7 +7,6 @@ order: 1
 minutes: 6
 gated: false
 videoId: "rzl5B2pq43w"
-checkpoints: [56, 97, 160]
 quiz:
   - question: "An auditor tests an application's automated three-way match and finds it works perfectly. Why might they still not rely on it?"
     options:
