@@ -8,6 +8,7 @@ control: "A.3"
 author: "Marco Cavani"
 tags: ["IT Risk Management", "ITGC", "Risk Register", "Equifax", "Vulnerability Management", "IT Audit"]
 readTime: "8 min read"
+youtubeId: "Rds3HRkiaZs"
 ---
 
 On 9 March 2017, the Apache Software Foundation disclosed a critical vulnerability in Apache Struts: CVE-2017-5638. A patch was released the same day. The vulnerability allowed remote code execution. Every organisation running Struts was at risk.

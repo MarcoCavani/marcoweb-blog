@@ -8,6 +8,7 @@ control: "B.2"
 author: "Marco Cavani"
 tags: ["Network Security Controls", "ITGC", "Firewall", "SolarWinds", "Egress Filtering", "IT Audit"]
 readTime: "8 min read"
+youtubeId: "_cwfuQAHM3c"
 ---
 
 In December 2020, cybersecurity firm FireEye discovered that its own network had been compromised. The investigation led to a startling finding: the attackers had entered through a software update for SolarWinds Orion, an IT monitoring platform used by tens of thousands of organisations globally, including multiple US federal agencies.

@@ -8,6 +8,7 @@ control: "B.1"
 author: "Marco Cavani"
 tags: ["Network Architecture", "ITGC", "Network Segmentation", "Marriott Breach", "Defence in Depth", "IT Audit"]
 readTime: "8 min read"
+youtubeId: "hbFymgBU4Oc"
 ---
 
 In 2016, Marriott International completed the largest acquisition in hotel industry history, purchasing Starwood Hotels and Resorts for USD $13.6 billion. What they did not know at the time of closing was that Starwood's network had been compromised since at least 2014. Attackers were already inside, quietly exfiltrating data from the Starwood Guest Reservation System.

@@ -8,6 +8,7 @@ control: "B.3"
 author: "Marco Cavani"
 tags: ["Endpoint Protection", "ITGC", "WannaCry", "EDR", "Patch Management", "NHS", "IT Audit"]
 readTime: "8 min read"
+youtubeId: "89b7zici4xg"
 ---
 
 On 12 May 2017, a ransomware worm named WannaCry began propagating across the internet at unprecedented speed. Within 24 hours, it had infected over 230,000 systems in 150 countries. It encrypted files on every machine it reached and demanded a ransom in Bitcoin to restore access.

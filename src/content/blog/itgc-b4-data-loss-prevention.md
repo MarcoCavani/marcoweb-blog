@@ -8,6 +8,7 @@ control: "B.4"
 author: "Marco Cavani"
 tags: ["Data Loss Prevention", "ITGC", "DLP", "Insider Threat", "Morgan Stanley", "IT Audit"]
 readTime: "8 min read"
+youtubeId: "EthxA-F_zmo"
 ---
 
 Between 2011 and 2014, Galen Marsh, a financial adviser at Morgan Stanley Wealth Management, used his legitimate access to client accounts to download the account details of approximately 730,000 clients to a personal laptop and home server. The data included client names, account numbers, investment data, and account balances.
