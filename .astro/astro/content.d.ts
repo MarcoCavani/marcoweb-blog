@@ -584,6 +584,90 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "lessons": {
+"cisa-d1-01-how-questions-are-written.md": {
+	id: "cisa-d1-01-how-questions-are-written.md";
+  slug: "cisa-d1-01-how-questions-are-written";
+  body: string;
+  collection: "lessons";
+  data: InferEntrySchema<"lessons">
+} & { render(): Render[".md"] };
+"cisa-d1-02-standards-ethics-charter.md": {
+	id: "cisa-d1-02-standards-ethics-charter.md";
+  slug: "cisa-d1-02-standards-ethics-charter";
+  body: string;
+  collection: "lessons";
+  data: InferEntrySchema<"lessons">
+} & { render(): Render[".md"] };
+"cisa-d1-03-independence-objectivity.md": {
+	id: "cisa-d1-03-independence-objectivity.md";
+  slug: "cisa-d1-03-independence-objectivity";
+  body: string;
+  collection: "lessons";
+  data: InferEntrySchema<"lessons">
+} & { render(): Render[".md"] };
+"cisa-d1-04-risk-based-audit-planning.md": {
+	id: "cisa-d1-04-risk-based-audit-planning.md";
+  slug: "cisa-d1-04-risk-based-audit-planning";
+  body: string;
+  collection: "lessons";
+  data: InferEntrySchema<"lessons">
+} & { render(): Render[".md"] };
+"cisa-d1-05-materiality.md": {
+	id: "cisa-d1-05-materiality.md";
+  slug: "cisa-d1-05-materiality";
+  body: string;
+  collection: "lessons";
+  data: InferEntrySchema<"lessons">
+} & { render(): Render[".md"] };
+"cisa-d1-06-audit-types-objectives.md": {
+	id: "cisa-d1-06-audit-types-objectives.md";
+  slug: "cisa-d1-06-audit-types-objectives";
+  body: string;
+  collection: "lessons";
+  data: InferEntrySchema<"lessons">
+} & { render(): Render[".md"] };
+"cisa-d1-07-design-and-operating-effectiveness.md": {
+	id: "cisa-d1-07-design-and-operating-effectiveness.md";
+  slug: "cisa-d1-07-design-and-operating-effectiveness";
+  body: string;
+  collection: "lessons";
+  data: InferEntrySchema<"lessons">
+} & { render(): Render[".md"] };
+"cisa-d1-08-sampling-approaches.md": {
+	id: "cisa-d1-08-sampling-approaches.md";
+  slug: "cisa-d1-08-sampling-approaches";
+  body: string;
+  collection: "lessons";
+  data: InferEntrySchema<"lessons">
+} & { render(): Render[".md"] };
+"cisa-d1-09-sample-size-and-exceptions.md": {
+	id: "cisa-d1-09-sample-size-and-exceptions.md";
+  slug: "cisa-d1-09-sample-size-and-exceptions";
+  body: string;
+  collection: "lessons";
+  data: InferEntrySchema<"lessons">
+} & { render(): Render[".md"] };
+"cisa-d1-10-evidence.md": {
+	id: "cisa-d1-10-evidence.md";
+  slug: "cisa-d1-10-evidence";
+  body: string;
+  collection: "lessons";
+  data: InferEntrySchema<"lessons">
+} & { render(): Render[".md"] };
+"cisa-d1-11-test-methods-and-caats.md": {
+	id: "cisa-d1-11-test-methods-and-caats.md";
+  slug: "cisa-d1-11-test-methods-and-caats";
+  body: string;
+  collection: "lessons";
+  data: InferEntrySchema<"lessons">
+} & { render(): Render[".md"] };
+"cisa-d1-12-findings-reporting-follow-up.md": {
+	id: "cisa-d1-12-findings-reporting-follow-up.md";
+  slug: "cisa-d1-12-findings-reporting-follow-up";
+  body: string;
+  collection: "lessons";
+  data: InferEntrySchema<"lessons">
+} & { render(): Render[".md"] };
 "itgc-foundations-design-vs-operating.md": {
 	id: "itgc-foundations-design-vs-operating.md";
   slug: "itgc-foundations-design-vs-operating";
