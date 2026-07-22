@@ -1,0 +1,237 @@
+{
+  "lesson": "itgc-foundations-what-itgc-are",
+  "title": "What IT General Controls Actually Are",
+  "source": "training-foundations-1-what-itgc-are.srt",
+  "generated": "2026-07-22",
+  "duration": 203.78,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "What IT General Controls actually are."
+        },
+        {
+          "t": 2.57,
+          "text": "Most people meet ITGC as a list, access management, change management, backups, physical security."
+        },
+        {
+          "t": 9.19,
+          "text": "The list is accurate and almost completely useless, because it tells you what to test without telling you why any of it matters."
+        },
+        {
+          "t": 17.84,
+          "text": "Here is the version that actually helps."
+        }
+      ]
+    },
+    {
+      "t": 20.54,
+      "sentences": [
+        {
+          "t": 20.54,
+          "text": "Imagine you are auditing a company’s revenue."
+        },
+        {
+          "t": 24.04,
+          "text": "The system automatically matches every invoice against a purchase order and a goods receipt, and rejects anything that does not line up."
+        },
+        {
+          "t": 34.59,
+          "text": "You test it."
+        },
+        {
+          "t": 35.8,
+          "text": "It works."
+        },
+        {
+          "t": 36.99,
+          "text": "Perfectly, every time."
+        },
+        {
+          "t": 38.7,
+          "text": "Can you rely on it?"
+        }
+      ]
+    },
+    {
+      "t": 39.41,
+      "sentences": [
+        {
+          "t": 39.41,
+          "text": "Not yet."
+        },
+        {
+          "t": 40.61,
+          "text": "You have proven the control works today, on the version of the system running right now."
+        },
+        {
+          "t": 46.64,
+          "text": "You have proven nothing at all about the other three hundred and sixty-four days in the period."
+        },
+        {
+          "t": 53.15,
+          "text": "And that gap is exactly where I-T-G-C lives."
+        }
+      ]
+    },
+    {
+      "t": 55.51,
+      "sentences": [
+        {
+          "t": 55.51,
+          "text": "There are two kinds of control in any system, and confusing them is the most common beginner mistake."
+        },
+        {
+          "t": 62.46,
+          "text": "Application controls are rules inside the business process."
+        },
+        {
+          "t": 66.53,
+          "text": "The invoice must match the purchase order."
+        },
+        {
+          "t": 69.42,
+          "text": "The credit limit must be checked before the order is accepted."
+        },
+        {
+          "t": 73.68,
+          "text": "Journal entries need a cost centre."
+        },
+        {
+          "t": 76.09,
+          "text": "These controls do specific work on specific transactions."
+        }
+      ]
+    },
+    {
+      "t": 80.02,
+      "sentences": [
+        {
+          "t": 80.02,
+          "text": "IT general controls govern the environment those rules live in."
+        },
+        {
+          "t": 84.56,
+          "text": "Who can change the matching logic."
+        },
+        {
+          "t": 87.01,
+          "text": "Who can access the database underneath it."
+        },
+        {
+          "t": 90.04,
+          "text": "Whether the change was tested and approved."
+        },
+        {
+          "t": 93.14,
+          "text": "Whether you could recover the system if it failed."
+        }
+      ]
+    },
+    {
+      "t": 96.74,
+      "sentences": [
+        {
+          "t": 96.74,
+          "text": "And the relationship between them is one-directional."
+        },
+        {
+          "t": 100.15,
+          "text": "It is the single most important idea in IT audit."
+        },
+        {
+          "t": 103.29,
+          "text": "An application control is only as reliable as the general controls surrounding it."
+        },
+        {
+          "t": 108.55,
+          "text": "If a developer can quietly alter that matching logic on a Tuesday afternoon with no approval and no record, then your perfect test result means nothing."
+        },
+        {
+          "t": 118.31,
+          "text": "You did not test a control."
+        },
+        {
+          "t": 120.04,
+          "text": "You tested a configuration that happened to be in place while you were looking."
+        }
+      ]
+    },
+    {
+      "t": 125.11,
+      "sentences": [
+        {
+          "t": 125.11,
+          "text": "Once you internalise that dependency, audit strategy follows from it."
+        },
+        {
+          "t": 129.25,
+          "text": "When general controls are strong, you can test an automated application control once and rely on it for the whole period, because the system cannot have changed underneath you without leaving a trace."
+        },
+        {
+          "t": 141.25,
+          "text": "When they are weak, that efficiency disappears, you fall back to testing individual transactions in volume, which costs far more and gives you less assurance."
+        },
+        {
+          "t": 150.72,
+          "text": "This is also why weak governance is called pervasive."
+        },
+        {
+          "t": 153.9,
+          "text": "It does not produce one finding in one place."
+        },
+        {
+          "t": 156.6,
+          "text": "It removes the foundation every other conclusion was resting on."
+        }
+      ]
+    },
+    {
+      "t": 160.44,
+      "sentences": [
+        {
+          "t": 160.44,
+          "text": "So stop thinking of I-T-G-C as a security checklist."
+        },
+        {
+          "t": 163.91,
+          "text": "Think of it as the answer to one question an auditor is always asking: can I trust that this system behaved the same way all year?"
+        },
+        {
+          "t": 172.59,
+          "text": "Every control group is a different way of asking it."
+        },
+        {
+          "t": 176.07,
+          "text": "Governance asks whether anyone owns the answer."
+        },
+        {
+          "t": 179.21,
+          "text": "Access management asks who could have changed things."
+        },
+        {
+          "t": 182.75,
+          "text": "Change management asks whether changes were controlled."
+        },
+        {
+          "t": 186.42,
+          "text": "Business continuity asks whether the record survives."
+        },
+        {
+          "t": 189.96,
+          "text": "Physical security asks whether someone could bypass all of it by walking into a room."
+        },
+        {
+          "t": 195.64,
+          "text": "Hold that question in your head, and the framework stops being a list to memorise."
+        },
+        {
+          "t": 201.11,
+          "text": "It becomes a structure that makes sense."
+        }
+      ]
+    }
+  ]
+}

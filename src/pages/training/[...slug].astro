@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro'
 import Footer from '../../components/Footer.astro'
 import Quiz from '../../components/Quiz.astro'
 import LessonVideo from '../../components/LessonVideo.astro'
+import TranscriptPlayer from '../../components/TranscriptPlayer.astro'
 import CourseSidebar from '../../components/CourseSidebar.astro'
 import NewsletterSignup from '../../components/NewsletterSignup.astro'
 import { getCollection } from 'astro:content'
@@ -44,6 +45,16 @@ const courseHasVideo = siblings.some(l => l.data.videoId)
 // lessons are not part of that sequence and should not advertise it.
 const isExamCourse = lesson.data.domain !== undefined
 const examQuestionCount = siblings.reduce((n, l) => n + (l.data.quiz?.length || 0), 0)
+
+// Sentence-timed transcript, if one has been generated for this lesson by
+// _build/make-transcript.mjs. Eagerly globbed so the lookup is a plain object
+// rather than a promise per page.
+const transcripts = import.meta.glob('../../data/transcripts/*.json', { eager: true }) as Record<
+  string,
+  { default: { paragraphs: { t: number; sentences: { t: number; text: string }[] }[] } }
+>
+const transcript = transcripts[`../../data/transcripts/${lesson.slug}.json`]?.default ?? null
+const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?.length)
 ---
 
 <Layout title={`${lesson.data.title} | IT Audit Training`} description={lesson.data.description}>
@@ -58,11 +69,24 @@ const examQuestionCount = siblings.reduce((n, l) => n + (l.data.quiz?.length || 
       <span class="text-gray-500">Lesson {position} of {total}</span>
     </nav>
 
+    {/* The player takes the full page width rather than sharing a row with the
+        course outline. Video, transcript and outline together are three columns
+        competing for one row, which squeezed the video to about 430px. Outside
+        the grid the video gets roughly 700px and the transcript stays wide
+        enough to read. The outline follows below, where it still does its job. */}
+    {hasFollowingTranscript && (
+      <TranscriptPlayer
+        videoId={lesson.data.videoId!}
+        title={lesson.data.title}
+        paragraphs={transcript!.paragraphs}
+      />
+    )}
+
     <!-- The outline is docked to the right on desktop and drops below the
          player on smaller screens, where a sticky sidebar would eat the fold. -->
     <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_20rem] gap-8 lg:gap-10 items-start">
       <div class="min-w-0">
-        {lesson.data.videoId && (
+        {!hasFollowingTranscript && lesson.data.videoId && (
           <LessonVideo videoId={lesson.data.videoId} title={lesson.data.title} />
         )}
 
@@ -112,7 +136,9 @@ const examQuestionCount = siblings.reduce((n, l) => n + (l.data.quiz?.length || 
 
         {lesson.data.videoId && (
           <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4 pt-6 border-t border-gray-100">
-            Video transcript
+            {/* When the transcript already runs beside the video, the prose below
+                is the fuller written lesson rather than a second copy of it. */}
+            {hasFollowingTranscript ? 'The written lesson' : 'Video transcript'}
           </h2>
         )}
 
