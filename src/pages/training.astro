@@ -2,18 +2,12 @@
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
-import ComingSoon from '../components/ComingSoon.astro'
-import CourseSidebar from '../components/CourseSidebar.astro'
 import NewsletterSignup from '../components/NewsletterSignup.astro'
 import { getCollection } from 'astro:content'
 
 // Placeholder launch date for the paid domains, change this one line.
-// Keep it in step with the default release label in CourseSidebar.astro.
-const RELEASE = '2026-12-01'
+const RELEASE_LABEL = '1 December 2026'
 
-// The course on offer is CISA Domain 1. The older ITGC lessons remain published
-// at their own URLs and are linked below as a primer, but they are not exam
-// preparation and are deliberately kept out of the course outline.
 const COURSE = 'cisa-domain-1'
 const PRIMER = 'itgc-foundations'
 
@@ -21,176 +15,375 @@ const all = await getCollection('lessons')
 const lessons = all.filter(l => l.data.course === COURSE).sort((a, b) => a.data.order - b.data.order)
 const primer = all.filter(l => l.data.course === PRIMER).sort((a, b) => a.data.order - b.data.order)
 
-const moduleName = lessons[0]?.data.module ?? 'Domain 1: The IS Audit Process'
 const totalMinutes = lessons.reduce((n, l) => n + l.data.minutes, 0)
 const quizCount = lessons.reduce((n, l) => n + (l.data.quiz?.length || 0), 0)
 const opener = lessons[0]
 
-const playlistItems = lessons.map(l => ({
-  slug: l.slug,
-  title: l.data.title,
-  minutes: l.data.minutes,
-  hasVideo: !!l.data.videoId,
-  questions: l.data.quiz?.length || 0,
-}))
+// The five exam domains. Lesson counts for the unbuilt domains are allocated in
+// proportion to exam weight, not to how much there is to say, so they move only
+// if the published exam content outline changes. Domain 1 counts its real
+// lessons rather than a planned figure.
+const DOMAINS = [
+  {
+    n: 1,
+    title: 'Information Systems Auditing Process',
+    weight: 18,
+    lessons: lessons.length,
+    ready: true,
+    blurb: 'Standards, planning, evidence, sampling and reporting. The domain that decides how you approach every other one.',
+    topics: [],
+  },
+  {
+    n: 2,
+    title: 'Governance and Management of IT',
+    weight: 18,
+    lessons: 11,
+    ready: false,
+    blurb: 'How the organisation directs and controls IT, and what an auditor looks for when it does not.',
+    topics: [
+      'IT governance frameworks and the board’s role',
+      'Strategy, policy and organisational structure',
+      'Risk identification, appetite and response',
+      'Third party management and right to audit',
+      'Performance measurement and portfolio management',
+      'Laws, regulations and compliance management',
+    ],
+  },
+  {
+    n: 3,
+    title: 'IS Acquisition, Development and Implementation',
+    weight: 12,
+    lessons: 7,
+    ready: false,
+    blurb: 'Project governance and the controls that decide whether a new system arrives trustworthy. The smallest domain.',
+    topics: [
+      'Project governance, business case and feasibility',
+      'SDLC models and development controls',
+      'Testing levels, from unit to user acceptance',
+      'Data conversion and migration controls',
+      'Implementation strategies and post-implementation review',
+      'Application controls: input, processing, output',
+    ],
+  },
+  {
+    n: 4,
+    title: 'IS Operations and Business Resilience',
+    weight: 26,
+    lessons: 15,
+    ready: false,
+    blurb: 'Running IT day to day and surviving when it breaks. Joint largest domain on the exam.',
+    topics: [
+      'Service management, incident and problem management',
+      'Change, release, configuration and patch management',
+      'Capacity, performance and database management',
+      'Backup, restoration and media handling',
+      'Business impact analysis, RPO and RTO',
+      'Continuity and disaster recovery, including test types',
+    ],
+  },
+  {
+    n: 5,
+    title: 'Protection of Information Assets',
+    weight: 26,
+    lessons: 16,
+    ready: false,
+    blurb: 'Security controls and the evidence that shows they work. Joint largest domain on the exam.',
+    topics: [
+      'Security governance, classification and asset ownership',
+      'Identity and access management, including privileged access',
+      'Network architecture, segmentation and monitoring',
+      'Cryptography, PKI and key management',
+      'Endpoint, mobile and cloud security',
+      'Testing, monitoring, forensics and evidence handling',
+    ],
+  },
+]
 ---
 
 <Layout
-  title="CISA Exam Preparation: Domain 1 | MarcoWeb"
-  description="Free CISA Domain 1 preparation for working IS auditors. The information systems auditing process, taught in exam language with scenario questions and full distractor reasoning."
+  title="CISA Exam Preparation | MarcoWeb"
+  description="Free CISA preparation for working IS auditors, organised by the five exam domains. Domain 1 is complete, with scenario questions and full reasoning on every option."
 >
   <Header />
 
   <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_20rem] gap-8 lg:gap-10 items-start">
-      <div class="min-w-0">
-        <div class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1.5 rounded-full mb-4">
-          Free · Domain 1 of 5
-        </div>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-          CISA Exam Preparation
-        </h1>
-        <p class="text-lg text-gray-500 leading-relaxed mb-6 max-w-2xl">
-          Domain 1, the information systems auditing process, for auditors who already do this work
-          and now have to answer questions about it the way the exam expects.
-        </p>
-
-        <div class="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 mb-10">
-          <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">
-            Who this is written for
-          </h2>
-          <p class="text-gray-600 leading-relaxed mb-4">
-            Candidates hold five years of audit experience before they sit this exam, so these
-            lessons do not explain what an audit is. They target the gap that actually costs marks:
-            answering as a practitioner, describing what you would really do on Monday, when the
-            question wants the governance-first, risk-based, independence-preserving answer.
-          </p>
-          <p class="text-gray-600 leading-relaxed">
-            Every lesson names the professional task it makes you able to perform, works through an
-            exam question out loud, and closes with scenario questions that explain why each wrong
-            option was attractive.
-          </p>
-        </div>
-
-        {opener && (
-          <div class="flex flex-wrap items-center justify-between gap-4 mb-10 pb-10 border-b border-gray-100">
-            <div class="min-w-0">
-              <p class="text-xs uppercase tracking-widest text-gray-400 mb-1">Start here</p>
-              <p class="text-lg font-bold text-gray-900 leading-snug">{opener.data.title}</p>
-            </div>
-            <a
-              href={`/training/${opener.slug}/`}
-              class="shrink-0 inline-flex items-center gap-2 rounded-xl bg-brand-blue px-5 py-3 text-sm font-bold text-white hover:bg-brand-navy transition-colors"
-            >
-              Open lesson 1
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        )}
-
-        <div class="flex flex-wrap gap-8 sm:gap-12 pb-10 mb-10 border-b border-gray-100">
-          <div>
-            <div class="text-3xl font-extrabold text-brand-blue tabular-nums">{lessons.length}</div>
-            <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">lessons free</div>
-          </div>
-          <div>
-            <div class="text-3xl font-extrabold text-brand-blue tabular-nums">{quizCount}</div>
-            <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">exam questions</div>
-          </div>
-          <div>
-            <div class="text-3xl font-extrabold text-brand-blue tabular-nums">{totalMinutes}</div>
-            <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">minutes</div>
-          </div>
-          <div>
-            <div class="text-3xl font-extrabold text-brand-blue tabular-nums">18%</div>
-            <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">of the exam</div>
-          </div>
-        </div>
-
-        <section class="mb-12">
-          <div class="flex items-baseline gap-3 mb-5">
-            <h2 class="text-xl font-bold text-gray-900">{moduleName}</h2>
-            <div class="flex-1 h-px bg-gray-200"></div>
-            <span class="text-xs text-gray-400">Free</span>
-          </div>
-          <ol class="space-y-3">
-            {lessons.map((l, i) => (
-              <li>
-                <a href={`/training/${l.slug}/`}
-                   class="flex items-start gap-4 rounded-xl border border-gray-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow group">
-                  <span class="shrink-0 w-7 h-7 rounded-lg bg-blue-50 text-brand-blue text-xs font-bold flex items-center justify-center tabular-nums">
-                    {i + 1}
-                  </span>
-                  <span class="flex-1 min-w-0">
-                    <span class="block font-semibold text-gray-900 group-hover:text-brand-blue transition-colors">{l.data.title}</span>
-                    <span class="block text-sm text-gray-500 mt-1 leading-relaxed">{l.data.description}</span>
-                    <span class="block text-xs text-gray-400 mt-2 tabular-nums">
-                      {l.data.minutes} min{l.data.quiz ? ` · ${l.data.quiz.length} questions` : ''}
-                    </span>
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        {primer.length > 0 && (
-          <section class="mb-12">
-            <div class="flex items-baseline gap-3 mb-4">
-              <h2 class="text-base font-bold text-gray-700">Before you start, optional</h2>
-              <div class="flex-1 h-px bg-gray-200"></div>
-            </div>
-            <p class="text-sm text-gray-500 leading-relaxed mb-4 max-w-2xl">
-              A short primer on IT general controls, written for practitioners rather than exam
-              candidates. Useful background if ITGC is not your day-to-day, and not part of the
-              Domain 1 sequence.
-            </p>
-            <ul class="flex flex-wrap gap-2">
-              {primer.map(l => (
-                <li>
-                  <a href={`/training/${l.slug}/`}
-                     class="inline-block text-sm rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-gray-600 hover:text-brand-blue hover:border-brand-blue transition-colors">
-                    {l.data.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        <div id="full-course" class="mt-14 pt-12 border-t border-gray-200 scroll-mt-8">
-          <ComingSoon
-            headingLevel={2}
-            eyebrow="Domains 2 to 5 in development"
-            title="The remaining domains"
-            intro="Domain 1 is free and stays free. The remaining four domains follow the same structure, with lessons allocated in proportion to each domain's weight in the exam rather than to how much there is to say about it."
-            releaseDate={RELEASE}
-            features={[
-              'Governance and management of IT, 18% of the exam',
-              'Acquisition, development and implementation, 12%',
-              'Operations and business resilience, 26%',
-              'Protection of information assets, 26%',
-              'Timed mock exams scored by domain, with re-study routing',
-              'Spaced review sets that interleave earlier domains',
-            ]}
-            note="Independent training produced by Marco Cavani. Not affiliated with, endorsed by, or sponsored by ISACA. CISA is a registered trademark of ISACA. Domain structure reflects the published exam content outline and is not reproduced from ISACA materials."
-          />
-        </div>
+    <div class="max-w-3xl mb-10">
+      <div class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1.5 rounded-full mb-4">
+        Domain 1 free
       </div>
-
-      <CourseSidebar
-        items={playlistItems}
-        module={moduleName}
-        releaseLabel="1 Dec 2026"
-        examUrl="/training/exam/"
-        examQuestions={quizCount}
-      />
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+        CISA Exam Preparation
+      </h1>
+      <p class="text-lg text-gray-500 leading-relaxed">
+        For auditors who already do this work and now have to answer questions about it the way the
+        exam expects. Select a domain to see what it covers.
+      </p>
     </div>
 
-    <div class="mt-16">
+    <!-- Domain table on the left, the selected domain's content on the right.
+         Rendered as tabs rather than a real <table> because the rows select a
+         panel; a table of buttons reads badly to a screen reader. -->
+    <div class="grid grid-cols-1 lg:grid-cols-[22rem_minmax(0,1fr)] gap-6 lg:gap-10 items-start">
+
+      <div class="lg:sticky lg:top-6">
+        <div class="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+          <div class="grid grid-cols-[1fr_3.2rem_3.6rem] gap-2 px-4 py-2.5 bg-gray-50 border-b border-gray-200">
+            <span class="text-[10px] font-semibold uppercase tracking-widest text-gray-400">Domain</span>
+            <span class="text-[10px] font-semibold uppercase tracking-widest text-gray-400 text-right">Exam</span>
+            <span class="text-[10px] font-semibold uppercase tracking-widest text-gray-400 text-right">Lessons</span>
+          </div>
+
+          <div role="tablist" aria-label="CISA exam domains" data-domain-tabs>
+            {DOMAINS.map((d, i) => (
+              <button
+                type="button"
+                role="tab"
+                id={`domain-tab-${d.n}`}
+                aria-controls={`domain-panel-${d.n}`}
+                aria-selected={i === 0 ? 'true' : 'false'}
+                tabindex={i === 0 ? '0' : '-1'}
+                data-domain={d.n}
+                class="w-full text-left grid grid-cols-[1fr_3.2rem_3.6rem] gap-2 items-center px-4 py-3.5 border-b border-gray-100 last:border-b-0 transition-colors group aria-selected:bg-blue-50 hover:bg-gray-50 aria-selected:hover:bg-blue-50"
+              >
+                <span class="min-w-0">
+                  <span class="flex items-center gap-2">
+                    <span class="shrink-0 w-5 h-5 rounded text-[10px] font-bold flex items-center justify-center tabular-nums bg-gray-100 text-gray-500 group-aria-selected:bg-brand-blue group-aria-selected:text-white">
+                      {d.n}
+                    </span>
+                    <span class="text-[13px] font-semibold leading-snug text-gray-700 group-aria-selected:text-brand-navy truncate">
+                      {d.title}
+                    </span>
+                  </span>
+                  <span class="block mt-1 text-[11px] text-gray-400 pl-7">
+                    {d.ready
+                      ? <span class="text-brand-blue font-semibold">Available now</span>
+                      : <span>{RELEASE_LABEL}</span>}
+                  </span>
+                </span>
+                <span class="text-xs text-gray-500 text-right tabular-nums">{d.weight}%</span>
+                <span class="text-xs text-gray-500 text-right tabular-nums">{d.lessons}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <p class="text-[11px] text-gray-400 leading-relaxed mt-3 px-1">
+          Lessons are allocated in proportion to each domain's weight in the exam, not to how much
+          there is to say about it.
+        </p>
+      </div>
+
+      <div class="min-w-0">
+        {DOMAINS.map((d, i) => (
+          <section
+            role="tabpanel"
+            id={`domain-panel-${d.n}`}
+            aria-labelledby={`domain-tab-${d.n}`}
+            data-domain-panel={d.n}
+            hidden={i !== 0}
+            tabindex="0"
+          >
+            <div class="flex flex-wrap items-baseline gap-3 mb-3">
+              <h2 class="text-2xl font-extrabold text-gray-900 leading-tight">
+                Domain {d.n}: {d.title}
+              </h2>
+            </div>
+            <p class="text-gray-500 leading-relaxed mb-8">{d.blurb}</p>
+
+            <div class="flex flex-wrap gap-8 sm:gap-10 pb-8 mb-8 border-b border-gray-100">
+              <div>
+                <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{d.weight}%</div>
+                <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">of the exam</div>
+              </div>
+              <div>
+                <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{d.lessons}</div>
+                <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">lessons</div>
+              </div>
+              {d.ready && (
+                <div>
+                  <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{quizCount}</div>
+                  <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">exam questions</div>
+                </div>
+              )}
+              {d.ready && (
+                <div>
+                  <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{totalMinutes}</div>
+                  <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">minutes</div>
+                </div>
+              )}
+            </div>
+
+            {d.ready ? (
+              <>
+                {opener && (
+                  <div class="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-100 bg-white shadow-sm p-5 mb-8">
+                    <div class="min-w-0">
+                      <p class="text-xs uppercase tracking-widest text-gray-400 mb-1">Start here</p>
+                      <p class="font-bold text-gray-900 leading-snug">{opener.data.title}</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2.5">
+                      <a href={`/training/${opener.slug}/`}
+                         class="shrink-0 inline-flex items-center gap-2 rounded-xl bg-brand-blue px-5 py-3 text-sm font-bold text-white hover:bg-brand-navy transition-colors">
+                        Open lesson 1
+                        <span aria-hidden="true">→</span>
+                      </a>
+                      <a href="/training/exam/"
+                         class="shrink-0 inline-flex items-center rounded-xl border border-gray-200 px-5 py-3 text-sm font-semibold text-gray-600 hover:border-brand-blue hover:text-brand-blue transition-colors">
+                        Practice exam
+                      </a>
+                    </div>
+                  </div>
+                )}
+
+                <ol class="space-y-3">
+                  {lessons.map((l, li) => (
+                    <li>
+                      <a href={`/training/${l.slug}/`}
+                         class="flex items-start gap-4 rounded-xl border border-gray-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow group">
+                        <span class="shrink-0 w-7 h-7 rounded-lg bg-blue-50 text-brand-blue text-xs font-bold flex items-center justify-center tabular-nums">
+                          {li + 1}
+                        </span>
+                        <span class="flex-1 min-w-0">
+                          <span class="block font-semibold text-gray-900 group-hover:text-brand-blue transition-colors">{l.data.title}</span>
+                          <span class="block text-sm text-gray-500 mt-1 leading-relaxed">{l.data.description}</span>
+                          <span class="block text-xs text-gray-400 mt-2 tabular-nums">
+                            {l.data.minutes} min{l.data.quiz ? ` · ${l.data.quiz.length} questions` : ''}
+                            {l.data.videoId ? ' · video' : ''}
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+
+                {primer.length > 0 && (
+                  <section class="mt-10 pt-8 border-t border-gray-100">
+                    <h3 class="text-base font-bold text-gray-700 mb-2">Before you start, optional</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed mb-4">
+                      A short primer on IT general controls, written for practitioners rather than exam
+                      candidates. Useful background if ITGC is not your day-to-day, and not part of the
+                      Domain 1 sequence.
+                    </p>
+                    <ul class="flex flex-wrap gap-2">
+                      {primer.map(l => (
+                        <li>
+                          <a href={`/training/${l.slug}/`}
+                             class="inline-block text-sm rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-gray-600 hover:text-brand-blue hover:border-brand-blue transition-colors">
+                            {l.data.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+              </>
+            ) : (
+              <>
+                <div class="rounded-2xl border border-gray-100 bg-gray-50/70 p-6 mb-8">
+                  <div class="flex items-center gap-3 mb-4">
+                    <svg class="w-4 h-4 text-gray-400 shrink-0" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                      <path d="M8 1a3.5 3.5 0 0 0-3.5 3.5V6H4a1.5 1.5 0 0 0-1.5 1.5v5A1.5 1.5 0 0 0 4 14h8a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 12 6h-.5V4.5A3.5 3.5 0 0 0 8 1Zm2 5H6V4.5a2 2 0 1 1 4 0V6Z"/>
+                    </svg>
+                    <p class="text-sm font-semibold text-gray-600">
+                      In development, releases {RELEASE_LABEL}
+                    </p>
+                  </div>
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    Domain 1 is free and stays free. This domain follows the same structure: every
+                    lesson names the professional task it makes you able to perform, works an exam
+                    question through out loud, and closes with scenario questions that explain why
+                    each wrong option was attractive.
+                  </p>
+                </div>
+
+                <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">
+                  What it will cover
+                </h3>
+                <ul class="space-y-2.5 mb-8">
+                  {d.topics.map(t => (
+                    <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
+                      <span class="shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+                      <span>{t}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a href="/training/exam/"
+                   class="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:text-brand-navy">
+                  Meanwhile, sit the Domain 1 practice exam
+                  <span aria-hidden="true">→</span>
+                </a>
+              </>
+            )}
+          </section>
+        ))}
+      </div>
+    </div>
+
+    <p class="mt-14 pt-8 border-t border-gray-200 text-xs text-gray-400 leading-relaxed">
+      Independent training produced by Marco Cavani. Not affiliated with, endorsed by, or sponsored
+      by ISACA. CISA is a registered trademark of ISACA. Domain structure reflects the published exam
+      content outline and is not reproduced from ISACA materials.
+    </p>
+
+    <div class="mt-14">
       <NewsletterSignup />
     </div>
   </main>
 
   <Footer />
 </Layout>
+
+<script>
+  // Domain selector. All five panels are server-rendered and one is revealed at
+  // a time, so the content is in the page for crawlers and works without the
+  // selector ever running.
+  const tablist = document.querySelector('[data-domain-tabs]')
+  if (tablist) {
+    const tabs = [...tablist.querySelectorAll<HTMLButtonElement>('[role="tab"]')]
+
+    function select(n: string, focus = false) {
+      for (const tab of tabs) {
+        const on = tab.dataset.domain === n
+        tab.setAttribute('aria-selected', on ? 'true' : 'false')
+        tab.tabIndex = on ? 0 : -1
+        if (on && focus) tab.focus()
+      }
+      for (const panel of document.querySelectorAll<HTMLElement>('[data-domain-panel]')) {
+        panel.hidden = panel.dataset.domainPanel !== n
+      }
+      // Reflected in the URL so a particular domain can be linked to directly,
+      // using replaceState so browsing domains does not fill the back button.
+      const url = new URL(window.location.href)
+      url.hash = `domain-${n}`
+      history.replaceState(null, '', url)
+    }
+
+    for (const tab of tabs) {
+      tab.addEventListener('click', () => select(tab.dataset.domain!))
+    }
+
+    tablist.addEventListener('keydown', e => {
+      if (!(e instanceof KeyboardEvent)) return
+      const i = tabs.findIndex(t => t.getAttribute('aria-selected') === 'true')
+      let next = -1
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') next = (i + 1) % tabs.length
+      else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length
+      else if (e.key === 'Home') next = 0
+      else if (e.key === 'End') next = tabs.length - 1
+      if (next < 0) return
+      e.preventDefault()
+      select(tabs[next].dataset.domain!, true)
+    })
+
+    // Honour /training#domain-4 on arrival, and whenever the hash changes.
+    // Changing the hash on a page that is already open does not reload it, so
+    // without the listener a link to another domain silently does nothing.
+    function fromHash() {
+      const m = window.location.hash.match(/^#domain-([1-5])$/)
+      if (m) select(m[1])
+    }
+    window.addEventListener('hashchange', fromHash)
+    fromHash()
+  }
+</script>
