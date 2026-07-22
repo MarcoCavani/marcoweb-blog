@@ -3,26 +3,29 @@ import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import ComingSoon from '../components/ComingSoon.astro'
-import LessonVideo from '../components/LessonVideo.astro'
 import CourseSidebar from '../components/CourseSidebar.astro'
 import NewsletterSignup from '../components/NewsletterSignup.astro'
 import { getCollection } from 'astro:content'
 
-// Placeholder launch date for the paid modules, change this one line.
-// Keep it in step with RELEASE_LABEL in CourseSidebar.astro.
+// Placeholder launch date for the paid domains, change this one line.
+// Keep it in step with the default release label in CourseSidebar.astro.
 const RELEASE = '2026-12-01'
-const TRAINING_PLAYLIST = 'PLQVFknVNfL1c'
 
-const lessons = (await getCollection('lessons')).sort((a, b) => a.data.order - b.data.order)
-const modules = [...new Set(lessons.map(l => l.data.module))]
-const freeMinutes = lessons.filter(l => !l.data.gated).reduce((n, l) => n + l.data.minutes, 0)
+// The course on offer is CISA Domain 1. The older ITGC lessons remain published
+// at their own URLs and are linked below as a primer, but they are not exam
+// preparation and are deliberately kept out of the course outline.
+const COURSE = 'cisa-domain-1'
+const PRIMER = 'itgc-foundations'
+
+const all = await getCollection('lessons')
+const lessons = all.filter(l => l.data.course === COURSE).sort((a, b) => a.data.order - b.data.order)
+const primer = all.filter(l => l.data.course === PRIMER).sort((a, b) => a.data.order - b.data.order)
+
+const moduleName = lessons[0]?.data.module ?? 'Domain 1: The IS Audit Process'
+const totalMinutes = lessons.reduce((n, l) => n + l.data.minutes, 0)
 const quizCount = lessons.reduce((n, l) => n + (l.data.quiz?.length || 0), 0)
-
-// The course opens on its first lesson, so arriving at /training puts a
-// playable video on screen with no clicks. The transcript deliberately stays on
-// the lesson's own page: repeating it here would publish the same text at two
-// URLs and split the ranking between them.
 const opener = lessons[0]
+
 const playlistItems = lessons.map(l => ({
   slug: l.slug,
   title: l.data.title,
@@ -33,8 +36,8 @@ const playlistItems = lessons.map(l => ({
 ---
 
 <Layout
-  title="IT Audit Training | MarcoWeb"
-  description="Structured IT audit and IT general controls training, short lessons, worked examples from real breaches, and quizzes that check you understood the control."
+  title="CISA Exam Preparation: Domain 1 | MarcoWeb"
+  description="Free CISA Domain 1 preparation for working IS auditors. The information systems auditing process, taught in exam language with scenario questions and full distractor reasoning."
 >
   <Header />
 
@@ -42,24 +45,37 @@ const playlistItems = lessons.map(l => ({
     <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_20rem] gap-8 lg:gap-10 items-start">
       <div class="min-w-0">
         <div class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1.5 rounded-full mb-4">
-          Free foundations module
+          Free · Domain 1 of 5
         </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-          IT Audit Training
+          CISA Exam Preparation
         </h1>
-        <p class="text-lg text-gray-500 leading-relaxed mb-8 max-w-2xl">
-          The reasoning behind IT general controls, not just the checklist, short lessons with
-          knowledge checks that tell you whether it actually landed.
+        <p class="text-lg text-gray-500 leading-relaxed mb-6 max-w-2xl">
+          Domain 1, the information systems auditing process, for auditors who already do this work
+          and now have to answer questions about it the way the exam expects.
         </p>
 
-        {opener?.data.videoId && (
-          <LessonVideo videoId={opener.data.videoId} title={opener.data.title} />
-        )}
+        <div class="rounded-2xl border border-gray-100 bg-white shadow-sm p-6 mb-10">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">
+            Who this is written for
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Candidates hold five years of audit experience before they sit this exam, so these
+            lessons do not explain what an audit is. They target the gap that actually costs marks:
+            answering as a practitioner, describing what you would really do on Monday, when the
+            question wants the governance-first, risk-based, independence-preserving answer.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Every lesson names the professional task it makes you able to perform, works through an
+            exam question out loud, and closes with scenario questions that explain why each wrong
+            option was attractive.
+          </p>
+        </div>
 
         {opener && (
-          <div class="flex flex-wrap items-center justify-between gap-4 -mt-4 mb-10">
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-10 pb-10 border-b border-gray-100">
             <div class="min-w-0">
-              <p class="text-xs uppercase tracking-widest text-gray-400 mb-1">Starts with lesson 1</p>
+              <p class="text-xs uppercase tracking-widest text-gray-400 mb-1">Start here</p>
               <p class="text-lg font-bold text-gray-900 leading-snug">{opener.data.title}</p>
             </div>
             <a
@@ -72,73 +88,100 @@ const playlistItems = lessons.map(l => ({
           </div>
         )}
 
-        <div class="flex flex-wrap gap-8 sm:gap-12 py-6 border-y border-gray-100 mb-10">
+        <div class="flex flex-wrap gap-8 sm:gap-12 pb-10 mb-10 border-b border-gray-100">
           <div>
             <div class="text-3xl font-extrabold text-brand-blue tabular-nums">{lessons.length}</div>
             <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">lessons free</div>
           </div>
           <div>
             <div class="text-3xl font-extrabold text-brand-blue tabular-nums">{quizCount}</div>
-            <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">quiz questions</div>
+            <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">exam questions</div>
           </div>
           <div>
-            <div class="text-3xl font-extrabold text-brand-blue tabular-nums">{freeMinutes}</div>
+            <div class="text-3xl font-extrabold text-brand-blue tabular-nums">{totalMinutes}</div>
             <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">minutes</div>
+          </div>
+          <div>
+            <div class="text-3xl font-extrabold text-brand-blue tabular-nums">18%</div>
+            <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">of the exam</div>
           </div>
         </div>
 
-        {modules.map(mod => (
-          <section class="mb-10">
-            <div class="flex items-baseline gap-3 mb-5">
-              <h2 class="text-xl font-bold text-gray-900">{mod}</h2>
+        <section class="mb-12">
+          <div class="flex items-baseline gap-3 mb-5">
+            <h2 class="text-xl font-bold text-gray-900">{moduleName}</h2>
+            <div class="flex-1 h-px bg-gray-200"></div>
+            <span class="text-xs text-gray-400">Free</span>
+          </div>
+          <ol class="space-y-3">
+            {lessons.map((l, i) => (
+              <li>
+                <a href={`/training/${l.slug}/`}
+                   class="flex items-start gap-4 rounded-xl border border-gray-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow group">
+                  <span class="shrink-0 w-7 h-7 rounded-lg bg-blue-50 text-brand-blue text-xs font-bold flex items-center justify-center tabular-nums">
+                    {i + 1}
+                  </span>
+                  <span class="flex-1 min-w-0">
+                    <span class="block font-semibold text-gray-900 group-hover:text-brand-blue transition-colors">{l.data.title}</span>
+                    <span class="block text-sm text-gray-500 mt-1 leading-relaxed">{l.data.description}</span>
+                    <span class="block text-xs text-gray-400 mt-2 tabular-nums">
+                      {l.data.minutes} min{l.data.quiz ? ` · ${l.data.quiz.length} questions` : ''}
+                    </span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {primer.length > 0 && (
+          <section class="mb-12">
+            <div class="flex items-baseline gap-3 mb-4">
+              <h2 class="text-base font-bold text-gray-700">Before you start, optional</h2>
               <div class="flex-1 h-px bg-gray-200"></div>
-              <span class="text-xs text-gray-400">Free</span>
             </div>
-            <ol class="space-y-3">
-              {lessons.filter(l => l.data.module === mod).map((l, i) => (
+            <p class="text-sm text-gray-500 leading-relaxed mb-4 max-w-2xl">
+              A short primer on IT general controls, written for practitioners rather than exam
+              candidates. Useful background if ITGC is not your day-to-day, and not part of the
+              Domain 1 sequence.
+            </p>
+            <ul class="flex flex-wrap gap-2">
+              {primer.map(l => (
                 <li>
                   <a href={`/training/${l.slug}/`}
-                     class="flex items-start gap-4 rounded-xl border border-gray-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow group">
-                    <span class="shrink-0 w-7 h-7 rounded-lg bg-blue-50 text-brand-blue text-xs font-bold flex items-center justify-center">
-                      {i + 1}
-                    </span>
-                    <span class="flex-1 min-w-0">
-                      <span class="block font-semibold text-gray-900 group-hover:text-brand-blue transition-colors">{l.data.title}</span>
-                      <span class="block text-sm text-gray-500 mt-1 leading-relaxed">{l.data.description}</span>
-                      <span class="block text-xs text-gray-400 mt-2 tabular-nums">
-                        {l.data.minutes} min{l.data.quiz ? ` · ${l.data.quiz.length} questions` : ''}
-                      </span>
-                    </span>
+                     class="inline-block text-sm rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-gray-600 hover:text-brand-blue hover:border-brand-blue transition-colors">
+                    {l.data.title}
                   </a>
                 </li>
               ))}
-            </ol>
+            </ul>
           </section>
-        ))}
+        )}
 
         <div id="full-course" class="mt-14 pt-12 border-t border-gray-200 scroll-mt-8">
           <ComingSoon
-            eyebrow="Next modules in development"
-            title="The full course"
-            intro="Foundations is free and stays free. The complete course walks every control group in the framework the same way, worked examples, testing procedures, and quizzes throughout."
+            headingLevel={2}
+            eyebrow="Domains 2 to 5 in development"
+            title="The remaining domains"
+            intro="Domain 1 is free and stays free. The remaining four domains follow the same structure, with lessons allocated in proportion to each domain's weight in the exam rather than to how much there is to say about it."
             releaseDate={RELEASE}
             features={[
-              'Every control group from A through I',
-              'Sampling and evidence workshops with real scenarios',
-              'Exam-style practice aligned to IT audit fundamentals',
-              'Progress tracking across the whole framework',
-              'Downloadable working papers and test templates',
-              'Included with an ITGC Tool subscription',
+              'Governance and management of IT, 18% of the exam',
+              'Acquisition, development and implementation, 12%',
+              'Operations and business resilience, 26%',
+              'Protection of information assets, 26%',
+              'Timed mock exams scored by domain, with re-study routing',
+              'Spaced review sets that interleave earlier domains',
             ]}
-            note="Independent training produced by Marco Cavani. Not affiliated with, endorsed by, or sponsored by ISACA. CISA is a registered trademark of ISACA."
+            note="Independent training produced by Marco Cavani. Not affiliated with, endorsed by, or sponsored by ISACA. CISA is a registered trademark of ISACA. Domain structure reflects the published exam content outline and is not reproduced from ISACA materials."
           />
         </div>
       </div>
 
       <CourseSidebar
         items={playlistItems}
-        module={modules[0] ?? 'Foundations'}
-        playlistUrl={`https://www.youtube.com/playlist?list=${TRAINING_PLAYLIST}`}
+        module={moduleName}
+        releaseLabel="1 Dec 2026"
       />
     </div>
 

@@ -4,6 +4,10 @@ interface Question {
   options: string[]
   answer: number
   explanation: string
+  // Parallel to `options`. Why the option you picked is attractive but wrong.
+  // Shown above the main explanation, because on a certification question
+  // knowing why your own reasoning failed matters more than the right answer.
+  whyWrong?: string[]
 }
 
 interface Props {
@@ -35,6 +39,7 @@ const { questions, id = 'quiz' } = Astro.props
             <button
               type="button"
               data-option={oi}
+              data-why={oi === q.answer ? undefined : q.whyWrong?.[oi]}
               class="quiz-option w-full text-left text-sm px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-700 hover:border-brand-blue hover:text-brand-blue transition-colors"
             >
               {opt}
@@ -42,7 +47,8 @@ const { questions, id = 'quiz' } = Astro.props
           ))}
         </div>
         <div class="quiz-explain hidden mt-3 text-sm rounded-xl p-4 leading-relaxed" data-explanation>
-          {q.explanation}
+          <p class="hidden mb-3 pb-3 border-b" data-why-wrong></p>
+          <span>{q.explanation}</span>
         </div>
       </li>
     ))}
@@ -81,6 +87,8 @@ const { questions, id = 'quiz' } = Astro.props
         questions.forEach(function (q) {
           q.removeAttribute('data-done')
           q.querySelector('[data-explanation]').classList.add('hidden')
+          var w = q.querySelector('[data-why-wrong]')
+          if (w) { w.textContent = ''; w.className = 'hidden' }
           q.querySelectorAll('.quiz-option').forEach(function (b) {
             b.disabled = false
             b.className = 'quiz-option w-full text-left text-sm px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-700 hover:border-brand-blue hover:text-brand-blue transition-colors'
@@ -116,6 +124,21 @@ const { questions, id = 'quiz' } = Astro.props
             explain.className = isRight
               ? 'quiz-explain mt-3 text-sm rounded-xl p-4 leading-relaxed bg-green-50 text-green-900 border border-green-200'
               : 'quiz-explain mt-3 text-sm rounded-xl p-4 leading-relaxed bg-white text-gray-700 border border-gray-200'
+
+            // On a wrong pick, lead with why that specific option failed. The
+            // candidate already believes it; correcting their reasoning is the
+            // point of the question.
+            var whyEl = explain.querySelector('[data-why-wrong]')
+            if (whyEl) {
+              var why = btn.getAttribute('data-why')
+              if (!isRight && why) {
+                whyEl.textContent = why
+                whyEl.className = 'mb-3 pb-3 border-b border-gray-200 text-gray-900'
+              } else {
+                whyEl.textContent = ''
+                whyEl.className = 'hidden'
+              }
+            }
 
             progress.textContent = answered + ' / ' + total
 

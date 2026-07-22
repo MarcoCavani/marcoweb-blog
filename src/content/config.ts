@@ -40,11 +40,32 @@ const lessons = defineCollection({
     // YouTube id for the lesson video. The written lesson doubles as its
     // transcript. Questions live in `quiz` and are asked at the foot of the page.
     videoId: z.string().optional(),
+
+    // ── Certification fields ──────────────────────────────────────────────
+    // Present on exam-preparation lessons, absent on the older ITGC lessons.
+    // CISA exam domain, 1 to 5. Drives the domain label and study weighting.
+    domain: z.number().min(1).max(5).optional(),
+    // The professional task the lesson makes you able to perform. Written in
+    // the exam's own register, so the lesson has a purpose beyond a topic name.
+    taskStatement: z.string().optional(),
+    // Measurable objectives, phrased at the cognitive level the exam tests.
+    // Mostly apply, analyse and evaluate rather than recall.
+    objectives: z.array(z.string()).optional(),
+    // The practitioner instinct this topic punishes. Experienced auditors lose
+    // marks by answering what they would really do rather than the expected
+    // answer, so naming the specific trap is worth more than more coverage.
+    trap: z.string().optional(),
+
     quiz: z.array(z.object({
       question: z.string(),
       options: z.array(z.string()).min(2),
       answer: z.number(),        // index into options
       explanation: z.string(),
+      // Why each wrong option is attractive but wrong, parallel to `options`.
+      // The entry at the `answer` index is ignored. Distractor reasoning is the
+      // highest-value part of certification practice, so it is worth carrying
+      // per option rather than folding into one explanation.
+      whyWrong: z.array(z.string()).optional(),
     })).optional(),
   }),
 })

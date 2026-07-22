@@ -8,9 +8,14 @@ interface Props {
   releaseDate: string   // ISO date, e.g. "2026-10-01"
   features?: string[]
   note?: string
+  // This component began life as a whole pre-launch page, so it owns the h1.
+  // When embedded in a page that already has one, pass 2 to avoid a second h1,
+  // which costs both accessibility and ranking.
+  headingLevel?: 1 | 2
 }
 
-const { eyebrow = 'Coming soon', title, intro, releaseDate, features = [], note } = Astro.props
+const { eyebrow = 'Coming soon', title, intro, releaseDate, features = [], note, headingLevel = 1 } = Astro.props
+const Heading = `h${headingLevel}` as 'h1' | 'h2'
 
 // Rendered server-side so the page is meaningful with JavaScript disabled and to
 // crawlers; the script below only makes it tick.
@@ -32,7 +37,7 @@ const units = [
     {eyebrow}
   </div>
 
-  <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-5">{title}</h1>
+  <Heading class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-5">{title}</Heading>
   <p class="text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto">{intro}</p>
 
   <div

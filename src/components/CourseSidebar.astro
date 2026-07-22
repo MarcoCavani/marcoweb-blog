@@ -18,23 +18,43 @@ interface Item {
   questions: number
 }
 
+interface LockedGroup {
+  code: string
+  title: string
+  lessons: number
+}
+
 interface Props {
   items: Item[]
   module: string
   currentSlug?: string
   playlistUrl?: string
+  locked?: LockedGroup[]
+  releaseLabel?: string
+  lockedHeading?: string
 }
 
-const { items, module, currentSlug, playlistUrl } = Astro.props
-
-// Paid groups previewed under the free module. Titles and counts come from the
-// ITGC framework groups; update alongside the release date in training.astro.
-const LOCKED = [
-  { code: 'B', title: 'Network and security controls', lessons: 9 },
-  { code: 'C', title: 'Access management', lessons: 6 },
-  { code: 'G', title: 'Change management', lessons: 5 },
+// The remaining exam domains, previewed under the free one. Lesson counts are
+// allocated in proportion to each domain's exam weight, so these numbers should
+// move only if the published exam content outline changes.
+const DEFAULT_LOCKED: LockedGroup[] = [
+  { code: 'D2', title: 'Governance and management of IT', lessons: 11 },
+  { code: 'D3', title: 'Acquisition, development, implementation', lessons: 7 },
+  { code: 'D4', title: 'Operations and business resilience', lessons: 15 },
+  { code: 'D5', title: 'Protection of information assets', lessons: 16 },
 ]
-const RELEASE_LABEL = '1 Dec 2026'
+
+const {
+  items,
+  module,
+  currentSlug,
+  playlistUrl,
+  locked = DEFAULT_LOCKED,
+  releaseLabel = '1 Dec 2026',
+  lockedHeading = 'Remaining domains',
+} = Astro.props
+const LOCKED = locked
+const RELEASE_LABEL = releaseLabel
 
 const totalMinutes = items.reduce((n, l) => n + l.minutes, 0)
 ---
@@ -96,15 +116,16 @@ const totalMinutes = items.reduce((n, l) => n + l.minutes, 0)
     )}
   </div>
 
+  {LOCKED.length > 0 && (
   <div class="rounded-2xl border border-gray-100 bg-gray-50/70 p-4 mt-3">
     <div class="flex items-baseline justify-between mb-3 px-1">
-      <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-400">The full course</h2>
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-400">{lockedHeading}</h2>
       <span class="text-[11px] text-gray-400">{RELEASE_LABEL}</span>
     </div>
     <ul class="space-y-1">
       {LOCKED.map(g => (
         <li class="flex items-center gap-3 p-2.5 rounded-lg">
-          <span class="shrink-0 w-5 h-5 rounded-md bg-gray-200/70 text-gray-400 text-[11px] font-bold flex items-center justify-center">
+          <span class="shrink-0 min-w-[1.25rem] h-5 px-1 rounded-md bg-gray-200/70 text-gray-400 text-[11px] font-bold flex items-center justify-center tabular-nums">
             {g.code}
           </span>
           <span class="flex-1 min-w-0">
@@ -121,6 +142,7 @@ const totalMinutes = items.reduce((n, l) => n + l.minutes, 0)
       What is included
     </a>
   </div>
+  )}
 </aside>
 
 <script>
