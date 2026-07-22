@@ -1,0 +1,320 @@
+{
+  "lesson": "cisa-d1-01-how-questions-are-written",
+  "title": "How CISA Questions Are Written",
+  "source": "cisa-d1-01-how-questions-are-written.srt",
+  "generated": "2026-07-22",
+  "duration": 284.11,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "How C-I-S-A questions are written."
+        },
+        {
+          "t": 2.23,
+          "text": "Every option can be true, and only one can be best."
+        },
+        {
+          "t": 5.57,
+          "text": "This lesson is about the reading technique that separates candidates who know the material from candidates who pass."
+        }
+      ]
+    },
+    {
+      "t": 13.18,
+      "sentences": [
+        {
+          "t": 13.18,
+          "text": "You have fifteen years of audit experience."
+        },
+        {
+          "t": 15.94,
+          "text": "You read a question, you recognise every word, and you find that three of the four options are things you have genuinely recommended to clients."
+        },
+        {
+          "t": 25.19,
+          "text": "You pick one."
+        },
+        {
+          "t": 26.39,
+          "text": "It is marked wrong."
+        },
+        {
+          "t": 27.61,
+          "text": "This is the single most common way experienced candidates lose marks, and the problem is not knowledge."
+        }
+      ]
+    },
+    {
+      "t": 33.86,
+      "sentences": [
+        {
+          "t": 33.86,
+          "text": "The problem is that the exam is not asking what you would do."
+        },
+        {
+          "t": 37.58,
+          "text": "It is asking what a model information systems auditor, following the standards, would do at that exact point in the process."
+        },
+        {
+          "t": 45.14,
+          "text": "Once you see that difference, a whole category of wrong answers becomes obvious."
+        }
+      ]
+    },
+    {
+      "t": 50.02,
+      "sentences": [
+        {
+          "t": 50.02,
+          "text": "So here is the habit that pays for itself."
+        },
+        {
+          "t": 53.02,
+          "text": "Before you read a single option, find the word in capitals and underline it."
+        },
+        {
+          "t": 58.47,
+          "text": "That word is not decoration."
+        },
+        {
+          "t": 60.48,
+          "text": "It changes the entire task you are being asked to perform."
+        }
+      ]
+    },
+    {
+      "t": 64.63,
+      "sentences": [
+        {
+          "t": 64.63,
+          "text": "FIRST asks about sequence."
+        },
+        {
+          "t": 66.55,
+          "text": "Several options may be perfectly correct actions, but only one of them comes first in a defensible order."
+        },
+        {
+          "t": 74.31,
+          "text": "Establishing the facts comes before evaluating them."
+        },
+        {
+          "t": 78.14,
+          "text": "Evaluating comes before recommending."
+        },
+        {
+          "t": 80.88,
+          "text": "And recommending comes before escalating."
+        }
+      ]
+    },
+    {
+      "t": 83.9,
+      "sentences": [
+        {
+          "t": 83.9,
+          "text": "BEST asks you to rank quality."
+        },
+        {
+          "t": 85.9,
+          "text": "Every option in front of you may be a real, sensible control."
+        },
+        {
+          "t": 89.95,
+          "text": "You judge them against what the question actually specifies."
+        },
+        {
+          "t": 93.94,
+          "text": "If the question says prevent, then a detective control cannot be the best answer, no matter how good a control it is."
+        }
+      ]
+    },
+    {
+      "t": 101.71,
+      "sentences": [
+        {
+          "t": 101.71,
+          "text": "MOST and GREATEST ask about magnitude, usually of risk or of concern."
+        },
+        {
+          "t": 106.21,
+          "text": "Look for the option with the widest consequence, not the one that is most technically interesting."
+        },
+        {
+          "t": 112.61,
+          "text": "And watch for MOST LIKELY, which asks about probability rather than severity."
+        },
+        {
+          "t": 117.63,
+          "text": "A catastrophic but improbable outcome loses to a mundane and common one."
+        }
+      ]
+    },
+    {
+      "t": 122.33,
+      "sentences": [
+        {
+          "t": 122.33,
+          "text": "There is a reason to underline the qualifier before you look at the options rather than after."
+        },
+        {
+          "t": 127.73,
+          "text": "Candidates who read the options first anchor on a phrase that sounds familiar, and then argue backwards to justify it."
+        },
+        {
+          "t": 134.52,
+          "text": "Reading the qualifier first tells you what you are looking for, so you are choosing rather than defending."
+        }
+      ]
+    },
+    {
+      "t": 140.62,
+      "sentences": [
+        {
+          "t": 140.62,
+          "text": "Now, the harder case."
+        },
+        {
+          "t": 141.92,
+          "text": "Sometimes two options are both genuinely defensible, and both are things a competent auditor might do."
+        },
+        {
+          "t": 148.26,
+          "text": "These are the questions that separate a pass from a near miss, and there are rankings that resolve almost all of them."
+        }
+      ]
+    },
+    {
+      "t": 155.59,
+      "sentences": [
+        {
+          "t": 155.59,
+          "text": "Governance beats technology."
+        },
+        {
+          "t": 157.41,
+          "text": "If one option addresses the policy, the ownership or the accountability, and another applies a technical fix, the exam usually prefers the governance answer."
+        },
+        {
+          "t": 167.62,
+          "text": "A firewall rule does not fix the absence of a network security standard."
+        }
+      ]
+    },
+    {
+      "t": 172.3,
+      "sentences": [
+        {
+          "t": 172.3,
+          "text": "Prevention beats detection, and detection beats correction, unless the question tells you otherwise."
+        },
+        {
+          "t": 178.3,
+          "text": "And assessment comes before action."
+        },
+        {
+          "t": 180.4,
+          "text": "Almost any option that begins with performing a risk assessment or determining the impact will outrank an option that jumps straight to a remedy."
+        }
+      ]
+    },
+    {
+      "t": 189.1,
+      "sentences": [
+        {
+          "t": 189.1,
+          "text": "Independence outranks usefulness."
+        },
+        {
+          "t": 191.21,
+          "text": "An auditor who could be more helpful by designing the control still must not, because the assurance role is worth more than the advice."
+        },
+        {
+          "t": 199.88,
+          "text": "And management owns the decision."
+        },
+        {
+          "t": 201.99,
+          "text": "You report, you recommend, and you evaluate."
+        },
+        {
+          "t": 204.82,
+          "text": "Any option where the auditor implements a control, approves an exception, or accepts a risk on management behalf is wrong for that reason alone."
+        }
+      ]
+    },
+    {
+      "t": 214.06,
+      "sentences": [
+        {
+          "t": 214.06,
+          "text": "Which brings us to the instinct that costs the most marks, and that instinct is pragmatism."
+        },
+        {
+          "t": 219.6,
+          "text": "In real life you would get the production password handed back today and sort out the paperwork afterwards."
+        },
+        {
+          "t": 226.11,
+          "text": "On the exam that option is a trap, because it skips assessment and it moves the auditor into management chair."
+        },
+        {
+          "t": 232.81,
+          "text": "The column on the right is not what a better auditor would do on Monday."
+        },
+        {
+          "t": 237.2,
+          "text": "It is what the exam is measuring."
+        }
+      ]
+    },
+    {
+      "t": 239.21,
+      "sentences": [
+        {
+          "t": 239.21,
+          "text": "So carry this question into the exam room with you."
+        },
+        {
+          "t": 242.35,
+          "text": "The wrong internal question is, is this statement true, because in a well written C-I-S-A question the distractors are usually true."
+        },
+        {
+          "t": 250.5,
+          "text": "They are simply not the best, or not first, or not what the qualifier asked for."
+        },
+        {
+          "t": 255.44,
+          "text": "The right internal question is, does this statement answer the qualifier."
+        }
+      ]
+    },
+    {
+      "t": 259.94,
+      "sentences": [
+        {
+          "t": 259.94,
+          "text": "And finally, the clock."
+        },
+        {
+          "t": 261.33,
+          "text": "One hundred and fifty questions in two hundred and forty minutes is ninety six seconds per question, and that includes review."
+        },
+        {
+          "t": 268.9,
+          "text": "Long scenario questions will take you more, so short recall questions have to take you much less."
+        },
+        {
+          "t": 274.73,
+          "text": "Flag it and move on rather than defending a first instinct for four minutes."
+        },
+        {
+          "t": 279.3,
+          "text": "That is time taken from three other questions you would have answered correctly."
+        }
+      ]
+    }
+  ]
+}

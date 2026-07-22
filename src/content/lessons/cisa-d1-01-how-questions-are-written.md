@@ -7,6 +7,7 @@ domain: 1
 order: 1
 minutes: 9
 gated: false
+videoId: "c9qOgPKJc_g"
 taskStatement: "Interpret a qualified exam stem and select the best answer from a set of individually defensible options."
 objectives:
   - "Identify the qualifier in a question stem and state what it is asking you to rank."

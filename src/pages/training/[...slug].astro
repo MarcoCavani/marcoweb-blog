@@ -134,17 +134,23 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
           </section>
         )}
 
-        {lesson.data.videoId && (
-          <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4 pt-6 border-t border-gray-100">
-            {/* When the transcript already runs beside the video, the prose below
-                is the fuller written lesson rather than a second copy of it. */}
-            {hasFollowingTranscript ? 'The written lesson' : 'Video transcript'}
-          </h2>
+        {/* The prose body is suppressed once a following transcript exists,
+            because the two are the same words twice on one page. The transcript
+            is the better of the pair here: it is timed to the narration, it can
+            be clicked to seek, and it is what the reader is actually following.
+            The markdown still holds the lesson, so removing a video restores it. */}
+        {!hasFollowingTranscript && (
+          <>
+            {lesson.data.videoId && (
+              <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4 pt-6 border-t border-gray-100">
+                Video transcript
+              </h2>
+            )}
+            <article class="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-brand-blue prose-strong:text-gray-900">
+              <Content />
+            </article>
+          </>
         )}
-
-        <article class="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-brand-blue prose-strong:text-gray-900">
-          <Content />
-        </article>
 
         {lesson.data.trap && (
           <aside class="mt-10 rounded-2xl border border-amber-200 bg-amber-50/60 p-6">
