@@ -1,0 +1,453 @@
+---
+// Timed mock exam. Deferred feedback, question navigator, flag for review, and
+// scoring broken down by topic so the result routes back to specific lessons.
+//
+// ⚠️ The answer key is in the page markup, exactly as in Quiz.astro. For a FREE
+// practice exam that is an acceptable trade: the only person a candidate can
+// cheat is themselves, and the review screen is where the value is. It is NOT
+// acceptable once the exam sits behind a subscription, because the question
+// bank itself becomes the product and page source hands it over. When the paid
+// domains ship, this moves to the ITGC tool and scores server-side against
+// Supabase. See src/lib/entitlement.ts for the standing decision on that split.
+//
+// Progress is held in sessionStorage so a refresh mid-exam does not wipe an
+// hour of work. It is deliberately session-scoped: a mock exam you can resume
+// days later is not a mock exam.
+
+interface Question {
+  question: string
+  options: string[]
+  answer: number
+  explanation: string
+  whyWrong?: string[]
+  topic: string
+  lessonSlug: string
+  lessonTitle: string
+}
+
+interface Props {
+  questions: Question[]
+  id?: string
+  // Real exam pacing is 150 questions in 240 minutes, which is 96 seconds each.
+  // Holding that ratio is the point: a generous clock trains the wrong habit.
+  secondsPerQuestion?: number
+}
+
+const { questions, id = 'exam', secondsPerQuestion = 96 } = Astro.props
+const totalSeconds = questions.length * secondsPerQuestion
+const totalMinutes = Math.round(totalSeconds / 60)
+---
+
+<section
+  class="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden"
+  data-exam
+  id={id}
+  data-seconds={totalSeconds}
+  data-count={questions.length}
+>
+  <!-- ── Start ─────────────────────────────────────────────────────────── -->
+  <div class="p-6 md:p-10 text-center" data-exam-start>
+    <span class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1.5 rounded-full mb-5">
+      Timed practice exam
+    </span>
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">Domain 1 practice exam</h2>
+    <p class="text-gray-500 leading-relaxed max-w-xl mx-auto mb-8">
+      {questions.length} questions in {totalMinutes} minutes, which is the real exam's pace of
+      96 seconds per question. No feedback until you submit. Sitting it under the clock is the
+      part that transfers.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-6 sm:gap-10 mb-9">
+      <div>
+        <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{questions.length}</div>
+        <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">questions</div>
+      </div>
+      <div>
+        <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{totalMinutes}</div>
+        <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">minutes</div>
+      </div>
+      <div>
+        <div class="text-2xl font-extrabold text-brand-blue tabular-nums">70%</div>
+        <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">working target</div>
+      </div>
+    </div>
+
+    <button type="button" data-exam-begin
+      class="rounded-xl bg-brand-blue px-7 py-3.5 text-sm font-bold text-white hover:bg-brand-navy transition-colors">
+      Begin the exam
+    </button>
+    <p class="text-xs text-gray-400 mt-4">The clock starts when you press begin.</p>
+
+    <p class="text-xs text-gray-400 mt-8 max-w-lg mx-auto leading-relaxed">
+      A practice exam over one domain cannot tell you whether you are ready for the real thing,
+      which covers five. Treat the result as a read on Domain 1 alone.
+    </p>
+  </div>
+
+  <!-- ── Running ───────────────────────────────────────────────────────── -->
+  <div hidden data-exam-run>
+    <div class="flex items-center gap-3 flex-wrap px-5 py-3 border-b border-gray-100 bg-gray-50/70">
+      <span class="text-xs font-semibold uppercase tracking-widest text-gray-400">Question
+        <span data-exam-position class="text-gray-700 tabular-nums">1</span> of {questions.length}
+      </span>
+      <span class="flex-1"></span>
+      <span class="text-xs text-gray-500 tabular-nums" data-exam-answered>0 answered</span>
+      <span class="text-sm font-bold tabular-nums rounded-lg px-3 py-1.5 bg-white border border-gray-200 text-gray-700"
+            data-exam-timer aria-live="off">00:00</span>
+    </div>
+
+    <div class="px-5 py-4 border-b border-gray-100">
+      <div class="flex flex-wrap gap-1.5" data-exam-nav role="group" aria-label="Question navigator"></div>
+    </div>
+
+    <div class="p-5 md:p-8">
+      <p class="text-xs text-gray-400 mb-2" data-exam-topic></p>
+      <p class="text-lg font-semibold text-gray-900 leading-snug mb-5" data-exam-stem></p>
+      <div class="space-y-2.5" data-exam-options></div>
+
+      <div class="flex flex-wrap items-center gap-2.5 mt-7 pt-6 border-t border-gray-100">
+        <button type="button" data-exam-prev
+          class="rounded-lg border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-600 hover:border-brand-blue hover:text-brand-blue transition-colors disabled:opacity-40 disabled:hover:border-gray-200 disabled:hover:text-gray-600">
+          Previous
+        </button>
+        <button type="button" data-exam-next
+          class="rounded-lg border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-600 hover:border-brand-blue hover:text-brand-blue transition-colors disabled:opacity-40 disabled:hover:border-gray-200 disabled:hover:text-gray-600">
+          Next
+        </button>
+        <button type="button" data-exam-flag
+          class="rounded-lg border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-600 hover:border-amber-500 hover:text-amber-600 transition-colors">
+          Flag for review
+        </button>
+        <span class="flex-1"></span>
+        <button type="button" data-exam-submit
+          class="rounded-lg bg-brand-blue px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-navy transition-colors">
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Result ────────────────────────────────────────────────────────── -->
+  <div hidden data-exam-result class="p-6 md:p-10">
+    <div class="text-center mb-9">
+      <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3" data-exam-verdict></p>
+      <p class="text-5xl font-extrabold text-gray-900 tabular-nums" data-exam-score></p>
+      <p class="text-sm text-gray-500 mt-2" data-exam-summary></p>
+    </div>
+
+    <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">By topic</h3>
+    <div class="space-y-3 mb-10" data-exam-breakdown></div>
+
+    <div class="flex flex-wrap gap-2.5 justify-center">
+      <button type="button" data-exam-review
+        class="rounded-xl bg-brand-blue px-6 py-3 text-sm font-bold text-white hover:bg-brand-navy transition-colors">
+        Review every question
+      </button>
+      <button type="button" data-exam-retry
+        class="rounded-xl border border-gray-200 px-6 py-3 text-sm font-semibold text-gray-600 hover:border-brand-blue hover:text-brand-blue transition-colors">
+        Sit it again
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Review ────────────────────────────────────────────────────────── -->
+  <div hidden data-exam-reviewpane class="p-5 md:p-8">
+    <div class="flex items-baseline gap-3 mb-6">
+      <h3 class="text-lg font-bold text-gray-900">Review</h3>
+      <div class="flex-1 h-px bg-gray-200"></div>
+      <button type="button" data-exam-backtoresult
+        class="text-xs font-semibold text-brand-blue hover:text-brand-navy">Back to score</button>
+    </div>
+    <ol class="space-y-8" data-exam-reviewlist></ol>
+  </div>
+
+  <script type="application/json" data-exam-questions set:html={JSON.stringify(questions)}></script>
+</section>
+
+<script is:inline>
+  (function () {
+    document.querySelectorAll('[data-exam]').forEach(function (root) {
+      var QS = JSON.parse(root.querySelector('[data-exam-questions]').textContent)
+      var KEY = 'marcoweb:exam:' + root.id
+
+      var startPane = root.querySelector('[data-exam-start]')
+      var runPane = root.querySelector('[data-exam-run]')
+      var resultPane = root.querySelector('[data-exam-result]')
+      var reviewPane = root.querySelector('[data-exam-reviewpane]')
+
+      var navEl = root.querySelector('[data-exam-nav]')
+      var stemEl = root.querySelector('[data-exam-stem]')
+      var topicEl = root.querySelector('[data-exam-topic]')
+      var optsEl = root.querySelector('[data-exam-options]')
+      var posEl = root.querySelector('[data-exam-position]')
+      var answeredEl = root.querySelector('[data-exam-answered]')
+      var timerEl = root.querySelector('[data-exam-timer]')
+      var flagBtn = root.querySelector('[data-exam-flag]')
+      var prevBtn = root.querySelector('[data-exam-prev]')
+      var nextBtn = root.querySelector('[data-exam-next]')
+
+      var LETTERS = ['A', 'B', 'C', 'D', 'E']
+      var answers = {}
+      var flags = {}
+      var at = 0
+      var left = parseInt(root.dataset.seconds, 10)
+      var ticking = null
+
+      function save() {
+        try {
+          sessionStorage.setItem(KEY, JSON.stringify({ answers: answers, flags: flags, at: at, left: left }))
+        } catch (e) { /* private mode, the exam still runs, it just cannot resume */ }
+      }
+      function clearSaved() {
+        try { sessionStorage.removeItem(KEY) } catch (e) {}
+      }
+      function restore() {
+        try {
+          var raw = sessionStorage.getItem(KEY)
+          if (!raw) return false
+          var s = JSON.parse(raw)
+          if (!s || typeof s.left !== 'number' || s.left <= 0) return false
+          answers = s.answers || {}
+          flags = s.flags || {}
+          at = s.at || 0
+          left = s.left
+          return true
+        } catch (e) { return false }
+      }
+
+      function fmt(s) {
+        if (s < 0) s = 0
+        var m = Math.floor(s / 60)
+        var r = s % 60
+        return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r
+      }
+
+      function tick() {
+        left--
+        timerEl.textContent = fmt(left)
+        // Amber in the last five minutes, red in the last one. Colour is doing
+        // real work here: the candidate should feel the clock without watching it.
+        if (left <= 60) timerEl.className = 'text-sm font-bold tabular-nums rounded-lg px-3 py-1.5 bg-red-50 border border-red-300 text-red-700'
+        else if (left <= 300) timerEl.className = 'text-sm font-bold tabular-nums rounded-lg px-3 py-1.5 bg-amber-50 border border-amber-300 text-amber-800'
+        if (left % 5 === 0) save()
+        if (left <= 0) { stop(); submit(true) }
+      }
+      function start() { if (!ticking) ticking = setInterval(tick, 1000) }
+      function stop() { if (ticking) { clearInterval(ticking); ticking = null } }
+
+      function show(pane) {
+        ;[startPane, runPane, resultPane, reviewPane].forEach(function (p) { p.hidden = p !== pane })
+      }
+
+      function paintNav() {
+        navEl.textContent = ''
+        QS.forEach(function (_, i) {
+          var b = document.createElement('button')
+          b.type = 'button'
+          b.textContent = String(i + 1)
+          b.setAttribute('aria-label', 'Question ' + (i + 1))
+          var base = 'w-8 h-8 rounded-lg text-xs font-semibold tabular-nums border transition-colors '
+          if (i === at) base += 'border-brand-blue border-2 text-brand-blue bg-white'
+          else if (flags[i]) base += 'border-amber-300 bg-amber-50 text-amber-700'
+          else if (answers[i] !== undefined) base += 'border-blue-200 bg-blue-50 text-brand-blue'
+          else base += 'border-gray-200 bg-white text-gray-400 hover:border-brand-blue'
+          b.className = base
+          b.addEventListener('click', function () { at = i; render() })
+          navEl.appendChild(b)
+        })
+      }
+
+      function render() {
+        var q = QS[at]
+        posEl.textContent = String(at + 1)
+        topicEl.textContent = q.topic
+        stemEl.textContent = q.question
+        optsEl.textContent = ''
+
+        q.options.forEach(function (text, i) {
+          var b = document.createElement('button')
+          b.type = 'button'
+          var picked = answers[at] === i
+          b.className = 'w-full text-left flex gap-3 items-start px-4 py-3 rounded-xl border transition-colors ' +
+            (picked
+              ? 'border-brand-blue border-2 bg-blue-50 text-gray-900'
+              : 'border-gray-200 bg-white text-gray-700 hover:border-brand-blue hover:text-brand-blue')
+          var l = document.createElement('span')
+          l.className = 'shrink-0 mt-0.5 w-5 h-5 rounded text-[11px] font-bold flex items-center justify-center ' +
+            (picked ? 'bg-brand-blue text-white' : 'bg-blue-50 text-brand-blue')
+          l.textContent = LETTERS[i]
+          var t = document.createElement('span')
+          t.className = 'text-sm leading-relaxed'
+          t.textContent = text
+          b.appendChild(l); b.appendChild(t)
+          b.addEventListener('click', function () {
+            answers[at] = i
+            answeredEl.textContent = Object.keys(answers).length + ' answered'
+            save()
+            render()
+          })
+          optsEl.appendChild(b)
+        })
+
+        flagBtn.textContent = flags[at] ? 'Unflag' : 'Flag for review'
+        prevBtn.disabled = at === 0
+        nextBtn.disabled = at === QS.length - 1
+        answeredEl.textContent = Object.keys(answers).length + ' answered'
+        paintNav()
+      }
+
+      function submit(auto) {
+        var unanswered = QS.length - Object.keys(answers).length
+        if (!auto && unanswered > 0) {
+          var ok = confirm(unanswered + ' question' + (unanswered === 1 ? '' : 's') +
+            ' still unanswered. Submit anyway?')
+          if (!ok) return
+        }
+        stop()
+        clearSaved()
+
+        var correct = 0
+        var byTopic = {}
+        QS.forEach(function (q, i) {
+          var right = answers[i] === q.answer
+          if (right) correct++
+          if (!byTopic[q.topic]) byTopic[q.topic] = { n: 0, c: 0, slug: q.lessonSlug, title: q.lessonTitle }
+          byTopic[q.topic].n++
+          if (right) byTopic[q.topic].c++
+        })
+        var pct = Math.round((correct / QS.length) * 100)
+
+        root.querySelector('[data-exam-score]').textContent = correct + ' / ' + QS.length
+        root.querySelector('[data-exam-verdict]').textContent =
+          auto ? 'Time expired, scored as it stood' : (pct >= 70 ? 'Above the working target' : 'Below the working target')
+        root.querySelector('[data-exam-summary]').textContent =
+          pct + '% correct. The real exam is scaled from 200 to 800 with 450 to pass, so treat this as a rough read rather than a predicted score.'
+
+        var bd = root.querySelector('[data-exam-breakdown]')
+        bd.textContent = ''
+        Object.keys(byTopic).sort(function (a, b) {
+          return (byTopic[a].c / byTopic[a].n) - (byTopic[b].c / byTopic[b].n)
+        }).forEach(function (topic) {
+          var s = byTopic[topic]
+          var p = Math.round((s.c / s.n) * 100)
+          var row = document.createElement('div')
+          row.className = 'flex items-center gap-4'
+
+          var name = document.createElement('a')
+          name.href = '/training/' + s.slug + '/'
+          name.className = 'w-44 shrink-0 text-sm text-gray-600 hover:text-brand-blue transition-colors truncate'
+          name.textContent = topic
+          name.title = 'Back to ' + s.title
+
+          var track = document.createElement('div')
+          track.className = 'flex-1 h-2 rounded-full bg-gray-100 overflow-hidden'
+          var fill = document.createElement('div')
+          fill.className = 'h-full rounded-full ' + (p < 70 ? 'bg-red-400' : 'bg-brand-blue')
+          fill.style.width = p + '%'
+          track.appendChild(fill)
+
+          var val = document.createElement('span')
+          val.className = 'w-16 shrink-0 text-right text-xs text-gray-500 tabular-nums'
+          val.textContent = s.c + '/' + s.n
+
+          row.appendChild(name); row.appendChild(track); row.appendChild(val)
+          bd.appendChild(row)
+        })
+
+        buildReview()
+        show(resultPane)
+        resultPane.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+
+      function buildReview() {
+        var list = root.querySelector('[data-exam-reviewlist]')
+        list.textContent = ''
+        QS.forEach(function (q, i) {
+          var picked = answers[i]
+          var right = picked === q.answer
+
+          var li = document.createElement('li')
+
+          var head = document.createElement('p')
+          head.className = 'text-xs text-gray-400 mb-1'
+          head.textContent = 'Question ' + (i + 1) + ' · ' + q.topic +
+            (picked === undefined ? ' · not answered' : (right ? ' · correct' : ' · incorrect'))
+          li.appendChild(head)
+
+          var stem = document.createElement('p')
+          stem.className = 'font-semibold text-gray-900 mb-3 leading-snug'
+          stem.textContent = q.question
+          li.appendChild(stem)
+
+          var opts = document.createElement('div')
+          opts.className = 'space-y-2 mb-3'
+          q.options.forEach(function (text, oi) {
+            var row = document.createElement('div')
+            var cls = 'flex gap-3 items-start px-4 py-2.5 rounded-xl border text-sm leading-relaxed '
+            if (oi === q.answer) cls += 'border-green-500 border-2 bg-green-50 text-green-900'
+            else if (oi === picked) cls += 'border-red-400 border-2 bg-red-50 text-red-900'
+            else cls += 'border-gray-200 bg-white text-gray-400'
+            row.className = cls
+            var l = document.createElement('span')
+            l.className = 'shrink-0 font-bold'
+            l.textContent = LETTERS[oi]
+            var t = document.createElement('span')
+            t.textContent = text
+            row.appendChild(l); row.appendChild(t)
+            opts.appendChild(row)
+          })
+          li.appendChild(opts)
+
+          var box = document.createElement('div')
+          box.className = 'text-sm rounded-xl p-4 leading-relaxed bg-gray-50 border border-gray-200 text-gray-700'
+          if (!right && picked !== undefined && q.whyWrong && q.whyWrong[picked]) {
+            var w = document.createElement('p')
+            w.className = 'mb-3 pb-3 border-b border-gray-200 text-gray-900'
+            w.textContent = q.whyWrong[picked]
+            box.appendChild(w)
+          }
+          box.appendChild(document.createTextNode(q.explanation))
+          li.appendChild(box)
+
+          var back = document.createElement('a')
+          back.href = '/training/' + q.lessonSlug + '/'
+          back.className = 'inline-block mt-2 text-xs font-semibold text-brand-blue hover:text-brand-navy'
+          back.textContent = 'Back to ' + q.lessonTitle
+          li.appendChild(back)
+
+          list.appendChild(li)
+        })
+      }
+
+      root.querySelector('[data-exam-begin]').addEventListener('click', function () {
+        show(runPane); render(); timerEl.textContent = fmt(left); start()
+      })
+      prevBtn.addEventListener('click', function () { if (at > 0) { at--; render() } })
+      nextBtn.addEventListener('click', function () { if (at < QS.length - 1) { at++; render() } })
+      flagBtn.addEventListener('click', function () { flags[at] = !flags[at]; save(); render() })
+      root.querySelector('[data-exam-submit]').addEventListener('click', function () { submit(false) })
+      root.querySelector('[data-exam-review]').addEventListener('click', function () {
+        show(reviewPane); reviewPane.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      })
+      root.querySelector('[data-exam-backtoresult]').addEventListener('click', function () {
+        show(resultPane); resultPane.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      })
+      root.querySelector('[data-exam-retry]').addEventListener('click', function () {
+        answers = {}; flags = {}; at = 0
+        left = parseInt(root.dataset.seconds, 10)
+        timerEl.className = 'text-sm font-bold tabular-nums rounded-lg px-3 py-1.5 bg-white border border-gray-200 text-gray-700'
+        timerEl.textContent = fmt(left)
+        clearSaved()
+        show(runPane); render(); start()
+      })
+
+      // Resume an exam interrupted by a refresh rather than losing the attempt.
+      if (restore()) {
+        show(runPane)
+        timerEl.textContent = fmt(left)
+        render()
+        start()
+      }
+    })
+  })()
+</script>

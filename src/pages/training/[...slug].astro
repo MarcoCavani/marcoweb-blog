@@ -43,6 +43,7 @@ const courseHasVideo = siblings.some(l => l.data.videoId)
 // The locked-domain panel belongs to the exam course. The older ITGC primer
 // lessons are not part of that sequence and should not advertise it.
 const isExamCourse = lesson.data.domain !== undefined
+const examQuestionCount = siblings.reduce((n, l) => n + (l.data.quiz?.length || 0), 0)
 ---
 
 <Layout title={`${lesson.data.title} | IT Audit Training`} description={lesson.data.description}>
@@ -168,6 +169,8 @@ const isExamCourse = lesson.data.domain !== undefined
         playlistUrl={courseHasVideo ? `https://www.youtube.com/playlist?list=${TRAINING_PLAYLIST}` : undefined}
         locked={isExamCourse ? undefined : []}
         lockedHeading={isExamCourse ? 'Remaining domains' : ''}
+        examUrl={isExamCourse ? '/training/exam/' : undefined}
+        examQuestions={isExamCourse ? examQuestionCount : undefined}
       />
     </div>
 
