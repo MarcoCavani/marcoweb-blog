@@ -143,13 +143,21 @@ const { questions, id = 'quiz' } = Astro.props
             progress.textContent = answered + ' / ' + total
 
             if (answered === total) {
+              var passed = correct >= Math.ceil(total * 0.7)
               scoreEl.textContent = correct + ' out of ' + total
               msgEl.textContent = correct === total
                 ? 'Full marks, you can explain this control to an auditor.'
-                : correct >= Math.ceil(total * 0.7)
+                : passed
                   ? 'Solid. Re-read the explanations you missed.'
                   : 'Worth another pass through the lesson before moving on.'
               result.classList.remove('hidden')
+
+              // Announce the outcome so a page can gate progression on it. The
+              // quiz itself stays unaware of what listens; it only reports.
+              quiz.dispatchEvent(new CustomEvent('quiz:complete', {
+                bubbles: true,
+                detail: { id: quiz.id, correct: correct, total: total, passed: passed },
+              }))
             }
           })
         })

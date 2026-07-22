@@ -10,6 +10,11 @@ import NewsletterSignup from '../../components/NewsletterSignup.astro'
 import { getCollection } from 'astro:content'
 
 // The training videos live in their own YouTube playlist.
+// Two playlists, because they are two different things. The CISA course has its
+// own so it is findable by anyone searching for exam preparation; "IT Audit
+// Training" keeps the older ITGC primer, which is practitioner material rather
+// than exam preparation and is no longer part of the course sequence.
+const CISA_PLAYLIST = 'PLIiO5GctRcns'
 const TRAINING_PLAYLIST = 'PLQVFknVNfL1c'
 
 export async function getStaticPaths() {
@@ -69,6 +74,66 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
       <span class="text-gray-500">Lesson {position} of {total}</span>
     </nav>
 
+    {/* Everything that orients the learner comes before the video: what the
+        lesson is, what it makes them able to do, and the trap it is written
+        against. You should know what you are watching for before you press
+        play. Constrained to a readable measure rather than the full page width,
+        which the player below is free to use. */}
+    <div class="max-w-3xl">
+      <header class="mb-8">
+        <div class="flex flex-wrap items-center gap-3 mb-3">
+          <span class="text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-2.5 py-1 rounded-full">
+            {lesson.data.module}
+          </span>
+          <span class="text-xs text-gray-400 tabular-nums">
+            {lesson.data.minutes} min{lesson.data.quiz ? ` · ${lesson.data.quiz.length} questions` : ''}
+          </span>
+          {lesson.data.control && (
+            <a href="/blog" class="text-xs text-gray-400 hover:text-brand-blue">Control {lesson.data.control}</a>
+          )}
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">{lesson.data.title}</h1>
+        <p class="text-lg text-gray-500 mt-4 leading-relaxed">{lesson.data.description}</p>
+      </header>
+
+      {(lesson.data.taskStatement || lesson.data.objectives) && (
+        <section class="rounded-2xl border border-gray-100 bg-gray-50/70 p-6 mb-6">
+          {lesson.data.taskStatement && (
+            <>
+              <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">
+                What this makes you able to do
+              </h2>
+              <p class="text-gray-700 leading-relaxed mb-5">{lesson.data.taskStatement}</p>
+            </>
+          )}
+          {lesson.data.objectives && lesson.data.objectives.length > 0 && (
+            <>
+              <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">
+                By the end you can
+              </h2>
+              <ul class="space-y-2">
+                {lesson.data.objectives.map(o => (
+                  <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
+                    <span class="shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
+                    <span>{o}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </section>
+      )}
+
+      {lesson.data.trap && (
+        <aside class="rounded-2xl border border-amber-200 bg-amber-50/60 p-6 mb-10">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-amber-700 mb-2">
+            The trap
+          </h2>
+          <p class="text-amber-900 leading-relaxed">{lesson.data.trap}</p>
+        </aside>
+      )}
+    </div>
+
     {/* The player takes the full page width rather than sharing a row with the
         course outline. Video, transcript and outline together are three columns
         competing for one row, which squeezed the video to about 430px. Outside
@@ -90,50 +155,6 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
           <LessonVideo videoId={lesson.data.videoId} title={lesson.data.title} />
         )}
 
-        <header class="mb-8">
-          <div class="flex flex-wrap items-center gap-3 mb-3">
-            <span class="text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-2.5 py-1 rounded-full">
-              {lesson.data.module}
-            </span>
-            <span class="text-xs text-gray-400 tabular-nums">
-              {lesson.data.minutes} min{lesson.data.quiz ? ` · ${lesson.data.quiz.length} questions` : ''}
-            </span>
-            {lesson.data.control && (
-              <a href="/blog" class="text-xs text-gray-400 hover:text-brand-blue">Control {lesson.data.control}</a>
-            )}
-          </div>
-          <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">{lesson.data.title}</h1>
-          <p class="text-lg text-gray-500 mt-4 leading-relaxed">{lesson.data.description}</p>
-        </header>
-
-        {(lesson.data.taskStatement || lesson.data.objectives) && (
-          <section class="rounded-2xl border border-gray-100 bg-gray-50/70 p-6 mb-10">
-            {lesson.data.taskStatement && (
-              <>
-                <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">
-                  What this makes you able to do
-                </h2>
-                <p class="text-gray-700 leading-relaxed mb-5">{lesson.data.taskStatement}</p>
-              </>
-            )}
-            {lesson.data.objectives && lesson.data.objectives.length > 0 && (
-              <>
-                <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">
-                  By the end you can
-                </h2>
-                <ul class="space-y-2">
-                  {lesson.data.objectives.map(o => (
-                    <li class="flex gap-3 text-sm text-gray-600 leading-relaxed">
-                      <span class="shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
-                      <span>{o}</span>
-                    </li>
-                  ))}
-                </ul>
-              </>
-            )}
-          </section>
-        )}
-
         {/* The prose body is suppressed once a following transcript exists,
             because the two are the same words twice on one page. The transcript
             is the better of the pair here: it is timed to the narration, it can
@@ -152,15 +173,6 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
           </>
         )}
 
-        {lesson.data.trap && (
-          <aside class="mt-10 rounded-2xl border border-amber-200 bg-amber-50/60 p-6">
-            <h2 class="text-xs font-semibold uppercase tracking-widest text-amber-700 mb-2">
-              The trap
-            </h2>
-            <p class="text-amber-900 leading-relaxed">{lesson.data.trap}</p>
-          </aside>
-        )}
-
         {lesson.data.quiz && lesson.data.quiz.length > 0 && (
           <Quiz questions={lesson.data.quiz} id={`quiz-${lesson.slug}`} />
         )}
@@ -173,7 +185,12 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
           </p>
         )}
 
-        <nav class="mt-12 pt-8 border-t border-gray-200 flex justify-between gap-4">
+        <nav
+          class="mt-12 pt-8 border-t border-gray-200 flex justify-between gap-4"
+          data-lesson-nav
+          data-quiz-id={lesson.data.quiz?.length ? `quiz-${lesson.slug}` : undefined}
+          data-lesson-slug={lesson.slug}
+        >
           {prev ? (
             <a href={`/training/${prev.slug}/`} class="group flex-1 text-left">
               <div class="text-xs text-gray-400 mb-1">← Previous</div>
@@ -181,10 +198,22 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
             </a>
           ) : <div class="flex-1"></div>}
           {next ? (
-            <a href={`/training/${next.slug}/`} class="group flex-1 text-right">
-              <div class="text-xs text-gray-400 mb-1">Next →</div>
-              <div class="text-sm font-semibold text-gray-700 group-hover:text-brand-blue transition-colors">{next.data.title}</div>
-            </a>
+            <div class="flex-1 text-right min-w-0">
+              {/* Locked until the knowledge check is passed. The lock is applied
+                  by script on load, so the link still works for anyone without
+                  JavaScript rather than becoming a dead end. */}
+              <a
+                href={`/training/${next.slug}/`}
+                data-next-link
+                class="group block"
+              >
+                <div class="text-xs text-gray-400 mb-1" data-next-label>Next →</div>
+                <div class="text-sm font-semibold text-gray-700 group-hover:text-brand-blue transition-colors">{next.data.title}</div>
+              </a>
+              <p class="hidden mt-2 text-xs text-amber-700" data-next-hint>
+                Pass the knowledge check above to continue.
+              </p>
+            </div>
           ) : (
             <div class="flex-1 text-right">
               <div class="text-xs text-gray-400 mb-1">End of module</div>
@@ -198,7 +227,9 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
         items={playlistItems}
         currentSlug={lesson.slug}
         module={lesson.data.module}
-        playlistUrl={courseHasVideo ? `https://www.youtube.com/playlist?list=${TRAINING_PLAYLIST}` : undefined}
+        playlistUrl={courseHasVideo
+          ? `https://www.youtube.com/playlist?list=${isExamCourse ? CISA_PLAYLIST : TRAINING_PLAYLIST}`
+          : undefined}
         locked={isExamCourse ? undefined : []}
         lockedHeading={isExamCourse ? 'Remaining domains' : ''}
         examUrl={isExamCourse ? '/training/exam/' : undefined}
@@ -210,6 +241,60 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
       <NewsletterSignup />
     </div>
   </main>
+
+<script>
+  // Gates the Next link on passing the lesson's knowledge check.
+  //
+  // ⚠️ This is a nudge, not enforcement. The site is static, the next lesson is
+  // a public URL, and the pass flag lives in localStorage where anyone can edit
+  // it. It exists to stop someone drifting past a check they have not done, not
+  // to stop someone determined to skip. Real gating needs server-side state,
+  // which means the ITGC tool rather than the blog.
+  //
+  // The lock is applied by script rather than rendered locked, so a reader
+  // without JavaScript gets a working link instead of a dead end.
+  const nav = document.querySelector<HTMLElement>('[data-lesson-nav]')
+  const quizId = nav?.dataset.quizId
+  const slug = nav?.dataset.lessonSlug
+
+  if (nav && quizId && slug) {
+    const KEY = `marcoweb:training:passed:${slug}`
+    const link = nav.querySelector<HTMLAnchorElement>('[data-next-link]')
+    const label = nav.querySelector<HTMLElement>('[data-next-label]')
+    const hint = nav.querySelector<HTMLElement>('[data-next-hint]')
+
+    function alreadyPassed() {
+      try { return localStorage.getItem(KEY) === '1' } catch { return false }
+    }
+
+    function unlock() {
+      if (!link || !label || !hint) return
+      link.removeAttribute('aria-disabled')
+      link.classList.remove('opacity-40', 'pointer-events-none')
+      label.textContent = 'Next →'
+      hint.classList.add('hidden')
+    }
+
+    function lock() {
+      if (!link || !label || !hint) return
+      link.setAttribute('aria-disabled', 'true')
+      link.classList.add('opacity-40', 'pointer-events-none')
+      label.textContent = 'Next, locked'
+      hint.classList.remove('hidden')
+    }
+
+    if (alreadyPassed()) unlock()
+    else lock()
+
+    document.addEventListener('quiz:complete', e => {
+      const d = (e as CustomEvent).detail
+      if (d.id !== quizId) return
+      if (!d.passed) return
+      try { localStorage.setItem(KEY, '1') } catch { /* private mode, unlock for this visit only */ }
+      unlock()
+    })
+  }
+</script>
 
   <Footer />
 </Layout>
