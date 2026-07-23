@@ -7,6 +7,7 @@ domain: 1
 order: 6
 minutes: 7
 gated: false
+videoId: "KexzBDwxuQg"
 taskStatement: "Select the audit approach and engagement objective appropriate to the assurance being sought."
 objectives:
   - "Distinguish compliance testing from substantive testing by what each concludes."

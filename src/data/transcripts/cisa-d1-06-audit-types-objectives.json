@@ -1,0 +1,240 @@
+{
+  "lesson": "cisa-d1-06-audit-types-objectives",
+  "title": "Audit Types and Engagement Objectives",
+  "source": "cisa-d1-06-audit-types-objectives.srt",
+  "generated": "2026-07-23",
+  "duration": 213.79,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Audit types and engagement objectives."
+        },
+        {
+          "t": 2.12,
+          "text": "This lesson is about choosing the audit approach that matches the assurance being sought, because the wrong choice gives you a technically correct answer to a question nobody asked."
+        }
+      ]
+    },
+    {
+      "t": 12.19,
+      "sentences": [
+        {
+          "t": 12.19,
+          "text": "Here is how that goes wrong."
+        },
+        {
+          "t": 13.86,
+          "text": "Management asks for assurance over the payroll system."
+        },
+        {
+          "t": 17.07,
+          "text": "You test that every change had an approval, that access was granted through the correct workflow, and that the interface reconciliation ran nightly and was signed."
+        },
+        {
+          "t": 26.75,
+          "text": "Everything passes, and you report that payroll controls are operating effectively."
+        },
+        {
+          "t": 31.62,
+          "text": "Then someone points out that payroll has been overpaying a group of staff for eight months."
+        }
+      ]
+    },
+    {
+      "t": 37.03,
+      "sentences": [
+        {
+          "t": 37.03,
+          "text": "Nothing you tested would have found it."
+        },
+        {
+          "t": 39.68,
+          "text": "And that is not a mistake in your testing, it is a mistake in the type of testing."
+        },
+        {
+          "t": 45.24,
+          "text": "You proved the machinery ran."
+        },
+        {
+          "t": 47.21,
+          "text": "You never proved the machinery produced the right answer."
+        }
+      ]
+    },
+    {
+      "t": 51.07,
+      "sentences": [
+        {
+          "t": 51.07,
+          "text": "The first type is compliance testing."
+        },
+        {
+          "t": 53.72,
+          "text": "Compliance testing determines whether a control operated as prescribed throughout the period."
+        },
+        {
+          "t": 60.37,
+          "text": "Every change had an approval."
+        },
+        {
+          "t": 62.44,
+          "text": "Every leaver was deprovisioned in time."
+        },
+        {
+          "t": 65.23,
+          "text": "The reconciliation was performed and signed each night."
+        },
+        {
+          "t": 69.17,
+          "text": "It concludes on the control, not on the data."
+        }
+      ]
+    },
+    {
+      "t": 72.38,
+      "sentences": [
+        {
+          "t": 72.38,
+          "text": "The second type is substantive testing."
+        },
+        {
+          "t": 74.95,
+          "text": "Substantive testing determines whether the data or the outcome is materially correct, regardless of what the controls did."
+        },
+        {
+          "t": 82.98,
+          "text": "Recalculating gross-to-net pay for a sample of employees."
+        },
+        {
+          "t": 86.73,
+          "text": "Confirming the entitlements in the identity provider match the approved matrix."
+        },
+        {
+          "t": 91.92,
+          "text": "That is what would have caught the overpayment."
+        }
+      ]
+    },
+    {
+      "t": 95.02,
+      "sentences": [
+        {
+          "t": 95.02,
+          "text": "And the two are connected, which the exam tests constantly."
+        },
+        {
+          "t": 98.91,
+          "text": "The result of compliance testing drives the extent of substantive work."
+        },
+        {
+          "t": 103.59,
+          "text": "If controls test clean, control risk is lower and you can justify less substantive testing."
+        },
+        {
+          "t": 109.59,
+          "text": "If exceptions are high, the control cannot be relied upon and substantive testing increases."
+        },
+        {
+          "t": 115.65,
+          "text": "More control exceptions mean more substantive work, never less."
+        }
+      ]
+    },
+    {
+      "t": 119.81,
+      "sentences": [
+        {
+          "t": 119.81,
+          "text": "Beyond those two, there are engagement types the exam expects you to recognise."
+        },
+        {
+          "t": 125.1,
+          "text": "An operational audit examines whether a process achieves its objectives economically, efficiently and effectively."
+        },
+        {
+          "t": 132.74,
+          "text": "Benefits realisation and capacity utilisation live here."
+        },
+        {
+          "t": 136.49,
+          "text": "It is not concerned with compliance for its own sake."
+        }
+      ]
+    },
+    {
+      "t": 140.04,
+      "sentences": [
+        {
+          "t": 140.04,
+          "text": "An integrated audit combines information systems audit with financial or operational audit, so that general and application controls are evaluated alongside the financial assertions that depend on them."
+        },
+        {
+          "t": 151.82,
+          "text": "This is the natural home of the question, can we rely on this automated control."
+        }
+      ]
+    },
+    {
+      "t": 156.48,
+      "sentences": [
+        {
+          "t": 156.48,
+          "text": "And a forensic audit responds to suspected fraud or irregularity."
+        },
+        {
+          "t": 160.61,
+          "text": "It differs in method, in how evidence is handled, and in the need to preserve chain of custody."
+        },
+        {
+          "t": 166.66,
+          "text": "Nothing about the routine audit approach applies unchanged when fraud is suspected."
+        }
+      ]
+    },
+    {
+      "t": 171.94,
+      "sentences": [
+        {
+          "t": 171.94,
+          "text": "Which brings us to the two reflexes that cost marks."
+        },
+        {
+          "t": 175.05,
+          "text": "The first is presenting compliance results as if they answered a substantive question."
+        },
+        {
+          "t": 180.2,
+          "text": "All changes were approved says nothing about whether the changes were correct."
+        },
+        {
+          "t": 184.88,
+          "text": "Auditors who have spent years in controls testing develop a reflex that a clean control test means a clean outcome, and the exam sets traps on exactly that reflex."
+        }
+      ]
+    },
+    {
+      "t": 194.64,
+      "sentences": [
+        {
+          "t": 194.64,
+          "text": "The second is misreading the direction of that relationship."
+        },
+        {
+          "t": 198.52,
+          "text": "More control exceptions mean more substantive work."
+        },
+        {
+          "t": 201.82,
+          "text": "If an option offers to reduce testing because a deficiency has already been identified, it is wrong."
+        },
+        {
+          "t": 208.29,
+          "text": "Carry both away, and read carefully which question the engagement is actually asking."
+        }
+      ]
+    }
+  ]
+}

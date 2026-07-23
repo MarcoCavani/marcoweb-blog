@@ -1,0 +1,229 @@
+{
+  "lesson": "cisa-d1-07-design-and-operating-effectiveness",
+  "title": "Design and Operating Effectiveness",
+  "source": "cisa-d1-07-design-and-operating-effectiveness.srt",
+  "generated": "2026-07-23",
+  "duration": 207.74,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Design effectiveness and operating effectiveness."
+        },
+        {
+          "t": 2.85,
+          "text": "Two questions that sound almost the same and are not, and testing the second before you have established the first produces findings that do not hold up."
+        }
+      ]
+    },
+    {
+      "t": 11.74,
+      "sentences": [
+        {
+          "t": 11.74,
+          "text": "Start with a situation."
+        },
+        {
+          "t": 13.25,
+          "text": "Every quarterly access review in the period was completed on time and signed by the right manager."
+        },
+        {
+          "t": 19.68,
+          "text": "The evidence is immaculate, and you are about to conclude that access review is operating effectively."
+        }
+      ]
+    },
+    {
+      "t": 26.38,
+      "sentences": [
+        {
+          "t": 26.38,
+          "text": "Then you look at what the reviewers were actually sent."
+        },
+        {
+          "t": 29.97,
+          "text": "A list of user names."
+        },
+        {
+          "t": 31.34,
+          "text": "No entitlements, no roles, no permissions."
+        },
+        {
+          "t": 34.09,
+          "text": "They were asked to confirm that these people still work here, which is not the same question as whether their access is still appropriate."
+        }
+      ]
+    },
+    {
+      "t": 43.1,
+      "sentences": [
+        {
+          "t": 43.1,
+          "text": "So separate the two questions cleanly."
+        },
+        {
+          "t": 45.72,
+          "text": "Design effectiveness asks: if this control were performed exactly as intended, would it address the risk?"
+        },
+        {
+          "t": 52.96,
+          "text": "Operating effectiveness asks: was it actually performed that way, consistently, throughout the period?"
+        },
+        {
+          "t": 59.99,
+          "text": "One is about whether the control can work."
+        },
+        {
+          "t": 62.89,
+          "text": "The other is about whether it did."
+        }
+      ]
+    },
+    {
+      "t": 65.23,
+      "sentences": [
+        {
+          "t": 65.23,
+          "text": "And that access review is designed ineffectively."
+        },
+        {
+          "t": 68.4,
+          "text": "It cannot identify inappropriate access, because the reviewer never sees the access."
+        },
+        {
+          "t": 73.83,
+          "text": "Its perfect operation is irrelevant."
+        },
+        {
+          "t": 76.16,
+          "text": "Reporting it as an operating issue would misdirect management entirely, they would tighten the schedule when they need to redesign the report."
+        }
+      ]
+    },
+    {
+      "t": 85.34,
+      "sentences": [
+        {
+          "t": 85.34,
+          "text": "Which is why design comes first, and it is not merely tidy sequencing."
+        },
+        {
+          "t": 89.42,
+          "text": "Testing the operation of a control that cannot work is wasted effort, and worse, it risks a clean conclusion on a control that never addressed the risk."
+        },
+        {
+          "t": 98.26,
+          "text": "You assess design by walking the control through once: the risk, the objective, who performs it, what they see, what they compare against, and what happens when they find an exception."
+        },
+        {
+          "t": 108.97,
+          "text": "That last part is where design deficiencies most often hide."
+        }
+      ]
+    },
+    {
+      "t": 112.46,
+      "sentences": [
+        {
+          "t": 112.46,
+          "text": "So hold the three combinations in your head."
+        },
+        {
+          "t": 115.2,
+          "text": "Design effective and operation effective, you can rely on the control."
+        },
+        {
+          "t": 119.55,
+          "text": "Design effective but operation deficient, the control could work but did not, so there is no reliance for the affected period."
+        },
+        {
+          "t": 127.39,
+          "text": "And design deficient, in which case you do not test operation at all, because a control that is designed ineffectively cannot be operating effectively."
+        },
+        {
+          "t": 136.78,
+          "text": "That combination does not exist, and any option offering it is wrong."
+        }
+      ]
+    },
+    {
+      "t": 141.07,
+      "sentences": [
+        {
+          "t": 141.07,
+          "text": "When a control is deficient, you consider whether another control addresses the same risk."
+        },
+        {
+          "t": 146.74,
+          "text": "But a genuine compensating control has to qualify, and candidates wave things through that do not."
+        }
+      ]
+    },
+    {
+      "t": 152.9,
+      "sentences": [
+        {
+          "t": 152.9,
+          "text": "First, it must address the same risk, not a related one."
+        },
+        {
+          "t": 156.44,
+          "text": "A monthly review of totals does not compensate for an access control failure, because it is aimed at a different thing."
+        }
+      ]
+    },
+    {
+      "t": 163.97,
+      "sentences": [
+        {
+          "t": 163.97,
+          "text": "Second, it must operate at sufficient precision to catch what the failed control would have caught."
+        },
+        {
+          "t": 169.9,
+          "text": "This is the test candidates skip most."
+        },
+        {
+          "t": 172.17,
+          "text": "A high-level management review would not detect a single inappropriate transaction, so it does not compensate for a control that was meant to."
+        }
+      ]
+    },
+    {
+      "t": 180.67,
+      "sentences": [
+        {
+          "t": 180.67,
+          "text": "And third, it must be independent, so the same weakness does not disable both controls at once."
+        },
+        {
+          "t": 187.23,
+          "text": "Same risk, sufficient precision, independent."
+        },
+        {
+          "t": 190.34,
+          "text": "Miss any one of the three and it is not a compensating control."
+        }
+      ]
+    },
+    {
+      "t": 194.69,
+      "sentences": [
+        {
+          "t": 194.69,
+          "text": "So carry away the rule that sits underneath all of it."
+        },
+        {
+          "t": 198.21,
+          "text": "A control cannot be operating effectively if it is designed ineffectively."
+        },
+        {
+          "t": 203.04,
+          "text": "Establish that the control can work before you ever test whether it did."
+        }
+      ]
+    }
+  ]
+}

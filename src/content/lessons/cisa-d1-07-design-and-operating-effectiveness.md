@@ -7,6 +7,7 @@ domain: 1
 order: 7
 minutes: 8
 gated: false
+videoId: "Xc2WdZo_u1k"
 taskStatement: "Evaluate whether a control is capable of addressing the risk, and whether it operated as intended throughout the period."
 objectives:
   - "State the question each type of effectiveness answers."
