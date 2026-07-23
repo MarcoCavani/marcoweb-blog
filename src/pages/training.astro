@@ -5,56 +5,50 @@ import Footer from '../components/Footer.astro'
 import NewsletterSignup from '../components/NewsletterSignup.astro'
 import { getCollection } from 'astro:content'
 
-// Placeholder launch date for the paid domains, change this one line.
+// Placeholder launch date for the domains still in development.
 const RELEASE_LABEL = '1 December 2026'
 
-const COURSE = 'cisa-domain-1'
 const PRIMER = 'itgc-foundations'
 
 const all = await getCollection('lessons')
-const lessons = all.filter(l => l.data.course === COURSE).sort((a, b) => a.data.order - b.data.order)
 const primer = all.filter(l => l.data.course === PRIMER).sort((a, b) => a.data.order - b.data.order)
+const forDomain = n => all
+  .filter(l => l.data.course === `cisa-domain-${n}`)
+  .sort((a, b) => a.data.order - b.data.order)
 
-const totalMinutes = lessons.reduce((n, l) => n + l.data.minutes, 0)
-const quizCount = lessons.reduce((n, l) => n + (l.data.quiz?.length || 0), 0)
-const opener = lessons[0]
-
-// The five exam domains. Lesson counts for the unbuilt domains are allocated in
-// proportion to exam weight, not to how much there is to say, so they move only
-// if the published exam content outline changes. Domain 1 counts its real
-// lessons rather than a planned figure.
-const DOMAINS = [
+// The five exam domains. `planned` is the full lesson count allocated in
+// proportion to exam weight; a domain lights up on the site as soon as it has
+// any built lessons, and shows "X of Y available" until it is complete. Nothing
+// here needs touching to bring a domain online: write its lessons with
+// course: "cisa-domain-N" and it appears.
+const DOMAIN_META = [
   {
     n: 1,
     title: 'Information Systems Auditing Process',
-    weight: 18,
-    lessons: lessons.length,
-    ready: true,
+    weight: 18, planned: 12,
     blurb: 'Standards, planning, evidence, sampling and reporting. The domain that decides how you approach every other one.',
     topics: [],
   },
   {
     n: 2,
     title: 'Governance and Management of IT',
-    weight: 18,
-    lessons: 11,
-    ready: false,
+    weight: 18, planned: 11,
     blurb: 'How the organisation directs and controls IT, and what an auditor looks for when it does not.',
     topics: [
       'IT governance frameworks and the board’s role',
-      'Strategy, policy and organisational structure',
-      'Risk identification, appetite and response',
-      'Third party management and right to audit',
-      'Performance measurement and portfolio management',
+      'IT strategy and business alignment',
+      'Policies, standards, procedures and organisational structure',
+      'Enterprise architecture',
+      'IT risk management, appetite and response',
+      'Third party management, SLAs and right to audit',
+      'Performance measurement and the IT balanced scorecard',
       'Laws, regulations and compliance management',
     ],
   },
   {
     n: 3,
     title: 'IS Acquisition, Development and Implementation',
-    weight: 12,
-    lessons: 7,
-    ready: false,
+    weight: 12, planned: 7,
     blurb: 'Project governance and the controls that decide whether a new system arrives trustworthy. The smallest domain.',
     topics: [
       'Project governance, business case and feasibility',
@@ -68,9 +62,7 @@ const DOMAINS = [
   {
     n: 4,
     title: 'IS Operations and Business Resilience',
-    weight: 26,
-    lessons: 15,
-    ready: false,
+    weight: 26, planned: 15,
     blurb: 'Running IT day to day and surviving when it breaks. Joint largest domain on the exam.',
     topics: [
       'Service management, incident and problem management',
@@ -84,9 +76,7 @@ const DOMAINS = [
   {
     n: 5,
     title: 'Protection of Information Assets',
-    weight: 26,
-    lessons: 16,
-    ready: false,
+    weight: 26, planned: 16,
     blurb: 'Security controls and the evidence that shows they work. Joint largest domain on the exam.',
     topics: [
       'Security governance, classification and asset ownership',
@@ -98,11 +88,31 @@ const DOMAINS = [
     ],
   },
 ]
+
+// Fold the built lessons in, so `ready` and the counts are derived, never
+// hand-maintained.
+const DOMAINS = DOMAIN_META.map(d => {
+  const lessons = forDomain(d.n)
+  return {
+    ...d,
+    lessons,
+    built: lessons.length,
+    ready: lessons.length > 0,
+    complete: lessons.length >= d.planned,
+    quizCount: lessons.reduce((n, l) => n + (l.data.quiz?.length || 0), 0),
+    minutes: lessons.reduce((n, l) => n + l.data.minutes, 0),
+  }
+})
+
+// The practice exam currently only covers Domain 1.
+const EXAM_DOMAIN = 1
+// The first domain that has any lessons is the one the page opens on.
+const firstReadyIndex = Math.max(0, DOMAINS.findIndex(d => d.ready))
 ---
 
 <Layout
   title="CISA Exam Preparation | MarcoWeb"
-  description="Free CISA preparation for working IS auditors, organised by the five exam domains. Domain 1 is complete, with scenario questions and full reasoning on every option."
+  description="Free CISA preparation for working IS auditors, organised by the five exam domains. Domain 1 is complete and Domain 2 is under way, with scenario questions and full reasoning on every option."
 >
   <Header />
 
@@ -140,8 +150,8 @@ const DOMAINS = [
                 role="tab"
                 id={`domain-tab-${d.n}`}
                 aria-controls={`domain-panel-${d.n}`}
-                aria-selected={i === 0 ? 'true' : 'false'}
-                tabindex={i === 0 ? '0' : '-1'}
+                aria-selected={i === firstReadyIndex ? 'true' : 'false'}
+                tabindex={i === firstReadyIndex ? '0' : '-1'}
                 data-domain={d.n}
                 class="w-full text-left grid grid-cols-[1fr_3.2rem_3.6rem] gap-2 items-center px-4 py-3.5 border-b border-gray-100 last:border-b-0 transition-colors group aria-selected:bg-blue-50 hover:bg-gray-50 aria-selected:hover:bg-blue-50"
               >
@@ -155,13 +165,15 @@ const DOMAINS = [
                     </span>
                   </span>
                   <span class="block mt-1 text-[11px] text-gray-400 pl-7">
-                    {d.ready
-                      ? <span class="text-brand-blue font-semibold">Available now</span>
-                      : <span>{RELEASE_LABEL}</span>}
+                    {!d.ready
+                      ? <span>{RELEASE_LABEL}</span>
+                      : d.complete
+                        ? <span class="text-brand-blue font-semibold">Available now</span>
+                        : <span class="text-brand-blue font-semibold tabular-nums">{d.built} of {d.planned} available</span>}
                   </span>
                 </span>
                 <span class="text-xs text-gray-500 text-right tabular-nums">{d.weight}%</span>
-                <span class="text-xs text-gray-500 text-right tabular-nums">{d.lessons}</span>
+                <span class="text-xs text-gray-500 text-right tabular-nums">{d.planned}</span>
               </button>
             ))}
           </div>
@@ -180,7 +192,7 @@ const DOMAINS = [
             id={`domain-panel-${d.n}`}
             aria-labelledby={`domain-tab-${d.n}`}
             data-domain-panel={d.n}
-            hidden={i !== 0}
+            hidden={i !== firstReadyIndex}
             tabindex="0"
           >
             <div class="flex flex-wrap items-baseline gap-3 mb-3">
@@ -196,18 +208,20 @@ const DOMAINS = [
                 <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">of the exam</div>
               </div>
               <div>
-                <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{d.lessons}</div>
-                <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">lessons</div>
+                <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{d.ready ? d.built : d.planned}</div>
+                <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">
+                  {d.ready && !d.complete ? `of ${d.planned} lessons` : 'lessons'}
+                </div>
               </div>
-              {d.ready && (
+              {d.ready && d.quizCount > 0 && (
                 <div>
-                  <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{quizCount}</div>
+                  <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{d.quizCount}</div>
                   <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">exam questions</div>
                 </div>
               )}
-              {d.ready && (
+              {d.ready && d.minutes > 0 && (
                 <div>
-                  <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{totalMinutes}</div>
+                  <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{d.minutes}</div>
                   <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">minutes</div>
                 </div>
               )}
@@ -215,28 +229,37 @@ const DOMAINS = [
 
             {d.ready ? (
               <>
-                {opener && (
+                {d.lessons[0] && (
                   <div class="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-100 bg-white shadow-sm p-5 mb-8">
                     <div class="min-w-0">
                       <p class="text-xs uppercase tracking-widest text-gray-400 mb-1">Start here</p>
-                      <p class="font-bold text-gray-900 leading-snug">{opener.data.title}</p>
+                      <p class="font-bold text-gray-900 leading-snug">{d.lessons[0].data.title}</p>
                     </div>
                     <div class="flex flex-wrap gap-2.5">
-                      <a href={`/training/${opener.slug}/`}
+                      <a href={`/training/${d.lessons[0].slug}/`}
                          class="shrink-0 inline-flex items-center gap-2 rounded-xl bg-brand-blue px-5 py-3 text-sm font-bold text-white hover:bg-brand-navy transition-colors">
                         Open lesson 1
                         <span aria-hidden="true">→</span>
                       </a>
-                      <a href="/training/exam/"
-                         class="shrink-0 inline-flex items-center rounded-xl border border-gray-200 px-5 py-3 text-sm font-semibold text-gray-600 hover:border-brand-blue hover:text-brand-blue transition-colors">
-                        Practice exam
-                      </a>
+                      {d.n === EXAM_DOMAIN && (
+                        <a href="/training/exam/"
+                           class="shrink-0 inline-flex items-center rounded-xl border border-gray-200 px-5 py-3 text-sm font-semibold text-gray-600 hover:border-brand-blue hover:text-brand-blue transition-colors">
+                          Practice exam
+                        </a>
+                      )}
                     </div>
                   </div>
                 )}
 
+                {d.ready && !d.complete && (
+                  <p class="text-sm text-gray-500 leading-relaxed mb-6">
+                    <span class="font-semibold text-gray-700 tabular-nums">{d.built} of {d.planned} lessons</span> are
+                    published so far, with more added regularly. The rest of the domain's topics are listed below the lessons.
+                  </p>
+                )}
+
                 <ol class="space-y-3">
-                  {lessons.map((l, li) => (
+                  {d.lessons.map((l, li) => (
                     <li>
                       <a href={`/training/${l.slug}/`}
                          class="flex items-start gap-4 rounded-xl border border-gray-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow group">
@@ -256,7 +279,24 @@ const DOMAINS = [
                   ))}
                 </ol>
 
-                {primer.length > 0 && (
+                {d.ready && !d.complete && d.topics.length > 0 && (
+                  <section class="mt-10 pt-8 border-t border-gray-100">
+                    <h3 class="text-base font-bold text-gray-700 mb-2">Still to come in this domain</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed mb-4">
+                      The remaining lessons cover these topics, added over the coming weeks.
+                    </p>
+                    <ul class="space-y-2.5">
+                      {d.topics.map(t => (
+                        <li class="flex gap-3 text-sm text-gray-500 leading-relaxed">
+                          <span class="shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+                          <span>{t}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {d.n === 1 && primer.length > 0 && (
                   <section class="mt-10 pt-8 border-t border-gray-100">
                     <h3 class="text-base font-bold text-gray-700 mb-2">Before you start, optional</h3>
                     <p class="text-sm text-gray-500 leading-relaxed mb-4">
