@@ -1,0 +1,245 @@
+{
+  "lesson": "cisa-d1-10-evidence",
+  "title": "Evidence: Sufficiency and Reliability",
+  "source": "cisa-d1-10-evidence.srt",
+  "generated": "2026-07-23",
+  "duration": 250.7,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Evidence, sufficiency and reliability."
+        },
+        {
+          "t": 2.31,
+          "text": "This lesson is about whether the evidence you have gathered actually supports your conclusion, which turns on two words the standards use together: sufficient, and appropriate."
+        }
+      ]
+    },
+    {
+      "t": 12.98,
+      "sentences": [
+        {
+          "t": 12.98,
+          "text": "Start with a request."
+        },
+        {
+          "t": 14.25,
+          "text": "You ask for evidence that privileged access was appropriate during the year, and you receive a spreadsheet of current privileged accounts, exported yesterday, emailed to you by the platform team."
+        },
+        {
+          "t": 25.99,
+          "text": "There are three separate problems with that evidence, and only one of them is obvious."
+        },
+        {
+          "t": 31.17,
+          "text": "By the end of this lesson all three will be."
+        }
+      ]
+    },
+    {
+      "t": 33.82,
+      "sentences": [
+        {
+          "t": 33.82,
+          "text": "The standards phrase is sufficient and appropriate, and the two words do different jobs."
+        },
+        {
+          "t": 39.2,
+          "text": "Sufficiency is quantity: is there enough evidence to support the conclusion?"
+        },
+        {
+          "t": 43.84,
+          "text": "A sample of three changes is unlikely to be sufficient to conclude on four thousand."
+        },
+        {
+          "t": 48.98,
+          "text": "Appropriateness is quality, and it has two parts: relevance, does the evidence bear on the objective you are testing, and reliability, can the evidence be trusted?"
+        },
+        {
+          "t": 58.94,
+          "text": "More evidence of the wrong kind does not make up for poor quality."
+        }
+      ]
+    },
+    {
+      "t": 62.98,
+      "sentences": [
+        {
+          "t": 62.98,
+          "text": "Underneath the reliability hierarchy is one simple principle."
+        },
+        {
+          "t": 66.91,
+          "text": "Reliability rises with the auditor independence from the person who could benefit from the evidence saying something particular."
+        },
+        {
+          "t": 75.16,
+          "text": "The further the evidence sits from that person, the more you can trust it."
+        },
+        {
+          "t": 79.94,
+          "text": "Hold that idea, and the ranking almost writes itself."
+        }
+      ]
+    },
+    {
+      "t": 83.35,
+      "sentences": [
+        {
+          "t": 83.35,
+          "text": "So here is the hierarchy, most reliable to least, and it is tested heavily."
+        },
+        {
+          "t": 87.97,
+          "text": "It runs from evidence you obtain yourself, at the top, all the way down to what management simply tells you, at the bottom."
+        }
+      ]
+    },
+    {
+      "t": 95.54,
+      "sentences": [
+        {
+          "t": 95.54,
+          "text": "At the top, evidence obtained directly by the auditor from the source system."
+        },
+        {
+          "t": 100.61,
+          "text": "A configuration you extract yourself, a recalculation you perform, a report you pull straight from the device."
+        },
+        {
+          "t": 107.85,
+          "text": "There is no opportunity for anyone to select or alter it."
+        }
+      ]
+    },
+    {
+      "t": 111.6,
+      "sentences": [
+        {
+          "t": 111.6,
+          "text": "Below that, evidence from independent external sources, such as a third-party confirmation."
+        },
+        {
+          "t": 117.34,
+          "text": "Then evidence produced by a system whose general controls you have tested and found effective."
+        },
+        {
+          "t": 123.28,
+          "text": "Each step down adds a party between you and the fact."
+        }
+      ]
+    },
+    {
+      "t": 126.62,
+      "sentences": [
+        {
+          "t": 126.62,
+          "text": "Lower still, evidence the auditee provides, and it is weaker again when the auditee chose what to hand over."
+        },
+        {
+          "t": 133.32,
+          "text": "And at the bottom, oral or written representations from management."
+        },
+        {
+          "t": 137.47,
+          "text": "This is why a screenshot from the administrator sits so low: it shows a moment somebody chose, in a format that is trivial to alter."
+        }
+      ]
+    },
+    {
+      "t": 145.66,
+      "sentences": [
+        {
+          "t": 145.66,
+          "text": "Which brings us back to the spreadsheet, and its most important flaw."
+        },
+        {
+          "t": 149.77,
+          "text": "The audit objective covers the whole period, but a current listing is point-in-time evidence."
+        },
+        {
+          "t": 155.32,
+          "text": "It shows the position on one day, so any account granted and removed during the year is invisible."
+        },
+        {
+          "t": 161.17,
+          "text": "Point-in-time evidence cannot support a period conclusion on its own."
+        },
+        {
+          "t": 165.28,
+          "text": "You need evidence spanning the period, such as a log of grants and revocations, or several points in time plus what happened between them."
+        },
+        {
+          "t": 173.51,
+          "text": "This is one of the most reliable traps in Domain 1, because point-in-time evidence is exactly what auditees naturally produce."
+        }
+      ]
+    },
+    {
+      "t": 181.03,
+      "sentences": [
+        {
+          "t": 181.03,
+          "text": "When your primary evidence is weak, corroboration can rescue it."
+        },
+        {
+          "t": 184.78,
+          "text": "Corroborative evidence comes from a different and independent source and agrees with what you already have."
+        },
+        {
+          "t": 191.05,
+          "text": "Its value is that independent sources are unlikely to be wrong in the same way."
+        },
+        {
+          "t": 195.68,
+          "text": "But note the limit: two reports from the same system are not corroboration, because they share a common source, and a fault in that source affects both identically."
+        }
+      ]
+    },
+    {
+      "t": 205.3,
+      "sentences": [
+        {
+          "t": 205.3,
+          "text": "Finally, documentation, because evidence you cannot stand behind is not much use."
+        },
+        {
+          "t": 210.18,
+          "text": "Your working papers must let a competent reviewer with no prior involvement understand what you tested, how you selected the items, what you found and what you concluded."
+        },
+        {
+          "t": 220.43,
+          "text": "The exam framing is whether another auditor could re-perform the work and reach the same conclusion."
+        },
+        {
+          "t": 226.46,
+          "text": "If they could not, the documentation is insufficient, however good the underlying testing was."
+        }
+      ]
+    },
+    {
+      "t": 232.13,
+      "sentences": [
+        {
+          "t": 232.13,
+          "text": "So carry this away."
+        },
+        {
+          "t": 233.39,
+          "text": "Quantity does not cure quality."
+        },
+        {
+          "t": 235.44,
+          "text": "If a question describes weak evidence and one option offers more of it while another offers a more reliable source, the more reliable source wins."
+        },
+        {
+          "t": 245.13,
+          "text": "And wherever direct extraction is available, prefer it to a file someone handed you."
+        }
+      ]
+    }
+  ]
+}

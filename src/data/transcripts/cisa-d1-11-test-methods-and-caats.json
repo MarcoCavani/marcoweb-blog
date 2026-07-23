@@ -1,0 +1,261 @@
+{
+  "lesson": "cisa-d1-11-test-methods-and-caats",
+  "title": "Test Methods and CAATs",
+  "source": "cisa-d1-11-test-methods-and-caats.srt",
+  "generated": "2026-07-23",
+  "duration": 270.36,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Test methods and computer assisted audit techniques."
+        },
+        {
+          "t": 3.01,
+          "text": "This lesson is about the four ways you gather evidence, which carry very different weight, and then about the tools that let you stop sampling altogether."
+        }
+      ]
+    },
+    {
+      "t": 11.93,
+      "sentences": [
+        {
+          "t": 11.93,
+          "text": "Here is the situation."
+        },
+        {
+          "t": 13.38,
+          "text": "You need to conclude that the nightly interface reconciliation between the payment system and the ledger actually works."
+        },
+        {
+          "t": 21.28,
+          "text": "So you ask the control owner to explain it, and they explain it clearly and correctly."
+        },
+        {
+          "t": 26.94,
+          "text": "You now understand how the control is meant to work."
+        },
+        {
+          "t": 30.37,
+          "text": "But notice what you have: you have no evidence that it did work."
+        },
+        {
+          "t": 34.58,
+          "text": "Understanding is not assurance."
+        }
+      ]
+    },
+    {
+      "t": 36.62,
+      "sentences": [
+        {
+          "t": 36.62,
+          "text": "There are four test methods, and the exam expects you to rank them by the strength of evidence they produce."
+        },
+        {
+          "t": 43.57,
+          "text": "In ascending order: inquiry, observation, inspection, and reperformance."
+        },
+        {
+          "t": 48.19,
+          "text": "The order is not trivia, it is the point of most questions that list all four."
+        }
+      ]
+    },
+    {
+      "t": 53.21,
+      "sentences": [
+        {
+          "t": 53.21,
+          "text": "Inquiry is asking."
+        },
+        {
+          "t": 54.27,
+          "text": "It is essential for understanding design, for finding out who does what, and for spotting where the real process differs from the documented one."
+        },
+        {
+          "t": 62.87,
+          "text": "But it is the weakest form of evidence, and on its own it cannot support a conclusion that a control operated."
+        },
+        {
+          "t": 69.39,
+          "text": "Every question that offers inquiry as the way to conclude something is offering a wrong answer."
+        }
+      ]
+    },
+    {
+      "t": 75.02,
+      "sentences": [
+        {
+          "t": 75.02,
+          "text": "Observation is watching the control being performed."
+        },
+        {
+          "t": 78.01,
+          "text": "It is stronger than inquiry because you see the activity rather than hearing about it, but it has two well-known limits: people behave differently when they know they are being watched, and it evidences only the moment you observed."
+        },
+        {
+          "t": 91.31,
+          "text": "Useful for physical and manual controls, weak for a conclusion about the whole period."
+        }
+      ]
+    },
+    {
+      "t": 96.24,
+      "sentences": [
+        {
+          "t": 96.24,
+          "text": "Inspection is examining evidence that the control was performed: signed reports, approval records, system logs, configuration files."
+        },
+        {
+          "t": 104.87,
+          "text": "This is the workhorse of controls testing."
+        },
+        {
+          "t": 107.61,
+          "text": "Its limitation is that it evidences performance, not correctness."
+        },
+        {
+          "t": 111.86,
+          "text": "A signed reconciliation shows that somebody signed it, not that the reconciliation was right."
+        }
+      ]
+    },
+    {
+      "t": 117.94,
+      "sentences": [
+        {
+          "t": 117.94,
+          "text": "Reperformance is you independently executing the control and comparing results."
+        },
+        {
+          "t": 122.9,
+          "text": "Recalculating the reconciliation, re-running the access report against the approved matrix, recomputing a sample of payroll."
+        },
+        {
+          "t": 130.69,
+          "text": "It is the strongest method, because it establishes that the control produces the correct outcome, not merely that it ran."
+        }
+      ]
+    },
+    {
+      "t": 138.29,
+      "sentences": [
+        {
+          "t": 138.29,
+          "text": "So carry this rule."
+        },
+        {
+          "t": 139.68,
+          "text": "Inquiry is never the answer to whether a control operated."
+        },
+        {
+          "t": 143.94,
+          "text": "In real audit a great deal runs on conversations, and an experienced auditor can tell when someone knows their process."
+        },
+        {
+          "t": 152.68,
+          "text": "The exam does not accept that at all."
+        },
+        {
+          "t": 155.39,
+          "text": "Inquiry corroborated by inspection is fine."
+        },
+        {
+          "t": 158.55,
+          "text": "Inquiry alone is never enough."
+        }
+      ]
+    },
+    {
+      "t": 160.75,
+      "sentences": [
+        {
+          "t": 160.75,
+          "text": "Now the tools, and the one thing about them that matters most for the exam."
+        },
+        {
+          "t": 165.24,
+          "text": "Computer assisted audit techniques let you examine data directly, and where the condition is precisely definable, a CAAT can test every record rather than a sample."
+        },
+        {
+          "t": 175.06,
+          "text": "That eliminates sampling risk entirely."
+        },
+        {
+          "t": 177.39,
+          "text": "When a scenario describes a precise, machine-testable rule over a large population, and one option offers a CAAT over the full population while another offers a sample, the CAAT is the better answer, because a definitive answer beats a projected one."
+        }
+      ]
+    },
+    {
+      "t": 192.36,
+      "sentences": [
+        {
+          "t": 192.36,
+          "text": "The complete-population cases are the obvious ones: segregation of duties conflicts, duplicate payments, entries posted outside business hours, dormant accounts that still hold access."
+        },
+        {
+          "t": 203.44,
+          "text": "And the techniques have names the exam uses."
+        },
+        {
+          "t": 206.09,
+          "text": "Test data submits prepared transactions to see how the system processes them."
+        },
+        {
+          "t": 210.73,
+          "text": "An integrated test facility runs fictitious audit transactions through the live system alongside real ones."
+        },
+        {
+          "t": 217.17,
+          "text": "Parallel simulation processes real production data through your own program and compares the output to the system."
+        },
+        {
+          "t": 224.04,
+          "text": "And continuous auditing runs these tests on an ongoing basis rather than at a single point in the cycle."
+        }
+      ]
+    },
+    {
+      "t": 230.3,
+      "sentences": [
+        {
+          "t": 230.3,
+          "text": "That last one carries a distinction the exam draws sharply."
+        },
+        {
+          "t": 233.98,
+          "text": "Continuous auditing is performed by audit."
+        },
+        {
+          "t": 236.6,
+          "text": "Continuous monitoring is performed by management."
+        },
+        {
+          "t": 239.66,
+          "text": "They sound alike and they are not the same thing, and confusing them is an independence error as much as a terminology one, because it puts audit and management in each other roles."
+        }
+      ]
+    },
+    {
+      "t": 250.94,
+      "sentences": [
+        {
+          "t": 250.94,
+          "text": "So carry away two things."
+        },
+        {
+          "t": 252.5,
+          "text": "Inquiry alone never concludes that a control worked."
+        },
+        {
+          "t": 255.72,
+          "text": "And sampling exists because testing everything used to be impossible, so where the data is available and the rule is precise, sampling a population a CAAT could test completely is the weaker audit, and the exam rewards recognising that."
+        }
+      ]
+    }
+  ]
+}

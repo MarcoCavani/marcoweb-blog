@@ -7,6 +7,7 @@ domain: 1
 order: 10
 minutes: 8
 gated: false
+videoId: "SmXv2Fnsm2I"
 taskStatement: "Evaluate whether audit evidence obtained is sufficient and appropriate to support the audit conclusion."
 objectives:
   - "Distinguish sufficiency from appropriateness and state what each measures."

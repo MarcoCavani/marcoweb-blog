@@ -7,6 +7,7 @@ domain: 1
 order: 12
 minutes: 9
 gated: false
+videoId: "otsxr3RjTEI"
 taskStatement: "Communicate audit results and evaluate the adequacy of management's remediation."
 objectives:
   - "Construct a finding containing condition, criteria, cause and effect."

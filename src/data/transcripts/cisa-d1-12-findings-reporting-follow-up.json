@@ -1,0 +1,289 @@
+{
+  "lesson": "cisa-d1-12-findings-reporting-follow-up",
+  "title": "Findings, Reporting and Follow-Up",
+  "source": "cisa-d1-12-findings-reporting-follow-up.srt",
+  "generated": "2026-07-23",
+  "duration": 289.66,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Findings, reporting and follow-up."
+        },
+        {
+          "t": 2.1,
+          "text": "This is the last lesson in Domain 1, and it is about turning what you found into something management can act on, and then making sure they actually did."
+        }
+      ]
+    },
+    {
+      "t": 11.52,
+      "sentences": [
+        {
+          "t": 11.52,
+          "text": "Start with a finding that is true and useless."
+        },
+        {
+          "t": 14.43,
+          "text": "You write: user access reviews are not being performed in accordance with policy."
+        },
+        {
+          "t": 19.55,
+          "text": "Management reads it, agrees that it is true, and asks what they should do about it."
+        },
+        {
+          "t": 24.8,
+          "text": "And you realise you have not told them, because you never established why it is happening."
+        },
+        {
+          "t": 30.5,
+          "text": "A finding that only says a rule was broken leaves everyone stuck."
+        }
+      ]
+    },
+    {
+      "t": 34.61,
+      "sentences": [
+        {
+          "t": 34.61,
+          "text": "A complete finding contains four elements, and the exam tests which one is missing far more often than it tests the list itself."
+        },
+        {
+          "t": 42.97,
+          "text": "The four are condition, criteria, cause and effect."
+        },
+        {
+          "t": 46.3,
+          "text": "Miss any one and the finding cannot do its job."
+        }
+      ]
+    },
+    {
+      "t": 49.37,
+      "sentences": [
+        {
+          "t": 49.37,
+          "text": "Condition is what you found, the factual state of affairs, stated without judgement."
+        },
+        {
+          "t": 55.34,
+          "text": "Access reviews were performed in two of the four quarters."
+        },
+        {
+          "t": 59.46,
+          "text": "Just the fact."
+        }
+      ]
+    },
+    {
+      "t": 60.46,
+      "sentences": [
+        {
+          "t": 60.46,
+          "text": "Criteria is what should be the case, and by whose authority."
+        },
+        {
+          "t": 65.02,
+          "text": "Policy, standard, regulation, contract, or accepted good practice."
+        },
+        {
+          "t": 70.04,
+          "text": "The information security policy requires quarterly reviews."
+        },
+        {
+          "t": 74.52,
+          "text": "Without criteria, a finding is just an opinion."
+        }
+      ]
+    },
+    {
+      "t": 78.1,
+      "sentences": [
+        {
+          "t": 78.1,
+          "text": "Cause is why the condition exists, and this is the element most often absent."
+        },
+        {
+          "t": 83.45,
+          "text": "It is what makes the finding actionable."
+        },
+        {
+          "t": 86.24,
+          "text": "Review scheduling depended on a single manual reminder held by one administrator, who left in March."
+        },
+        {
+          "t": 93.2,
+          "text": "Now management knows what to fix."
+        }
+      ]
+    },
+    {
+      "t": 95.5,
+      "sentences": [
+        {
+          "t": 95.5,
+          "text": "And effect is the consequence or risk that arises, the second most often absent."
+        },
+        {
+          "t": 100.86,
+          "text": "It is what makes the finding matter, and what tells management how urgently to act."
+        },
+        {
+          "t": 106.42,
+          "text": "Inappropriate access may persist undetected for up to six months, including access still held by leavers."
+        },
+        {
+          "t": 113.45,
+          "text": "Condition and criteria tell them a rule was broken."
+        },
+        {
+          "t": 116.86,
+          "text": "Cause tells them what to fix."
+        },
+        {
+          "t": 118.81,
+          "text": "Effect tells them how much to care."
+        }
+      ]
+    },
+    {
+      "t": 121.15,
+      "sentences": [
+        {
+          "t": 121.15,
+          "text": "One warning on cause: it is not the same as the immediate trigger."
+        },
+        {
+          "t": 125.51,
+          "text": "The reminder-holder leaving is the trigger."
+        },
+        {
+          "t": 128.35,
+          "text": "The root cause is that a control depended on one person calendar with no process ownership behind it."
+        },
+        {
+          "t": 135.01,
+          "text": "Fix the trigger and you get a new reminder for a new person."
+        },
+        {
+          "t": 138.97,
+          "text": "Fix the root cause and you get a scheduled, owned and monitored process."
+        },
+        {
+          "t": 143.72,
+          "text": "Exam scenarios often offer both, and expect the structural answer."
+        }
+      ]
+    },
+    {
+      "t": 148.08,
+      "sentences": [
+        {
+          "t": 148.08,
+          "text": "Now, management disagrees and decides to accept the risk."
+        },
+        {
+          "t": 151.68,
+          "text": "This is the point candidates get wrong most."
+        },
+        {
+          "t": 154.46,
+          "text": "Accepting risk is a management prerogative, not an audit decision."
+        },
+        {
+          "t": 158.63,
+          "text": "So you report the finding regardless, you record the acceptance, and you satisfy yourself that whoever is accepting it has the authority for a risk of that size."
+        },
+        {
+          "t": 168.81,
+          "text": "A team leader cannot accept an enterprise-level risk."
+        },
+        {
+          "t": 172.15,
+          "text": "What you do not do is remove a supported finding, soften it, accept the risk yourself, or run to a regulator."
+        },
+        {
+          "t": 179.04,
+          "text": "If you believe the accepted risk is genuinely unacceptable to the organisation, the route is escalation to the audit committee or board, the parties who can overrule it."
+        }
+      ]
+    },
+    {
+      "t": 189.72,
+      "sentences": [
+        {
+          "t": 189.72,
+          "text": "Then follow-up, and this is where audit functions quietly fail."
+        },
+        {
+          "t": 193.63,
+          "text": "Follow-up determines whether the agreed remediation was implemented and is effective."
+        },
+        {
+          "t": 198.92,
+          "text": "The essential point: closure requires audit evidence, not management confirmation."
+        },
+        {
+          "t": 204.01,
+          "text": "A written statement that the control is now working is a representation, which sits at the very bottom of the reliability hierarchy."
+        },
+        {
+          "t": 212.22,
+          "text": "You test the remediated control, at a scale proportionate to the risk, before you close the finding."
+        },
+        {
+          "t": 218.43,
+          "text": "Closing on assurance is the single most common real-world audit failure, and it is heavily tested."
+        }
+      ]
+    },
+    {
+      "t": 224.52,
+      "sentences": [
+        {
+          "t": 224.52,
+          "text": "Two more concepts to know."
+        },
+        {
+          "t": 226.06,
+          "text": "Control self-assessment has process owners evaluate their own controls, with audit facilitating rather than performing."
+        },
+        {
+          "t": 233.12,
+          "text": "It widens coverage and raises control awareness, but it is not independent, so it supplements audit and never replaces it."
+        },
+        {
+          "t": 240.35,
+          "text": "Any option treating self-assessment results as a substitute for audit testing is wrong."
+        },
+        {
+          "t": 245.51,
+          "text": "And quality assurance of the audit function itself, internal review of engagements plus periodic external assessment, exists because the function that assures everyone else is expected to be assured too, and internal review of your own function has the same independence problem audit exists to solve."
+        }
+      ]
+    },
+    {
+      "t": 263.35,
+      "sentences": [
+        {
+          "t": 263.35,
+          "text": "And that is Domain 1."
+        },
+        {
+          "t": 264.64,
+          "text": "You have covered the standards, independence, planning, materiality, the types of testing, design versus operating effectiveness, sampling, evidence, the test methods, and now findings and follow-up."
+        },
+        {
+          "t": 276.84,
+          "text": "The best next step is not to re-watch, it is to test yourself under time."
+        },
+        {
+          "t": 281.32,
+          "text": "Go to marcoweb dot org, sit the timed practice exam, and let the score by topic tell you exactly which of these lessons to come back to."
+        }
+      ]
+    }
+  ]
+}
