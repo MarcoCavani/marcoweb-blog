@@ -7,6 +7,7 @@ domain: 1
 order: 4
 minutes: 9
 gated: false
+videoId: "y18EdSW58X4"
 taskStatement: "Develop a risk-based IS audit plan that allocates audit resources according to assessed risk."
 objectives:
   - "Construct an audit universe and rank it by inherent and residual risk."

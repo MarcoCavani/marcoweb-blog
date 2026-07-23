@@ -1,0 +1,253 @@
+{
+  "lesson": "cisa-d1-05-materiality",
+  "title": "Materiality in an IS Audit",
+  "source": "cisa-d1-05-materiality.srt",
+  "generated": "2026-07-23",
+  "duration": 240.24,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Materiality in an information systems audit."
+        },
+        {
+          "t": 2.93,
+          "text": "A financial auditor can tell you materiality for the engagement in a number, a percentage of revenue or of total assets."
+        },
+        {
+          "t": 10.92,
+          "text": "This lesson is about what you do when there is no number."
+        }
+      ]
+    },
+    {
+      "t": 14.71,
+      "sentences": [
+        {
+          "t": 14.71,
+          "text": "Here is the situation."
+        },
+        {
+          "t": 16.43,
+          "text": "You are auditing logical access to an identity provider."
+        },
+        {
+          "t": 20.81,
+          "text": "There is nothing to denominate in currency, no figure to put a percentage on."
+        },
+        {
+          "t": 26.83,
+          "text": "So does that mean nothing here is material?"
+        },
+        {
+          "t": 30.19,
+          "text": "Financial audit gives you a threshold."
+        },
+        {
+          "t": 33.16,
+          "text": "IS audit rarely can."
+        }
+      ]
+    },
+    {
+      "t": 34.73,
+      "sentences": [
+        {
+          "t": 34.73,
+          "text": "The reason the number disappears is simple."
+        },
+        {
+          "t": 37.25,
+          "text": "Financial materiality asks whether a misstatement could influence the decisions of users of the financial statements, and it works because those statements are measured in money."
+        },
+        {
+          "t": 47.71,
+          "text": "The absence of logging on a privileged account has no monetary value at all."
+        }
+      ]
+    },
+    {
+      "t": 52.18,
+      "sentences": [
+        {
+          "t": 52.18,
+          "text": "So IS audit materiality is assessed against the objectives the system or process serves, and it is largely qualitative."
+        },
+        {
+          "t": 59.16,
+          "text": "A deficiency is material because of the consequence it creates for those objectives, not because of a price you can attach to it."
+        }
+      ]
+    },
+    {
+      "t": 66.72,
+      "sentences": [
+        {
+          "t": 66.72,
+          "text": "Take the scenario that catches people out."
+        },
+        {
+          "t": 69.52,
+          "text": "A system processes four tenths of one per cent of transaction volume, almost nothing."
+        },
+        {
+          "t": 75.17,
+          "text": "But it authorises payment releases above one million, and it has no audit logging."
+        },
+        {
+          "t": 80.63,
+          "text": "Is that immaterial, because the volume is negligible?"
+        },
+        {
+          "t": 84.16,
+          "text": "No."
+        },
+        {
+          "t": 84.36,
+          "text": "It is material, because the system performs a critical control function, and the missing logging removes accountability over exactly those high-value releases."
+        }
+      ]
+    },
+    {
+      "t": 94.94,
+      "sentences": [
+        {
+          "t": 94.94,
+          "text": "So what makes an IS deficiency material."
+        },
+        {
+          "t": 97.64,
+          "text": "First, and the one candidates get wrong most, the criticality of the process supported."
+        },
+        {
+          "t": 103.49,
+          "text": "A small system doing something essential outranks a large system doing something peripheral."
+        }
+      ]
+    },
+    {
+      "t": 109.68,
+      "sentences": [
+        {
+          "t": 109.68,
+          "text": "Second, the sensitivity and classification of the data."
+        },
+        {
+          "t": 113.48,
+          "text": "Personal data, payment data and material non-public information all raise materiality sharply."
+        },
+        {
+          "t": 119.98,
+          "text": "Third, regulatory and legal exposure."
+        },
+        {
+          "t": 122.54,
+          "text": "A deficiency that could breach a law, a licence condition or a reporting obligation is material largely by virtue of that exposure."
+        }
+      ]
+    },
+    {
+      "t": 131.59,
+      "sentences": [
+        {
+          "t": 131.59,
+          "text": "Fourth, whether other controls depend on it."
+        },
+        {
+          "t": 134.51,
+          "text": "And fifth, the reputational and operational consequence, including public visibility and the ability to keep operating."
+        },
+        {
+          "t": 142.39,
+          "text": "These are the factors, and notice that not one of them is a number."
+        }
+      ]
+    },
+    {
+      "t": 146.83,
+      "sentences": [
+        {
+          "t": 146.83,
+          "text": "That fourth factor deserves its own moment, because it is the general-control multiplier."
+        },
+        {
+          "t": 152.1,
+          "text": "A general control weakness that undermines your reliance on many application controls is material because of everything it invalidates downstream."
+        },
+        {
+          "t": 160.75,
+          "text": "A weak change management process is material for exactly this reason: it is not one broken control, it is every automated control you can no longer trust."
+        }
+      ]
+    },
+    {
+      "t": 169.87,
+      "sentences": [
+        {
+          "t": 169.87,
+          "text": "There is a move in the other direction too."
+        },
+        {
+          "t": 172.44,
+          "text": "Individually minor findings can be material in aggregate."
+        },
+        {
+          "t": 175.85,
+          "text": "Six small access weaknesses in one application may each sit below any reporting threshold, while together they support a conclusion that access control over that application is not effective."
+        },
+        {
+          "t": 187.26,
+          "text": "That aggregate judgement is yours to make."
+        },
+        {
+          "t": 189.77,
+          "text": "Listing six low-severity observations and leaving the reader to connect them is weaker work than stating the conclusion they support."
+        }
+      ]
+    },
+    {
+      "t": 197.71,
+      "sentences": [
+        {
+          "t": 197.71,
+          "text": "Which brings us to the traps."
+        },
+        {
+          "t": 199.54,
+          "text": "The dominant error is reaching for size."
+        },
+        {
+          "t": 202.07,
+          "text": "Transaction volume, user counts and system cost are all proxies for importance, and all three are unreliable."
+        },
+        {
+          "t": 208.96,
+          "text": "The payment system with four transactions a month and a one million pound threshold is more material than the intranet with nine thousand users."
+        },
+        {
+          "t": 218.05,
+          "text": "What actually matters is criticality, consequence, what a deficiency invalidates, and how pervasive it is across systems."
+        }
+      ]
+    },
+    {
+      "t": 225.7,
+      "sentences": [
+        {
+          "t": 225.7,
+          "text": "So carry this away."
+        },
+        {
+          "t": 226.91,
+          "text": "Materiality in IS audit is not a threshold you apply mechanically at the end of the engagement."
+        },
+        {
+          "t": 232.97,
+          "text": "It is a qualitative judgement you make throughout, and it shapes how much testing an area gets in the first place."
+        }
+      ]
+    }
+  ]
+}

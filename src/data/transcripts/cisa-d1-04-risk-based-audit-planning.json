@@ -1,0 +1,266 @@
+{
+  "lesson": "cisa-d1-04-risk-based-audit-planning",
+  "title": "Risk-Based Audit Planning",
+  "source": "cisa-d1-04-risk-based-audit-planning.srt",
+  "generated": "2026-07-23",
+  "duration": 232.34,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Risk-based audit planning."
+        },
+        {
+          "t": 1.6,
+          "text": "This lesson is about how the annual audit plan is actually built, which is from a risk assessment, not from last year plan, and why coverage is not the objective."
+        }
+      ]
+    },
+    {
+      "t": 11.54,
+      "sentences": [
+        {
+          "t": 11.54,
+          "text": "Start with the arithmetic."
+        },
+        {
+          "t": 13.32,
+          "text": "You have resource for eleven audits this year."
+        },
+        {
+          "t": 16.47,
+          "text": "The audit universe has sixty entries."
+        },
+        {
+          "t": 19,
+          "text": "Last year plan covered eleven different ones, and the year before that another eleven."
+        },
+        {
+          "t": 24.89,
+          "text": "At that rate every system is audited once every five years, which sounds like perfectly reasonable coverage."
+        }
+      ]
+    },
+    {
+      "t": 32.28,
+      "sentences": [
+        {
+          "t": 32.28,
+          "text": "And it is the wrong answer."
+        },
+        {
+          "t": 33.89,
+          "text": "Auditing everything on a cycle feels diligent, and on the exam, cycle-based planning is a distractor in almost every planning question."
+        },
+        {
+          "t": 41.95,
+          "text": "It allocates effort by elapsed time rather than by risk, which guarantees you spend resource on low-risk areas simply because their turn has come."
+        }
+      ]
+    },
+    {
+      "t": 50.66,
+      "sentences": [
+        {
+          "t": 50.66,
+          "text": "So step one is the audit universe."
+        },
+        {
+          "t": 52.97,
+          "text": "That is the complete set of auditable entities: systems, processes, business units, third parties, projects."
+        },
+        {
+          "t": 60.31,
+          "text": "And you build it from the organisation, not from the audit function history."
+        }
+      ]
+    },
+    {
+      "t": 65.47,
+      "sentences": [
+        {
+          "t": 65.47,
+          "text": "An entity belongs in the universe if it could, in the absence of any controls, cause harm significant to the organisation objectives."
+        },
+        {
+          "t": 73.99,
+          "text": "That is a statement about inherent risk, which is risk before controls are considered."
+        },
+        {
+          "t": 79.5,
+          "text": "Controls come next."
+        }
+      ]
+    },
+    {
+      "t": 80.71,
+      "sentences": [
+        {
+          "t": 80.71,
+          "text": "Once the universe exists, you assess each entity, and the exam expects you to know the components."
+        },
+        {
+          "t": 87.42,
+          "text": "Inherent risk is the risk in the absence of any controls."
+        },
+        {
+          "t": 91.32,
+          "text": "High-value data, regulatory exposure and financial materiality all raise it."
+        }
+      ]
+    },
+    {
+      "t": 96.53,
+      "sentences": [
+        {
+          "t": 96.53,
+          "text": "Control risk is the risk that controls fail to prevent or detect a problem in time."
+        },
+        {
+          "t": 101.98,
+          "text": "And residual risk is what remains after controls operate."
+        },
+        {
+          "t": 105.73,
+          "text": "Residual risk is the primary driver of where audit effort goes, because it reflects actual current exposure."
+        }
+      ]
+    },
+    {
+      "t": 112.82,
+      "sentences": [
+        {
+          "t": 112.82,
+          "text": "Then there is detection risk, and this one is different."
+        },
+        {
+          "t": 116.7,
+          "text": "Detection risk is the risk that your own procedures fail to detect a material issue."
+        },
+        {
+          "t": 122.51,
+          "text": "It is about the audit, not the auditee."
+        },
+        {
+          "t": 125.21,
+          "text": "It is the risk you control directly, by testing more, or differently."
+        }
+      ]
+    },
+    {
+      "t": 129.98,
+      "sentences": [
+        {
+          "t": 129.98,
+          "text": "Hold on to that difference, because it is heavily tested."
+        },
+        {
+          "t": 133.71,
+          "text": "You cannot change inherent risk or control risk."
+        },
+        {
+          "t": 136.85,
+          "text": "Those belong to management."
+        },
+        {
+          "t": 138.61,
+          "text": "The only risk the auditor moves is detection risk."
+        },
+        {
+          "t": 141.88,
+          "text": "So a question that asks what you should do about high control risk is asking about the audit response, which is more testing, not about fixing the control."
+        }
+      ]
+    },
+    {
+      "t": 152.02,
+      "sentences": [
+        {
+          "t": 152.02,
+          "text": "That gives you the rule the exam tests most."
+        },
+        {
+          "t": 155,
+          "text": "If control risk is assessed as high, the auditor reduces detection risk by performing more extensive substantive testing."
+        },
+        {
+          "t": 163.21,
+          "text": "High control risk means more testing, never less."
+        }
+      ]
+    },
+    {
+      "t": 166.54,
+      "sentences": [
+        {
+          "t": 166.54,
+          "text": "Now you build the plan against the ranked universe, and you adjust for a few things."
+        },
+        {
+          "t": 172.13,
+          "text": "Regulatory or statutory requirements that mandate certain audits regardless of ranking."
+        },
+        {
+          "t": 177.92,
+          "text": "Requests from the audit committee, considered but not determinative."
+        },
+        {
+          "t": 182.45,
+          "text": "And assurance already provided by others, so you do not duplicate a reliable external review."
+        },
+        {
+          "t": 188.64,
+          "text": "Time since last audited is a modifier, not a driver."
+        },
+        {
+          "t": 192.11,
+          "text": "A low-risk area does not become high-risk through neglect alone."
+        }
+      ]
+    },
+    {
+      "t": 196.37,
+      "sentences": [
+        {
+          "t": 196.37,
+          "text": "And the plan stays flexible."
+        },
+        {
+          "t": 198.17,
+          "text": "A significant change in the risk profile, an acquisition, a major new system, a serious incident, triggers a reassessment and re-approval."
+        },
+        {
+          "t": 207.04,
+          "text": "Not a rigid march through the approved list to the end of the year."
+        }
+      ]
+    },
+    {
+      "t": 211.34,
+      "sentences": [
+        {
+          "t": 211.34,
+          "text": "So carry two things away."
+        },
+        {
+          "t": 213.04,
+          "text": "Resist coverage, because a plan that visits everything on a cycle is not risk-based, however thorough it feels."
+        },
+        {
+          "t": 220.56,
+          "text": "And remember who owns the plan."
+        },
+        {
+          "t": 222.66,
+          "text": "Audit proposes it and the audit committee approves it."
+        },
+        {
+          "t": 226.31,
+          "text": "The moment management decides what audit will and will not examine, independence is gone."
+        }
+      ]
+    }
+  ]
+}
