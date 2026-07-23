@@ -24,6 +24,7 @@ quiz:
     explanation: "A standard is a mandatory, specific rule that supports a higher-level policy. A minimum password length is exactly this: derived from an access control policy, mandatory, and specific enough to be tested."
     whyWrong:
       - "A guideline is discretionary advice, not a mandatory rule, so it cannot be where a required minimum is set."
+      - ""
       - "A procedure is the step-by-step method for performing a task, not the rule that fixes the required value."
       - "A policy states high-level intent and direction; it would not itself specify a value like a minimum length."
   - question: "Senior management wants to change the required encryption algorithm for stored data as technology evolves, without amending a board-approved document each time. At which level should the specific algorithm be set?"
@@ -49,6 +50,7 @@ quiz:
     explanation: "Guidelines are discretionary recommendations, not mandatory rules. Enforcing one as binding means the organisation is not applying its own hierarchy consistently, which undermines the whole framework: staff cannot know what is truly required, and genuinely mandatory standards lose authority."
     whyWrong:
       - "Guidelines are legitimately written down; the problem is the status being applied to this one, not its existence."
+      - ""
       - "Board approval is not the issue; a guideline is discretionary by design regardless of who approved it."
       - "Discipline for IT matters can be entirely appropriate when a mandatory standard is breached; the issue here is enforcing a discretionary document."
 ---
