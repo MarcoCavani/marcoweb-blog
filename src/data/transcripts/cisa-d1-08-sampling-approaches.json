@@ -1,0 +1,253 @@
+{
+  "lesson": "cisa-d1-08-sampling-approaches",
+  "title": "Choosing a Sampling Approach",
+  "source": "cisa-d1-08-sampling-approaches.srt",
+  "generated": "2026-07-23",
+  "duration": 259.1,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Choosing a sampling approach."
+        },
+        {
+          "t": 1.63,
+          "text": "The approach you pick decides what you are allowed to say about the population when you are finished, and the exam cares about this more than almost any other part of sampling."
+        }
+      ]
+    },
+    {
+      "t": 11.5,
+      "sentences": [
+        {
+          "t": 11.5,
+          "text": "Here is why it matters."
+        },
+        {
+          "t": 13.1,
+          "text": "You test thirty changes."
+        },
+        {
+          "t": 14.78,
+          "text": "All thirty had approvals."
+        },
+        {
+          "t": 16.53,
+          "text": "Your report says change management is operating effectively across the four thousand changes in the period."
+        },
+        {
+          "t": 24.01,
+          "text": "Whether that sentence is defensible depends entirely on how those thirty were chosen."
+        }
+      ]
+    },
+    {
+      "t": 29.95,
+      "sentences": [
+        {
+          "t": 29.95,
+          "text": "So the first choice is statistical or non-statistical."
+        },
+        {
+          "t": 33.34,
+          "text": "Statistical sampling uses random selection, so every item in the population has a known, non-zero chance of being selected."
+        },
+        {
+          "t": 41.04,
+          "text": "That is what permits projection: you can state a conclusion about the whole population with a measurable confidence level."
+        },
+        {
+          "t": 48.69,
+          "text": "Non-statistical, or judgemental, sampling selects items by auditor judgement, the largest, the riskiest, the ones from the month the new team took over."
+        },
+        {
+          "t": 58.21,
+          "text": "It is legitimate, often efficient, and frequently finds more than a random sample would."
+        },
+        {
+          "t": 63.73,
+          "text": "What it cannot do is support a projected conclusion."
+        }
+      ]
+    },
+    {
+      "t": 66.98,
+      "sentences": [
+        {
+          "t": 66.98,
+          "text": "The exam test of this is blunt."
+        },
+        {
+          "t": 69,
+          "text": "If a question describes a judgemental selection and an option projects the result to the population, that option is wrong."
+        },
+        {
+          "t": 76.91,
+          "text": "Sample size does not fix it."
+        },
+        {
+          "t": 78.73,
+          "text": "A thousand judgementally selected items still describe only the items tested, never the four thousand you did not look at."
+        }
+      ]
+    },
+    {
+      "t": 86.64,
+      "sentences": [
+        {
+          "t": 86.64,
+          "text": "The second choice is attribute or variable."
+        },
+        {
+          "t": 89.46,
+          "text": "Attribute sampling answers questions of rate: how often does this condition occur?"
+        },
+        {
+          "t": 94.83,
+          "text": "Deviation rates, exception rates, compliance rates."
+        },
+        {
+          "t": 98.18,
+          "text": "Almost all controls testing is attribute sampling, because did the control operate is a yes or no property of each item."
+        },
+        {
+          "t": 106.04,
+          "text": "Variable sampling answers questions of amount: what is the total value, or the average, or the misstatement?"
+        },
+        {
+          "t": 113.12,
+          "text": "It estimates a quantity rather than a frequency, and it belongs to substantive testing."
+        }
+      ]
+    },
+    {
+      "t": 118.82,
+      "sentences": [
+        {
+          "t": 118.82,
+          "text": "There is a reliable shortcut here."
+        },
+        {
+          "t": 121.05,
+          "text": "Compliance testing tends toward attribute sampling, and substantive testing tends toward variable sampling."
+        },
+        {
+          "t": 128.07,
+          "text": "If you are asking whether a control operated, that is a rate."
+        },
+        {
+          "t": 132.07,
+          "text": "If you are asking whether an amount is correct, that is a quantity."
+        }
+      ]
+    },
+    {
+      "t": 136.46,
+      "sentences": [
+        {
+          "t": 136.46,
+          "text": "Beyond those two axes, there are specialised approaches the exam expects you to recognise, and it names them by what they are for rather than only how they work."
+        },
+        {
+          "t": 145.51,
+          "text": "Each is the right tool for a specific objective, and picking the wrong tool is a common trap."
+        }
+      ]
+    },
+    {
+      "t": 150.74,
+      "sentences": [
+        {
+          "t": 150.74,
+          "text": "Stop-or-go sampling is used when you expect very few errors."
+        },
+        {
+          "t": 154.62,
+          "text": "It lets you stop early once enough clean items support the conclusion, which minimises the sample size."
+        },
+        {
+          "t": 161.27,
+          "text": "It reduces effort when the controls are believed to be working."
+        }
+      ]
+    },
+    {
+      "t": 165.34,
+      "sentences": [
+        {
+          "t": 165.34,
+          "text": "Discovery sampling is used when the condition is rare and critical, typically fraud, and the objective is to find at least one instance if any exist."
+        },
+        {
+          "t": 174.38,
+          "text": "It does not estimate a rate."
+        },
+        {
+          "t": 176.08,
+          "text": "If the expected rate is near zero and any single instance matters, attribute sampling is the wrong tool and discovery is the right one."
+        }
+      ]
+    },
+    {
+      "t": 184.27,
+      "sentences": [
+        {
+          "t": 184.27,
+          "text": "Stratified sampling divides the population into sub-populations of similar characteristics, usually value bands, and samples each."
+        },
+        {
+          "t": 192.46,
+          "text": "It reduces the sample size needed for a given precision when the population contains items of widely varying value."
+        },
+        {
+          "t": 199.69,
+          "text": "And systematic, or cell, sampling selects every nth item after a random start."
+        },
+        {
+          "t": 204.6,
+          "text": "It stays statistical provided the start is random and the population has no periodic pattern that lines up with the interval."
+        }
+      ]
+    },
+    {
+      "t": 212.47,
+      "sentences": [
+        {
+          "t": 212.47,
+          "text": "Now, where people actually go wrong, and it is the quiet projection."
+        },
+        {
+          "t": 216.45,
+          "text": "An auditor selects the twenty five most significant items, finds two exceptions, and writes that eight per cent of changes lacked approval."
+        },
+        {
+          "t": 224.57,
+          "text": "That sentence is not supported, because the selection was not random, and on the exam it is the trap in nearly every judgemental sampling question."
+        }
+      ]
+    },
+    {
+      "t": 233.16,
+      "sentences": [
+        {
+          "t": 233.16,
+          "text": "The second error is choosing variable sampling for a controls question because money is involved."
+        },
+        {
+          "t": 238.87,
+          "text": "The presence of a monetary amount in the scenario does not make the question about amount."
+        },
+        {
+          "t": 244.16,
+          "text": "If you are asking how often a control failed, that is a rate, and it is attribute sampling regardless of what the transactions are worth."
+        },
+        {
+          "t": 252.22,
+          "text": "So carry both away: judgemental means no projection, and money does not turn a rate question into an amount question."
+        }
+      ]
+    }
+  ]
+}

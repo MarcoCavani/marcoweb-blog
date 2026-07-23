@@ -7,6 +7,7 @@ domain: 1
 order: 9
 minutes: 8
 gated: false
+videoId: "1uVtckkgcLM"
 taskStatement: "Determine an appropriate sample size and evaluate the effect of exceptions on the audit conclusion."
 objectives:
   - "Predict the direction in which each sampling parameter moves sample size."

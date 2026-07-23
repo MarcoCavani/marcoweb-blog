@@ -7,6 +7,7 @@ domain: 1
 order: 8
 minutes: 8
 gated: false
+videoId: "xPBh0rRnkE4"
 taskStatement: "Select a sampling approach appropriate to the audit objective and the conclusion required."
 objectives:
   - "Distinguish statistical from non-statistical sampling by what each permits you to conclude."

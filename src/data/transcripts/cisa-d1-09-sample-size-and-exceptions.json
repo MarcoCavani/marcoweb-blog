@@ -1,0 +1,253 @@
+{
+  "lesson": "cisa-d1-09-sample-size-and-exceptions",
+  "title": "Sample Size and Evaluating Exceptions",
+  "source": "cisa-d1-09-sample-size-and-exceptions.srt",
+  "generated": "2026-07-23",
+  "duration": 244.94,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Sample size and evaluating exceptions."
+        },
+        {
+          "t": 2.24,
+          "text": "This lesson is about what actually determines how many items you test, and then what to do with the exception once you have found one, which is a harder question than most auditors treat it as."
+        }
+      ]
+    },
+    {
+      "t": 13.61,
+      "sentences": [
+        {
+          "t": 13.61,
+          "text": "Start with the instinct."
+        },
+        {
+          "t": 15.15,
+          "text": "Your population is four thousand changes instead of four hundred, and something in you says take a much larger sample."
+        },
+        {
+          "t": 22.71,
+          "text": "That instinct is close to wrong, and the exam likes testing it, so let us see why."
+        }
+      ]
+    },
+    {
+      "t": 27.96,
+      "sentences": [
+        {
+          "t": 27.96,
+          "text": "Three parameters do most of the work in setting sample size, and population size is barely one of them."
+        },
+        {
+          "t": 34.23,
+          "text": "The three that matter are the confidence level, the tolerable deviation rate, and the expected deviation rate."
+        }
+      ]
+    },
+    {
+      "t": 40.92,
+      "sentences": [
+        {
+          "t": 40.92,
+          "text": "Confidence level first."
+        },
+        {
+          "t": 42.5,
+          "text": "This is how certain you want to be that the sample supports your conclusion."
+        },
+        {
+          "t": 47.73,
+          "text": "Higher confidence means accepting less sampling risk, and less risk needs more evidence."
+        },
+        {
+          "t": 53.78,
+          "text": "So confidence level and sample size move together."
+        }
+      ]
+    },
+    {
+      "t": 57.22,
+      "sentences": [
+        {
+          "t": 57.22,
+          "text": "Tolerable deviation rate next."
+        },
+        {
+          "t": 59.29,
+          "text": "This is the maximum rate of deviation you could accept and still conclude the control is effective."
+        },
+        {
+          "t": 66.14,
+          "text": "A lower tolerable rate means less room for error, so the sample grows."
+        },
+        {
+          "t": 70.99,
+          "text": "Tolerable rate and sample size move in opposite directions."
+        }
+      ]
+    },
+    {
+      "t": 75.07,
+      "sentences": [
+        {
+          "t": 75.07,
+          "text": "And expected deviation rate."
+        },
+        {
+          "t": 76.94,
+          "text": "This is the rate you anticipate finding, based on prior audits or the control environment."
+        },
+        {
+          "t": 82.93,
+          "text": "A higher expected rate means you need more evidence to distinguish an acceptable control from an unacceptable one, so the sample grows."
+        },
+        {
+          "t": 91.92,
+          "text": "Expected rate and sample size move together."
+        }
+      ]
+    },
+    {
+      "t": 94.85,
+      "sentences": [
+        {
+          "t": 94.85,
+          "text": "Here is the relationship candidates miss most."
+        },
+        {
+          "t": 97.94,
+          "text": "Sample size depends on the gap between the tolerable and expected rates."
+        },
+        {
+          "t": 102.79,
+          "text": "As those two converge, sample size rises sharply."
+        },
+        {
+          "t": 106.08,
+          "text": "If you expect a four per cent deviation rate and can tolerate five, you need a great deal of evidence to tell the difference."
+        },
+        {
+          "t": 114.49,
+          "text": "And population size?"
+        },
+        {
+          "t": 115.84,
+          "text": "Once the population is reasonably large, doubling it barely changes the sample at all."
+        },
+        {
+          "t": 121.62,
+          "text": "That is counter-intuitive, and it appears as a distractor again and again."
+        }
+      ]
+    },
+    {
+      "t": 126.6,
+      "sentences": [
+        {
+          "t": 126.6,
+          "text": "The exam also separates two sampling risks."
+        },
+        {
+          "t": 129.39,
+          "text": "The risk of over-reliance is concluding the control is effective when it is not."
+        },
+        {
+          "t": 134.57,
+          "text": "That is the dangerous one, because it leads to unwarranted reliance and too little substantive work."
+        },
+        {
+          "t": 141.05,
+          "text": "The risk of under-reliance is concluding the control is ineffective when it is."
+        },
+        {
+          "t": 146.17,
+          "text": "That one is merely costly, it produces unnecessary extra testing."
+        },
+        {
+          "t": 150.38,
+          "text": "If asked which matters more to the effectiveness of the audit, it is over-reliance."
+        }
+      ]
+    },
+    {
+      "t": 155.76,
+      "sentences": [
+        {
+          "t": 155.76,
+          "text": "Now, you have found an exception."
+        },
+        {
+          "t": 157.96,
+          "text": "This is the beginning of the analysis, not the end of it, and what you do next is exactly where the marks are."
+        }
+      ]
+    },
+    {
+      "t": 165.29,
+      "sentences": [
+        {
+          "t": 165.29,
+          "text": "Work it in order."
+        },
+        {
+          "t": 166.29,
+          "text": "First, establish what the control actually required, because an item that looks like a deviation may have followed a legitimate alternative path, such as a documented emergency change route."
+        },
+        {
+          "t": 177.51,
+          "text": "Second, establish the cause, because a deviation caused by one person being unaware of the procedure is a different problem from one caused by a system that permits an unapproved deployment."
+        },
+        {
+          "t": 188.72,
+          "text": "Third, do not classify the exception as isolated without evidence, isolated is a conclusion you have to support."
+        },
+        {
+          "t": 195.33,
+          "text": "And fourth, where the sample was statistical, project the rate and compare it, plus the allowance for sampling risk, against the tolerable rate."
+        }
+      ]
+    },
+    {
+      "t": 203.83,
+      "sentences": [
+        {
+          "t": 203.83,
+          "text": "The dominant real-world failure, and a heavily tested one, is accepting a plausible explanation and moving on."
+        },
+        {
+          "t": 210.81,
+          "text": "Management explains the exception, it sounds reasonable, and the auditor marks it resolved."
+        },
+        {
+          "t": 216.59,
+          "text": "The exam treats that as substituting representation for evidence."
+        },
+        {
+          "t": 220.71,
+          "text": "An explanation you have not tested against the documented process is not audit evidence, it is an assertion."
+        }
+      ]
+    },
+    {
+      "t": 227.57,
+      "sentences": [
+        {
+          "t": 227.57,
+          "text": "So carry this away."
+        },
+        {
+          "t": 228.71,
+          "text": "One exception is not automatically immaterial just because the rate looks low."
+        },
+        {
+          "t": 233.4,
+          "text": "One deviation in forty is two and a half per cent, and whether that is acceptable depends entirely on the tolerable rate you set during planning, not on the number feeling small in the moment."
+        }
+      ]
+    }
+  ]
+}
