@@ -50,6 +50,10 @@ const courseHasVideo = siblings.some(l => l.data.videoId)
 // lessons are not part of that sequence and should not advertise it.
 const isExamCourse = lesson.data.domain !== undefined
 const examQuestionCount = siblings.reduce((n, l) => n + (l.data.quiz?.length || 0), 0)
+// The exam belongs to the lesson's own domain. Domain 1 keeps the bare URL.
+const examUrl = lesson.data.domain === 1
+  ? '/training/exam/'
+  : `/training/exam/domain-${lesson.data.domain}/`
 
 // Sentence-timed transcript, if one has been generated for this lesson by
 // _build/make-transcript.mjs. Eagerly globbed so the lookup is a plain object
@@ -232,7 +236,7 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
           : undefined}
         locked={isExamCourse ? undefined : []}
         lockedHeading={isExamCourse ? 'Remaining domains' : ''}
-        examUrl={isExamCourse ? '/training/exam/' : undefined}
+        examUrl={isExamCourse && examQuestionCount > 0 ? examUrl : undefined}
         examQuestions={isExamCourse ? examQuestionCount : undefined}
       />
     </div>

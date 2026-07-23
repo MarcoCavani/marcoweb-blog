@@ -104,8 +104,9 @@ const DOMAINS = DOMAIN_META.map(d => {
   }
 })
 
-// The practice exam currently only covers Domain 1.
-const EXAM_DOMAIN = 1
+// Each domain with quiz questions has its own practice exam. Domain 1 keeps the
+// bare URL; the rest live under /training/exam/domain-N/.
+const examHref = (n: number) => (n === 1 ? '/training/exam/' : `/training/exam/domain-${n}/`)
 // The first domain that has any lessons is the one the page opens on.
 const firstReadyIndex = Math.max(0, DOMAINS.findIndex(d => d.ready))
 ---
@@ -241,8 +242,8 @@ const firstReadyIndex = Math.max(0, DOMAINS.findIndex(d => d.ready))
                         Open lesson 1
                         <span aria-hidden="true">→</span>
                       </a>
-                      {d.n === EXAM_DOMAIN && (
-                        <a href="/training/exam/"
+                      {d.quizCount > 0 && (
+                        <a href={examHref(d.n)}
                            class="shrink-0 inline-flex items-center rounded-xl border border-gray-200 px-5 py-3 text-sm font-semibold text-gray-600 hover:border-brand-blue hover:text-brand-blue transition-colors">
                           Practice exam
                         </a>
