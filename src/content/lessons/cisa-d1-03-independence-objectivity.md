@@ -7,6 +7,7 @@ domain: 1
 order: 3
 minutes: 8
 gated: false
+videoId: "zkvTRJG2y7I"
 taskStatement: "Evaluate threats to the independence and objectivity of the IS audit function and determine an appropriate safeguard."
 objectives:
   - "Distinguish organisational independence from individual objectivity."

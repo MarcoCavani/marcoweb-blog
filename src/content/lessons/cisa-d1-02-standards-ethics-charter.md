@@ -7,6 +7,7 @@ domain: 1
 order: 2
 minutes: 8
 gated: false
+videoId: "J7cvRu26O-k"
 taskStatement: "Evaluate whether an audit engagement is being conducted in accordance with professional standards and an approved audit charter."
 objectives:
   - "Distinguish between standards, guidelines and procedures and state which are mandatory."

@@ -1,0 +1,233 @@
+{
+  "lesson": "cisa-d1-02-standards-ethics-charter",
+  "title": "Standards, Ethics and the Audit Charter",
+  "source": "cisa-d1-02-standards-ethics-charter.srt",
+  "generated": "2026-07-23",
+  "duration": 212.93,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Standards, ethics and the audit charter."
+        },
+        {
+          "t": 2.4,
+          "text": "This lesson is about two things: what gives an information systems auditor the authority to demand evidence, and what obliges that same auditor to hand back work they cannot competently perform."
+        }
+      ]
+    },
+    {
+      "t": 14.04,
+      "sentences": [
+        {
+          "t": 14.04,
+          "text": "Start with a situation."
+        },
+        {
+          "t": 15.45,
+          "text": "An infrastructure manager tells you the configuration files you have asked for are commercially sensitive, and cannot be shared with audit."
+        },
+        {
+          "t": 23.94,
+          "text": "You have never been refused before, and the request sounds almost reasonable when they say it."
+        }
+      ]
+    },
+    {
+      "t": 29.69,
+      "sentences": [
+        {
+          "t": 29.69,
+          "text": "So what actually gives you the right to insist?"
+        },
+        {
+          "t": 32.76,
+          "text": "It is not your job title, and it is not seniority."
+        },
+        {
+          "t": 36.03,
+          "text": "It is a document that most auditors read once when they join and then never think about again."
+        }
+      ]
+    },
+    {
+      "t": 42.17,
+      "sentences": [
+        {
+          "t": 42.17,
+          "text": "That document is the audit charter."
+        },
+        {
+          "t": 44.18,
+          "text": "It is approved at the highest level, normally by the board or the audit committee, and it is what establishes that the audit function exists at all and what it is permitted to do."
+        }
+      ]
+    },
+    {
+      "t": 54.46,
+      "sentences": [
+        {
+          "t": 54.46,
+          "text": "For the exam, know what a charter has to establish."
+        },
+        {
+          "t": 58.05,
+          "text": "First, the purpose, responsibility and authority of the audit function."
+        },
+        {
+          "t": 63.05,
+          "text": "That is the foundation everything else sits on."
+        }
+      ]
+    },
+    {
+      "t": 66.36,
+      "sentences": [
+        {
+          "t": 66.36,
+          "text": "Second, and this is the one that gets tested hardest, the reporting line."
+        },
+        {
+          "t": 70.87,
+          "text": "Audit should report to the audit committee or the board, not to the management it audits."
+        }
+      ]
+    },
+    {
+      "t": 76.37,
+      "sentences": [
+        {
+          "t": 76.37,
+          "text": "And then the right of access to records, personnel, systems and premises."
+        },
+        {
+          "t": 81.07,
+          "text": "The scope of audit activity."
+        },
+        {
+          "t": 82.87,
+          "text": "And accountability, meaning how the function reports on its own performance."
+        },
+        {
+          "t": 87.76,
+          "text": "When a question involves access being refused or management disputing audit remit, the charter is almost always the correct first reference."
+        }
+      ]
+    },
+    {
+      "t": 96.77,
+      "sentences": [
+        {
+          "t": 96.77,
+          "text": "Look again at that reporting line, because it is not administrative detail."
+        },
+        {
+          "t": 101.4,
+          "text": "An audit function that reports to the chief information officer cannot independently audit the chief information officer."
+        },
+        {
+          "t": 108.87,
+          "text": "The reporting line is the structural guarantee of independence."
+        },
+        {
+          "t": 112.75,
+          "text": "Without it, independence depends on everybody continuing to behave well, which is not a control."
+        }
+      ]
+    },
+    {
+      "t": 118.68,
+      "sentences": [
+        {
+          "t": 118.68,
+          "text": "Now the framework itself, and one distinction the exam tests directly."
+        },
+        {
+          "t": 123.34,
+          "text": "Standards are mandatory."
+        },
+        {
+          "t": 124.94,
+          "text": "They state what an auditor must do, and a departure has to be justified and disclosed."
+        },
+        {
+          "t": 130.67,
+          "text": "Guidelines are guidance on applying those standards."
+        },
+        {
+          "t": 134.13,
+          "text": "They are not mandatory, but an auditor who ignores relevant guidance should be able to say why."
+        },
+        {
+          "t": 140.46,
+          "text": "Tools and techniques are examples of procedures, and are purely informational."
+        }
+      ]
+    },
+    {
+      "t": 145.66,
+      "sentences": [
+        {
+          "t": 145.66,
+          "text": "Three provisions of the code of ethics produce most of the questions."
+        },
+        {
+          "t": 149.92,
+          "text": "Competence, meaning you undertake only activities you can reasonably expect to complete with professional competence."
+        },
+        {
+          "t": 157.15,
+          "text": "Due care and objectivity in performing your duties."
+        },
+        {
+          "t": 160.3,
+          "text": "And confidentiality of the information you obtain, with one important limit: confidentiality does not override a legal obligation to disclose."
+        }
+      ]
+    },
+    {
+      "t": 169.08,
+      "sentences": [
+        {
+          "t": 169.08,
+          "text": "The competence rule catches experienced candidates out, because in real engagements people learn on the job constantly."
+        },
+        {
+          "t": 176.32,
+          "text": "The exam does not accept that."
+        },
+        {
+          "t": 178.15,
+          "text": "If an engagement is beyond your competence, you decline it, or you obtain the competence, through training or by bringing in a specialist."
+        },
+        {
+          "t": 186.54,
+          "text": "Performing the work anyway and disclosing the limitation in the report does not repair it."
+        },
+        {
+          "t": 192.02,
+          "text": "The work was still done without the ability to do it."
+        }
+      ]
+    },
+    {
+      "t": 195.24,
+      "sentences": [
+        {
+          "t": 195.24,
+          "text": "So carry this away."
+        },
+        {
+          "t": 196.4,
+          "text": "When someone refuses you access, the instinct is to escalate or to concede."
+        },
+        {
+          "t": 200.99,
+          "text": "The better first move is to refer to the charter, because it tells you whether this is a genuine restriction on your scope or simply a misunderstanding about what you are already entitled to see."
+        }
+      ]
+    }
+  ]
+}
