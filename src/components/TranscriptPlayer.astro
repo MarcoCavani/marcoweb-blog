@@ -98,6 +98,21 @@ const flat = paragraphs.flatMap((p, pi) =>
 <script type="application/json" data-transcript-cues set:html={JSON.stringify(flat)}></script>
 
 <style>
+  /* The YouTube IFrame API creates its iframe with fixed width="640"
+     height="360" attributes and no filling CSS, so on any container narrower
+     than 640px, every mobile screen, it overflowed and got clipped to a
+     zoomed-in top-left slice. Force it to fill the 16:9 box.
+     Must be :global, because the iframe is created by YouTube at runtime and
+     never carries Astro's scoped-style attribute, so a scoped rule would not
+     match it. LessonVideo.astro escapes this because its iframe is a static
+     w-full h-full element in the markup. */
+  :global([data-yt-mount] iframe) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   /* Highlight states. Kept in a style block rather than utility classes because
      the script toggles them on many spans and shorter class names keep the
      toggling cheap. */
