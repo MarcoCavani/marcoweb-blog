@@ -249,7 +249,12 @@ const flat = paragraphs.flatMap((p, pi) =>
       player = new YT.Player(holder, {
         videoId: root.dataset.video,
         host: 'https://www.youtube-nocookie.com',
-        playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
+        // autoplay: 1 asks the video to start on load. Browsers only permit
+        // sound-on autoplay where the visitor has engaged with the site before,
+        // so on a cold mobile visit it stays paused behind the play button
+        // rather than playing silently. We deliberately do NOT mute to force it:
+        // a muted lesson is worse than one the reader taps to start.
+        playerVars: { rel: 0, modestbranding: 1, playsinline: 1, autoplay: 1 },
         events: {
           onReady: function () { sizeBox() },
           onStateChange: function (e) {

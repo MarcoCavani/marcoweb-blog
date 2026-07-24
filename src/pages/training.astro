@@ -383,25 +383,36 @@ const firstReadyIndex = Math.max(0, DOMAINS.findIndex(d => d.ready))
   if (tablist) {
     const tabs = [...tablist.querySelectorAll<HTMLButtonElement>('[role="tab"]')]
 
-    function select(n: string, focus = false) {
+    function select(n: string, { focus = false, scroll = false } = {}) {
       for (const tab of tabs) {
         const on = tab.dataset.domain === n
         tab.setAttribute('aria-selected', on ? 'true' : 'false')
         tab.tabIndex = on ? 0 : -1
         if (on && focus) tab.focus()
       }
+      let selectedPanel: HTMLElement | null = null
       for (const panel of document.querySelectorAll<HTMLElement>('[data-domain-panel]')) {
-        panel.hidden = panel.dataset.domainPanel !== n
+        const on = panel.dataset.domainPanel === n
+        panel.hidden = !on
+        if (on) selectedPanel = panel
       }
       // Reflected in the URL so a particular domain can be linked to directly,
       // using replaceState so browsing domains does not fill the back button.
       const url = new URL(window.location.href)
       url.hash = `domain-${n}`
       history.replaceState(null, '', url)
+
+      // Below the lg breakpoint the panels stack BELOW the table, so tapping a
+      // domain would otherwise leave the reader looking at the table with the
+      // lessons off-screen. Take them to the lessons. On desktop the panel sits
+      // beside the table and is already visible, so we leave the scroll alone.
+      if (scroll && selectedPanel && window.matchMedia('(max-width: 1023px)').matches) {
+        selectedPanel.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
     }
 
     for (const tab of tabs) {
-      tab.addEventListener('click', () => select(tab.dataset.domain!))
+      tab.addEventListener('click', () => select(tab.dataset.domain!, { scroll: true }))
     }
 
     tablist.addEventListener('keydown', e => {
@@ -414,7 +425,8 @@ const firstReadyIndex = Math.max(0, DOMAINS.findIndex(d => d.ready))
       else if (e.key === 'End') next = tabs.length - 1
       if (next < 0) return
       e.preventDefault()
-      select(tabs[next].dataset.domain!, true)
+      // Keyboard arrows browse tabs; keep focus moving but do not yank the page.
+      select(tabs[next].dataset.domain!, { focus: true })
     })
 
     // Honour /training#domain-4 on arrival, and whenever the hash changes.
