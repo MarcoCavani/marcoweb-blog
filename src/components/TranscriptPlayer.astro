@@ -47,6 +47,29 @@ const flat = paragraphs.flatMap((p, pi) =>
             >Watch this lesson on YouTube</a>
           </noscript>
         </div>
+
+        <!-- Poster over the player. The YouTube iframe renders black while it
+             loads, and when autoplay is blocked (a work PC, a corporate
+             network, any first visit) it never advanced past that black frame.
+             This shows the lesson thumbnail with a play button instead, so the
+             video area is never a black void, and hides once playback starts. -->
+        <button
+          type="button"
+          data-poster
+          class="absolute inset-0 z-10 grid place-items-center group"
+          aria-label="Play the lesson video"
+        >
+          <img
+            src={`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
+            onerror={`this.onerror=null;this.src='https://i.ytimg.com/vi/${videoId}/hqdefault.jpg'`}
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+          <span class="relative grid place-items-center w-16 h-16 rounded-full bg-black/70 transition-transform group-hover:scale-110">
+            <svg viewBox="0 0 24 24" class="w-7 h-7 translate-x-0.5" fill="white" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        </button>
       </div>
     </div>
 
@@ -136,8 +159,17 @@ const flat = paragraphs.flatMap((p, pi) =>
     var followBtn = root.querySelector('[data-follow]')
     var resumeBtn = root.querySelector('[data-resume]')
     var mount = root.querySelector('[data-yt-mount]')
+    var poster = root.querySelector('[data-poster]')
     var spans = Array.prototype.slice.call(doc.querySelectorAll('span[data-t]'))
     var paras = Array.prototype.slice.call(doc.querySelectorAll('[data-para]'))
+
+    // Tapping the poster is the user gesture browsers require, so autoplay-
+    // blocked visits still start on a single click.
+    if (poster) poster.addEventListener('click', function () {
+      if (player && player.playVideo) player.playVideo()
+      else poster.setAttribute('data-armed', '1') // player not ready yet; play on ready
+    })
+    function hidePoster() { if (poster) poster.style.display = 'none' }
 
     var player = null
     var follow = true
@@ -256,9 +288,14 @@ const flat = paragraphs.flatMap((p, pi) =>
         // a muted lesson is worse than one the reader taps to start.
         playerVars: { rel: 0, modestbranding: 1, playsinline: 1, autoplay: 1 },
         events: {
-          onReady: function () { sizeBox() },
+          onReady: function () {
+            sizeBox()
+            // If the reader tapped the poster before the player finished loading,
+            // honour that click now.
+            if (poster && poster.getAttribute('data-armed') === '1') player.playVideo()
+          },
           onStateChange: function (e) {
-            if (e.data === YT.PlayerState.PLAYING) startPolling()
+            if (e.data === YT.PlayerState.PLAYING) { hidePoster(); startPolling() }
             else if (e.data === YT.PlayerState.ENDED || e.data === YT.PlayerState.PAUSED) {
               stopPolling()
               if (player.getCurrentTime) paint(player.getCurrentTime())
