@@ -99,7 +99,12 @@ const examHref = (d: number) => (d === 1 ? '/training/exam/' : `/training/exam/d
     )}
 
     {questions.length > 0 ? (
-      <ExamMode questions={questions} id={`exam-cisa-domain-${n}`} />
+      <ExamMode
+        questions={questions}
+        id={`exam-cisa-domain-${n}`}
+        heading={`Domain ${n} practice exam`}
+        scopeNote={`Treat the result as a read on Domain ${n} alone.`}
+      />
     ) : (
       <p class="text-gray-500">No questions are available yet.</p>
     )}
