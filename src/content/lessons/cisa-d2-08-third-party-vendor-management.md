@@ -7,6 +7,7 @@ domain: 2
 order: 8
 minutes: 8
 gated: false
+videoId: "CiKIdPGVojE"
 taskStatement: "Evaluate whether third-party arrangements preserve the organisation's control, assurance and accountability over outsourced IT."
 objectives:
   - "State what must be fixed in a contract before a service is outsourced."

@@ -1,0 +1,225 @@
+{
+  "lesson": "cisa-d2-07-risk-appetite-tolerance",
+  "title": "Risk Appetite, Tolerance and Acceptance",
+  "source": "cisa-d2-07-risk-appetite-tolerance.srt",
+  "generated": "2026-07-27",
+  "duration": 197.38,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Risk appetite, tolerance and acceptance."
+        },
+        {
+          "t": 2.63,
+          "text": "This lesson is about who decides how much risk an organisation will carry, who may accept a specific risk, and at what level."
+        },
+        {
+          "t": 10.86,
+          "text": "It builds directly on the risk response from the last lesson."
+        }
+      ]
+    },
+    {
+      "t": 14.88,
+      "sentences": [
+        {
+          "t": 14.88,
+          "text": "Start with a situation."
+        },
+        {
+          "t": 16.31,
+          "text": "A junior I-T manager tells you they have accepted the risk of leaving an internet-facing server unpatched, because patching it would cause downtime the business dislikes."
+        },
+        {
+          "t": 26.89,
+          "text": "The trade-off is genuinely real."
+        },
+        {
+          "t": 28.89,
+          "text": "The decision was theirs to announce, but the question the exam is testing is, was it theirs to make."
+        }
+      ]
+    },
+    {
+      "t": 35.11,
+      "sentences": [
+        {
+          "t": 35.11,
+          "text": "Because risk appetite, the amount and type of risk an organisation is willing to pursue in meeting its objectives, is a governance decision."
+        },
+        {
+          "t": 43.91,
+          "text": "It is set by the board, or by senior management on the board’s behalf."
+        },
+        {
+          "t": 48.31,
+          "text": "Everything below it operates within it."
+        },
+        {
+          "t": 50.76,
+          "text": "Every mitigate, transfer, accept or avoid decision is made against the appetite the board has defined."
+        }
+      ]
+    },
+    {
+      "t": 57.17,
+      "sentences": [
+        {
+          "t": 57.17,
+          "text": "Which is why appetite cannot be set by the I-T security manager, or by individual system owners."
+        },
+        {
+          "t": 63.51,
+          "text": "They make decisions within appetite."
+        },
+        {
+          "t": 65.88,
+          "text": "They do not decide how much risk the enterprise as a whole will carry."
+        },
+        {
+          "t": 70.5,
+          "text": "And audit evaluates whether decisions stay within appetite, but does not set it either."
+        }
+      ]
+    },
+    {
+      "t": 76.25,
+      "sentences": [
+        {
+          "t": 76.25,
+          "text": "The exam distinguishes two related terms, and questions turn on the difference."
+        },
+        {
+          "t": 81.21,
+          "text": "Appetite is broad and strategic, the overall level of risk the organisation will take."
+        },
+        {
+          "t": 86.6,
+          "text": "We are willing to accept moderate operational risk to enter new markets quickly."
+        },
+        {
+          "t": 91.62,
+          "text": "Tolerance is narrow and specific, the acceptable variation around a particular objective."
+        },
+        {
+          "t": 97.21,
+          "text": "A critical service may have no more than four hours of unplanned downtime per quarter before it breaches."
+        }
+      ]
+    },
+    {
+      "t": 103.8,
+      "sentences": [
+        {
+          "t": 103.8,
+          "text": "So tolerance operationalises appetite for a specific target."
+        },
+        {
+          "t": 108.05,
+          "text": "Appetite says how much risk in general."
+        },
+        {
+          "t": 110.81,
+          "text": "Tolerance says how far a specific measure may drift before it is out of bounds."
+        },
+        {
+          "t": 116.41,
+          "text": "Treating the two as synonyms is a reliable trap."
+        }
+      ]
+    },
+    {
+      "t": 119.81,
+      "sentences": [
+        {
+          "t": 119.81,
+          "text": "Now acceptance."
+        },
+        {
+          "t": 120.86,
+          "text": "As we saw in the risk lesson, accepting a risk is a legitimate response."
+        },
+        {
+          "t": 125.93,
+          "text": "What the exam tests hardest is something else: the authority to accept must match the size of the risk."
+        }
+      ]
+    },
+    {
+      "t": 133.18,
+      "sentences": [
+        {
+          "t": 133.18,
+          "text": "So think of it as a ladder."
+        },
+        {
+          "t": 135.39,
+          "text": "A small, local risk can be accepted by a local manager."
+        }
+      ]
+    },
+    {
+      "t": 139.9,
+      "sentences": [
+        {
+          "t": 139.9,
+          "text": "A significant risk needs a higher level of authority to accept it, someone who can answer for that magnitude."
+        }
+      ]
+    },
+    {
+      "t": 146.23,
+      "sentences": [
+        {
+          "t": 146.23,
+          "text": "And an enterprise-level risk must be accepted by senior management or the board."
+        },
+        {
+          "t": 151.37,
+          "text": "A team leader cannot accept an enterprise-level risk, exactly the principle from the findings lesson in Domain 1."
+        }
+      ]
+    },
+    {
+      "t": 158.62,
+      "sentences": [
+        {
+          "t": 158.62,
+          "text": "Which is why the junior manager’s acceptance is the finding, and notice why."
+        },
+        {
+          "t": 163.13,
+          "text": "Not because acceptance is wrong, and not because unpatched servers are always unacceptable."
+        },
+        {
+          "t": 168.53,
+          "text": "It is the finding because an internet-facing unpatched server may carry enterprise-level exposure, and a junior manager is not positioned to accept that on the organisation’s behalf."
+        },
+        {
+          "t": 179.33,
+          "text": "The right move is to escalate the acceptance to a level of authority that matches the risk."
+        }
+      ]
+    },
+    {
+      "t": 184.73,
+      "sentences": [
+        {
+          "t": 184.73,
+          "text": "So carry this away."
+        },
+        {
+          "t": 186.08,
+          "text": "When you see a risk accepted, do not ask only, was acceptance reasonable."
+        },
+        {
+          "t": 191.26,
+          "text": "Ask, was it accepted at the right level of authority, and within the board’s appetite."
+        }
+      ]
+    }
+  ]
+}

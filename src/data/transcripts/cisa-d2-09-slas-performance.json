@@ -1,0 +1,241 @@
+{
+  "lesson": "cisa-d2-09-slas-performance",
+  "title": "Service Level Agreements and Performance Monitoring",
+  "source": "cisa-d2-09-slas-performance.srt",
+  "generated": "2026-07-27",
+  "duration": 201.1,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Service level agreements and performance monitoring."
+        },
+        {
+          "t": 3.24,
+          "text": "This lesson is about what makes a service level a real control, and how an auditor knows it is actually being met."
+        }
+      ]
+    },
+    {
+      "t": 10.34,
+      "sentences": [
+        {
+          "t": 10.34,
+          "text": "Here is the situation."
+        },
+        {
+          "t": 11.94,
+          "text": "The cloud contract has a thorough S-L-A: ninety nine point nine per cent availability, defined response times, credits for breaches."
+        },
+        {
+          "t": 21.54,
+          "text": "It reads well."
+        },
+        {
+          "t": 22.56,
+          "text": "Then you ask for the last twelve months of measured performance against it, and there is none."
+        },
+        {
+          "t": 29.39,
+          "text": "Nobody has ever checked."
+        },
+        {
+          "t": 31.14,
+          "text": "The S-L-A is real."
+        },
+        {
+          "t": 32.45,
+          "text": "As a control, it is doing nothing."
+        }
+      ]
+    },
+    {
+      "t": 34.92,
+      "sentences": [
+        {
+          "t": 34.92,
+          "text": "An S-L-A becomes a control, rather than a statement of good intentions, when it has two properties."
+        },
+        {
+          "t": 41.49,
+          "text": "Its targets are specific and measurable, so performance can be tested objectively."
+        },
+        {
+          "t": 46.93,
+          "text": "And breaching them carries a consequence, so the target has force."
+        },
+        {
+          "t": 51.31,
+          "text": "Without measurability and consequence, the S-L-A is intent, not control."
+        }
+      ]
+    },
+    {
+      "t": 56.09,
+      "sentences": [
+        {
+          "t": 56.09,
+          "text": "So hold those two apart."
+        },
+        {
+          "t": 57.82,
+          "text": "Measurable targets: specific, quantified levels you can test."
+        },
+        {
+          "t": 62.21,
+          "text": "Ninety nine point nine per cent availability, a four-hour response time."
+        },
+        {
+          "t": 67.39,
+          "text": "Good service is not a target; a number is."
+        },
+        {
+          "t": 70.42,
+          "text": "And consequences: something that follows when a target is missed, service credits, escalation, termination rights."
+        },
+        {
+          "t": 78.62,
+          "text": "A target with no consequence has no force."
+        },
+        {
+          "t": 81.65,
+          "text": "Signatures and legal review do neither of those jobs."
+        }
+      ]
+    },
+    {
+      "t": 85.46,
+      "sentences": [
+        {
+          "t": 85.46,
+          "text": "Verifying that an S-L-A was met is an evidence question, and the reliability hierarchy from Domain 1 applies directly."
+        },
+        {
+          "t": 92.99,
+          "text": "The provider’s own monthly summary is self-reported by the very party whose performance is being judged."
+        },
+        {
+          "t": 99.62,
+          "text": "That is the weakest kind of evidence."
+        }
+      ]
+    },
+    {
+      "t": 101.98,
+      "sentences": [
+        {
+          "t": 101.98,
+          "text": "The most reliable evidence is independent measurement: your own uptime monitoring, or a neutral third-party monitor."
+        },
+        {
+          "t": 108.69,
+          "text": "It does not depend on the party being measured having reported honestly."
+        },
+        {
+          "t": 112.86,
+          "text": "When a question asks for the most reliable source of S-L-A performance evidence, prefer independent data over self-reported figures, exactly as you would prefer a configuration you extracted yourself over a screenshot the provider sent."
+        }
+      ]
+    },
+    {
+      "t": 126.53,
+      "sentences": [
+        {
+          "t": 126.53,
+          "text": "And one more thing the exam likes to slip in: the absence of complaints is not measurement."
+        },
+        {
+          "t": 132.57,
+          "text": "Users under-report, and silence is not evidence that a service level was met."
+        },
+        {
+          "t": 137.68,
+          "text": "No news is not the same as good news."
+        }
+      ]
+    },
+    {
+      "t": 140.14,
+      "sentences": [
+        {
+          "t": 140.14,
+          "text": "So rank the sources."
+        },
+        {
+          "t": 141.54,
+          "text": "Your own independent monitoring is the strongest, because it does not rely on the provider at all."
+        }
+      ]
+    },
+    {
+      "t": 148.42,
+      "sentences": [
+        {
+          "t": 148.42,
+          "text": "Below it, the provider’s self-reported summary, which comes from the party in question."
+        }
+      ]
+    },
+    {
+      "t": 153.94,
+      "sentences": [
+        {
+          "t": 153.94,
+          "text": "Weaker still, the provider’s verbal assurance, a representation."
+        },
+        {
+          "t": 158.57,
+          "text": "And at the bottom, the absence of complaints, which is not evidence at all."
+        },
+        {
+          "t": 164,
+          "text": "Prefer the top of that list."
+        }
+      ]
+    },
+    {
+      "t": 166.03,
+      "sentences": [
+        {
+          "t": 166.03,
+          "text": "The core failure, though, is the one in our scenario: an S-L-A that is never measured against."
+        },
+        {
+          "t": 171.89,
+          "text": "Without monitoring, you cannot know whether targets are met, cannot substantiate a breach, and cannot enforce a consequence."
+        },
+        {
+          "t": 179.63,
+          "text": "You cannot even conclude the provider is in breach, because no one is measuring."
+        },
+        {
+          "t": 184.61,
+          "text": "The lack of monitoring is the finding."
+        }
+      ]
+    },
+    {
+      "t": 186.98,
+      "sentences": [
+        {
+          "t": 186.98,
+          "text": "So carry this away."
+        },
+        {
+          "t": 188.47,
+          "text": "The auditor’s test is not, is there an S-L-A."
+        },
+        {
+          "t": 191.97,
+          "text": "It is, is it monitored, and against independent data."
+        },
+        {
+          "t": 196.11,
+          "text": "A well-written agreement nobody measures assures nothing at all."
+        }
+      ]
+    }
+  ]
+}

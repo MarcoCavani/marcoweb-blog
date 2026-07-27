@@ -7,6 +7,7 @@ domain: 2
 order: 7
 minutes: 7
 gated: false
+videoId: "MjRwFbeQNUs"
 taskStatement: "Evaluate whether risk acceptance decisions are made within a defined appetite and at an appropriate level of authority."
 objectives:
   - "Distinguish risk appetite from risk tolerance."

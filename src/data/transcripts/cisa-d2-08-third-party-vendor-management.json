@@ -1,0 +1,241 @@
+{
+  "lesson": "cisa-d2-08-third-party-vendor-management",
+  "title": "Third-Party and Vendor Management",
+  "source": "cisa-d2-08-third-party-vendor-management.srt",
+  "generated": "2026-07-27",
+  "duration": 200.86,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Third-party and vendor management."
+        },
+        {
+          "t": 2.31,
+          "text": "The core of this lesson is one line: you can outsource the work, but not the accountability."
+        }
+      ]
+    },
+    {
+      "t": 8.54,
+      "sentences": [
+        {
+          "t": 8.54,
+          "text": "Here is the situation."
+        },
+        {
+          "t": 10.02,
+          "text": "An organisation moves payroll to a specialist provider, and the C-I-O tells you the risk now sits with the vendor."
+        },
+        {
+          "t": 17.65,
+          "text": "Six months later the vendor has a breach, and the regulator’s letter arrives on the C-I-O’s desk, not the vendor’s."
+        },
+        {
+          "t": 25.36,
+          "text": "Outsourcing moved the work."
+        },
+        {
+          "t": 27.16,
+          "text": "It did not move what the exam wants you to see."
+        }
+      ]
+    },
+    {
+      "t": 30.31,
+      "sentences": [
+        {
+          "t": 30.31,
+          "text": "The single most tested point in third-party management is timing."
+        },
+        {
+          "t": 34.73,
+          "text": "The controls you want must be in the contract before it is signed."
+        },
+        {
+          "t": 39.22,
+          "text": "Before go-live, the organisation has leverage, the provider wants the deal."
+        },
+        {
+          "t": 44.33,
+          "text": "After signing, that leverage is gone."
+        },
+        {
+          "t": 46.84,
+          "text": "So the contract, not a later review, is where you fix everything."
+        }
+      ]
+    },
+    {
+      "t": 51.26,
+      "sentences": [
+        {
+          "t": 51.26,
+          "text": "What goes in the contract, while you still have the leverage: the right to audit, or an agreed alternative form of assurance."
+        },
+        {
+          "t": 60.58,
+          "text": "Security requirements the provider must meet."
+        },
+        {
+          "t": 63.93,
+          "text": "Service levels and the consequences of missing them."
+        },
+        {
+          "t": 67.8,
+          "text": "Data handling."
+        },
+        {
+          "t": 68.84,
+          "text": "And exit terms."
+        },
+        {
+          "t": 69.96,
+          "text": "Let us place those."
+        }
+      ]
+    },
+    {
+      "t": 71.38,
+      "sentences": [
+        {
+          "t": 71.38,
+          "text": "First, the right to audit, or an agreed assurance report in its place."
+        },
+        {
+          "t": 76.04,
+          "text": "Sought only after a problem is suspected, it is a right you never secured."
+        }
+      ]
+    },
+    {
+      "t": 80.98,
+      "sentences": [
+        {
+          "t": 80.98,
+          "text": "Then the security requirements the provider must meet, and the service levels, with real consequences for missing them."
+        },
+        {
+          "t": 88.64,
+          "text": "A target with no consequence has no force."
+        }
+      ]
+    },
+    {
+      "t": 91.34,
+      "sentences": [
+        {
+          "t": 91.34,
+          "text": "And then data handling: where the data lives, how it is protected, how it is returned or destroyed on exit."
+        },
+        {
+          "t": 97.97,
+          "text": "And exit terms, so you are not trapped when the relationship ends."
+        },
+        {
+          "t": 102.05,
+          "text": "When a question asks when to establish the right to audit, the answer is in the contract, before signing."
+        }
+      ]
+    },
+    {
+      "t": 108.55,
+      "sentences": [
+        {
+          "t": 108.55,
+          "text": "Now, large providers, cloud platforms especially, will not grant every customer direct audit access, and the exam accepts this."
+        },
+        {
+          "t": 116.89,
+          "text": "The standard substitute is an independent assurance report, such as a SOC two Type two."
+        },
+        {
+          "t": 122.6,
+          "text": "You rely on it as third-party assurance over the provider’s controls."
+        }
+      ]
+    },
+    {
+      "t": 127.13,
+      "sentences": [
+        {
+          "t": 127.13,
+          "text": "But relying on it is not swallowing it."
+        },
+        {
+          "t": 129.56,
+          "text": "Check its scope, does it cover the controls that matter here."
+        },
+        {
+          "t": 133.36,
+          "text": "Check its period, a Type two covers a span of operation, not a single moment."
+        },
+        {
+          "t": 138.16,
+          "text": "And check the complementary controls it assumes you perform yourself."
+        },
+        {
+          "t": 142.47,
+          "text": "What you do not do is reject it just because it is not a direct audit, accept it without reading the scope, or treat it as a substitute for understanding your own controls."
+        }
+      ]
+    },
+    {
+      "t": 153.19,
+      "sentences": [
+        {
+          "t": 153.19,
+          "text": "The principle underneath all of it: accountability stays home."
+        },
+        {
+          "t": 156.9,
+          "text": "When a provider breaches data you are responsible for, you remain accountable, and in most regimes you remain the data controller, whoever did the processing."
+        },
+        {
+          "t": 166.34,
+          "text": "The contract may apportion liability, but the obligation to protect the data does not leave you."
+        }
+      ]
+    },
+    {
+      "t": 172.08,
+      "sentences": [
+        {
+          "t": 172.08,
+          "text": "Which is the trap."
+        },
+        {
+          "t": 173.37,
+          "text": "It is theirs now is always the wrong answer."
+        },
+        {
+          "t": 176.51,
+          "text": "Outsourcing transfers the activity and some financial liability."
+        },
+        {
+          "t": 181.08,
+          "text": "It does not transfer the accountability, or the obligation to protect the data."
+        }
+      ]
+    },
+    {
+      "t": 186.72,
+      "sentences": [
+        {
+          "t": 186.72,
+          "text": "So carry this away."
+        },
+        {
+          "t": 187.96,
+          "text": "Establish the right to audit, and everything else you need, in the contract, before signing."
+        },
+        {
+          "t": 193.95,
+          "text": "Once the contract is agreed, your leverage is gone, and the accountability was never the vendor’s to take."
+        }
+      ]
+    }
+  ]
+}

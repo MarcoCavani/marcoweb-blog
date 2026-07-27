@@ -7,6 +7,7 @@ domain: 2
 order: 9
 minutes: 7
 gated: false
+videoId: "SkU-czTjNHo"
 taskStatement: "Evaluate whether service level agreements are measurable, monitored against independent data, and enforced."
 objectives:
   - "State the properties that make a service level meaningful and testable."
