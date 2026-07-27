@@ -27,8 +27,10 @@ const recentPosts = blogPosts.slice(1, 5)
   <main>
     <!-- Hero -->
     <section class="bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 text-white py-20 px-4 relative overflow-hidden">
+      <div class="hero-orb hero-orb-a" data-parallax="0.34" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-b" data-parallax="0.22" aria-hidden="true"></div>
       <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
-      <div class="max-w-4xl mx-auto text-center relative">
+      <div class="max-w-4xl mx-auto text-center relative hero-parallax" data-parallax="-0.12">
         <div class="hero-anim inline-block text-xs font-semibold uppercase tracking-widest text-brand-light bg-white/10 px-4 py-1.5 rounded-full mb-6">
           Cybersecurity · IT Governance · Digital Reports
         </div>
@@ -62,7 +64,7 @@ const recentPosts = blogPosts.slice(1, 5)
 
       <!-- Featured post -->
       {featuredPost && (
-        <section class="mb-16">
+        <section class="mb-16 sr">
           <div class="flex items-center gap-3 mb-6">
             <h2 class="text-2xl font-bold text-gray-900">Featured Report</h2>
             <div class="flex-1 h-px bg-gray-200"></div>
@@ -102,7 +104,7 @@ const recentPosts = blogPosts.slice(1, 5)
       )}
 
       <!-- Free training -->
-      <section class="mt-16">
+      <section class="mt-16 sr">
         <a href="/training" class="block rounded-2xl bg-gradient-to-r from-brand-navy to-brand-blue text-white p-8 hover:shadow-lg transition-shadow group">
           <div class="flex flex-col md:flex-row md:items-center gap-6">
             <div class="flex-1">
@@ -122,7 +124,7 @@ const recentPosts = blogPosts.slice(1, 5)
 
       <!-- Recent blog posts -->
       {recentPosts.length > 0 && (
-        <section class="mt-16">
+        <section class="mt-16 sr">
           <div class="flex items-center gap-3 mb-6">
             <h2 class="text-2xl font-bold text-gray-900">Latest from the Blog</h2>
             <div class="flex-1 h-px bg-gray-200"></div>
@@ -148,7 +150,7 @@ const recentPosts = blogPosts.slice(1, 5)
 
       <!-- Digital Reports -->
       {reports.length > 0 && (
-        <section class="mt-16">
+        <section class="mt-16 sr">
           <div class="flex items-center gap-3 mb-6">
             <h2 class="text-2xl font-bold text-gray-900">Digital Reports</h2>
             <div class="flex-1 h-px bg-gray-200"></div>
@@ -173,12 +175,14 @@ const recentPosts = blogPosts.slice(1, 5)
       )}
 
       <!-- Newsletter -->
-      <div class="mt-16">
+      <div class="mt-16 sr">
         <NewsletterSignup />
       </div>
 
       <!-- Full CTA -->
-      <CTABox variant="full" />
+      <div class="sr">
+        <CTABox variant="full" />
+      </div>
 
       <!-- Bottom ad -->
       <AdBanner slot="leaderboard" />
@@ -192,6 +196,38 @@ const recentPosts = blogPosts.slice(1, 5)
   .hero-anim {
     opacity: 0;
     transform: translateY(18px);
+  }
+
+  /* Depth orbs behind the particle network, parallaxed on scroll. */
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(8px);
+    pointer-events: none;
+    z-index: 0;
+    will-change: transform;
+  }
+  .hero-orb-a {
+    width: 26rem; height: 26rem; left: -6rem; top: -7rem;
+    background: radial-gradient(circle at 35% 35%, rgba(51,153,204,.35), transparent 62%);
+  }
+  .hero-orb-b {
+    width: 20rem; height: 20rem; right: -5rem; bottom: -7rem;
+    background: radial-gradient(circle at 60% 40%, rgba(51,153,204,.28), transparent 62%);
+  }
+  .hero-parallax { will-change: transform; }
+
+  /* Scroll reveal: sections ease up into place as they enter the viewport. */
+  .sr {
+    opacity: 0;
+    transform: translateY(34px);
+    transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);
+  }
+  .sr.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sr { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .hero-orb, .hero-parallax { transform: none !important; }
   }
 </style>
 
@@ -275,6 +311,39 @@ const recentPosts = blogPosts.slice(1, 5)
     }
     setTimeout(doGlitch, 1800);
     setInterval(doGlitch, 7000);
+  }
+
+  // ── Scroll reveals + hero parallax (both disabled under reduce-motion) ──
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var srEls = [].slice.call(document.querySelectorAll('.sr'));
+  if (reduce || !('IntersectionObserver' in window)) {
+    srEls.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    srEls.forEach(function (el) { io.observe(el); });
+  }
+
+  if (!reduce) {
+    var pEls = [].slice.call(document.querySelectorAll('[data-parallax]'));
+    var pTick = false;
+    function applyParallax() {
+      var y = window.pageYOffset;
+      for (var k = 0; k < pEls.length; k++) {
+        pEls[k].style.transform = 'translate3d(0,' + (y * parseFloat(pEls[k].getAttribute('data-parallax'))) + 'px,0)';
+      }
+      pTick = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!pTick) { pTick = true; requestAnimationFrame(applyParallax); }
+    }, { passive: true });
+    applyParallax();
   }
 })();
 </script>
