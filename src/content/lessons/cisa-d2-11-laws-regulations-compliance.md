@@ -7,6 +7,7 @@ domain: 2
 order: 11
 minutes: 8
 gated: false
+videoId: "rB1BZrkmDgc"
 taskStatement: "Evaluate whether an organisation identifies its legal and regulatory obligations and manages compliance with them on an ongoing basis."
 objectives:
   - "Explain why identifying applicable obligations is the first compliance control."

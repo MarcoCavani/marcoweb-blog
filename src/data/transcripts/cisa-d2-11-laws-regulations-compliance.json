@@ -1,0 +1,265 @@
+{
+  "lesson": "cisa-d2-11-laws-regulations-compliance",
+  "title": "Laws, Regulations and Compliance Management",
+  "source": "cisa-d2-11-laws-regulations-compliance.srt",
+  "generated": "2026-07-27",
+  "duration": 241.06,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Laws, regulations and compliance management."
+        },
+        {
+          "t": 2.52,
+          "text": "This is the last lesson of Domain 2, and it ties the governance half of the exam back to a single discipline: knowing what applies to you, proving you meet it, and keeping the auditor on the right side of the line."
+        }
+      ]
+    },
+    {
+      "t": 14.78,
+      "sentences": [
+        {
+          "t": 14.78,
+          "text": "Start with the situation."
+        },
+        {
+          "t": 16.58,
+          "text": "An organisation proudly shows you a compliance certificate."
+        },
+        {
+          "t": 20.83,
+          "text": "It is framed, it is genuine, and it is two years old."
+        },
+        {
+          "t": 24.64,
+          "text": "In those two years the systems have been rebuilt and the regulation itself has been amended."
+        },
+        {
+          "t": 31.25,
+          "text": "The certificate proves the company was compliant once."
+        },
+        {
+          "t": 35.14,
+          "text": "It says nothing about today."
+        }
+      ]
+    },
+    {
+      "t": 37.15,
+      "sentences": [
+        {
+          "t": 37.15,
+          "text": "That is the failure this lesson is about: compliance treated as a trophy rather than a process."
+        },
+        {
+          "t": 43.17,
+          "text": "Something you win and hang on the wall, instead of something you maintain."
+        },
+        {
+          "t": 47.85,
+          "text": "Hold that image, because the exam keeps coming back to it."
+        }
+      ]
+    },
+    {
+      "t": 51.53,
+      "sentences": [
+        {
+          "t": 51.53,
+          "text": "Now the first control, and it is the one people skip."
+        },
+        {
+          "t": 55.13,
+          "text": "You cannot comply with what you have not identified."
+        },
+        {
+          "t": 58.66,
+          "text": "The very first step in compliance management is determining which laws and regulations actually apply to you."
+        },
+        {
+          "t": 66.06,
+          "text": "Not implementing controls, not booking an audit, not buying a tool."
+        },
+        {
+          "t": 70.6,
+          "text": "Identifying the obligations comes first."
+        }
+      ]
+    },
+    {
+      "t": 73.32,
+      "sentences": [
+        {
+          "t": 73.32,
+          "text": "What drives those obligations."
+        },
+        {
+          "t": 75.38,
+          "text": "First, jurisdiction: where the organisation operates, and where its data subjects are."
+        },
+        {
+          "t": 81.3,
+          "text": "The same company can face different rules in every country it touches."
+        }
+      ]
+    },
+    {
+      "t": 86.11,
+      "sentences": [
+        {
+          "t": 86.11,
+          "text": "Second, industry: the sector-specific rules for finance, for health, for payments."
+        },
+        {
+          "t": 91.28,
+          "text": "A hospital and a payment processor carry very different obligations from the same starting point."
+        }
+      ]
+    },
+    {
+      "t": 97.39,
+      "sentences": [
+        {
+          "t": 97.39,
+          "text": "And third, data and services: what the organisation actually holds and does."
+        },
+        {
+          "t": 102.49,
+          "text": "Holding personal data triggers data-protection and breach-notification duties that a business without that data simply does not have."
+        },
+        {
+          "t": 111.42,
+          "text": "Jurisdiction, industry, data and services."
+        },
+        {
+          "t": 114.24,
+          "text": "Those three tell you what applies."
+        }
+      ]
+    },
+    {
+      "t": 116.52,
+      "sentences": [
+        {
+          "t": 116.52,
+          "text": "So the order matters."
+        },
+        {
+          "t": 117.86,
+          "text": "Identify first, then build."
+        },
+        {
+          "t": 119.58,
+          "text": "If you implement a stack of common controls before knowing your actual obligations, you risk meeting requirements that do not apply to you, while missing the ones that do."
+        },
+        {
+          "t": 130.47,
+          "text": "When a question asks for the first step in compliance management, the answer is identifying what applies."
+        }
+      ]
+    },
+    {
+      "t": 137.16,
+      "sentences": [
+        {
+          "t": 137.16,
+          "text": "Now the auditor’s role, because the exam draws a hard line here."
+        },
+        {
+          "t": 141,
+          "text": "When you find non-compliance, you do the same thing you do with every finding in Domain 1."
+        },
+        {
+          "t": 146.41,
+          "text": "You report it to management and to those charged with governance, and you evaluate their response."
+        },
+        {
+          "t": 152.29,
+          "text": "You do not implement the fix."
+        },
+        {
+          "t": 154.04,
+          "text": "You do not, by default, report the organisation straight to the regulator, that bypasses management and governance and is not your responsibility absent a specific legal duty."
+        },
+        {
+          "t": 164.55,
+          "text": "And you never ignore a known non-compliance because detection seems unlikely, that is not a judgement call, it is an ethics breach."
+        }
+      ]
+    },
+    {
+      "t": 172.42,
+      "sentences": [
+        {
+          "t": 172.42,
+          "text": "Why not just fix it."
+        },
+        {
+          "t": 173.74,
+          "text": "Because the moment you implement the control you found broken, you become the doer of that control, and you can no longer independently assess it."
+        },
+        {
+          "t": 183.42,
+          "text": "Report, do not remediate."
+        },
+        {
+          "t": 185.08,
+          "text": "The remediation, and the accountability for it, stays with management."
+        },
+        {
+          "t": 189.72,
+          "text": "This is the independence principle you have seen in every findings question."
+        }
+      ]
+    },
+    {
+      "t": 194.76,
+      "sentences": [
+        {
+          "t": 194.76,
+          "text": "And now the deepest point, a favourite exam theme."
+        },
+        {
+          "t": 198.11,
+          "text": "Compliance is a continuous process, not a one-off event."
+        },
+        {
+          "t": 201.87,
+          "text": "Systems change, regulations change, and controls degrade over time."
+        },
+        {
+          "t": 206.36,
+          "text": "A certification is point-in-time evidence, and exactly like the current access listing back in Domain 1, it describes a state that may no longer exist."
+        }
+      ]
+    },
+    {
+      "t": 216.48,
+      "sentences": [
+        {
+          "t": 216.48,
+          "text": "So carry this away."
+        },
+        {
+          "t": 217.74,
+          "text": "A two-year-old certificate does not prove the organisation is compliant today."
+        },
+        {
+          "t": 222.89,
+          "text": "The concern is not that the original certificate was wrong, it is that current compliance is simply unknown."
+        },
+        {
+          "t": 230.02,
+          "text": "Effective compliance builds in continuous monitoring and periodic reassessment, so the question, are we compliant, can be answered about today."
+        },
+        {
+          "t": 239.47,
+          "text": "That completes Domain 2."
+        }
+      ]
+    }
+  ]
+}

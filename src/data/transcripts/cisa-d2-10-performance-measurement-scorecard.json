@@ -1,0 +1,245 @@
+{
+  "lesson": "cisa-d2-10-performance-measurement-scorecard",
+  "title": "Performance Measurement and the IT Balanced Scorecard",
+  "source": "cisa-d2-10-performance-measurement-scorecard.srt",
+  "generated": "2026-07-27",
+  "duration": 213.14,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Performance measurement and the I-T balanced scorecard."
+        },
+        {
+          "t": 3.4,
+          "text": "This lesson is about the difference between measuring how busy I-T is, and measuring whether I-T delivered, and the exam tests exactly that gap."
+        }
+      ]
+    },
+    {
+      "t": 12.31,
+      "sentences": [
+        {
+          "t": 12.31,
+          "text": "Picture the quarterly I-T report as a wall of big numbers."
+        },
+        {
+          "t": 16.14,
+          "text": "Five thousand tickets closed, three hundred servers patched, ninety nine per cent of changes on schedule."
+        },
+        {
+          "t": 23.08,
+          "text": "Leadership nods."
+        },
+        {
+          "t": 24.14,
+          "text": "Then a director asks whether any of it made the business run better, and the room goes quiet."
+        }
+      ]
+    },
+    {
+      "t": 30.29,
+      "sentences": [
+        {
+          "t": 30.29,
+          "text": "Because those numbers measure how busy I-T was."
+        },
+        {
+          "t": 33.18,
+          "text": "They do not measure whether I-T delivered."
+        },
+        {
+          "t": 35.76,
+          "text": "Good performance measurement ties to business outcomes, not to the volume of activity, and that distinction runs through the whole lesson."
+        }
+      ]
+    },
+    {
+      "t": 44.26,
+      "sentences": [
+        {
+          "t": 44.26,
+          "text": "Two indicator types appear constantly, and questions turn on telling them apart."
+        },
+        {
+          "t": 50.08,
+          "text": "A key performance indicator, a K-P-I, is a lagging measure."
+        },
+        {
+          "t": 54.38,
+          "text": "It tells you how well an objective was met, after the fact."
+        },
+        {
+          "t": 58.68,
+          "text": "Availability achieved, projects delivered on time."
+        },
+        {
+          "t": 62.32,
+          "text": "It looks back at outcomes."
+        },
+        {
+          "t": 64.22,
+          "text": "A key risk indicator, a K-R-I, is a leading measure."
+        },
+        {
+          "t": 68.01,
+          "text": "It warns that exposure is rising before the risk materialises."
+        },
+        {
+          "t": 72.52,
+          "text": "A growing backlog of unpatched vulnerabilities, rising turnover in a critical team."
+        },
+        {
+          "t": 78.57,
+          "text": "It looks forward at emerging danger."
+        }
+      ]
+    },
+    {
+      "t": 81.19,
+      "sentences": [
+        {
+          "t": 81.19,
+          "text": "So here is the shortcut."
+        },
+        {
+          "t": 82.9,
+          "text": "A K-P-I tells you how you did."
+        },
+        {
+          "t": 85.04,
+          "text": "A K-R-I tells you what is coming."
+        },
+        {
+          "t": 87.39,
+          "text": "A good measurement programme has both, because K-P-Is alone let you discover problems only after they have already cost you."
+        }
+      ]
+    },
+    {
+      "t": 96.22,
+      "sentences": [
+        {
+          "t": 96.22,
+          "text": "Now, measuring I-T purely by cost and financial return misses most of what I-T is for."
+        },
+        {
+          "t": 101.36,
+          "text": "The I-T balanced scorecard corrects that by measuring I-T from several perspectives at once, so that I-T is judged on the value it delivers and the capability it builds, not on cost alone."
+        }
+      ]
+    },
+    {
+      "t": 112.61,
+      "sentences": [
+        {
+          "t": 112.61,
+          "text": "The point is balance."
+        },
+        {
+          "t": 114.03,
+          "text": "Financial measures sit alongside non-financial ones."
+        },
+        {
+          "t": 117.54,
+          "text": "It is a management and governance tool, not a regulatory report, and it does not replace financial measures, it frames them among others."
+        },
+        {
+          "t": 126.81,
+          "text": "So what are those perspectives."
+        }
+      ]
+    },
+    {
+      "t": 128.9,
+      "sentences": [
+        {
+          "t": 128.9,
+          "text": "First, business contribution: the value I-T delivers to the enterprise’s objectives."
+        },
+        {
+          "t": 134.21,
+          "text": "This is the perspective that keeps I-T pointed at what the business is trying to achieve."
+        }
+      ]
+    },
+    {
+      "t": 139.82,
+      "sentences": [
+        {
+          "t": 139.82,
+          "text": "Second, user or customer orientation: how well I-T serves the people who depend on it."
+        },
+        {
+          "t": 145.51,
+          "text": "The best-run system in the world still fails if its users cannot work with it."
+        }
+      ]
+    },
+    {
+      "t": 150.67,
+      "sentences": [
+        {
+          "t": 150.67,
+          "text": "Third, operational excellence: how efficiently and reliably I-T runs day to day."
+        },
+        {
+          "t": 156.32,
+          "text": "And fourth, future orientation: the capability, skills and architecture I-T is building for what comes next."
+        },
+        {
+          "t": 163.94,
+          "text": "Business contribution, user orientation, operational excellence, future orientation."
+        },
+        {
+          "t": 169.86,
+          "text": "Four views, held together."
+        }
+      ]
+    },
+    {
+      "t": 171.7,
+      "sentences": [
+        {
+          "t": 171.7,
+          "text": "Which brings us to the trap, and it is the activity metric."
+        },
+        {
+          "t": 175.38,
+          "text": "Tickets closed and servers patched are counts of effort."
+        },
+        {
+          "t": 178.87,
+          "text": "They say how busy I-T was, not whether services were reliable or the business got what it needed."
+        },
+        {
+          "t": 184.93,
+          "text": "Adding cost to them gives an efficiency ratio, but still measures activity."
+        },
+        {
+          "t": 189.6,
+          "text": "Good measurement ties to outcomes: not, we patched three hundred servers, but, critical systems had zero exploitable vulnerabilities open beyond the agreed window."
+        }
+      ]
+    },
+    {
+      "t": 199.78,
+      "sentences": [
+        {
+          "t": 199.78,
+          "text": "So carry this away."
+        },
+        {
+          "t": 200.97,
+          "text": "When a metric counts what I-T did rather than what the business got, it is measuring the wrong thing, however impressive the count."
+        },
+        {
+          "t": 209.23,
+          "text": "Ask always whether the measure connects to a business outcome."
+        }
+      ]
+    }
+  ]
+}

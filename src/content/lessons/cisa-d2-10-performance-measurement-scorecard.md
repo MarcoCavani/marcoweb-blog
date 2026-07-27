@@ -7,6 +7,7 @@ domain: 2
 order: 10
 minutes: 7
 gated: false
+videoId: "1WirX-DeCSc"
 taskStatement: "Evaluate whether IT performance measurement links to business objectives and gives leading as well as lagging indicators."
 objectives:
   - "Distinguish a key performance indicator from a key risk indicator."
