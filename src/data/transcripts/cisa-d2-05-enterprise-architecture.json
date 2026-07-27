@@ -1,0 +1,233 @@
+{
+  "lesson": "cisa-d2-05-enterprise-architecture",
+  "title": "Enterprise Architecture",
+  "source": "cisa-d2-05-enterprise-architecture.srt",
+  "generated": "2026-07-27",
+  "duration": 206.16,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Enterprise architecture."
+        },
+        {
+          "t": 1.41,
+          "text": "This lesson is about the map that keeps I-T aligned with the business as both of them change, and why the exam treats it as a governance control rather than a technical drawing."
+        }
+      ]
+    },
+    {
+      "t": 11.78,
+      "sentences": [
+        {
+          "t": 11.78,
+          "text": "Picture a company with a beautiful enterprise architecture."
+        },
+        {
+          "t": 15.72,
+          "text": "Layered diagrams, a target-state model, principles on every page."
+        },
+        {
+          "t": 20.05,
+          "text": "It also has three separate systems doing customer onboarding, two overlapping data warehouses, and a new tool just approved that duplicates a capability it already owns."
+        },
+        {
+          "t": 31.32,
+          "text": "The architecture is excellent."
+        },
+        {
+          "t": 33.31,
+          "text": "It is also being ignored, and that is the finding."
+        }
+      ]
+    },
+    {
+      "t": 36.65,
+      "sentences": [
+        {
+          "t": 36.65,
+          "text": "Because the exam does not treat enterprise architecture as a technical drawing."
+        },
+        {
+          "t": 41.02,
+          "text": "It treats it as a governance instrument, a structured view of the business and its I-T that keeps investment and systems aligned with business direction as the organisation changes over time."
+        }
+      ]
+    },
+    {
+      "t": 51.58,
+      "sentences": [
+        {
+          "t": 51.58,
+          "text": "The problem it solves is drift."
+        },
+        {
+          "t": 53.56,
+          "text": "Organisations wander."
+        },
+        {
+          "t": 54.91,
+          "text": "New systems get bought to solve today’s problem, duplicating capabilities that already exist, adding dependencies nobody tracks, slowly turning the estate into something no one understands."
+        },
+        {
+          "t": 67.03,
+          "text": "Enterprise architecture is the control against that drift."
+        },
+        {
+          "t": 70.75,
+          "text": "It gives decision-makers a map, so each new investment is judged against where the organisation is trying to go."
+        }
+      ]
+    },
+    {
+      "t": 77.93,
+      "sentences": [
+        {
+          "t": 77.93,
+          "text": "And this is why it helps the auditor directly: a good architecture reveals dependencies and single points of failure."
+        },
+        {
+          "t": 85.16,
+          "text": "When you can see that six systems rely on one shared component, you can see where risk is concentrated."
+        },
+        {
+          "t": 91.53,
+          "text": "A device list or an asset register never shows you that."
+        }
+      ]
+    },
+    {
+      "t": 94.99,
+      "sentences": [
+        {
+          "t": 94.99,
+          "text": "Used properly, enterprise architecture controls three things the exam cares about."
+        },
+        {
+          "t": 100.16,
+          "text": "First, alignment."
+        },
+        {
+          "t": 101.23,
+          "text": "New systems are assessed against the target architecture, so investment moves the estate toward business direction rather than away from it."
+        }
+      ]
+    },
+    {
+      "t": 110.06,
+      "sentences": [
+        {
+          "t": 110.06,
+          "text": "Second, redundancy."
+        },
+        {
+          "t": 111.42,
+          "text": "Duplicate capabilities become visible and avoidable, so the organisation stops paying twice for the same function."
+        }
+      ]
+    },
+    {
+      "t": 119.54,
+      "sentences": [
+        {
+          "t": 119.54,
+          "text": "And third, risk."
+        },
+        {
+          "t": 120.72,
+          "text": "Dependencies and single points of failure become visible, so you can see how risk is spread or concentrated across the whole estate."
+        },
+        {
+          "t": 130.38,
+          "text": "Alignment, redundancy, risk."
+        }
+      ]
+    },
+    {
+      "t": 132.43,
+      "sentences": [
+        {
+          "t": 132.43,
+          "text": "Now the common failure, an architecture that exists but decides nothing."
+        },
+        {
+          "t": 136.96,
+          "text": "If new systems are approved without reference to the enterprise architecture, and duplication keeps appearing, the architecture is a document, not a control."
+        },
+        {
+          "t": 146.83,
+          "text": "Its detail and its elegance are irrelevant."
+        },
+        {
+          "t": 149.53,
+          "text": "What matters is whether investment decisions actually pass through it."
+        }
+      ]
+    },
+    {
+      "t": 153.94,
+      "sentences": [
+        {
+          "t": 153.94,
+          "text": "So the auditor’s real test is not, is there an architecture."
+        },
+        {
+          "t": 157.92,
+          "text": "It is, is it used."
+        },
+        {
+          "t": 159.12,
+          "text": "Ask to see recent investment decisions and look for the architecture in them."
+        },
+        {
+          "t": 164.23,
+          "text": "If it is absent, the governance gap is the finding, and consolidating the duplicate systems only treats the symptom that gap produced."
+        }
+      ]
+    },
+    {
+      "t": 173.14,
+      "sentences": [
+        {
+          "t": 173.14,
+          "text": "Which is the trap."
+        },
+        {
+          "t": 174.31,
+          "text": "The instinct is to grade the architecture as a technical deliverable, to admire the diagrams."
+        },
+        {
+          "t": 180.4,
+          "text": "The exam asks a governance question: does this architecture govern how I-T investment is directed."
+        },
+        {
+          "t": 186.81,
+          "text": "A plain architecture that every decision consults beats a magnificent one that sits on a shelf."
+        }
+      ]
+    },
+    {
+      "t": 193.03,
+      "sentences": [
+        {
+          "t": 193.03,
+          "text": "So carry this away."
+        },
+        {
+          "t": 194.5,
+          "text": "Do not ask whether an architecture exists."
+        },
+        {
+          "t": 197.74,
+          "text": "Ask whether it governs how I-T investment is directed."
+        },
+        {
+          "t": 201.91,
+          "text": "That is the difference between a drawing and a control."
+        }
+      ]
+    }
+  ]
+}

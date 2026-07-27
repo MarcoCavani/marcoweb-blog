@@ -1,0 +1,229 @@
+{
+  "lesson": "cisa-d2-04-org-structure-segregation",
+  "title": "Organisational Structure and Segregation of Duties",
+  "source": "cisa-d2-04-org-structure-segregation.srt",
+  "generated": "2026-07-27",
+  "duration": 203.66,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Organisational structure and segregation of duties."
+        },
+        {
+          "t": 3.23,
+          "text": "This lesson is about arranging an organisation so that no single person can both make a mistake, or commit a fraud, and then hide it."
+        }
+      ]
+    },
+    {
+      "t": 11.66,
+      "sentences": [
+        {
+          "t": 11.66,
+          "text": "Start with a change that went wrong in production."
+        },
+        {
+          "t": 14.89,
+          "text": "You trace it back and find that one engineer requested it, approved it, wrote it, deployed it, and signed off the post-implementation review."
+        },
+        {
+          "t": 24.01,
+          "text": "Every box on the form is ticked."
+        },
+        {
+          "t": 26.08,
+          "text": "And every box was ticked by the same person."
+        }
+      ]
+    },
+    {
+      "t": 28.92,
+      "sentences": [
+        {
+          "t": 28.92,
+          "text": "Nothing detected the problem, because there was never anyone in a position to."
+        },
+        {
+          "t": 34.03,
+          "text": "That is what segregation of duties prevents."
+        },
+        {
+          "t": 36.91,
+          "text": "When one person holds two of the key duties over the same transaction, the control weakens."
+        },
+        {
+          "t": 42.87,
+          "text": "When one person holds all four, there is effectively no control at all."
+        }
+      ]
+    },
+    {
+      "t": 47.52,
+      "sentences": [
+        {
+          "t": 47.52,
+          "text": "So which duties should separate?"
+        },
+        {
+          "t": 49.64,
+          "text": "Four of them, and the exam expects the set: authorisation, custody, recording and verification."
+        },
+        {
+          "t": 55.94,
+          "text": "When one person holds two or more of these over the same transaction, you have a segregation problem."
+        }
+      ]
+    },
+    {
+      "t": 62.64,
+      "sentences": [
+        {
+          "t": 62.64,
+          "text": "First, authorisation, approving that something should happen."
+        },
+        {
+          "t": 66.62,
+          "text": "This is the permission to act, and it should sit apart from the doing."
+        }
+      ]
+    },
+    {
+      "t": 71.18,
+      "sentences": [
+        {
+          "t": 71.18,
+          "text": "Then custody, holding or controlling the asset, for example access to production."
+        },
+        {
+          "t": 76.36,
+          "text": "And recording, creating the record of what happened."
+        },
+        {
+          "t": 79.68,
+          "text": "Keep the person who controls the asset apart from the person who writes the record of it."
+        }
+      ]
+    },
+    {
+      "t": 85.37,
+      "sentences": [
+        {
+          "t": 85.37,
+          "text": "And fourth, verification, independently checking that it was done correctly."
+        },
+        {
+          "t": 90.87,
+          "text": "Authorisation, custody, recording, verification."
+        },
+        {
+          "t": 94.35,
+          "text": "Hold two over the same transaction and the control weakens."
+        },
+        {
+          "t": 98.62,
+          "text": "Hold all four, and you are back to our engineer."
+        }
+      ]
+    },
+    {
+      "t": 102.1,
+      "sentences": [
+        {
+          "t": 102.1,
+          "text": "The most heavily tested I-T conflict is developing a change and promoting it to production."
+        },
+        {
+          "t": 107.53,
+          "text": "If the same person can both build code and deploy it, they can move untested or unauthorised code into the live environment with nobody in between."
+        },
+        {
+          "t": 116.31,
+          "text": "This is why development and production access are separated as a matter of course."
+        }
+      ]
+    },
+    {
+      "t": 121.2,
+      "sentences": [
+        {
+          "t": 121.2,
+          "text": "And watch for the reporting-line trap, because it returns here."
+        },
+        {
+          "t": 125.2,
+          "text": "The person who creates a user account should not also approve the access."
+        },
+        {
+          "t": 129.83,
+          "text": "The person who runs a system should not be the only one who reviews its logs."
+        },
+        {
+          "t": 134.71,
+          "text": "And the security function should not report to the operations it is meant to challenge."
+        },
+        {
+          "t": 140.23,
+          "text": "Oversight cannot report to what it oversees, exactly as with the audit function in Domain 1."
+        }
+      ]
+    },
+    {
+      "t": 146.06,
+      "sentences": [
+        {
+          "t": 146.06,
+          "text": "Real teams are sometimes too small to split every duty, and the exam knows this."
+        },
+        {
+          "t": 150.81,
+          "text": "What it will not accept is treating small size as a reason to abandon the control."
+        },
+        {
+          "t": 155.67,
+          "text": "The expected answer is a compensating control, and the standard one for segregation is independent oversight: someone who is not the administrator reviews the activity logs."
+        }
+      ]
+    },
+    {
+      "t": 165.94,
+      "sentences": [
+        {
+          "t": 165.94,
+          "text": "That review does not prevent an improper action the way separation would, but it makes one detectable by a party with no stake in hiding it."
+        },
+        {
+          "t": 174.49,
+          "text": "That is the trade a compensating control makes, detection in place of prevention."
+        },
+        {
+          "t": 179.44,
+          "text": "But it only works if the reviewer is genuinely independent."
+        },
+        {
+          "t": 183.05,
+          "text": "Self-documentation fails, because the person creating the record is the very person you need assurance over."
+        }
+      ]
+    },
+    {
+      "t": 189.65,
+      "sentences": [
+        {
+          "t": 189.65,
+          "text": "So carry two things away."
+        },
+        {
+          "t": 191.33,
+          "text": "A small team does not remove the need to compensate, it just changes how."
+        },
+        {
+          "t": 196.25,
+          "text": "And a compensating control that relies on the conflicted person is not a control, it is the conflict restated."
+        }
+      ]
+    }
+  ]
+}

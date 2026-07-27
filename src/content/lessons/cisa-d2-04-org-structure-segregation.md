@@ -7,6 +7,7 @@ domain: 2
 order: 4
 minutes: 8
 gated: false
+videoId: "TIWfwaeRWAE"
 taskStatement: "Evaluate whether an IT organisational structure enforces segregation of duties and provides a compensating control where it cannot."
 objectives:
   - "Identify the four duties that should be separated and why."

@@ -1,0 +1,233 @@
+{
+  "lesson": "cisa-d2-06-it-risk-management",
+  "title": "IT Risk Management",
+  "source": "cisa-d2-06-it-risk-management.srt",
+  "generated": "2026-07-27",
+  "duration": 210.55,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "I-T risk management."
+        },
+        {
+          "t": 1.43,
+          "text": "This lesson is about the risk lifecycle, the four ways to respond to a risk, and who is actually allowed to choose."
+        },
+        {
+          "t": 9.63,
+          "text": "The exam tests the order and the vocabulary directly."
+        }
+      ]
+    },
+    {
+      "t": 13.42,
+      "sentences": [
+        {
+          "t": 13.42,
+          "text": "Here is the situation."
+        },
+        {
+          "t": 14.85,
+          "text": "A team spots that a legacy system has no logging."
+        },
+        {
+          "t": 18.05,
+          "text": "Within a day, someone has bought a logging tool, someone else has written a policy, and a third person has quietly decided the whole thing is probably fine."
+        },
+        {
+          "t": 28.22,
+          "text": "Three responses, and not one person has worked out how likely a problem is, or how bad it would be."
+        },
+        {
+          "t": 34.67,
+          "text": "They skipped assessment."
+        }
+      ]
+    },
+    {
+      "t": 36.24,
+      "sentences": [
+        {
+          "t": 36.24,
+          "text": "And that is the cardinal error."
+        },
+        {
+          "t": 38.25,
+          "text": "Just as risk-based audit planning demands you assess before you allocate effort, risk management demands you assess before you respond."
+        },
+        {
+          "t": 47.01,
+          "text": "A control chosen before assessment is guesswork."
+        },
+        {
+          "t": 50.12,
+          "text": "It may over-spend on a trivial exposure or under-treat a severe one."
+        },
+        {
+          "t": 54.53,
+          "text": "So when a question asks what to do next after identifying a risk, the answer is almost always, assess it."
+        }
+      ]
+    },
+    {
+      "t": 61.34,
+      "sentences": [
+        {
+          "t": 61.34,
+          "text": "The lifecycle runs in order: identify the risks, assess each one’s likelihood and impact, respond with something proportionate to the assessed size, then monitor over time and reassess as things change."
+        },
+        {
+          "t": 72.98,
+          "text": "The step candidates skip is the second one, assessment, and it is the one the exam guards most."
+        }
+      ]
+    },
+    {
+      "t": 78.46,
+      "sentences": [
+        {
+          "t": 78.46,
+          "text": "Once a risk is assessed, there are exactly four things you can do with it."
+        },
+        {
+          "t": 83.67,
+          "text": "First, mitigate, or reduce: apply controls that lower the likelihood or the impact."
+        },
+        {
+          "t": 89.52,
+          "text": "Most controls are mitigation."
+        }
+      ]
+    },
+    {
+      "t": 91.56,
+      "sentences": [
+        {
+          "t": 91.56,
+          "text": "Second, transfer, or share: shift the financial consequence to a third party, typically through insurance or a contract."
+        },
+        {
+          "t": 99.29,
+          "text": "The event can still happen; what changes is who bears the loss."
+        }
+      ]
+    },
+    {
+      "t": 103.34,
+      "sentences": [
+        {
+          "t": 103.34,
+          "text": "Third, accept: bear the risk with no further action, which is legitimate when it sits within appetite and treatment would cost more than it saves."
+        },
+        {
+          "t": 112.06,
+          "text": "And fourth, avoid: stop the activity that creates the risk, for example by not collecting the data at all."
+        }
+      ]
+    },
+    {
+      "t": 118.39,
+      "sentences": [
+        {
+          "t": 118.39,
+          "text": "A favourite trap: calling insurance mitigation."
+        },
+        {
+          "t": 121.73,
+          "text": "It is transfer."
+        },
+        {
+          "t": 122.8,
+          "text": "Mitigation changes the risk itself, its likelihood or impact."
+        },
+        {
+          "t": 127.13,
+          "text": "Transfer only moves the financial consequence, and it moves the money, not the underlying obligation or the reputational harm."
+        }
+      ]
+    },
+    {
+      "t": 136.08,
+      "sentences": [
+        {
+          "t": 136.08,
+          "text": "Now, who decides the response."
+        },
+        {
+          "t": 137.97,
+          "text": "It is the risk owner, the person accountable for the process or asset the risk affects."
+        },
+        {
+          "t": 143.44,
+          "text": "They choose to mitigate, transfer, accept or avoid, within the appetite the board has set."
+        },
+        {
+          "t": 149.1,
+          "text": "The auditor identifies and evaluates the risk and reports on it, but must not choose the response, because making that management decision destroys independence, exactly as in Domain 1."
+        }
+      ]
+    },
+    {
+      "t": 160.73,
+      "sentences": [
+        {
+          "t": 160.73,
+          "text": "And there is one risk that is yours."
+        },
+        {
+          "t": 163.01,
+          "text": "You cannot change inherent risk or control risk, those belong to management."
+        },
+        {
+          "t": 167.83,
+          "text": "The only risk the auditor moves is detection risk."
+        },
+        {
+          "t": 171,
+          "text": "So a question asking what you should do about high control risk is asking about the audit response, which is more testing, not about fixing the control."
+        }
+      ]
+    },
+    {
+      "t": 180.65,
+      "sentences": [
+        {
+          "t": 180.65,
+          "text": "Which brings us to the trap."
+        },
+        {
+          "t": 182.57,
+          "text": "The instinct, the moment a risk appears, is to reach for a control."
+        },
+        {
+          "t": 187.18,
+          "text": "It feels responsible, and it is premature."
+        },
+        {
+          "t": 190.07,
+          "text": "Assess first, then let the risk owner choose a response proportionate to what the assessment found."
+        }
+      ]
+    },
+    {
+      "t": 196.87,
+      "sentences": [
+        {
+          "t": 196.87,
+          "text": "So carry this away."
+        },
+        {
+          "t": 198.17,
+          "text": "After identifying a risk, the next step is almost always to assess it."
+        },
+        {
+          "t": 202.96,
+          "text": "And the response decision belongs to the business risk owner, not to the auditor, and not to the security team."
+        }
+      ]
+    }
+  ]
+}

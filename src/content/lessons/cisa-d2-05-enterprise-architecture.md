@@ -7,6 +7,7 @@ domain: 2
 order: 5
 minutes: 7
 gated: false
+videoId: "eVg3YbUf-xM"
 taskStatement: "Evaluate whether enterprise architecture is used to keep IT investment aligned with business direction and to control technical complexity."
 objectives:
   - "State the purpose of enterprise architecture in governance terms."
