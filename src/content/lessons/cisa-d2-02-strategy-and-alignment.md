@@ -7,6 +7,7 @@ domain: 2
 order: 2
 minutes: 8
 gated: false
+videoId: "eUvG13QbmrM"
 taskStatement: "Evaluate whether the IT strategy is aligned with, and traceable to, the organisation's business strategy."
 objectives:
   - "Explain what business-IT alignment means and how an auditor tests for it."

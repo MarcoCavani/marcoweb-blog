@@ -1,0 +1,277 @@
+{
+  "lesson": "cisa-d2-03-policies-standards-procedures",
+  "title": "Policies, Standards, Procedures and Guidelines",
+  "source": "cisa-d2-03-policies-standards-procedures.srt",
+  "generated": "2026-07-27",
+  "duration": 228.36,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Policies, standards, procedures and guidelines."
+        },
+        {
+          "t": 2.98,
+          "text": "Four documents that candidates blur together, and the exam is precise about the differences, because their status is usually what the answer turns on."
+        }
+      ]
+    },
+    {
+      "t": 12.5,
+      "sentences": [
+        {
+          "t": 12.5,
+          "text": "Here is the situation."
+        },
+        {
+          "t": 14.14,
+          "text": "You ask to see the organisation’s rules on encryption, and you are handed four documents that contradict each other on the detail."
+        },
+        {
+          "t": 23.79,
+          "text": "One says data should be protected."
+        },
+        {
+          "t": 26.32,
+          "text": "One names an algorithm."
+        },
+        {
+          "t": 28.02,
+          "text": "One describes how to configure the tool."
+        },
+        {
+          "t": 31,
+          "text": "And one recommends a stronger cipher."
+        },
+        {
+          "t": 33.74,
+          "text": "Which one actually binds anyone?"
+        }
+      ]
+    },
+    {
+      "t": 36.12,
+      "sentences": [
+        {
+          "t": 36.12,
+          "text": "The first cut is simple: which of these are mandatory, and which are discretionary."
+        },
+        {
+          "t": 41.89,
+          "text": "Three of the four compel you."
+        },
+        {
+          "t": 43.91,
+          "text": "One does not."
+        },
+        {
+          "t": 44.81,
+          "text": "Getting that split right resolves most questions at this level, so let us place each one."
+        }
+      ]
+    },
+    {
+      "t": 51,
+      "sentences": [
+        {
+          "t": 51,
+          "text": "They form a hierarchy, from highest authority and least specific, down to lowest authority and most specific."
+        },
+        {
+          "t": 59.42,
+          "text": "Policy sets the direction."
+        },
+        {
+          "t": 61.43,
+          "text": "Standard fixes the specific rule."
+        },
+        {
+          "t": 63.98,
+          "text": "Procedure gives the method."
+        },
+        {
+          "t": 66.07,
+          "text": "Guideline offers advice."
+        }
+      ]
+    },
+    {
+      "t": 67.92,
+      "sentences": [
+        {
+          "t": 67.92,
+          "text": "At the top, the policy."
+        },
+        {
+          "t": 69.87,
+          "text": "A high-level statement of management intent."
+        },
+        {
+          "t": 73.61,
+          "text": "Broad, enduring, and mandatory."
+        },
+        {
+          "t": 76.24,
+          "text": "Sensitive data must be protected in storage and transit."
+        },
+        {
+          "t": 81,
+          "text": "It says what and why, never how."
+        }
+      ]
+    },
+    {
+      "t": 83.71,
+      "sentences": [
+        {
+          "t": 83.71,
+          "text": "Beneath it, the standard."
+        },
+        {
+          "t": 85.63,
+          "text": "A mandatory, specific rule that supports the policy."
+        },
+        {
+          "t": 89.63,
+          "text": "Data at rest must be encrypted using A-E-S two fifty-six."
+        },
+        {
+          "t": 94.01,
+          "text": "Specific enough to test, and binding."
+        },
+        {
+          "t": 96.86,
+          "text": "Standards are where a policy’s intent becomes a measurable requirement."
+        }
+      ]
+    },
+    {
+      "t": 102.31,
+      "sentences": [
+        {
+          "t": 102.31,
+          "text": "Then the procedure."
+        },
+        {
+          "t": 103.58,
+          "text": "The step-by-step method for carrying out a task in line with the standards."
+        },
+        {
+          "t": 108.58,
+          "text": "To enable disk encryption, do the following."
+        },
+        {
+          "t": 111.51,
+          "text": "Mandatory in the sense that the task must be done this way, but operational rather than directional."
+        }
+      ]
+    },
+    {
+      "t": 118.18,
+      "sentences": [
+        {
+          "t": 118.18,
+          "text": "And at the bottom, the guideline."
+        },
+        {
+          "t": 120.64,
+          "text": "Discretionary advice and recommended practice."
+        },
+        {
+          "t": 124.07,
+          "text": "Consider rotating keys more often for high-value data."
+        },
+        {
+          "t": 128.1,
+          "text": "Helpful, not binding."
+        },
+        {
+          "t": 129.66,
+          "text": "The guideline is the one level that does not compel anyone."
+        },
+        {
+          "t": 134.07,
+          "text": "So: policies, standards and procedures are mandatory; guidelines are not."
+        }
+      ]
+    },
+    {
+      "t": 139.51,
+      "sentences": [
+        {
+          "t": 139.51,
+          "text": "Now, why the levels are separated, because this is a favourite exam scenario."
+        },
+        {
+          "t": 144.19,
+          "text": "A policy states enduring intent and rarely changes, which is why it sits high and is often board-approved."
+        },
+        {
+          "t": 150.64,
+          "text": "A standard carries the specific value that technology forces you to revisit, an algorithm, a key length, a version."
+        },
+        {
+          "t": 157.63,
+          "text": "So the algorithm belongs in a standard, beneath the policy, where management can update it as cryptography moves on without reopening a board-approved policy."
+        },
+        {
+          "t": 167.24,
+          "text": "Put the algorithm in the policy, and you must amend the policy every time the technology changes."
+        }
+      ]
+    },
+    {
+      "t": 173.14,
+      "sentences": [
+        {
+          "t": 173.14,
+          "text": "And the framework only works if each document is treated according to its level."
+        },
+        {
+          "t": 177.77,
+          "text": "A guideline enforced as if it were mandatory is a real finding, because it corrodes the whole structure."
+        },
+        {
+          "t": 183.8,
+          "text": "If a discretionary recommendation can get you disciplined, staff can no longer tell what is genuinely required, and truly mandatory standards lose their authority in the noise."
+        }
+      ]
+    },
+    {
+      "t": 193.99,
+      "sentences": [
+        {
+          "t": 193.99,
+          "text": "So the exam uses this in two ways."
+        },
+        {
+          "t": 196.09,
+          "text": "When a question hinges on whether something is binding, the level tells you: standard, procedure and policy bind, a guideline does not."
+        },
+        {
+          "t": 204.42,
+          "text": "And when a question asks where a specific value belongs, the answer is almost always a standard beneath the policy, so it can change as technology does."
+        }
+      ]
+    },
+    {
+      "t": 213.79,
+      "sentences": [
+        {
+          "t": 213.79,
+          "text": "Carry this away."
+        },
+        {
+          "t": 214.85,
+          "text": "A standard is mandatory and a guideline is not, a policy sets direction and a procedure sets method."
+        },
+        {
+          "t": 221.47,
+          "text": "When the answer hinges on whether something binds, or on where a value belongs, the level is the answer."
+        }
+      ]
+    }
+  ]
+}

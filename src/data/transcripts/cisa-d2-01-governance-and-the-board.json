@@ -1,0 +1,253 @@
+{
+  "lesson": "cisa-d2-01-governance-and-the-board",
+  "title": "IT Governance and the Board's Role",
+  "source": "cisa-d2-01-governance-and-the-board.srt",
+  "generated": "2026-07-27",
+  "duration": 216.17,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "I-T governance and the board’s role."
+        },
+        {
+          "t": 2.04,
+          "text": "This lesson is about the distinction the whole of Domain 2 rests on: the difference between governing I-T and managing it, and what belongs to the board that can never be handed down."
+        }
+      ]
+    },
+    {
+      "t": 12.38,
+      "sentences": [
+        {
+          "t": 12.38,
+          "text": "Picture a company that directs its I-T well."
+        },
+        {
+          "t": 15.39,
+          "text": "There is a steering committee, a strategy document, and a C-I-O who clearly runs a tight operation."
+        },
+        {
+          "t": 22.16,
+          "text": "Everything looks healthy."
+        },
+        {
+          "t": 23.87,
+          "text": "Then you notice two things."
+        },
+        {
+          "t": 25.71,
+          "text": "The steering committee reports to the C-I-O, and the board has not discussed I-T in over a year."
+        },
+        {
+          "t": 32.27,
+          "text": "Nothing is technically broken, and yet the governance is."
+        }
+      ]
+    },
+    {
+      "t": 36.17,
+      "sentences": [
+        {
+          "t": 36.17,
+          "text": "Here is the distinction."
+        },
+        {
+          "t": 37.81,
+          "text": "Governance sets direction and holds people accountable for following it."
+        },
+        {
+          "t": 42.72,
+          "text": "Management runs I-T within that direction."
+        },
+        {
+          "t": 45.59,
+          "text": "Governance asks what I-T should achieve for the enterprise and whether management is delivering it."
+        },
+        {
+          "t": 52.35,
+          "text": "Management asks how to deliver it with the resources available."
+        },
+        {
+          "t": 56.65,
+          "text": "Most Domain 2 questions turn on this line."
+        }
+      ]
+    },
+    {
+      "t": 59.52,
+      "sentences": [
+        {
+          "t": 59.52,
+          "text": "So keep the two jobs separate in your head."
+        },
+        {
+          "t": 62.12,
+          "text": "Governance is the board’s work: what should I-T achieve, what risk are we willing to carry, and is management actually delivering."
+        },
+        {
+          "t": 69.96,
+          "text": "Management is the C-I-O’s work: how do we deliver what governance asked for, and with what resources."
+        },
+        {
+          "t": 76.06,
+          "text": "When an option has the board designing controls or picking technologies, it is wrong, that is management."
+        },
+        {
+          "t": 82.4,
+          "text": "When an option has management setting the enterprise’s risk appetite, that is wrong too, that belongs to governance."
+        }
+      ]
+    },
+    {
+      "t": 89.4,
+      "sentences": [
+        {
+          "t": 89.4,
+          "text": "Now the line that cannot move."
+        },
+        {
+          "t": 91.36,
+          "text": "A board can delegate authority to a committee."
+        },
+        {
+          "t": 94.36,
+          "text": "What it cannot delegate is accountability."
+        },
+        {
+          "t": 97.09,
+          "text": "It remains answerable to shareholders and regulators for the value I-T delivers and the risk it carries, no matter how much decision-making it hands down."
+        }
+      ]
+    },
+    {
+      "t": 107.14,
+      "sentences": [
+        {
+          "t": 107.14,
+          "text": "So what stays with the board, non-delegable."
+        },
+        {
+          "t": 110.11,
+          "text": "First, setting the strategic direction for I-T, so that I-T supports the enterprise’s objectives rather than its own."
+        }
+      ]
+    },
+    {
+      "t": 118.01,
+      "sentences": [
+        {
+          "t": 118.01,
+          "text": "Second, ensuring I-T actually delivers value for what it costs."
+        },
+        {
+          "t": 122.6,
+          "text": "And third, ensuring I-T risk is managed within an appetite the board itself has defined."
+        },
+        {
+          "t": 129.01,
+          "text": "Value and risk, both owned at the top."
+        }
+      ]
+    },
+    {
+      "t": 131.78,
+      "sentences": [
+        {
+          "t": 131.78,
+          "text": "And fourth, holding management accountable, through reporting the board can actually rely on."
+        },
+        {
+          "t": 138.02,
+          "text": "Set direction, ensure value, ensure risk is managed, hold management to account."
+        },
+        {
+          "t": 143.38,
+          "text": "Those four do not move down the organisation."
+        }
+      ]
+    },
+    {
+      "t": 146.4,
+      "sentences": [
+        {
+          "t": 146.4,
+          "text": "The fastest way to spot broken governance is to follow the reporting line, exactly as you would for the audit function in Domain 1."
+        },
+        {
+          "t": 154.5,
+          "text": "Oversight cannot report to the thing it oversees."
+        }
+      ]
+    },
+    {
+      "t": 157.54,
+      "sentences": [
+        {
+          "t": 157.54,
+          "text": "Which is the real failure in our scenario."
+        },
+        {
+          "t": 160.28,
+          "text": "A steering committee exists to align I-T with business needs on behalf of the enterprise."
+        },
+        {
+          "t": 166.08,
+          "text": "If it is chaired by the C-I-O and reports to the C-I-O, it oversees I-T while answering to the head of I-T."
+        },
+        {
+          "t": 173.06,
+          "text": "It cannot give independent, business-driven direction."
+        },
+        {
+          "t": 176.58,
+          "text": "The structure has quietly turned oversight into self-endorsement."
+        }
+      ]
+    },
+    {
+      "t": 180.82,
+      "sentences": [
+        {
+          "t": 180.82,
+          "text": "And here is the trap that costs marks."
+        },
+        {
+          "t": 183.3,
+          "text": "The instinct is to judge governance by how well I-T is run."
+        },
+        {
+          "t": 187.15,
+          "text": "But a superbly managed I-T function with no board oversight is still a governance failure, because good management is not a substitute for accountability."
+        },
+        {
+          "t": 197.21,
+          "text": "The exam rewards keeping the two apart."
+        }
+      ]
+    },
+    {
+      "t": 199.75,
+      "sentences": [
+        {
+          "t": 199.75,
+          "text": "So carry this question into every Domain 2 scenario."
+        },
+        {
+          "t": 203.46,
+          "text": "Do not ask, is I-T working well."
+        },
+        {
+          "t": 205.75,
+          "text": "Ask, who set the direction, and who holds them to it."
+        },
+        {
+          "t": 209.53,
+          "text": "That is the difference between management and governance, and it is what the exam is testing."
+        }
+      ]
+    }
+  ]
+}

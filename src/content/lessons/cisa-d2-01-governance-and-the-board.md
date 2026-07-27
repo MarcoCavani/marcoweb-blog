@@ -7,6 +7,7 @@ domain: 2
 order: 1
 minutes: 8
 gated: false
+videoId: "8VbyZO4myyE"
 taskStatement: "Evaluate whether an organisation's IT governance framework holds management accountable to the board for the use of IT."
 objectives:
   - "Distinguish governance from management and say which body owns each."

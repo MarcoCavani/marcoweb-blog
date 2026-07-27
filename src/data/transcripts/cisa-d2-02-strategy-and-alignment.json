@@ -1,0 +1,245 @@
+{
+  "lesson": "cisa-d2-02-strategy-and-alignment",
+  "title": "IT Strategy and Business Alignment",
+  "source": "cisa-d2-02-strategy-and-alignment.srt",
+  "generated": "2026-07-27",
+  "duration": 201.5,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "I-T strategy and business alignment."
+        },
+        {
+          "t": 2.31,
+          "text": "This lesson is about a simple test the exam applies to any I-T strategy: does it actually serve the business, or does it serve the technology."
+        }
+      ]
+    },
+    {
+      "t": 11.4,
+      "sentences": [
+        {
+          "t": 11.4,
+          "text": "Picture a strategy document that is genuinely impressive."
+        },
+        {
+          "t": 15.3,
+          "text": "Cloud migration, a data platform, an A-I roadmap, all current, all ambitious."
+        },
+        {
+          "t": 20.58,
+          "text": "You are inclined to call it strong."
+        },
+        {
+          "t": 22.98,
+          "text": "Then you ask a plain question of each initiative, what business objective does this serve, and the answers get vague."
+        },
+        {
+          "t": 30.99,
+          "text": "That vagueness is the finding."
+        }
+      ]
+    },
+    {
+      "t": 33.05,
+      "sentences": [
+        {
+          "t": 33.05,
+          "text": "Because alignment, stripped of jargon, is traceability."
+        },
+        {
+          "t": 36.97,
+          "text": "Every significant I-T initiative should trace back to a business objective it advances."
+        },
+        {
+          "t": 43.16,
+          "text": "I-T does not exist to be modern."
+        },
+        {
+          "t": 45.44,
+          "text": "It exists to help the enterprise meet its goals."
+        }
+      ]
+    },
+    {
+      "t": 48.86,
+      "sentences": [
+        {
+          "t": 48.86,
+          "text": "So the auditor’s test for alignment is not, is this strategy ambitious."
+        },
+        {
+          "t": 53.16,
+          "text": "It is, can each initiative be tied to a business need."
+        },
+        {
+          "t": 56.42,
+          "text": "A cloud migration that cuts the cost of a service the business is trying to scale is aligned."
+        },
+        {
+          "t": 62.05,
+          "text": "The same migration done just because the platform is old, with no business case, is maintenance wearing a strategy’s clothes."
+        },
+        {
+          "t": 69.6,
+          "text": "A plain strategy where every line serves a goal beats a dazzling one that serves the technology."
+        }
+      ]
+    },
+    {
+      "t": 75.41,
+      "sentences": [
+        {
+          "t": 75.41,
+          "text": "Two committees appear all through Domain 2, and the exam expects you to tell them apart."
+        },
+        {
+          "t": 81.4,
+          "text": "The I-T strategy committee operates at board level."
+        },
+        {
+          "t": 84.87,
+          "text": "It advises the board on the future direction of I-T and on whether I-T strategy supports the business strategy."
+        },
+        {
+          "t": 92.43,
+          "text": "It is about direction."
+        },
+        {
+          "t": 93.93,
+          "text": "The I-T steering committee operates below the board."
+        },
+        {
+          "t": 97.47,
+          "text": "It turns that direction into prioritised, resourced execution: which initiatives proceed, in what order, with what budget."
+        },
+        {
+          "t": 105.78,
+          "text": "It is about delivery."
+        }
+      ]
+    },
+    {
+      "t": 107.21,
+      "sentences": [
+        {
+          "t": 107.21,
+          "text": "Now the clearest sign of misalignment, and it shows up in the order decisions get made."
+        },
+        {
+          "t": 112.61,
+          "text": "When the I-T department selects projects on technical merit, and consults the business units only after approval, selection is technology-driven."
+        },
+        {
+          "t": 121.62,
+          "text": "The business need never shaped what was chosen."
+        }
+      ]
+    },
+    {
+      "t": 124.54,
+      "sentences": [
+        {
+          "t": 124.54,
+          "text": "And that is why the most significant risk is not old technology or an overspend."
+        },
+        {
+          "t": 129.63,
+          "text": "It is that the investment does not deliver business value, however well it is built."
+        },
+        {
+          "t": 134.97,
+          "text": "Business-driven selection reverses the order: the business states a need, and I-T proposes how to meet it."
+        },
+        {
+          "t": 141.71,
+          "text": "Alignment is as much about sequence as it is about content."
+        }
+      ]
+    },
+    {
+      "t": 145.46,
+      "sentences": [
+        {
+          "t": 145.46,
+          "text": "So hold on to what business-driven selection looks like."
+        },
+        {
+          "t": 149.6,
+          "text": "A stated business need comes first."
+        }
+      ]
+    },
+    {
+      "t": 152.18,
+      "sentences": [
+        {
+          "t": 152.18,
+          "text": "Then I-T proposes how to meet that need."
+        },
+        {
+          "t": 154.81,
+          "text": "The direction of travel runs from the business to the technology, not the other way."
+        }
+      ]
+    },
+    {
+      "t": 160.32,
+      "sentences": [
+        {
+          "t": 160.32,
+          "text": "What it is not: I-T picking the project and telling the business afterwards."
+        },
+        {
+          "t": 165.09,
+          "text": "And what it is not: a project chosen because the technology is current and interesting."
+        },
+        {
+          "t": 170.56,
+          "text": "Both of those are the technology leading, and both are the trap."
+        }
+      ]
+    },
+    {
+      "t": 174.58,
+      "sentences": [
+        {
+          "t": 174.58,
+          "text": "Which is the instinct that costs marks."
+        },
+        {
+          "t": 177.36,
+          "text": "An auditor impressed by the roadmap asks whether the technology is good."
+        },
+        {
+          "t": 182.5,
+          "text": "The exam asks whether the technology serves the business."
+        },
+        {
+          "t": 186.58,
+          "text": "Do not admire the strategy on its own terms."
+        }
+      ]
+    },
+    {
+      "t": 189.72,
+      "sentences": [
+        {
+          "t": 189.72,
+          "text": "So carry this away."
+        },
+        {
+          "t": 191.13,
+          "text": "Judge an I-T strategy by its traceability to business objectives, not by how advanced or ambitious it looks."
+        },
+        {
+          "t": 199.13,
+          "text": "The plain aligned strategy wins."
+        }
+      ]
+    }
+  ]
+}
