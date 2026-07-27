@@ -71,9 +71,11 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
 
   <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12" data-current-lesson={lesson.slug}>
     <nav class="text-xs text-gray-400 mb-5">
-      <a href="/training" class="hover:text-brand-blue">Training</a>
+      <a href="/training" class="hover:text-brand-blue">Courses</a>
       <span class="mx-2">›</span>
-      <span>{lesson.data.module}</span>
+      {lesson.data.domain
+        ? <a href={`/training/domain/${lesson.data.domain}/`} class="hover:text-brand-blue">{lesson.data.module}</a>
+        : <span>{lesson.data.module}</span>}
       <span class="mx-2">›</span>
       <span class="text-gray-500">Lesson {position} of {total}</span>
     </nav>

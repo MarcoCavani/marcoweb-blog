@@ -1,0 +1,187 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import Header from '../../../components/Header.astro'
+import Footer from '../../../components/Footer.astro'
+import NewsletterSignup from '../../../components/NewsletterSignup.astro'
+import ComingSoon from '../../../components/ComingSoon.astro'
+import { getCollection } from 'astro:content'
+import { buildDomains, EXAM_DOMAIN, examHref } from '../../../data/cisaDomains'
+
+const RELEASE = '2026-12-01'
+const PRIMER = 'itgc-foundations'
+
+export async function getStaticPaths() {
+  const all = await getCollection('lessons')
+  return buildDomains(all).map(d => ({ params: { n: String(d.n) }, props: { d } }))
+}
+
+const { d } = Astro.props
+const all = await getCollection('lessons')
+const primer = all.filter(l => l.data.course === PRIMER).sort((a, b) => a.data.order - b.data.order)
+---
+
+<Layout
+  title={`Domain ${d.n}: ${d.title} | CISA Exam Preparation | MarcoWeb`}
+  description={`CISA Domain ${d.n}, ${d.title}. ${d.weight}% of the exam. ${d.ready ? `${d.built} free lessons with scenario questions.` : 'In development.'}`}
+>
+  <Header />
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+    <nav class="text-xs text-gray-400 mb-6">
+      <a href="/training" class="hover:text-brand-blue">Courses</a>
+      <span class="mx-2">›</span>
+      <span class="text-gray-500">Domain {d.n}</span>
+    </nav>
+
+    <div class="mb-8">
+      <div class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1.5 rounded-full mb-4">
+        {d.ready ? (d.complete ? 'Available now' : `${d.built} of ${d.planned} lessons available`) : 'In development'}
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-3">
+        Domain {d.n}: {d.title}
+      </h1>
+      <p class="text-lg text-gray-500 leading-relaxed max-w-2xl">{d.blurb}</p>
+    </div>
+
+    <div class="flex flex-wrap gap-8 sm:gap-10 pb-8 mb-8 border-b border-gray-100">
+      <div>
+        <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{d.weight}%</div>
+        <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">of the exam</div>
+      </div>
+      <div>
+        <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{d.ready ? d.built : d.planned}</div>
+        <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">
+          {d.ready && !d.complete ? `of ${d.planned} lessons` : 'lessons'}
+        </div>
+      </div>
+      {d.ready && d.quizCount > 0 && (
+        <div>
+          <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{d.quizCount}</div>
+          <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">exam questions</div>
+        </div>
+      )}
+      {d.ready && d.minutes > 0 && (
+        <div>
+          <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{d.minutes}</div>
+          <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">minutes</div>
+        </div>
+      )}
+    </div>
+
+    {d.ready ? (
+      <>
+        {d.lessons[0] && (
+          <div class="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-gray-100 bg-white shadow-sm p-5 mb-8">
+            <div class="min-w-0">
+              <p class="text-xs uppercase tracking-widest text-gray-400 mb-1">Start here</p>
+              <p class="font-bold text-gray-900 leading-snug">{d.lessons[0].data.title}</p>
+            </div>
+            <div class="flex flex-wrap gap-2.5">
+              <a href={`/training/${d.lessons[0].slug}/`}
+                 class="shrink-0 inline-flex items-center gap-2 rounded-xl bg-brand-blue px-5 py-3 text-sm font-bold text-white hover:bg-brand-navy transition-colors">
+                Open lesson 1
+                <span aria-hidden="true">→</span>
+              </a>
+              {d.quizCount > 0 && (
+                <a href={examHref(d.n)}
+                   class="shrink-0 inline-flex items-center rounded-xl border border-gray-200 px-5 py-3 text-sm font-semibold text-gray-600 hover:border-brand-blue hover:text-brand-blue transition-colors">
+                  Practice exam
+                </a>
+              )}
+            </div>
+          </div>
+        )}
+
+        <ol class="space-y-3">
+          {d.lessons.map((l, li) => (
+            <li>
+              <a href={`/training/${l.slug}/`}
+                 class="flex items-start gap-4 rounded-xl border border-gray-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow group">
+                <span class="shrink-0 w-7 h-7 rounded-lg bg-blue-50 text-brand-blue text-xs font-bold flex items-center justify-center tabular-nums">
+                  {li + 1}
+                </span>
+                <span class="flex-1 min-w-0">
+                  <span class="block font-semibold text-gray-900 group-hover:text-brand-blue transition-colors">{l.data.title}</span>
+                  <span class="block text-sm text-gray-500 mt-1 leading-relaxed">{l.data.description}</span>
+                  <span class="block text-xs text-gray-400 mt-2 tabular-nums">
+                    {l.data.minutes} min{l.data.quiz ? ` · ${l.data.quiz.length} questions` : ''}
+                    {l.data.videoId ? ' · video' : ''}
+                  </span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ol>
+
+        {!d.complete && d.topics.length > 0 && (
+          <section class="mt-10 pt-8 border-t border-gray-100">
+            <h2 class="text-base font-bold text-gray-700 mb-2">Still to come in this domain</h2>
+            <p class="text-sm text-gray-500 leading-relaxed mb-4">
+              The remaining lessons cover these topics, added over the coming weeks.
+            </p>
+            <ul class="space-y-2.5">
+              {d.topics.map(t => (
+                <li class="flex gap-3 text-sm text-gray-500 leading-relaxed">
+                  <span class="shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {d.n === 1 && primer.length > 0 && (
+          <section class="mt-10 pt-8 border-t border-gray-100">
+            <h2 class="text-base font-bold text-gray-700 mb-2">Before you start, optional</h2>
+            <p class="text-sm text-gray-500 leading-relaxed mb-4">
+              A short primer on IT general controls, written for practitioners rather than exam
+              candidates. Useful background if ITGC is not your day-to-day, and not part of the
+              Domain 1 sequence.
+            </p>
+            <ul class="flex flex-wrap gap-2">
+              {primer.map(l => (
+                <li>
+                  <a href={`/training/${l.slug}/`}
+                     class="inline-block text-sm rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-gray-600 hover:text-brand-blue hover:border-brand-blue transition-colors">
+                    {l.data.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </>
+    ) : (
+      <div id="notify">
+        <ComingSoon
+          eyebrow={`Domain ${d.n} in development`}
+          title="This domain is being built"
+          intro={`${d.title} is ${d.weight}% of the exam. It follows the same structure as Domain 1: every lesson names the professional task it makes you able to perform, works an exam question through out loud, and closes with scenario questions that explain why each wrong option was attractive.`}
+          releaseDate={RELEASE}
+          headingLevel={2}
+          features={d.topics}
+          note="Independent training produced by Marco Cavani. Not affiliated with, endorsed by, or sponsored by ISACA. CISA is a registered trademark of ISACA."
+        />
+        <p class="mt-8 text-center">
+          <a href={EXAM_DOMAIN === 1 ? '/training/exam/' : examHref(EXAM_DOMAIN)}
+             class="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:text-brand-navy">
+            Meanwhile, sit the Domain 1 practice exam
+            <span aria-hidden="true">→</span>
+          </a>
+        </p>
+      </div>
+    )}
+
+    <p class="mt-12 pt-8 border-t border-gray-200 text-xs text-gray-400 leading-relaxed">
+      Independent training produced by Marco Cavani. Not affiliated with, endorsed by, or sponsored
+      by ISACA. CISA is a registered trademark of ISACA. Domain structure reflects the published exam
+      content outline and is not reproduced from ISACA materials.
+    </p>
+
+    <div class="mt-12">
+      <NewsletterSignup />
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
