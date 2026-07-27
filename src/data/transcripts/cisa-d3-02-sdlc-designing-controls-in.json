@@ -1,0 +1,241 @@
+{
+  "lesson": "cisa-d3-02-sdlc-designing-controls-in",
+  "title": "The SDLC and Designing Controls In",
+  "source": "cisa-d3-02-sdlc-designing-controls-in.srt",
+  "generated": "2026-07-27",
+  "duration": 217.1,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "The system development life cycle, and designing controls in."
+        },
+        {
+          "t": 3.81,
+          "text": "This lesson is about where in a project’s life the controls belong, and the exam has a firm answer: at the front, not the end."
+        }
+      ]
+    },
+    {
+      "t": 11.66,
+      "sentences": [
+        {
+          "t": 11.66,
+          "text": "Here is the situation."
+        },
+        {
+          "t": 13.01,
+          "text": "A new system reaches user acceptance testing when someone asks where the access controls and the audit logging are."
+        },
+        {
+          "t": 20.05,
+          "text": "They were never in the requirements, so they were never built."
+        },
+        {
+          "t": 23.84,
+          "text": "Adding them now means reopening the design and re-testing code, and slipping the deadline, so the team’s instinct is to launch and harden it afterwards."
+        },
+        {
+          "t": 33.14,
+          "text": "That instinct is the finding, and this lesson is why."
+        }
+      ]
+    },
+    {
+      "t": 36.38,
+      "sentences": [
+        {
+          "t": 36.38,
+          "text": "First, the shape of the life cycle."
+        },
+        {
+          "t": 38.98,
+          "text": "The names vary, but the exam expects the arc."
+        },
+        {
+          "t": 42.32,
+          "text": "Feasibility, is it worth doing."
+        },
+        {
+          "t": 44.62,
+          "text": "Requirements, what the system must do, functionally and in terms of controls."
+        },
+        {
+          "t": 50.34,
+          "text": "Design, then development."
+        },
+        {
+          "t": 52.19,
+          "text": "Testing, then implementation."
+        },
+        {
+          "t": 54.34,
+          "text": "And finally post-implementation, did it deliver."
+        },
+        {
+          "t": 57.9,
+          "text": "Each phase depends on the one before it, and that dependency is the whole point."
+        }
+      ]
+    },
+    {
+      "t": 63.84,
+      "sentences": [
+        {
+          "t": 63.84,
+          "text": "Now the economics."
+        },
+        {
+          "t": 65.12,
+          "text": "The cost of changing a system rises steeply as it moves down the life cycle."
+        },
+        {
+          "t": 70.55,
+          "text": "A control described in a requirements document is a sentence."
+        },
+        {
+          "t": 74.9,
+          "text": "The same control added after go-live is a change to a live system: re-analysis, re-coding, re-testing, and a release."
+        },
+        {
+          "t": 83.25,
+          "text": "It can cost many times more."
+        }
+      ]
+    },
+    {
+      "t": 85.25,
+      "sentences": [
+        {
+          "t": 85.25,
+          "text": "So the principle the exam rewards is this: design controls in, do not bolt them on."
+        },
+        {
+          "t": 90.33,
+          "text": "When a system is specified, its access controls, input validation, audit trails, segregation of duties and error handling should be part of the requirements, not a later thought."
+        }
+      ]
+    },
+    {
+      "t": 101.23,
+      "sentences": [
+        {
+          "t": 101.23,
+          "text": "Which is why a retrofit is a double problem."
+        },
+        {
+          "t": 103.99,
+          "text": "Controls grafted onto a finished system are usually weaker and less complete, because the architecture was not designed to hold them."
+        },
+        {
+          "t": 112.31,
+          "text": "And the system ran exposed until they were added."
+        },
+        {
+          "t": 115.38,
+          "text": "An auditor who finds controls were retrofitted after go-live carries both concerns at once."
+        }
+      ]
+    },
+    {
+      "t": 121.08,
+      "sentences": [
+        {
+          "t": 121.08,
+          "text": "This is where the auditor’s advisory role pays off."
+        },
+        {
+          "t": 124.19,
+          "text": "Reviewing the requirements for control adequacy, before anything is built, is the highest-leverage moment in the whole project."
+        },
+        {
+          "t": 131.94,
+          "text": "And it does not compromise independence, as long as the auditor advises rather than owns, exactly the line from the previous lesson."
+        }
+      ]
+    },
+    {
+      "t": 139.99,
+      "sentences": [
+        {
+          "t": 139.99,
+          "text": "So what does a good requirement look like."
+        },
+        {
+          "t": 143.21,
+          "text": "First, complete: nothing essential is missing."
+        }
+      ]
+    },
+    {
+      "t": 146.74,
+      "sentences": [
+        {
+          "t": 146.74,
+          "text": "Second, unambiguous: there is only one way to read it, so the design cannot drift from the intent."
+        }
+      ]
+    },
+    {
+      "t": 153.34,
+      "sentences": [
+        {
+          "t": 153.34,
+          "text": "And third, testable: you can actually prove it was met."
+        },
+        {
+          "t": 156.88,
+          "text": "You cannot run an acceptance test against a requirement no one can measure, which is next lesson’s problem."
+        }
+      ]
+    },
+    {
+      "t": 163.78,
+      "sentences": [
+        {
+          "t": 163.78,
+          "text": "Because everything downstream is built against the requirements."
+        },
+        {
+          "t": 167.57,
+          "text": "The design realises them, the code implements them, the tests check against them."
+        },
+        {
+          "t": 172.37,
+          "text": "So a requirement that is missing, ambiguous or wrong is designed in, coded in, and tested as if correct, and it emerges as a flaw in the delivered system."
+        },
+        {
+          "t": 181.5,
+          "text": "That is why incomplete or poorly defined requirements are the most common root cause of project failure, more than languages, hardware or sourcing."
+        },
+        {
+          "t": 190.21,
+          "text": "A system built well against the wrong specification is still the wrong system."
+        }
+      ]
+    },
+    {
+      "t": 194.83,
+      "sentences": [
+        {
+          "t": 194.83,
+          "text": "So carry this away."
+        },
+        {
+          "t": 196.01,
+          "text": "A control added after implementation accepts a window of exposure and is usually weaker than one designed in."
+        },
+        {
+          "t": 202.77,
+          "text": "Do not rush past requirements to start building."
+        },
+        {
+          "t": 205.75,
+          "text": "Requirements are not bureaucracy; they are the thing every later phase is measured against, and the cheapest place in the entire life cycle to get the system, and its controls, right."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "lesson": "cisa-d3-01-project-governance-business-case",
+  "title": "Project Governance, the Business Case and Feasibility",
+  "source": "cisa-d3-01-project-governance-business-case.srt",
+  "generated": "2026-07-27",
+  "duration": 217.61,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Project governance, the business case and feasibility."
+        },
+        {
+          "t": 3.31,
+          "text": "This is where Domain 3 begins, and the exam tests something specific: who owns a project, what justifies it, and what an I-T auditor may and may not do while it happens."
+        }
+      ]
+    },
+    {
+      "t": 13.66,
+      "sentences": [
+        {
+          "t": 13.66,
+          "text": "Picture a project that is already staffed and building."
+        },
+        {
+          "t": 17.11,
+          "text": "You ask for the approved business case and the feasibility study, and there is neither."
+        },
+        {
+          "t": 22.57,
+          "text": "It has a budget and a deadline, but nothing on record says why the organisation is spending the money, or how anyone will later know it worked."
+        },
+        {
+          "t": 31.55,
+          "text": "The code may turn out fine."
+        },
+        {
+          "t": 33.24,
+          "text": "The governance gap is the finding."
+        }
+      ]
+    },
+    {
+      "t": 35.38,
+      "sentences": [
+        {
+          "t": 35.38,
+          "text": "The exam separates who delivers a project from who owns it, and questions turn on that line."
+        },
+        {
+          "t": 41.2,
+          "text": "So keep the two apart as we go: delivering is not the same as owning."
+        }
+      ]
+    },
+    {
+      "t": 45.58,
+      "sentences": [
+        {
+          "t": 45.58,
+          "text": "First role: the sponsor."
+        },
+        {
+          "t": 47.18,
+          "text": "A business owner who owns the business case, secures the funding, and is accountable for the benefits the project exists to deliver."
+        },
+        {
+          "t": 56.02,
+          "text": "When a question asks who owns the benefits, it is the sponsor, not I-T."
+        }
+      ]
+    },
+    {
+      "t": 60.77,
+      "sentences": [
+        {
+          "t": 60.77,
+          "text": "Second: the steering committee."
+        },
+        {
+          "t": 62.72,
+          "text": "It provides governance and oversight, resolves cross-functional issues, keeps the project aligned with strategy, and approves progression at each stage gate."
+        },
+        {
+          "t": 72.59,
+          "text": "It governs; it does not do the day-to-day work."
+        }
+      ]
+    },
+    {
+      "t": 75.55,
+      "sentences": [
+        {
+          "t": 75.55,
+          "text": "Third: the project manager."
+        },
+        {
+          "t": 77.47,
+          "text": "They run delivery, managing scope, schedule and cost, and reporting progress."
+        },
+        {
+          "t": 82.93,
+          "text": "They deliver the project, but they do not own the business benefits that justify it."
+        },
+        {
+          "t": 88.88,
+          "text": "Confusing delivery with ownership is the reliable trap."
+        }
+      ]
+    },
+    {
+      "t": 92.78,
+      "sentences": [
+        {
+          "t": 92.78,
+          "text": "Now, what justifies a project before it spends resources."
+        },
+        {
+          "t": 96.28,
+          "text": "The business case sets expected costs against expected benefits and shows how the work supports strategy."
+        },
+        {
+          "t": 102.71,
+          "text": "And it is not written once and filed."
+        },
+        {
+          "t": 104.98,
+          "text": "It is revisited at each stage gate, so a project whose costs have ballooned or whose benefits have evaporated can be stopped rather than finished out of momentum."
+        }
+      ]
+    },
+    {
+      "t": 114.91,
+      "sentences": [
+        {
+          "t": 114.91,
+          "text": "Feasibility is a separate question: not is it worth doing, but can it be done."
+        },
+        {
+          "t": 120.29,
+          "text": "Economic, does it pay back."
+        },
+        {
+          "t": 122.16,
+          "text": "Technical, can it be built with the technology and skills available."
+        },
+        {
+          "t": 126.85,
+          "text": "Operational, will the organisation actually adopt and run it."
+        },
+        {
+          "t": 131.06,
+          "text": "Scheduling and legal, can it be delivered in time and within the law."
+        },
+        {
+          "t": 135.82,
+          "text": "A project that fails feasibility should not proceed, however attractive the business case looks."
+        }
+      ]
+    },
+    {
+      "t": 142.44,
+      "sentences": [
+        {
+          "t": 142.44,
+          "text": "So where does the auditor sit."
+        },
+        {
+          "t": 144.19,
+          "text": "The auditor may review the governance and the controls being designed in, advise on what controls the system needs, early advice makes them cheaper and stronger, and report to the sponsor and the committee."
+        },
+        {
+          "t": 156.2,
+          "text": "What the auditor may not do is own any of it: manage the project, make the go or no-go decision, or design and build the controls."
+        }
+      ]
+    },
+    {
+      "t": 163.78,
+      "sentences": [
+        {
+          "t": 163.78,
+          "text": "Because the moment you design a control, you cannot later give an independent opinion on whether it works."
+        },
+        {
+          "t": 170.45,
+          "text": "Advise, do not own."
+        },
+        {
+          "t": 171.65,
+          "text": "It is the same discipline as reporting a finding rather than fixing it in Domain 1, and evaluating a risk response rather than making it in Domain 2."
+        }
+      ]
+    },
+    {
+      "t": 181.03,
+      "sentences": [
+        {
+          "t": 181.03,
+          "text": "And here is why the missing case matters so much."
+        },
+        {
+          "t": 184.2,
+          "text": "Without an approved business case and feasibility study, there is no documented justification, no confirmation the project is viable, and no benchmark."
+        },
+        {
+          "t": 193.95,
+          "text": "At the end of the domain, the post-implementation review will have nothing to measure success against."
+        },
+        {
+          "t": 200.54,
+          "text": "No case, no benchmark."
+        }
+      ]
+    },
+    {
+      "t": 201.96,
+      "sentences": [
+        {
+          "t": 201.96,
+          "text": "So carry this away."
+        },
+        {
+          "t": 203.15,
+          "text": "I-T and the project manager build and deliver; the business sponsor owns the reason and the result."
+        },
+        {
+          "t": 209.38,
+          "text": "When a project has no approved case, that governance gap is the finding, and the business case belongs to the business, not to I-T."
+        }
+      ]
+    }
+  ]
+}

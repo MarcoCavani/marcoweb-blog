@@ -1,0 +1,253 @@
+{
+  "lesson": "cisa-d3-07-application-controls-input-processing-output",
+  "title": "Application Controls: Input, Processing and Output",
+  "source": "cisa-d3-07-application-controls-input-processing-output.srt",
+  "generated": "2026-07-27",
+  "duration": 268.54,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Application controls: input, processing and output."
+        },
+        {
+          "t": 3.09,
+          "text": "This is the last lesson of Domain 3, and it is where the whole domain’s goal, a system you can trust, becomes concrete, in the controls inside the application that make each transaction dependable."
+        }
+      ]
+    },
+    {
+      "t": 15.02,
+      "sentences": [
+        {
+          "t": 15.02,
+          "text": "Start with the situation."
+        },
+        {
+          "t": 16.58,
+          "text": "A clerk mistypes an account number."
+        },
+        {
+          "t": 18.75,
+          "text": "Does the system catch it at the point of entry, or does the payment go to the wrong account, process cleanly, and appear on a report as if it were correct?"
+        },
+        {
+          "t": 28.38,
+          "text": "The answer depends on whether controls sit at every stage of the flow, not just the first one."
+        }
+      ]
+    },
+    {
+      "t": 34.22,
+      "sentences": [
+        {
+          "t": 34.22,
+          "text": "First, the distinction the exam returns to again and again."
+        },
+        {
+          "t": 37.84,
+          "text": "Application controls are specific to one application or business process, and they assure that application’s transactions: their completeness, accuracy, validity and authorisation."
+        },
+        {
+          "t": 48.85,
+          "text": "General controls, the I-T general controls at the heart of the ITGC world, are pervasive across the whole environment: access management, change management, operations, physical security."
+        },
+        {
+          "t": 60.3,
+          "text": "They do not process transactions; they create the conditions in which application controls can be trusted."
+        }
+      ]
+    },
+    {
+      "t": 66.79,
+      "sentences": [
+        {
+          "t": 66.79,
+          "text": "And the dependency runs one way."
+        },
+        {
+          "t": 68.7,
+          "text": "If change management is weak, someone can alter the application’s logic without authorisation, and every application control inside it is now suspect."
+        },
+        {
+          "t": 77.67,
+          "text": "So strong application controls sitting on weak general controls give false comfort."
+        },
+        {
+          "t": 82.64,
+          "text": "When a question asks you to tell them apart: application controls are specific to a process and assure its transactions; general controls are pervasive and assure the environment."
+        }
+      ]
+    },
+    {
+      "t": 93.34,
+      "sentences": [
+        {
+          "t": 93.34,
+          "text": "Within an application, the controls are grouped by where in the flow they act, and the objective is the same throughout, completeness, accuracy, validity and authorisation, but each stage guards a different point."
+        }
+      ]
+    },
+    {
+      "t": 105.22,
+      "sentences": [
+        {
+          "t": 105.22,
+          "text": "Stage one, input controls, ensure the data entering the system is right before it is accepted, the cheapest place to catch an error, at the door."
+        },
+        {
+          "t": 114.5,
+          "text": "Validation and edit checks: range, limit, format and existence checks."
+        },
+        {
+          "t": 118.99,
+          "text": "Check digits, catching a transposed or mistyped identifier like our account number."
+        },
+        {
+          "t": 124.3,
+          "text": "Sequence checks, catching missing or duplicate items in a numbered series."
+        },
+        {
+          "t": 129.04,
+          "text": "Batch control totals, and authorisation that the input was permitted."
+        }
+      ]
+    },
+    {
+      "t": 133.46,
+      "sentences": [
+        {
+          "t": 133.46,
+          "text": "Stage two, processing controls, ensure the data is handled completely and accurately once inside."
+        },
+        {
+          "t": 139.55,
+          "text": "The data was correct going in; these confirm nothing was lost or corrupted while the system worked on it."
+        },
+        {
+          "t": 146.15,
+          "text": "Run-to-run totals, carrying record counts and control totals from the start of a run to the end and comparing them."
+        },
+        {
+          "t": 153.37,
+          "text": "Reconciliation between files or stages."
+        },
+        {
+          "t": 155.81,
+          "text": "And reasonableness and limit checks applied during calculation."
+        }
+      ]
+    },
+    {
+      "t": 159.77,
+      "sentences": [
+        {
+          "t": 159.77,
+          "text": "Stage three, output controls, ensure the results are complete, accurate and reach only the people entitled to them."
+        },
+        {
+          "t": 167.14,
+          "text": "Reconciling the output back to the input and processing control totals."
+        },
+        {
+          "t": 171.69,
+          "text": "Review of the output for completeness and reasonableness."
+        },
+        {
+          "t": 175.34,
+          "text": "Controlled distribution, so a report of sensitive data goes only to authorised recipients."
+        },
+        {
+          "t": 181.11,
+          "text": "And error and exception reports, surfacing what did not process correctly."
+        }
+      ]
+    },
+    {
+      "t": 185.86,
+      "sentences": [
+        {
+          "t": 185.86,
+          "text": "Here is the point: one stage is never enough."
+        },
+        {
+          "t": 188.72,
+          "text": "Perfect input validation does not help if a processing error then corrupts the data, or if a clean, correct report is emailed to the wrong distribution list."
+        },
+        {
+          "t": 198.69,
+          "text": "Each stage catches only its own kind of failure."
+        }
+      ]
+    },
+    {
+      "t": 201.74,
+      "sentences": [
+        {
+          "t": 201.74,
+          "text": "Picture the failure chain."
+        },
+        {
+          "t": 203.42,
+          "text": "A transaction can be entered correctly, processed wrongly, and output to the wrong person."
+        },
+        {
+          "t": 209.22,
+          "text": "Only a control at each stage catches the failure that belongs to it."
+        },
+        {
+          "t": 213.6,
+          "text": "That is why the auditor’s question is never just, is there input validation."
+        },
+        {
+          "t": 218.5,
+          "text": "It is whether completeness, accuracy, validity and authorisation are protected all the way through."
+        }
+      ]
+    },
+    {
+      "t": 224.88,
+      "sentences": [
+        {
+          "t": 224.88,
+          "text": "So think of the shape of it as in, through, out."
+        },
+        {
+          "t": 227.83,
+          "text": "Correct in at the front, intact through the middle, and out only to the right hands."
+        },
+        {
+          "t": 232.99,
+          "text": "That end-to-end assurance is exactly what makes the delivered system trustworthy, which was the whole purpose of Domain 3."
+        }
+      ]
+    },
+    {
+      "t": 240.48,
+      "sentences": [
+        {
+          "t": 240.48,
+          "text": "So carry this away, and it closes the domain."
+        },
+        {
+          "t": 243.43,
+          "text": "Application controls assure a process’s transactions; general controls assure the environment those controls run in, and weak general controls quietly undermine strong application ones."
+        },
+        {
+          "t": 255.56,
+          "text": "And do not treat robust input validation as the whole job: input controls only guard the door."
+        },
+        {
+          "t": 261.72,
+          "text": "A trustworthy system needs control across input, processing and output together."
+        },
+        {
+          "t": 266.96,
+          "text": "That completes Domain 3."
+        }
+      ]
+    }
+  ]
+}

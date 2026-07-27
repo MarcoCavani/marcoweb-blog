@@ -7,6 +7,7 @@ domain: 3
 order: 7
 minutes: 8
 gated: false
+videoId: "iwu2FmIxNas"
 taskStatement: "Evaluate whether an application's controls ensure the completeness, accuracy, validity and authorisation of its transactions across input, processing and output."
 objectives:
   - "Classify a control as input, processing or output, and state what it assures."

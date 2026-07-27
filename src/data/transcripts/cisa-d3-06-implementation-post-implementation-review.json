@@ -1,0 +1,229 @@
+{
+  "lesson": "cisa-d3-06-implementation-post-implementation-review",
+  "title": "Implementation Strategies and the Post-Implementation Review",
+  "source": "cisa-d3-06-implementation-post-implementation-review.srt",
+  "generated": "2026-07-27",
+  "duration": 233.93,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Implementation strategies and the post-implementation review."
+        },
+        {
+          "t": 3.89,
+          "text": "Two decisions hide in this lesson: how to switch the business over to a new system, and whether the project is really finished at go-live."
+        },
+        {
+          "t": 12.7,
+          "text": "The exam has a firm view on both."
+        }
+      ]
+    },
+    {
+      "t": 14.81,
+      "sentences": [
+        {
+          "t": 14.81,
+          "text": "The situation."
+        },
+        {
+          "t": 15.65,
+          "text": "The build is done, the data is converted, and now the project has to actually change everyone over."
+        },
+        {
+          "t": 21.64,
+          "text": "One camp wants to run the old and new systems side by side for a month; another wants to save the cost and flip everyone to the new system on Saturday night, old system off."
+        },
+        {
+          "t": 32.11,
+          "text": "And once it is live, the plan is to close the project and move the team on."
+        }
+      ]
+    },
+    {
+      "t": 36.65,
+      "sentences": [
+        {
+          "t": 36.65,
+          "text": "So, the ways to change over, from safe to fast."
+        },
+        {
+          "t": 39.69,
+          "text": "Parallel running: old and new operate together for a period, their outputs are compared, and the old system is a ready fallback."
+        },
+        {
+          "t": 47.99,
+          "text": "It is the lowest risk, and the highest cost, because you run and reconcile two systems at once."
+        }
+      ]
+    },
+    {
+      "t": 54.14,
+      "sentences": [
+        {
+          "t": 54.14,
+          "text": "Phased changeover: the move happens in stages, module by module or site by site."
+        },
+        {
+          "t": 59.09,
+          "text": "Risk and cost sit in the middle, a failure is contained to the stage, but the two systems must interoperate during the transition."
+        }
+      ]
+    },
+    {
+      "t": 67.13,
+      "sentences": [
+        {
+          "t": 67.13,
+          "text": "Pilot: one site or group adopts the new system first, limiting the blast radius before a wider rollout."
+        },
+        {
+          "t": 73.7,
+          "text": "And direct, or big-bang, cutover: everyone moves at once and the old system is retired immediately."
+        },
+        {
+          "t": 80.02,
+          "text": "Cheapest and fastest, and the highest risk, because there is no fallback if the new system fails."
+        }
+      ]
+    },
+    {
+      "t": 86.21,
+      "sentences": [
+        {
+          "t": 86.21,
+          "text": "What separates the low-risk options from the high-risk one is the fallback."
+        },
+        {
+          "t": 90.69,
+          "text": "Parallel and phased keep a way back; a direct cutover does not."
+        },
+        {
+          "t": 94.45,
+          "text": "That is why parallel running is the lowest-risk choice and also the most resource-intensive."
+        },
+        {
+          "t": 99.95,
+          "text": "When a question asks which changeover carries the least risk, it is parallel, precisely because the old system stays live to compare against and fall back to."
+        }
+      ]
+    },
+    {
+      "t": 109.39,
+      "sentences": [
+        {
+          "t": 109.39,
+          "text": "So when a critical system is moved by big-bang cutover, the auditor’s greatest concern is exactly that: if the new system fails on Monday morning, there is nothing to revert to."
+        },
+        {
+          "t": 120.24,
+          "text": "That does not forbid a direct cutover; it raises the bar."
+        },
+        {
+          "t": 123.73,
+          "text": "It demands exhaustive testing beforehand and a tested rollback plan, a rehearsed, proven way back to a working state, not a paragraph in a document."
+        },
+        {
+          "t": 132.81,
+          "text": "An untested rollback is not a fallback; it is a hope."
+        }
+      ]
+    },
+    {
+      "t": 136.06,
+      "sentences": [
+        {
+          "t": 136.06,
+          "text": "Which means there is no single right changeover; there is a right one for the risk."
+        },
+        {
+          "t": 140.81,
+          "text": "The more unacceptable a failure would be, the more you lean toward parallel running and away from a direct cutover."
+        }
+      ]
+    },
+    {
+      "t": 147.38,
+      "sentences": [
+        {
+          "t": 147.38,
+          "text": "Now the second decision."
+        },
+        {
+          "t": 148.98,
+          "text": "Going live is not the finish line."
+        },
+        {
+          "t": 151.24,
+          "text": "The project set out to deliver benefits, the ones the sponsor put in the business case back in lesson one, and no one yet knows whether it did."
+        },
+        {
+          "t": 160.76,
+          "text": "That is the job of the post-implementation review."
+        }
+      ]
+    },
+    {
+      "t": 164.09,
+      "sentences": [
+        {
+          "t": 164.09,
+          "text": "A post-implementation review looks back and asks whether the system met its objectives and delivered the expected benefits, at the expected cost."
+        },
+        {
+          "t": 172.59,
+          "text": "Two things make it meaningful."
+        },
+        {
+          "t": 174.35,
+          "text": "Timing: it is conducted after the system has stabilised into normal operation, not at go-live, because too early you measure teething troubles, not steady-state value."
+        },
+        {
+          "t": 184.15,
+          "text": "And independence: it is most credible when performed by someone independent of the project, so the people who delivered it are not the ones grading it."
+        }
+      ]
+    },
+    {
+      "t": 193.01,
+      "sentences": [
+        {
+          "t": 193.01,
+          "text": "And here the thread from lesson one closes."
+        },
+        {
+          "t": 195.44,
+          "text": "Because the benefits were stated and measurable at the start, the review has something concrete to check them against."
+        },
+        {
+          "t": 202.1,
+          "text": "A project with no approved business case leaves the review with nothing to measure, which is why the two lessons are two ends of the same thread."
+        }
+      ]
+    },
+    {
+      "t": 210.29,
+      "sentences": [
+        {
+          "t": 210.29,
+          "text": "So carry this away."
+        },
+        {
+          "t": 211.46,
+          "text": "Judge a changeover by its fallback, not by its speed; a direct cutover of a critical system without a tested rollback is the classic wrong choice."
+        },
+        {
+          "t": 220.47,
+          "text": "And do not treat go-live as the end."
+        },
+        {
+          "t": 222.69,
+          "text": "The loop closes at the post-implementation review, conducted after stabilisation, ideally independently, measuring the delivered system against the benefits it was supposed to bring."
+        }
+      ]
+    }
+  ]
+}

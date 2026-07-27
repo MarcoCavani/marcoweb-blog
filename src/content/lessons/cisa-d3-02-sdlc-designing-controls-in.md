@@ -7,6 +7,7 @@ domain: 3
 order: 2
 minutes: 8
 gated: false
+videoId: "psx9I8_v8jw"
 taskStatement: "Evaluate whether controls and requirements are defined early enough in the system development life cycle to be effective and testable."
 objectives:
   - "Outline the phases of the system development life cycle."

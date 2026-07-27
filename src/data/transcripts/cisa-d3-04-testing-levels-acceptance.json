@@ -1,0 +1,241 @@
+{
+  "lesson": "cisa-d3-04-testing-levels-acceptance",
+  "title": "Testing: From Unit to User Acceptance",
+  "source": "cisa-d3-04-testing-levels-acceptance.srt",
+  "generated": "2026-07-27",
+  "duration": 230.62,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Testing, from unit to user acceptance."
+        },
+        {
+          "t": 2.94,
+          "text": "This lesson is about what testing proves, and who gets to say the system is accepted."
+        },
+        {
+          "t": 9.51,
+          "text": "The exam is firm on both."
+        }
+      ]
+    },
+    {
+      "t": 11.45,
+      "sentences": [
+        {
+          "t": 11.45,
+          "text": "The situation."
+        },
+        {
+          "t": 12.34,
+          "text": "A new system has passed system testing."
+        },
+        {
+          "t": 14.84,
+          "text": "The developers are happy, the defect list is short, and the project wants to go live this weekend."
+        },
+        {
+          "t": 21.12,
+          "text": "You ask who signed the user acceptance, and the answer is the development lead did, the users were busy."
+        },
+        {
+          "t": 27.78,
+          "text": "Then you notice the test environment was loaded with a full copy of last month’s live customer data, so the tests would be realistic."
+        },
+        {
+          "t": 36.29,
+          "text": "Two things are wrong here, and both are reliable exam points."
+        }
+      ]
+    },
+    {
+      "t": 40.2,
+      "sentences": [
+        {
+          "t": 40.2,
+          "text": "First, the levels of testing, which build on each other from the small and specific to the whole and business-facing."
+        },
+        {
+          "t": 47.51,
+          "text": "Unit testing checks the smallest pieces, individual programs, in isolation."
+        }
+      ]
+    },
+    {
+      "t": 52.2,
+      "sentences": [
+        {
+          "t": 52.2,
+          "text": "Integration testing then checks that those pieces work together and pass data correctly between them."
+        }
+      ]
+    },
+    {
+      "t": 58.08,
+      "sentences": [
+        {
+          "t": 58.08,
+          "text": "System testing checks the complete system against its technical specification, does it work as designed, end to end."
+        },
+        {
+          "t": 64.8,
+          "text": "And user acceptance testing checks the whole system against the business requirements, judged by the people who will use it."
+        },
+        {
+          "t": 71.98,
+          "text": "Each level assumes the one below it has passed, and the last one answers a different question from the rest."
+        }
+      ]
+    },
+    {
+      "t": 78.24,
+      "sentences": [
+        {
+          "t": 78.24,
+          "text": "That is the key."
+        },
+        {
+          "t": 79.33,
+          "text": "Unit, integration and system testing all ask, does the system work as built."
+        },
+        {
+          "t": 84.49,
+          "text": "Only user acceptance testing asks, does the system do what the business actually needs."
+        },
+        {
+          "t": 90.4,
+          "text": "And only the users can answer that, so user acceptance is owned and signed off by the business, not the developers."
+        }
+      ]
+    },
+    {
+      "t": 98.21,
+      "sentences": [
+        {
+          "t": 98.21,
+          "text": "Why not the developers."
+        },
+        {
+          "t": 99.53,
+          "text": "Because developers testing their own work can confirm it runs, but they cannot be the authority that accepts it meets a need they did not define."
+        },
+        {
+          "t": 107.87,
+          "text": "It is the same independence logic that runs through the whole course."
+        },
+        {
+          "t": 111.84,
+          "text": "And a system can pass every developer test and still be the wrong system, because system testing checks it against the specification, and the specification itself might have missed the business need."
+        },
+        {
+          "t": 123.28,
+          "text": "Accepting a developer’s sign-off in place of the users’ is accepting the wrong signature."
+        }
+      ]
+    },
+    {
+      "t": 128.4,
+      "sentences": [
+        {
+          "t": 128.4,
+          "text": "Now the second finding: keep live data out of test."
+        },
+        {
+          "t": 131.95,
+          "text": "Test environments exist to be poked at, so access is broader, change is looser, and the controls that guard production are relaxed."
+        },
+        {
+          "t": 141.08,
+          "text": "That is fine for test data."
+        },
+        {
+          "t": 142.96,
+          "text": "It is a breach for live data."
+        }
+      ]
+    },
+    {
+      "t": 144.98,
+      "sentences": [
+        {
+          "t": 144.98,
+          "text": "Copying real customer or employee records into a test environment exposes confidential and personal information to developers, testers and tools that would never be allowed near it in production."
+        },
+        {
+          "t": 156.57,
+          "text": "The risk is not that the tests are unrealistic; it is that real personal data is now sitting in a weakly controlled place."
+        },
+        {
+          "t": 163.82,
+          "text": "The fix is to mask or anonymise the data first, keeping its shape without exposing the individuals in it."
+        },
+        {
+          "t": 170.06,
+          "text": "When a question weighs realism against exposure, exposure wins."
+        }
+      ]
+    },
+    {
+      "t": 173.81,
+      "sentences": [
+        {
+          "t": 173.81,
+          "text": "And where does the auditor sit."
+        },
+        {
+          "t": 175.71,
+          "text": "The auditor reviews that acceptance happened properly, that the users tested and signed, not that the auditor performs the acceptance."
+        },
+        {
+          "t": 183.93,
+          "text": "An auditor who runs the acceptance test becomes a participant and loses the independent position, exactly as in the earlier lessons."
+        }
+      ]
+    },
+    {
+      "t": 192.02,
+      "sentences": [
+        {
+          "t": 192.02,
+          "text": "So hold on to the catch."
+        },
+        {
+          "t": 193.6,
+          "text": "A passed test is not automatically the right system."
+        },
+        {
+          "t": 197.03,
+          "text": "System testing confirms the build matches the specification; user acceptance confirms the specification matched the need."
+        },
+        {
+          "t": 205,
+          "text": "That is why both exist, and why the users are the ones who get to say the system is fit for use."
+        }
+      ]
+    },
+    {
+      "t": 211.32,
+      "sentences": [
+        {
+          "t": 211.32,
+          "text": "So carry this away."
+        },
+        {
+          "t": 212.58,
+          "text": "Acceptance is the users’ decision, made through user acceptance testing, never the developers’ sign-off."
+        },
+        {
+          "t": 219.45,
+          "text": "And when realism tempts you toward live data, mask it or manufacture it."
+        },
+        {
+          "t": 224.21,
+          "text": "Testing proves the system meets its requirements, and the users are the ones who confirm it does."
+        }
+      ]
+    }
+  ]
+}

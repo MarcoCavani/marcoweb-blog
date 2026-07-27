@@ -1,0 +1,209 @@
+{
+  "lesson": "cisa-d3-03-development-methodologies-agile",
+  "title": "Development Methodologies: Waterfall, Agile and the Auditor",
+  "source": "cisa-d3-03-development-methodologies-agile.srt",
+  "generated": "2026-07-27",
+  "duration": 219.65,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Development methodologies: waterfall, agile, and the auditor."
+        },
+        {
+          "t": 3.75,
+          "text": "This lesson is about the control implications of how a team builds software, and the exam’s point is that the method changes the evidence, never the objective."
+        }
+      ]
+    },
+    {
+      "t": 13.54,
+      "sentences": [
+        {
+          "t": 13.54,
+          "text": "Two projects."
+        },
+        {
+          "t": 14.36,
+          "text": "The first runs waterfall: a thick requirements document signed off, then design, then build, then a formal test phase, each gate with a signature you can put your finger on."
+        },
+        {
+          "t": 25.28,
+          "text": "The second runs agile: two-week sprints, a backlog, working software every fortnight, and not a phase-gate document in sight."
+        },
+        {
+          "t": 33.17,
+          "text": "The agile team tells you there is nothing to audit."
+        },
+        {
+          "t": 36.4,
+          "text": "Both statements are wrong in the same way."
+        }
+      ]
+    },
+    {
+      "t": 39.05,
+      "sentences": [
+        {
+          "t": 39.05,
+          "text": "Start with the two shapes."
+        },
+        {
+          "t": 40.61,
+          "text": "Waterfall is sequential: each phase completes and is signed off before the next begins."
+        },
+        {
+          "t": 45.84,
+          "text": "Its strength for an auditor is clear checkpoints and heavy documentation; its weakness is rigidity, change late in the project is expensive."
+        },
+        {
+          "t": 54.25,
+          "text": "Agile delivers in small increments, working software early and often, adapting to feedback each cycle."
+        },
+        {
+          "t": 60.38,
+          "text": "Its strength is responsiveness; its cost, for control, is that the neat phase documents give way to many smaller, faster artefacts, and the checkpoints are continuous rather than fixed."
+        }
+      ]
+    },
+    {
+      "t": 71.5,
+      "sentences": [
+        {
+          "t": 71.5,
+          "text": "Here is the key."
+        },
+        {
+          "t": 72.44,
+          "text": "The control objectives are identical across both: requirements are understood, controls are built in, changes are authorised, testing proves the system, and someone accepts it."
+        },
+        {
+          "t": 82.83,
+          "text": "What changes between the methods is not whether those things happen, but where the evidence that they happened lives."
+        }
+      ]
+    },
+    {
+      "t": 89.74,
+      "sentences": [
+        {
+          "t": 89.74,
+          "text": "So the mistake is to read the difference as waterfall is controlled and agile is not."
+        },
+        {
+          "t": 95.16,
+          "text": "Agile is not uncontrolled; its evidence is distributed rather than absent."
+        },
+        {
+          "t": 99.88,
+          "text": "Think of it as a different filing cabinet, not an empty one."
+        }
+      ]
+    },
+    {
+      "t": 103.7,
+      "sentences": [
+        {
+          "t": 103.7,
+          "text": "Where does agile keep it."
+        },
+        {
+          "t": 105.38,
+          "text": "First, the product backlog and its acceptance criteria: these are the requirements, written incrementally."
+        }
+      ]
+    },
+    {
+      "t": 112.46,
+      "sentences": [
+        {
+          "t": 112.46,
+          "text": "Second, the definition of done: a control gate applied to every increment, often including testing and review before anything is called finished."
+        }
+      ]
+    },
+    {
+      "t": 120.86,
+      "sentences": [
+        {
+          "t": 120.86,
+          "text": "Third, the sprint reviews, where the business sees and accepts working software, the continuous form of user acceptance."
+        },
+        {
+          "t": 128.05,
+          "text": "And fourth, the automated test suites and the version history, which produce control evidence on every single change."
+        }
+      ]
+    },
+    {
+      "t": 135.05,
+      "sentences": [
+        {
+          "t": 135.05,
+          "text": "So when a team says we are agile, there is nothing to audit, the auditor’s answer is not to accept it, not to declare the project uncontrolled, and certainly not to order the team back to waterfall."
+        },
+        {
+          "t": 146.31,
+          "text": "It is to find the evidence where an agile project keeps it."
+        },
+        {
+          "t": 149.67,
+          "text": "Dictating the methodology is beyond the auditor’s role; assessing whether the control objectives are met, in whatever artefacts the method produces, is exactly the role."
+        }
+      ]
+    },
+    {
+      "t": 159.29,
+      "sentences": [
+        {
+          "t": 159.29,
+          "text": "There is a second trap in this area: prototyping."
+        },
+        {
+          "t": 162.05,
+          "text": "Building a quick, working model to clarify what users actually want is a legitimate, useful technique, and it is built for speed, not to production standard, so it is light on design rigour, controls and testing."
+        },
+        {
+          "t": 174,
+          "text": "The danger is that the prototype works well enough that someone decides to ship it, promoting straight to production a thing that never went through proper design, control specification or testing."
+        }
+      ]
+    },
+    {
+      "t": 185.11,
+      "sentences": [
+        {
+          "t": 185.11,
+          "text": "Used well, a prototype informs the build."
+        },
+        {
+          "t": 187.69,
+          "text": "Used badly, it becomes the build, carrying its missing controls and unproven quality into production."
+        },
+        {
+          "t": 194.03,
+          "text": "The same caution applies to rapid development generally: speed is the benefit and the risk, and the control objectives cannot be traded away for it."
+        }
+      ]
+    },
+    {
+      "t": 203.33,
+      "sentences": [
+        {
+          "t": 203.33,
+          "text": "So carry this away."
+        },
+        {
+          "t": 204.48,
+          "text": "Do not accept nothing to audit, and do not write the project up as uncontrolled just because it does not produce waterfall’s documents."
+        },
+        {
+          "t": 212.64,
+          "text": "Judge a methodology by whether the control objectives are met and evidenced, in whatever form the method keeps them."
+        }
+      ]
+    }
+  ]
+}

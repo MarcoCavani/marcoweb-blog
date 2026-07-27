@@ -1,0 +1,229 @@
+{
+  "lesson": "cisa-d3-05-data-conversion-migration",
+  "title": "Data Conversion and Migration",
+  "source": "cisa-d3-05-data-conversion-migration.srt",
+  "generated": "2026-07-27",
+  "duration": 216.82,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Data conversion and migration."
+        },
+        {
+          "t": 1.94,
+          "text": "This is the sharpest risk in the domain, and the exam tests one control above all others: reconciling the data from the old system to the new one."
+        }
+      ]
+    },
+    {
+      "t": 11.38,
+      "sentences": [
+        {
+          "t": 11.38,
+          "text": "The situation."
+        },
+        {
+          "t": 12.24,
+          "text": "The new system goes live on Monday."
+        },
+        {
+          "t": 14.4,
+          "text": "Over the weekend, three years of customer and transaction data will move across from the old one."
+        },
+        {
+          "t": 20.4,
+          "text": "The project plan treats the conversion as a single line item, and the step right after it, on the same weekend, is to switch the old system off to save on running costs."
+        },
+        {
+          "t": 30.84,
+          "text": "Everything now rests on one overnight event that, if it goes wrong quietly, no one may notice until it is too late."
+        }
+      ]
+    },
+    {
+      "t": 37.94,
+      "sentences": [
+        {
+          "t": 37.94,
+          "text": "What makes conversion so sharp is this: most controls operate continuously and get many chances to catch a problem."
+        },
+        {
+          "t": 45.07,
+          "text": "Data conversion gets one."
+        },
+        {
+          "t": 46.62,
+          "text": "The data moves once, and if records are lost, duplicated or corrupted in the move, the new system starts its life on wrong data, and every process built on it inherits the error."
+        }
+      ]
+    },
+    {
+      "t": 57.65,
+      "sentences": [
+        {
+          "t": 57.65,
+          "text": "So it is controlled as the high-risk event it is."
+        },
+        {
+          "t": 60.94,
+          "text": "First, cleanse the data first: fix duplicates, errors and obsolete records in the old system before conversion, not after."
+        },
+        {
+          "t": 69.14,
+          "text": "Garbage converted is still garbage."
+        }
+      ]
+    },
+    {
+      "t": 71.5,
+      "sentences": [
+        {
+          "t": 71.5,
+          "text": "Second, map the fields: every field in the source must map to the right field in the target, with values translated correctly where the formats differ."
+        }
+      ]
+    },
+    {
+      "t": 80.28,
+      "sentences": [
+        {
+          "t": 80.28,
+          "text": "And third, convert, then validate."
+        },
+        {
+          "t": 82.79,
+          "text": "The move is followed by checking, never assumed to have worked."
+        },
+        {
+          "t": 87.44,
+          "text": "Which brings us to how you check it."
+        }
+      ]
+    },
+    {
+      "t": 90.1,
+      "sentences": [
+        {
+          "t": 90.1,
+          "text": "The control that proves a conversion is reconciliation of source to target, and it answers two questions with evidence."
+        },
+        {
+          "t": 97.57,
+          "text": "Completeness: compare record counts, source against target, did every record arrive."
+        },
+        {
+          "t": 102.84,
+          "text": "A mismatch means records were lost or duplicated."
+        },
+        {
+          "t": 105.92,
+          "text": "Accuracy: compare control totals, the sum of a numeric field such as account balances, across source and target."
+        },
+        {
+          "t": 112.95,
+          "text": "Equal totals give strong evidence the values were not altered in the move."
+        }
+      ]
+    },
+    {
+      "t": 117.6,
+      "sentences": [
+        {
+          "t": 117.6,
+          "text": "Now apply the Domain 1 evidence hierarchy."
+        },
+        {
+          "t": 120.27,
+          "text": "The project’s migration successful report is self-reported by the people who ran it, the weakest position."
+        },
+        {
+          "t": 127.02,
+          "text": "The migration tool’s log shows the job finished, not that it finished correctly, a run can complete and still silently drop rows."
+        },
+        {
+          "t": 135.23,
+          "text": "The strongest evidence is the reconciliation the auditor performs or independently re-checks."
+        },
+        {
+          "t": 141.15,
+          "text": "Verify it yourself; do not accept that it was verified."
+        }
+      ]
+    },
+    {
+      "t": 144.65,
+      "sentences": [
+        {
+          "t": 144.65,
+          "text": "The sequence matters too."
+        },
+        {
+          "t": 146.12,
+          "text": "Convert, reconcile, validate, get business sign-off, and only then plan to decommission the source, with the old data retained for a defined period."
+        },
+        {
+          "t": 154.8,
+          "text": "What you do not do is switch the old system off over the same weekend to save cost, trusting the completion report, because that loses your only fallback and your reconciliation reference at once."
+        }
+      ]
+    },
+    {
+      "t": 166.3,
+      "sentences": [
+        {
+          "t": 166.3,
+          "text": "And that is the reason: do not switch off the fallback."
+        },
+        {
+          "t": 169.49,
+          "text": "The old system is both the reference you reconcile against and the way to keep operating if the new one fails."
+        },
+        {
+          "t": 175.88,
+          "text": "Conversion errors often surface a week later, and when they do, the source is what you compare against to find them, and reverting to it is how you keep running while you fix them."
+        },
+        {
+          "t": 186.34,
+          "text": "Retire it too early and you lose both."
+        }
+      ]
+    },
+    {
+      "t": 188.54,
+      "sentences": [
+        {
+          "t": 188.54,
+          "text": "This whole lesson is a Domain 1 echo."
+        },
+        {
+          "t": 190.85,
+          "text": "The team that ran the migration is the party whose work is in question, so their assurance is the weakest kind of evidence."
+        },
+        {
+          "t": 198.5,
+          "text": "The reconciliation you verify yourself, counts and totals, outranks any report they hand you."
+        }
+      ]
+    },
+    {
+      "t": 204.29,
+      "sentences": [
+        {
+          "t": 204.29,
+          "text": "So carry this away."
+        },
+        {
+          "t": 205.55,
+          "text": "Conversion is a one-time event; control it like one."
+        },
+        {
+          "t": 209.02,
+          "text": "Prove it with counts and totals you check yourself, and keep the old data until the new system has earned your trust."
+        }
+      ]
+    }
+  ]
+}

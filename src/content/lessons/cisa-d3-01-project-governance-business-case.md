@@ -7,6 +7,7 @@ domain: 3
 order: 1
 minutes: 8
 gated: false
+videoId: "wut3wyj5zvE"
 taskStatement: "Evaluate whether an IT project has the governance, an approved business case and a feasibility basis to proceed, and determine the IS auditor's proper role in it."
 objectives:
   - "Identify who owns a project's business case and the realisation of its benefits."
