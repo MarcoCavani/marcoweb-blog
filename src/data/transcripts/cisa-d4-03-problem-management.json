@@ -1,0 +1,221 @@
+{
+  "lesson": "cisa-d4-03-problem-management",
+  "title": "Problem Management",
+  "source": "cisa-d4-03-problem-management.srt",
+  "generated": "2026-07-27",
+  "duration": 191.02,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Problem management."
+        },
+        {
+          "t": 1.29,
+          "text": "This is the other half of incident management, and the exam tests the boundary between them relentlessly."
+        }
+      ]
+    },
+    {
+      "t": 8.42,
+      "sentences": [
+        {
+          "t": 8.42,
+          "text": "The scene."
+        },
+        {
+          "t": 9.09,
+          "text": "The nightly reconciliation job has failed and been manually restarted every night for two weeks."
+        },
+        {
+          "t": 15.49,
+          "text": "Each morning the on-call engineer restarts it, service is restored, the incident is closed, and everyone moves on."
+        },
+        {
+          "t": 23.09,
+          "text": "The restart works every time."
+        },
+        {
+          "t": 25.02,
+          "text": "And every night it fails again, because no one has asked why."
+        }
+      ]
+    },
+    {
+      "t": 29.09,
+      "sentences": [
+        {
+          "t": 29.09,
+          "text": "Think about that count."
+        },
+        {
+          "t": 30.64,
+          "text": "Fourteen incidents, fourteen resolutions, and one unsolved problem."
+        },
+        {
+          "t": 35.18,
+          "text": "Restarting the job is correct incident handling, it restores service."
+        },
+        {
+          "t": 39.85,
+          "text": "But if that is all that ever happens, the cause is never removed and the failure recurs indefinitely."
+        }
+      ]
+    },
+    {
+      "t": 46.68,
+      "sentences": [
+        {
+          "t": 46.68,
+          "text": "So here is the definition."
+        },
+        {
+          "t": 48.32,
+          "text": "A problem is the underlying cause of one or more incidents."
+        },
+        {
+          "t": 52.03,
+          "text": "Incident management gets the users working; problem management makes sure they do not have to be got working again for the same reason next week."
+        }
+      ]
+    },
+    {
+      "t": 61.15,
+      "sentences": [
+        {
+          "t": 61.15,
+          "text": "Keep the two apart."
+        },
+        {
+          "t": 63,
+          "text": "Incident management restores service."
+        },
+        {
+          "t": 66.6,
+          "text": "It cares about now."
+        }
+      ]
+    },
+    {
+      "t": 68.45,
+      "sentences": [
+        {
+          "t": 68.45,
+          "text": "Problem management investigates the underlying cause and removes it, so those incidents stop happening."
+        },
+        {
+          "t": 75.15,
+          "text": "It cares about never again."
+        },
+        {
+          "t": 76.9,
+          "text": "The two are complementary, and the exam checks constantly that you do not blur them."
+        }
+      ]
+    },
+    {
+      "t": 82.37,
+      "sentences": [
+        {
+          "t": 82.37,
+          "text": "The clearest signal that a problem exists is an incident that keeps coming back."
+        },
+        {
+          "t": 87.39,
+          "text": "The nightly batch failure is not fourteen unrelated incidents; it is one problem generating an incident a day."
+        },
+        {
+          "t": 94.3,
+          "text": "Restarting restores service each time, but it never touches why it fails."
+        }
+      ]
+    },
+    {
+      "t": 98.88,
+      "sentences": [
+        {
+          "t": 98.88,
+          "text": "So good practice raises a problem the moment a pattern appears: investigate why the job fails, find the root cause, and remove it."
+        },
+        {
+          "t": 106.28,
+          "text": "That converts a nightly firefight into a one-time fix."
+        },
+        {
+          "t": 109.35,
+          "text": "When a question describes the same incident recurring and asks what should happen, the answer is to raise a problem and pursue the root cause, not to keep re-applying the workaround."
+        }
+      ]
+    },
+    {
+      "t": 119.71,
+      "sentences": [
+        {
+          "t": 119.71,
+          "text": "When problem management identifies a cause and documents a workaround or fix, the result is a known error: a problem whose cause is understood and whose handling is written down."
+        },
+        {
+          "t": 129.74,
+          "text": "That is valuable operationally, because if it recurs before the permanent fix lands, the service desk can resolve it fast using the documented workaround, rather than diagnosing it afresh."
+        }
+      ]
+    },
+    {
+      "t": 140.33,
+      "sentences": [
+        {
+          "t": 140.33,
+          "text": "And problem management is not only reactive."
+        },
+        {
+          "t": 143.22,
+          "text": "It can be proactive, analysing incident trends to find and fix latent problems before they cause the next outage."
+        },
+        {
+          "t": 150.66,
+          "text": "Fixing it before the next failure is problem management at its best."
+        }
+      ]
+    },
+    {
+      "t": 155.14,
+      "sentences": [
+        {
+          "t": 155.14,
+          "text": "Which points at the trap."
+        },
+        {
+          "t": 156.68,
+          "text": "The costly instinct is to treat recurrence as normal because service is always restored."
+        },
+        {
+          "t": 162.1,
+          "text": "Fourteen successful restarts feel like fourteen wins; they are fourteen symptoms of one unaddressed problem."
+        },
+        {
+          "t": 168.76,
+          "text": "Restoring service is incident management doing its job, but a fault that keeps returning is the signal to raise a problem."
+        }
+      ]
+    },
+    {
+      "t": 176.28,
+      "sentences": [
+        {
+          "t": 176.28,
+          "text": "So carry this away."
+        },
+        {
+          "t": 177.55,
+          "text": "Re-fixing forever is not resolution; it is a problem no one has agreed to solve."
+        },
+        {
+          "t": 182.88,
+          "text": "A fault that keeps returning is a problem to investigate and remove at the root, not an incident to restart one more time."
+        }
+      ]
+    }
+  ]
+}

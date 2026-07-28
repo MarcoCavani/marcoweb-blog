@@ -7,6 +7,7 @@ domain: 4
 order: 7
 minutes: 7
 gated: false
+videoId: "2DbPvJ8cuZ8"
 taskStatement: "Evaluate whether automated and batch operations run completely and in order, with failures detected and access to the scheduler controlled."
 objectives:
   - "Identify the key controls over automated job scheduling."

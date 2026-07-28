@@ -1,0 +1,230 @@
+{
+  "lesson": "cisa-d4-15-disaster-recovery-sites-tests",
+  "title": "Disaster Recovery: Sites and Test Types",
+  "source": "cisa-d4-15-disaster-recovery-sites-tests.srt",
+  "generated": "2026-07-27",
+  "duration": 224.93,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Disaster recovery: sites and test types."
+        },
+        {
+          "t": 2.54,
+          "text": "This is the last lesson of Domain four, and it brings the recovery objectives, the site choice, and the discipline of testing together."
+        }
+      ]
+    },
+    {
+      "t": 11.14,
+      "sentences": [
+        {
+          "t": 11.14,
+          "text": "Two facts sit in the disaster recovery file."
+        },
+        {
+          "t": 13.88,
+          "text": "The recovery site is a cold site, chosen because it was the cheapest option, and the organisation’s most critical system has a recovery time objective of two hours."
+        },
+        {
+          "t": 24.11,
+          "text": "And the plan itself, forty careful pages, has never once been tested."
+        },
+        {
+          "t": 28.41,
+          "text": "On paper, there is a D-R capability."
+        },
+        {
+          "t": 30.66,
+          "text": "Read the two facts together, and there is a system that must be back in two hours, a site that takes days to stand up, and no evidence any of it works."
+        }
+      ]
+    },
+    {
+      "t": 40.08,
+      "sentences": [
+        {
+          "t": 40.08,
+          "text": "Start with sites."
+        },
+        {
+          "t": 41.13,
+          "text": "Where you recover to is a trade-off between cost and how fast you can be running again, and the choice is driven by the R-T-O from lesson eleven."
+        }
+      ]
+    },
+    {
+      "t": 50.09,
+      "sentences": [
+        {
+          "t": 50.09,
+          "text": "A hot site is fully equipped, with systems and current data ready to take over almost immediately."
+        },
+        {
+          "t": 57.41,
+          "text": "Fastest recovery, highest cost."
+        },
+        {
+          "t": 59.72,
+          "text": "It is what a short R-T-O demands."
+        }
+      ]
+    },
+    {
+      "t": 62.18,
+      "sentences": [
+        {
+          "t": 62.18,
+          "text": "A warm site is partially equipped, some infrastructure in place, data restored on activation."
+        },
+        {
+          "t": 69.28,
+          "text": "Recovery in hours to a day, moderate cost."
+        },
+        {
+          "t": 72.49,
+          "text": "It suits a moderate R-T-O."
+        }
+      ]
+    },
+    {
+      "t": 74.47,
+      "sentences": [
+        {
+          "t": 74.47,
+          "text": "And a cold site provides only space, power and connectivity; equipment and data must be brought in and built up."
+        },
+        {
+          "t": 81.7,
+          "text": "Cheapest, and slowest, days to activate."
+        },
+        {
+          "t": 84.29,
+          "text": "Only acceptable for a long R-T-O."
+        },
+        {
+          "t": 86.42,
+          "text": "There is also a mirrored or fully redundant site, running in parallel with near-real-time data, for effectively immediate failover at the highest cost."
+        }
+      ]
+    },
+    {
+      "t": 96.17,
+      "sentences": [
+        {
+          "t": 96.17,
+          "text": "So the cold site in our scenario is the finding."
+        },
+        {
+          "t": 99.51,
+          "text": "Chosen on price, it cannot possibly meet a two-hour R-T-O."
+        },
+        {
+          "t": 103.55,
+          "text": "The site must fit the objective, and a critical, low-R-T-O system justifies the expense of a warm or hot site."
+        },
+        {
+          "t": 111.2,
+          "text": "Choosing by cost alone, ignoring the R-T-O, is the wrong answer."
+        }
+      ]
+    },
+    {
+      "t": 115.66,
+      "sentences": [
+        {
+          "t": 115.66,
+          "text": "Now testing, because a D-R plan is only proven by testing, and the test types form a ladder, from least to most rigorous, and from least to most risky."
+        },
+        {
+          "t": 124.83,
+          "text": "Assurance and risk rise together as you climb it."
+        }
+      ]
+    },
+    {
+      "t": 127.8,
+      "sentences": [
+        {
+          "t": 127.8,
+          "text": "At the bottom, the checklist, or desk review, checks the plan on paper for completeness, and the structured walkthrough has the recovery team talk through it together."
+        },
+        {
+          "t": 137.8,
+          "text": "Lowest effort, lowest assurance, no system is actually recovered."
+        }
+      ]
+    },
+    {
+      "t": 141.7,
+      "sentences": [
+        {
+          "t": 141.7,
+          "text": "Next, simulation: the team role-plays a disaster scenario and their response, without affecting production."
+        }
+      ]
+    },
+    {
+      "t": 148.37,
+      "sentences": [
+        {
+          "t": 148.37,
+          "text": "And at the top, the parallel test brings the recovery systems up at the alternate site alongside production and compares outputs, and the full-interruption test actually fails production over to the recovery capability."
+        },
+        {
+          "t": 160.7,
+          "text": "These give the strongest assurance, they prove recovery genuinely works, and they carry the most risk, because a failed test disrupts live operations."
+        }
+      ]
+    },
+    {
+      "t": 169.15,
+      "sentences": [
+        {
+          "t": 169.15,
+          "text": "Underneath both choices is the discipline our scenario is missing entirely: the plan has never been tested."
+        },
+        {
+          "t": 175.47,
+          "text": "A D-R plan is full of assumptions, dependencies, data that must restore, steps timed on optimism, and only testing exposes them while it is still safe to fix them."
+        },
+        {
+          "t": 185.09,
+          "text": "Until it has been tested, there is no assurance the plan works, and a real disaster is the worst possible moment to discover it does not."
+        },
+        {
+          "t": 193.17,
+          "text": "It is the untested rollback from Domain three, and the unexercised continuity plan from the last lesson: an untested fallback is a hope, not a control."
+        }
+      ]
+    },
+    {
+      "t": 202.08,
+      "sentences": [
+        {
+          "t": 202.08,
+          "text": "So carry this away, and it closes the domain."
+        },
+        {
+          "t": 205.15,
+          "text": "Match the recovery site to the R-T-O, not to the budget, a cold site cannot serve a critical, low-R-T-O system however cheap."
+        },
+        {
+          "t": 213.68,
+          "text": "The more rigorous the test, the more assurance and the more risk."
+        },
+        {
+          "t": 218.11,
+          "text": "And an untested D-R plan, like an untested backup, proves nothing at all."
+        },
+        {
+          "t": 223.09,
+          "text": "That completes Domain four."
+        }
+      ]
+    }
+  ]
+}

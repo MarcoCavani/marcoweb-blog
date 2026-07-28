@@ -1,0 +1,217 @@
+{
+  "lesson": "cisa-d4-02-incident-management",
+  "title": "Incident Management",
+  "source": "cisa-d4-02-incident-management.srt",
+  "generated": "2026-07-27",
+  "duration": 200.42,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Incident management."
+        },
+        {
+          "t": 1.37,
+          "text": "This lesson is about one job and one job only: restoring service as fast as possible when something breaks."
+        },
+        {
+          "t": 8.69,
+          "text": "And the exam tests, hard, that finding the cause is a different job."
+        }
+      ]
+    },
+    {
+      "t": 13.34,
+      "sentences": [
+        {
+          "t": 13.34,
+          "text": "Here is the scene."
+        },
+        {
+          "t": 14.47,
+          "text": "The order-processing system is down and the whole sales floor is idle."
+        },
+        {
+          "t": 18.85,
+          "text": "A capable engineer has the logs open and is determined to find exactly why it failed before bringing it back, out of professional pride."
+        },
+        {
+          "t": 27.36,
+          "text": "Forty minutes in, sales are still stopped, and a simple restart would very likely have had everyone working within two."
+        },
+        {
+          "t": 34.81,
+          "text": "The engineer is doing good work at the wrong moment."
+        }
+      ]
+    },
+    {
+      "t": 38.06,
+      "sentences": [
+        {
+          "t": 38.06,
+          "text": "Because incident management has a single primary objective: restore normal service operation as quickly as possible, and minimise the impact on the business while service is degraded."
+        },
+        {
+          "t": 48.66,
+          "text": "Everything else, understanding the fault, preventing it from happening again, is a different process."
+        }
+      ]
+    },
+    {
+      "t": 54.5,
+      "sentences": [
+        {
+          "t": 54.5,
+          "text": "That changes what good looks like during an outage."
+        },
+        {
+          "t": 57.42,
+          "text": "Success is measured by how fast users are working again, not by how thoroughly the cause was understood in the moment."
+        },
+        {
+          "t": 64.17,
+          "text": "The engineer who restores service in two minutes with a restart has done incident management well, even if they do not yet know why it failed."
+        }
+      ]
+    },
+    {
+      "t": 72.29,
+      "sentences": [
+        {
+          "t": 72.29,
+          "text": "Which is why a workaround is a legitimate resolution to an incident, even when the cause is still unknown."
+        },
+        {
+          "t": 78.65,
+          "text": "Rebooting the server, failing over to a standby, switching to a manual process: all restore service, all buy back the business impact, none require the cause to be understood first."
+        },
+        {
+          "t": 89.52,
+          "text": "The underlying fault is not forgotten, it is raised for problem management, next lesson."
+        }
+      ]
+    },
+    {
+      "t": 94.8,
+      "sentences": [
+        {
+          "t": 94.8,
+          "text": "Incidents are prioritised the way any service-desk call is: by impact combined with urgency."
+        },
+        {
+          "t": 100.1,
+          "text": "A customer-facing outage that stops revenue is high impact and high urgency and is worked ahead of a single user’s minor glitch, regardless of which arrived first or which is technically harder."
+        }
+      ]
+    },
+    {
+      "t": 111.26,
+      "sentences": [
+        {
+          "t": 111.26,
+          "text": "So the correct order during an incident is restore first, understand later."
+        },
+        {
+          "t": 115.91,
+          "text": "Holding a service down to diagnose the root cause, as our engineer did, inverts that order and prolongs exactly the impact incident management exists to reduce."
+        },
+        {
+          "t": 125.83,
+          "text": "Get users working with whatever workaround is available; hand the cause on afterwards."
+        }
+      ]
+    },
+    {
+      "t": 131.16,
+      "sentences": [
+        {
+          "t": 131.16,
+          "text": "Keep the boundary clear."
+        },
+        {
+          "t": 133.17,
+          "text": "Incident management restores service now."
+        },
+        {
+          "t": 136.61,
+          "text": "It cares about the here and now."
+        }
+      ]
+    },
+    {
+      "t": 139.3,
+      "sentences": [
+        {
+          "t": 139.3,
+          "text": "Problem management, the next lesson, finds and removes the underlying cause so the incident stops happening."
+        },
+        {
+          "t": 146.4,
+          "text": "It cares about never again."
+        },
+        {
+          "t": 148.18,
+          "text": "Two processes, one boundary between them, and the exam repeatedly checks you keep them apart."
+        }
+      ]
+    },
+    {
+      "t": 154.3,
+      "sentences": [
+        {
+          "t": 154.3,
+          "text": "Which brings us to the trap: chasing the root cause during the incident."
+        },
+        {
+          "t": 158.78,
+          "text": "It feels like the responsible, thorough thing to do, and it is precisely the wrong thing during an outage."
+        },
+        {
+          "t": 165.37,
+          "text": "It costs the exam question, and it costs the business time it did not have."
+        }
+      ]
+    },
+    {
+      "t": 170.04,
+      "sentences": [
+        {
+          "t": 170.04,
+          "text": "One more thing."
+        },
+        {
+          "t": 171.15,
+          "text": "Severe, wide-impact incidents are often handled as major incidents, with extra coordination and communication."
+        },
+        {
+          "t": 179.26,
+          "text": "But the objective does not change."
+        },
+        {
+          "t": 181.76,
+          "text": "Even for a major incident, the job is to restore service, fast."
+        }
+      ]
+    },
+    {
+      "t": 186.41,
+      "sentences": [
+        {
+          "t": 186.41,
+          "text": "So carry this away."
+        },
+        {
+          "t": 187.66,
+          "text": "The objective of incident management is to restore service, not to find the cause."
+        },
+        {
+          "t": 193.09,
+          "text": "Restore first with whatever workaround is available, then hand the cause to problem management to fix for good."
+        }
+      ]
+    }
+  ]
+}

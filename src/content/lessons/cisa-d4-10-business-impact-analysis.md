@@ -7,6 +7,7 @@ domain: 4
 order: 10
 minutes: 7
 gated: false
+videoId: "5Z_rwqAXRoE"
 taskStatement: "Evaluate whether a business impact analysis identifies critical processes and drives recovery priorities and objectives."
 objectives:
   - "State the purpose of a business impact analysis."

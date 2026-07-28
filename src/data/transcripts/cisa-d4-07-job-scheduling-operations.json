@@ -1,0 +1,205 @@
+{
+  "lesson": "cisa-d4-07-job-scheduling-operations",
+  "title": "Job Scheduling and Automated Operations",
+  "source": "cisa-d4-07-job-scheduling-operations.srt",
+  "generated": "2026-07-27",
+  "duration": 195.41,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Job scheduling and automated operations."
+        },
+        {
+          "t": 2.61,
+          "text": "This lesson is about a trap in one sentence: automation removes the manual effort, but it does not remove the need for control."
+        }
+      ]
+    },
+    {
+      "t": 10.9,
+      "sentences": [
+        {
+          "t": 10.9,
+          "text": "The scene."
+        },
+        {
+          "t": 11.61,
+          "text": "A critical overnight job, the one that posts the day’s transactions, failed at 3am."
+        },
+        {
+          "t": 17.5,
+          "text": "No alert fired."
+        },
+        {
+          "t": 18.56,
+          "text": "The first anyone knew was the following afternoon, when users noticed yesterday’s figures were missing."
+        },
+        {
+          "t": 25.87,
+          "text": "By then a second night’s run had layered on top of the gap, and untangling it took days."
+        },
+        {
+          "t": 32.11,
+          "text": "The job was fully automated."
+        },
+        {
+          "t": 34.1,
+          "text": "That was supposed to make it more reliable."
+        }
+      ]
+    },
+    {
+      "t": 37.15,
+      "sentences": [
+        {
+          "t": 37.15,
+          "text": "Job scheduling automates repetitive processing, overnight batch runs, reports, data transfers, and that is a real gain: it removes the slips of doing things by hand."
+        },
+        {
+          "t": 47.89,
+          "text": "But it moves the risk somewhere else."
+        },
+        {
+          "t": 50.3,
+          "text": "When a person runs a job and it fails, they see it fail."
+        },
+        {
+          "t": 53.94,
+          "text": "When an automated job fails at 3am, no one is watching, unless the system is built to watch."
+        }
+      ]
+    },
+    {
+      "t": 59.93,
+      "sentences": [
+        {
+          "t": 59.93,
+          "text": "So the central risk of automation is not that jobs fail."
+        },
+        {
+          "t": 63.51,
+          "text": "It is that they fail silently, and processing is corrupted or skipped with nobody aware, until the damage surfaces downstream."
+        },
+        {
+          "t": 71.55,
+          "text": "Which means the controls are all about making the automation visible."
+        }
+      ]
+    },
+    {
+      "t": 75.96,
+      "sentences": [
+        {
+          "t": 75.96,
+          "text": "What are they."
+        },
+        {
+          "t": 76.83,
+          "text": "First, and most important, exception handling and alerting: failed, missed, or out-of-sequence jobs are detected and raised immediately, so operators can rerun or recover them before users are affected."
+        }
+      ]
+    },
+    {
+      "t": 89.33,
+      "sentences": [
+        {
+          "t": 89.33,
+          "text": "Second, sequence and dependency control: jobs run in the correct order, and a job that depends on another does not start until its predecessor has succeeded."
+        }
+      ]
+    },
+    {
+      "t": 98.4,
+      "sentences": [
+        {
+          "t": 98.4,
+          "text": "And third, completeness and restart procedures: all scheduled jobs actually ran, a missed run is detected rather than assumed, and when a job fails there is a defined way to recover to a known state, not an improvised untangling."
+        }
+      ]
+    },
+    {
+      "t": 111.19,
+      "sentences": [
+        {
+          "t": 111.19,
+          "text": "Around all of it, the console is watched and activity is logged, so failures and interventions are recorded."
+        },
+        {
+          "t": 117.38,
+          "text": "Exception handling is the most important of these controls, and its absence is exactly what turned the 3am failure into a multi-day mess: the failure happened, and nothing raised a hand."
+        }
+      ]
+    },
+    {
+      "t": 128.04,
+      "sentences": [
+        {
+          "t": 128.04,
+          "text": "Then there is access."
+        },
+        {
+          "t": 129.35,
+          "text": "The production schedule is powerful: whoever can change it can alter what runs, in what order, and whether critical jobs run at all."
+        },
+        {
+          "t": 137.59,
+          "text": "So the ability to modify the schedule is restricted to authorised personnel, and schedule changes are controlled and logged."
+        }
+      ]
+    },
+    {
+      "t": 145.32,
+      "sentences": [
+        {
+          "t": 145.32,
+          "text": "And the answer is neither open access nor a total freeze."
+        },
+        {
+          "t": 148.74,
+          "text": "Any operator editing the schedule when convenient is a control failure; but schedules legitimately need to change, so freezing them is not the control either."
+        },
+        {
+          "t": 158.21,
+          "text": "The control is authorised, logged change, treating a schedule change as a change in its own right."
+        }
+      ]
+    },
+    {
+      "t": 164.09,
+      "sentences": [
+        {
+          "t": 164.09,
+          "text": "Which brings us to the trap."
+        },
+        {
+          "t": 165.84,
+          "text": "The instinct that because something is automated it is under control is exactly backwards."
+        },
+        {
+          "t": 171.45,
+          "text": "Automation without monitoring is more dangerous than a manual process, not less, because the failure happens with no one watching for it."
+        }
+      ]
+    },
+    {
+      "t": 180,
+      "sentences": [
+        {
+          "t": 180,
+          "text": "So carry this away."
+        },
+        {
+          "t": 181.2,
+          "text": "The key control over automated operations is exception handling and monitoring, so failures are seen and recovered before they cascade."
+        },
+        {
+          "t": 189.72,
+          "text": "And access to change what the schedule does is restricted to authorised people and logged."
+        }
+      ]
+    }
+  ]
+}

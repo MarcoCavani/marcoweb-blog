@@ -1,0 +1,217 @@
+{
+  "lesson": "cisa-d4-08-capacity-performance-database",
+  "title": "Capacity, Performance and Database Management",
+  "source": "cisa-d4-08-capacity-performance-database.srt",
+  "generated": "2026-07-27",
+  "duration": 230.21,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Capacity, performance and database management."
+        },
+        {
+          "t": 3.18,
+          "text": "This lesson covers keeping systems fed with resources, and keeping the powerful people who run databases in check."
+        },
+        {
+          "t": 11.07,
+          "text": "Two surprises in one review, both the finding."
+        }
+      ]
+    },
+    {
+      "t": 14.26,
+      "sentences": [
+        {
+          "t": 14.26,
+          "text": "First surprise: the main system ran out of storage last quarter and stopped, and the response was to buy more disk after the outage, the third time this year the same thing has happened."
+        },
+        {
+          "t": 25.28,
+          "text": "Second surprise: a database administrator has been correcting figures by editing the production tables directly, because it is quicker than going through the application."
+        },
+        {
+          "t": 35.36,
+          "text": "Both feel like pragmatic operations."
+        },
+        {
+          "t": 37.49,
+          "text": "Both are the finding."
+        }
+      ]
+    },
+    {
+      "t": 38.74,
+      "sentences": [
+        {
+          "t": 38.74,
+          "text": "Start with capacity."
+        },
+        {
+          "t": 40.12,
+          "text": "The key point is that capacity management looks forward."
+        },
+        {
+          "t": 43.98,
+          "text": "It is proactive, not reactive: it provides the resources, processing, storage, memory, network, before they run out, not after the system has already stopped."
+        }
+      ]
+    },
+    {
+      "t": 54.89,
+      "sentences": [
+        {
+          "t": 54.89,
+          "text": "So what does proactive actually mean."
+        },
+        {
+          "t": 57.08,
+          "text": "It means monitoring utilisation trends and forecasting future demand, so resources are provided before they are exhausted."
+        },
+        {
+          "t": 64.31,
+          "text": "Watching storage climb toward its limit and expanding it in advance is capacity management working."
+        },
+        {
+          "t": 70.18,
+          "text": "Discovering the limit because the system stopped, and buying disk afterwards, is not capacity management at all, it is incident response to a shortage that planning should have prevented."
+        }
+      ]
+    },
+    {
+      "t": 81.26,
+      "sentences": [
+        {
+          "t": 81.26,
+          "text": "Alongside it sits performance management: monitoring response times and throughput against expected baselines and thresholds, so degradation is spotted and investigated before it becomes an outage."
+        },
+        {
+          "t": 92.58,
+          "text": "A system drifting slower over weeks is often the early warning of a capacity problem ahead."
+        }
+      ]
+    },
+    {
+      "t": 97.8,
+      "sentences": [
+        {
+          "t": 97.8,
+          "text": "Now the database, and why editing it directly is dangerous."
+        },
+        {
+          "t": 101.56,
+          "text": "The database sits underneath the application."
+        },
+        {
+          "t": 104.42,
+          "text": "Everything Domain three said about application controls, input validation, processing checks, an audit trail, is enforced by the application."
+        },
+        {
+          "t": 113.39,
+          "text": "When a D-B-A changes a value straight in the table, the change goes around all of it."
+        }
+      ]
+    },
+    {
+      "t": 118.8,
+      "sentences": [
+        {
+          "t": 118.8,
+          "text": "What does it escape."
+        },
+        {
+          "t": 120.26,
+          "text": "First, input validation, so the value could be out of range, malformed, or leave related records unbalanced."
+        }
+      ]
+    },
+    {
+      "t": 128.14,
+      "sentences": [
+        {
+          "t": 128.14,
+          "text": "And second, the processing controls and the audit trail, so totals and dependent data may no longer reconcile, and there is often no application record of who changed what, or why."
+        },
+        {
+          "t": 138.49,
+          "text": "So direct data changes are tightly restricted, and where genuinely necessary, they are authorised, logged and reviewed, never a routine shortcut because it is quicker."
+        }
+      ]
+    },
+    {
+      "t": 148.1,
+      "sentences": [
+        {
+          "t": 148.1,
+          "text": "Which brings us to privileged access."
+        },
+        {
+          "t": 150.5,
+          "text": "A D-B-A’s access is necessarily powerful: they can read, alter or delete almost any data and change the database itself."
+        },
+        {
+          "t": 158.27,
+          "text": "That power is required for the role, and precisely because of it, D-B-A activity is logged and independently monitored."
+        },
+        {
+          "t": 165.98,
+          "text": "The reviewer is someone other than the D-B-A, so the powerful access is accountable to a second pair of eyes."
+        }
+      ]
+    },
+    {
+      "t": 173.04,
+      "sentences": [
+        {
+          "t": 173.04,
+          "text": "And this is not a judgement about D-B-As personally."
+        },
+        {
+          "t": 176.24,
+          "text": "It is the same principle that governs any highly privileged access: the greater the power, the greater the need for its use to be traceable and independently reviewed."
+        },
+        {
+          "t": 186.5,
+          "text": "Logs that only the D-B-A can see, or that no one ever reads, are not a control."
+        }
+      ]
+    },
+    {
+      "t": 191.35,
+      "sentences": [
+        {
+          "t": 191.35,
+          "text": "So both habits in our review are findings."
+        },
+        {
+          "t": 193.8,
+          "text": "Reactive capacity management treats a resource running out as an operational hiccup, when the exam wants forward-looking, trend-based planning that prevents the shortage."
+        },
+        {
+          "t": 203.69,
+          "text": "And direct database edits look like harmless efficiency but bypass the application’s controls entirely, letting bad or unauthorised data enter with no trace."
+        }
+      ]
+    },
+    {
+      "t": 212.83,
+      "sentences": [
+        {
+          "t": 212.83,
+          "text": "So carry this away."
+        },
+        {
+          "t": 214.06,
+          "text": "Capacity management is forward-looking, built on trend analysis to meet future demand."
+        },
+        {
+          "t": 219.59,
+          "text": "And a D-B-A’s direct data change bypasses the application’s validation and audit trail, which is why privileged database access is logged and independently reviewed."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "lesson": "cisa-d4-01-service-management-service-levels",
+  "title": "IT Service Management and Service Levels",
+  "source": "cisa-d4-01-service-management-service-levels.srt",
+  "generated": "2026-07-27",
+  "duration": 199.66,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "I-T service management and service levels."
+        },
+        {
+          "t": 2.55,
+          "text": "Domain four is about running I-T well day to day, and it starts where the business meets I-T: the service desk, and how it decides what to work first."
+        }
+      ]
+    },
+    {
+      "t": 11.66,
+      "sentences": [
+        {
+          "t": 11.66,
+          "text": "Picture a service desk queue worked strictly in the order calls arrive."
+        },
+        {
+          "t": 16.01,
+          "text": "This morning a request for a spare monitor is being handled ahead of a report that the payment system is down for the whole finance team, because the monitor request was logged first."
+        },
+        {
+          "t": 27.2,
+          "text": "Nobody set out to prioritise a monitor over payroll."
+        },
+        {
+          "t": 30.38,
+          "text": "The process just never distinguished them."
+        }
+      ]
+    },
+    {
+      "t": 32.95,
+      "sentences": [
+        {
+          "t": 32.95,
+          "text": "So start with what the service desk actually is: the single point of contact between users and I-T."
+        },
+        {
+          "t": 38.67,
+          "text": "Its value is not that it personally fixes everything, it cannot, but that every contact goes through one place that logs it, categorises it, sets a priority, and coordinates its resolution, escalating what it cannot resolve at first line."
+        }
+      ]
+    },
+    {
+      "t": 52.42,
+      "sentences": [
+        {
+          "t": 52.42,
+          "text": "And that single door is what makes the rest of operations measurable."
+        },
+        {
+          "t": 56.53,
+          "text": "Because every incident and request is recorded in one place, I-T can see what is breaking, how long things take, and whether service levels are being met."
+        },
+        {
+          "t": 65.7,
+          "text": "A user who phones a developer directly bypasses all of it, and the work becomes invisible."
+        }
+      ]
+    },
+    {
+      "t": 71.06,
+      "sentences": [
+        {
+          "t": 71.06,
+          "text": "Now the distinction the exam leans on."
+        },
+        {
+          "t": 73.64,
+          "text": "An incident is an unplanned interruption to a service, or a drop in its quality: the email server is down, a login fails."
+        },
+        {
+          "t": 81.83,
+          "text": "Something that was working is not."
+        },
+        {
+          "t": 84.14,
+          "text": "A service request is a standard, expected request for something: a new laptop, access to a system, a password reset."
+        },
+        {
+          "t": 91.99,
+          "text": "Nothing is broken; the user wants a routine service delivered."
+        }
+      ]
+    },
+    {
+      "t": 96.19,
+      "sentences": [
+        {
+          "t": 96.19,
+          "text": "They are handled by different processes, incident management to restore service, request fulfilment to deliver the item, so misclassifying one as the other routes it wrongly."
+        },
+        {
+          "t": 107.04,
+          "text": "Requesting a new laptop for a starter interrupts no running service."
+        },
+        {
+          "t": 111.28,
+          "text": "It is a service request, not an incident."
+        }
+      ]
+    },
+    {
+      "t": 113.83,
+      "sentences": [
+        {
+          "t": 113.83,
+          "text": "How is priority set, then."
+        },
+        {
+          "t": 115.59,
+          "text": "Not first come first served, and not by the rank of the caller, but by two things combined."
+        },
+        {
+          "t": 121.76,
+          "text": "First, impact: how much of the business is affected, and how badly, one user or the whole finance department."
+        }
+      ]
+    },
+    {
+      "t": 129.14,
+      "sentences": [
+        {
+          "t": 129.14,
+          "text": "And second, urgency: how quickly it must be resolved before the impact grows."
+        },
+        {
+          "t": 134.75,
+          "text": "Impact and urgency together give the priority."
+        }
+      ]
+    },
+    {
+      "t": 138.1,
+      "sentences": [
+        {
+          "t": 138.1,
+          "text": "So it is not arrival order, and not the caller’s seniority."
+        },
+        {
+          "t": 141.78,
+          "text": "A payroll outage affecting a whole team on payday is high impact and high urgency, and it outranks a spare-monitor request logged an hour earlier."
+        },
+        {
+          "t": 150.89,
+          "text": "A junior reporting a payroll failure outranks an executive’s minor query."
+        }
+      ]
+    },
+    {
+      "t": 155.45,
+      "sentences": [
+        {
+          "t": 155.45,
+          "text": "And that is what fixes the queue."
+        },
+        {
+          "t": 157.57,
+          "text": "Set priority by impact and urgency, and the payment outage jumps ahead of the monitor request automatically."
+        },
+        {
+          "t": 164.52,
+          "text": "That is precisely what stops the desk from serving a spare monitor while finance sits idle."
+        }
+      ]
+    },
+    {
+      "t": 170.38,
+      "sentences": [
+        {
+          "t": 170.38,
+          "text": "So the point of the service desk is not that it fixes everything itself."
+        },
+        {
+          "t": 174.51,
+          "text": "It is the single, recorded point of contact that triages by impact and urgency and coordinates resolution, and that coordination is what makes the whole of operations visible and measurable."
+        }
+      ]
+    },
+    {
+      "t": 185.42,
+      "sentences": [
+        {
+          "t": 185.42,
+          "text": "So carry this away."
+        },
+        {
+          "t": 186.72,
+          "text": "A request for something new is a service request, not an incident, and the distinction decides how it is handled."
+        },
+        {
+          "t": 194.41,
+          "text": "And priority is impact combined with urgency, never first come, first served."
+        }
+      ]
+    }
+  ]
+}

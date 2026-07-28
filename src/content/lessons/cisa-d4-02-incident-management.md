@@ -7,6 +7,7 @@ domain: 4
 order: 2
 minutes: 7
 gated: false
+videoId: "k2eYdOcRZZY"
 taskStatement: "Evaluate whether incidents are resolved to restore normal service as quickly as possible and prioritised by business impact."
 objectives:
   - "State the primary objective of incident management."

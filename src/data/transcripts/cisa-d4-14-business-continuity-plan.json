@@ -1,0 +1,217 @@
+{
+  "lesson": "cisa-d4-14-business-continuity-plan",
+  "title": "Business Continuity Planning",
+  "source": "cisa-d4-14-business-continuity-plan.srt",
+  "generated": "2026-07-27",
+  "duration": 214.54,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Business continuity planning."
+        },
+        {
+          "t": 1.7,
+          "text": "This lesson draws a line between two plans that are constantly used interchangeably, and it insists that a plan is something you maintain and rehearse, not a document you produce once."
+        }
+      ]
+    },
+    {
+      "t": 12.48,
+      "sentences": [
+        {
+          "t": 12.48,
+          "text": "The scene."
+        },
+        {
+          "t": 13.15,
+          "text": "The organisation has a disaster recovery plan for its data centre, and everyone calls it the continuity plan."
+        },
+        {
+          "t": 20.45,
+          "text": "Then a burst pipe closes the head office for a fortnight."
+        },
+        {
+          "t": 24.26,
+          "text": "The servers are fine, so the D-R plan never triggers, but nobody knows where staff should work, how customers will be answered, or which processes must run manually."
+        },
+        {
+          "t": 35.31,
+          "text": "The technology was covered."
+        },
+        {
+          "t": 37.11,
+          "text": "The business was not."
+        }
+      ]
+    },
+    {
+      "t": 38.52,
+      "sentences": [
+        {
+          "t": 38.52,
+          "text": "So, two plans, two scopes."
+        },
+        {
+          "t": 40.26,
+          "text": "The business continuity plan, the B-C-P, is the broad plan for keeping the whole organisation operating through a disruption: its critical business processes, its people, its facilities, its communications."
+        },
+        {
+          "t": 54.07,
+          "text": "It answers, how does the business keep functioning."
+        },
+        {
+          "t": 57.49,
+          "text": "The disaster recovery plan, the D-R-P, is a subset, focused specifically on recovering I-T systems and technology."
+        },
+        {
+          "t": 65.13,
+          "text": "It answers, how do we get the systems back."
+        }
+      ]
+    },
+    {
+      "t": 68.02,
+      "sentences": [
+        {
+          "t": 68.02,
+          "text": "The relationship is one of scope: the D-R-P sits inside the B-C-P, and I-T recovery exists to serve business continuity, not the other way round."
+        },
+        {
+          "t": 76.7,
+          "text": "The burst pipe is the classic illustration, the D-R-P was intact and completely irrelevant, because the disruption was to the business, not the technology."
+        }
+      ]
+    },
+    {
+      "t": 85.99,
+      "sentences": [
+        {
+          "t": 85.99,
+          "text": "And a B-C-P addresses any disruption, not only natural disasters: a cyberattack, a supply-chain failure, a pandemic, a closed building."
+        },
+        {
+          "t": 94.39,
+          "text": "The disruption that spares the technology can still stop the business, which is exactly what the burst pipe did."
+        }
+      ]
+    },
+    {
+      "t": 101.35,
+      "sentences": [
+        {
+          "t": 101.35,
+          "text": "Now the second theme."
+        },
+        {
+          "t": 102.9,
+          "text": "A plan is a capability, not a document."
+        },
+        {
+          "t": 105.78,
+          "text": "A continuity plan written once and filed is worth very little, the same way a two-year-old compliance certificate was in Domain two."
+        },
+        {
+          "t": 115.53,
+          "text": "Two things keep a B-C-P real."
+        }
+      ]
+    },
+    {
+      "t": 117.67,
+      "sentences": [
+        {
+          "t": 117.67,
+          "text": "First, maintenance."
+        },
+        {
+          "t": 118.93,
+          "text": "The business changes, new processes, new systems, new sites, people, so the plan must be kept current, or it drifts into describing an organisation that no longer exists."
+        }
+      ]
+    },
+    {
+      "t": 130.18,
+      "sentences": [
+        {
+          "t": 130.18,
+          "text": "And second, testing."
+        },
+        {
+          "t": 131.44,
+          "text": "A plan that has never been exercised is untested theory."
+        },
+        {
+          "t": 134.99,
+          "text": "Testing reveals the gaps, the missing contact, the assumption that does not hold, the step that takes far longer than planned, while it is still safe to find them."
+        }
+      ]
+    },
+    {
+      "t": 145.32,
+      "sentences": [
+        {
+          "t": 145.32,
+          "text": "So an outdated, untested plan gives no assurance it would work when invoked, which is exactly when you cannot afford to discover it does not."
+        },
+        {
+          "t": 153.51,
+          "text": "When a question describes a continuity plan written years ago, never updated and never tested, that lack of assurance is the concern."
+        }
+      ]
+    },
+    {
+      "t": 161.23,
+      "sentences": [
+        {
+          "t": 161.23,
+          "text": "And who is accountable."
+        },
+        {
+          "t": 162.63,
+          "text": "Because business continuity spans the whole organisation, accountability for the B-C-P rests with senior management, as a governance responsibility, just as risk appetite sat with the board in Domain two."
+        }
+      ]
+    },
+    {
+      "t": 175.01,
+      "sentences": [
+        {
+          "t": 175.01,
+          "text": "That does not mean I-T is uninvolved."
+        },
+        {
+          "t": 177.52,
+          "text": "I-T owns and runs the D-R component."
+        },
+        {
+          "t": 179.96,
+          "text": "But the enterprise-wide continuity plan is not an I-T deliverable, it is a management one."
+        },
+        {
+          "t": 186.06,
+          "text": "Senior management sponsors it, ensures it reflects the priorities the B-I-A established, and sees that it is maintained and tested."
+        }
+      ]
+    },
+    {
+      "t": 194.95,
+      "sentences": [
+        {
+          "t": 194.95,
+          "text": "So carry this away."
+        },
+        {
+          "t": 196.13,
+          "text": "The B-C-P is the whole business; the D-R-P is the I-T subset within it, and a disruption that spares the technology can still stop the business."
+        },
+        {
+          "t": 205.02,
+          "text": "And an unmaintained, untested plan gives no assurance, which is the entire point, so continuity is maintained and exercised, not written once and shelved."
+        }
+      ]
+    }
+  ]
+}

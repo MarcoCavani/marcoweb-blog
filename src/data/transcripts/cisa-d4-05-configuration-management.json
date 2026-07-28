@@ -1,0 +1,217 @@
+{
+  "lesson": "cisa-d4-05-configuration-management",
+  "title": "Configuration Management",
+  "source": "cisa-d4-05-configuration-management.srt",
+  "generated": "2026-07-27",
+  "duration": 200.54,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Configuration management."
+        },
+        {
+          "t": 1.53,
+          "text": "This lesson is about knowing what is actually running in your production environment, and being able to prove it matches what was approved."
+        }
+      ]
+    },
+    {
+      "t": 10.01,
+      "sentences": [
+        {
+          "t": 10.01,
+          "text": "The scene."
+        },
+        {
+          "t": 10.65,
+          "text": "You pull the approved change records for a production server and compare them against how the server is actually configured."
+        },
+        {
+          "t": 18.67,
+          "text": "A firewall rule is open that no change ever authorised."
+        },
+        {
+          "t": 22.23,
+          "text": "Nobody can say when it was added or by whom."
+        },
+        {
+          "t": 25.08,
+          "text": "The change records and the live system tell two different stories, and only one of them was approved."
+        }
+      ]
+    },
+    {
+      "t": 31.61,
+      "sentences": [
+        {
+          "t": 31.61,
+          "text": "Configuration management maintains an authoritative record of the configuration items that make up the I-T environment, servers, applications, network devices, their attributes and relationships, together with their approved baseline state."
+        },
+        {
+          "t": 45.91,
+          "text": "Often that record lives in a configuration management database, a C-M-D-B."
+        },
+        {
+          "t": 50.32,
+          "text": "Its purpose is to answer two questions: what is actually in production, and does it match what was authorised."
+        }
+      ]
+    },
+    {
+      "t": 56.88,
+      "sentences": [
+        {
+          "t": 56.88,
+          "text": "And that is why a C-M-D-B is more than an asset inventory."
+        },
+        {
+          "t": 60.86,
+          "text": "An asset list tells you a server exists."
+        },
+        {
+          "t": 63.6,
+          "text": "Configuration management records the approved state, the baseline, against which the real world can be compared."
+        },
+        {
+          "t": 71.28,
+          "text": "Recording the authorised state is the whole point."
+        }
+      ]
+    },
+    {
+      "t": 74.71,
+      "sentences": [
+        {
+          "t": 74.71,
+          "text": "Now the distinction the exam relies on, because these two are constantly confused."
+        },
+        {
+          "t": 79.85,
+          "text": "Change management is the process: it assesses, authorises and controls a change before it happens."
+        },
+        {
+          "t": 86,
+          "text": "Configuration management is the record: it captures what the environment actually is, after changes have happened."
+        }
+      ]
+    },
+    {
+      "t": 93.14,
+      "sentences": [
+        {
+          "t": 93.14,
+          "text": "They are designed to work together."
+        },
+        {
+          "t": 95.29,
+          "text": "Every authorised change should update the configuration record, so the baseline stays current."
+        },
+        {
+          "t": 101.05,
+          "text": "Change management says what should have changed; configuration management shows what did."
+        },
+        {
+          "t": 106.5,
+          "text": "And reconciling the two, comparing the live configuration against the record of approved changes, is exactly how unauthorised change is detected."
+        }
+      ]
+    },
+    {
+      "t": 115.39,
+      "sentences": [
+        {
+          "t": 115.39,
+          "text": "Which is where the open firewall rule is caught."
+        },
+        {
+          "t": 118.33,
+          "text": "A production configuration that differs from the baseline with no corresponding change record is the signature of an unauthorised change."
+        },
+        {
+          "t": 126.7,
+          "text": "That mismatch is not noise; it is the thing configuration management exists to surface."
+        }
+      ]
+    },
+    {
+      "t": 132.02,
+      "sentences": [
+        {
+          "t": 132.02,
+          "text": "And it means one of two things, both findings."
+        },
+        {
+          "t": 135.08,
+          "text": "Either something was altered without going through change management."
+        }
+      ]
+    },
+    {
+      "t": 139.66,
+      "sentences": [
+        {
+          "t": 139.66,
+          "text": "Or the records are not being maintained."
+        },
+        {
+          "t": 142.12,
+          "text": "Both are findings, and both are what configuration management is there to expose."
+        },
+        {
+          "t": 147.12,
+          "text": "When you see a live configuration differ from the approved baseline with nothing to account for it, you investigate."
+        }
+      ]
+    },
+    {
+      "t": 154.27,
+      "sentences": [
+        {
+          "t": 154.27,
+          "text": "Without a maintained baseline, the organisation is blind to all of this."
+        },
+        {
+          "t": 158.35,
+          "text": "It cannot tell an approved state from a drifted one, cannot detect that a rule was opened without approval, and cannot even reliably say what is running in production."
+        }
+      ]
+    },
+    {
+      "t": 167.81,
+      "sentences": [
+        {
+          "t": 167.81,
+          "text": "So the baseline changes the question you can ask."
+        },
+        {
+          "t": 170.93,
+          "text": "It turns a vague the server looks fine into a testable statement: the server matches its authorised state, or it does not."
+        },
+        {
+          "t": 178.7,
+          "text": "That is the shift from impression to evidence."
+        }
+      ]
+    },
+    {
+      "t": 181.63,
+      "sentences": [
+        {
+          "t": 181.63,
+          "text": "So carry this away."
+        },
+        {
+          "t": 182.76,
+          "text": "Change management authorises a change; configuration management records what the system actually is, and it is the reconciliation between them that catches what slipped through."
+        },
+        {
+          "t": 193.29,
+          "text": "An unexplained difference from the baseline is a potential unauthorised change to investigate, not something to wave away."
+        }
+      ]
+    }
+  ]
+}

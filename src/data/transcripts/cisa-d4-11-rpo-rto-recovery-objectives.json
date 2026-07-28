@@ -1,0 +1,253 @@
+{
+  "lesson": "cisa-d4-11-rpo-rto-recovery-objectives",
+  "title": "Recovery Objectives: RPO and RTO",
+  "source": "cisa-d4-11-rpo-rto-recovery-objectives.srt",
+  "generated": "2026-07-27",
+  "duration": 223.27,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Recovery objectives: R-P-O and R-T-O."
+        },
+        {
+          "t": 2.67,
+          "text": "These are the two most heavily tested terms in the whole domain, and the exam swaps them constantly."
+        },
+        {
+          "t": 9.88,
+          "text": "So let us make them impossible to confuse."
+        }
+      ]
+    },
+    {
+      "t": 12.91,
+      "sentences": [
+        {
+          "t": 12.91,
+          "text": "Two questions decide how a system must be protected, and they are not the same question."
+        },
+        {
+          "t": 18.41,
+          "text": "How much data can we afford to lose if this fails?"
+        },
+        {
+          "t": 21.54,
+          "text": "And how long can we afford to be down?"
+        },
+        {
+          "t": 23.92,
+          "text": "A trading system might tolerate almost no data loss but survive a short outage."
+        },
+        {
+          "t": 28.86,
+          "text": "An internal reporting tool might lose a day’s data harmlessly but cannot be down for a week at month-end."
+        },
+        {
+          "t": 35.42,
+          "text": "Answer the two questions the wrong way round and you buy the wrong protection."
+        }
+      ]
+    },
+    {
+      "t": 40.3,
+      "sentences": [
+        {
+          "t": 40.3,
+          "text": "So here is the anchor."
+        },
+        {
+          "t": 42.46,
+          "text": "R-P-O is data."
+        },
+        {
+          "t": 43.83,
+          "text": "R-T-O is time."
+        },
+        {
+          "t": 45.2,
+          "text": "Hold those two words and everything else follows."
+        }
+      ]
+    },
+    {
+      "t": 50.02,
+      "sentences": [
+        {
+          "t": 50.02,
+          "text": "The recovery point objective, R-P-O, is the maximum amount of data the organisation can afford to lose."
+        },
+        {
+          "t": 56.63,
+          "text": "It is measured backward from the moment of disruption."
+        },
+        {
+          "t": 60.09,
+          "text": "An R-P-O of one hour means that if the system fails now, losing up to the last hour of data is acceptable, but no more."
+        }
+      ]
+    },
+    {
+      "t": 67.73,
+      "sentences": [
+        {
+          "t": 67.73,
+          "text": "And because it caps data loss, R-P-O drives how often data is captured."
+        },
+        {
+          "t": 72.09,
+          "text": "An R-P-O of twenty-four hours is met by a nightly backup; one hour needs data captured at least hourly; near zero needs continuous replication."
+        },
+        {
+          "t": 80.88,
+          "text": "Think of R-P-O as a point on the timeline before the failure, the last moment you can afford to fall back to."
+        }
+      ]
+    },
+    {
+      "t": 87.58,
+      "sentences": [
+        {
+          "t": 87.58,
+          "text": "The recovery time objective, R-T-O, is the maximum tolerable downtime: how long a process can be unavailable before the impact becomes unacceptable."
+        },
+        {
+          "t": 97.15,
+          "text": "It is measured forward from the disruption."
+        },
+        {
+          "t": 99.93,
+          "text": "An R-T-O of two hours means the service must be restored within two hours."
+        }
+      ]
+    },
+    {
+      "t": 104.71,
+      "sentences": [
+        {
+          "t": 104.71,
+          "text": "And because it caps downtime, R-T-O drives how fast the recovery solution must be."
+        },
+        {
+          "t": 109.78,
+          "text": "A generous R-T-O can be met by restoring backups onto rebuilt hardware; a tight one needs a standby system or a failover site ready to take over."
+        },
+        {
+          "t": 118.75,
+          "text": "Think of R-T-O as a stretch of time after the failure, the window you have to get back."
+        }
+      ]
+    },
+    {
+      "t": 124.13,
+      "sentences": [
+        {
+          "t": 124.13,
+          "text": "So the clean way to hold them apart: R-P-O is data, measured backward, and it drives backup frequency."
+        },
+        {
+          "t": 131.22,
+          "text": "R-T-O is time, measured forward, and it drives recovery speed."
+        },
+        {
+          "t": 135.53,
+          "text": "Two different axes, two different jobs."
+        }
+      ]
+    },
+    {
+      "t": 138.24,
+      "sentences": [
+        {
+          "t": 138.24,
+          "text": "And there is a direct relationship between the objective and the cost of meeting it."
+        },
+        {
+          "t": 143.82,
+          "text": "A near-zero R-P-O requires continuous, real-time replication, far more costly than a nightly backup."
+        },
+        {
+          "t": 150.46,
+          "text": "A near-zero R-T-O requires a hot standby or failover capability, far more costly than restoring from backup."
+        },
+        {
+          "t": 157.63,
+          "text": "Tighter objectives cost more."
+        }
+      ]
+    },
+    {
+      "t": 159.55,
+      "sentences": [
+        {
+          "t": 159.55,
+          "text": "Which is why objectives are not set as tight as possible for everything."
+        },
+        {
+          "t": 163.87,
+          "text": "They come from the B-I-A: how critical a process is determines how little data loss and downtime it can tolerate."
+        },
+        {
+          "t": 170.64,
+          "text": "A process worth protecting to near-zero gets the expensive solution; one that can tolerate a day’s loss and a day’s downtime does not."
+        },
+        {
+          "t": 178.67,
+          "text": "Above both sits the maximum tolerable downtime, the absolute ceiling the R-T-O must sit within."
+        }
+      ]
+    },
+    {
+      "t": 184.37,
+      "sentences": [
+        {
+          "t": 184.37,
+          "text": "Now the trap, and it is the whole reason this lesson exists."
+        },
+        {
+          "t": 188.7,
+          "text": "The exam swaps them."
+        },
+        {
+          "t": 190.15,
+          "text": "It describes a data-loss tolerance and calls it R-T-O, or a downtime limit and calls it R-P-O."
+        },
+        {
+          "t": 196.94,
+          "text": "Do not match on the letters; read what the scenario is actually describing."
+        },
+        {
+          "t": 202.36,
+          "text": "Data backward is R-P-O."
+        },
+        {
+          "t": 204.02,
+          "text": "Time forward is R-T-O."
+        }
+      ]
+    },
+    {
+      "t": 205.61,
+      "sentences": [
+        {
+          "t": 205.61,
+          "text": "So carry this away."
+        },
+        {
+          "t": 206.87,
+          "text": "R-P-O is the data you can lose, measured backward, and it drives how often you back up."
+        },
+        {
+          "t": 212.65,
+          "text": "R-T-O is the downtime you can tolerate, measured forward, and it drives how fast you must recover."
+        },
+        {
+          "t": 219.16,
+          "text": "Fix that pairing and the questions that swap them become easy."
+        }
+      ]
+    }
+  ]
+}

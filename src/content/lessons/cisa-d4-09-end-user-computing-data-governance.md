@@ -7,6 +7,7 @@ domain: 4
 order: 9
 minutes: 7
 gated: false
+videoId: "IRW-0HPaOJE"
 taskStatement: "Evaluate the risk of end-user-developed applications and whether data has defined ownership and governance."
 objectives:
   - "Identify the risks of critical end-user computing such as spreadsheets."

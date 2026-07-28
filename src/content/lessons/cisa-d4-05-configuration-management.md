@@ -7,6 +7,7 @@ domain: 4
 order: 5
 minutes: 7
 gated: false
+videoId: "2ix7NJygW2E"
 taskStatement: "Evaluate whether the configuration of production systems is recorded, controlled against a baseline, and reconciled to authorised changes."
 objectives:
   - "State the purpose of a configuration management database and baseline."

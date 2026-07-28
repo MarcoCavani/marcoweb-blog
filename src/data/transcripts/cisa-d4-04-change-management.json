@@ -1,0 +1,221 @@
+{
+  "lesson": "cisa-d4-04-change-management",
+  "title": "Change Management",
+  "source": "cisa-d4-04-change-management.srt",
+  "generated": "2026-07-27",
+  "duration": 206.23,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Change management."
+        },
+        {
+          "t": 1.35,
+          "text": "This is the single most important control in I-T operations, and one of the crown jewels of I-T general controls."
+        },
+        {
+          "t": 9.82,
+          "text": "The exam tests it constantly."
+        }
+      ]
+    },
+    {
+      "t": 12,
+      "sentences": [
+        {
+          "t": 12,
+          "text": "Here is why it matters."
+        },
+        {
+          "t": 13.47,
+          "text": "A change went into production on Friday and took the ordering system down for the whole weekend."
+        },
+        {
+          "t": 19.62,
+          "text": "When you trace it, there was no test record, no approval, and no plan to undo it."
+        },
+        {
+          "t": 24.8,
+          "text": "The developer who wrote it also deployed it, on their own judgement, straight to live."
+        },
+        {
+          "t": 30.3,
+          "text": "The fix for the outage was itself an unauthorised, untested change."
+        },
+        {
+          "t": 34.59,
+          "text": "Change management is everything this scene was missing."
+        }
+      ]
+    },
+    {
+      "t": 38.11,
+      "sentences": [
+        {
+          "t": 38.11,
+          "text": "A change is controlled when three things are true before it reaches production."
+        },
+        {
+          "t": 42.61,
+          "text": "First, it is authorised: the appropriate change authority has approved it, a delegated approver for routine changes, a change advisory board for significant ones that assesses risk and impact."
+        }
+      ]
+    },
+    {
+      "t": 53.54,
+      "sentences": [
+        {
+          "t": 53.54,
+          "text": "Second, it is tested: shown to work, and shown not to break anything else, in an environment that is not production."
+        }
+      ]
+    },
+    {
+      "t": 60.62,
+      "sentences": [
+        {
+          "t": 60.62,
+          "text": "And third, it is reversible: there is a documented backout plan to return to the previous working state if the change fails once it is live."
+        }
+      ]
+    },
+    {
+      "t": 68.71,
+      "sentences": [
+        {
+          "t": 68.71,
+          "text": "That third one carries a lot of weight."
+        },
+        {
+          "t": 71.2,
+          "text": "No change can ever be guaranteed not to fail, which is exactly why the backout plan matters."
+        },
+        {
+          "t": 77.08,
+          "text": "Control is not the promise that nothing goes wrong; it is the ability to authorise, verify, and recover."
+        },
+        {
+          "t": 83.72,
+          "text": "When a question asks what must be true before a change goes live, look for these three."
+        }
+      ]
+    },
+    {
+      "t": 89.28,
+      "sentences": [
+        {
+          "t": 89.28,
+          "text": "Change management recognises different routes for different risks."
+        },
+        {
+          "t": 93.35,
+          "text": "Standard changes are low-risk and pre-authorised, handled through a streamlined path."
+        },
+        {
+          "t": 98.58,
+          "text": "Normal changes go through the full process, with the change advisory board weighing risk and impact."
+        },
+        {
+          "t": 104.74,
+          "text": "And emergency changes address something urgent, a critical failure, an actively exploited vulnerability, using an expedited approval route."
+        }
+      ]
+    },
+    {
+      "t": 113.3,
+      "sentences": [
+        {
+          "t": 113.3,
+          "text": "And here is the exam’s favourite point."
+        },
+        {
+          "t": 115.79,
+          "text": "An emergency change is expedited, not exempted."
+        },
+        {
+          "t": 118.78,
+          "text": "The fix can be made fast, but authorisation is still obtained, even if from a single on-call approver, and the change is documented and formally reviewed afterwards."
+        },
+        {
+          "t": 129.28,
+          "text": "Bypassing change management entirely, at the very moment the system is most fragile, is the wrong answer."
+        }
+      ]
+    },
+    {
+      "t": 135.96,
+      "sentences": [
+        {
+          "t": 135.96,
+          "text": "Now segregation of duties."
+        },
+        {
+          "t": 137.56,
+          "text": "The developer who deployed their own code broke it."
+        },
+        {
+          "t": 140.69,
+          "text": "The person who builds a change must not be the one who authorises and deploys it."
+        },
+        {
+          "t": 145.66,
+          "text": "When a single individual controls the whole path from writing code to running it in production, an error, or a deliberate malicious change, reaches live systems with no independent check."
+        }
+      ]
+    },
+    {
+      "t": 157.15,
+      "sentences": [
+        {
+          "t": 157.15,
+          "text": "So the environments and the roles are kept separate."
+        },
+        {
+          "t": 160.29,
+          "text": "Developers work in development, changes are tested elsewhere, and a distinct authority or process moves approved, tested changes into production."
+        },
+        {
+          "t": 169.04,
+          "text": "It is the same principle as an auditor not remediating their own finding, applied to the pipeline that feeds production."
+        }
+      ]
+    },
+    {
+      "t": 176.28,
+      "sentences": [
+        {
+          "t": 176.28,
+          "text": "Which is why an unauthorised change is the classic finding: a change sitting in production with no approval, no test record, and no backout plan."
+        },
+        {
+          "t": 184.89,
+          "text": "It is exactly the gap through which the Friday outage arrived."
+        }
+      ]
+    },
+    {
+      "t": 188.57,
+      "sentences": [
+        {
+          "t": 188.57,
+          "text": "So carry three things away."
+        },
+        {
+          "t": 190.47,
+          "text": "Authorise, test, be able to undo."
+        },
+        {
+          "t": 192.79,
+          "text": "Emergencies are expedited, not exempt, so expedite the approval, do not abandon it, and review afterwards."
+        },
+        {
+          "t": 200.25,
+          "text": "And the person who builds a change must never be the one who approves and deploys it."
+        }
+      ]
+    }
+  ]
+}

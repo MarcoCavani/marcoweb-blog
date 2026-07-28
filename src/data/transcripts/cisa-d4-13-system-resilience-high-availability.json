@@ -1,0 +1,233 @@
+{
+  "lesson": "cisa-d4-13-system-resilience-high-availability",
+  "title": "System Resilience and High Availability",
+  "source": "cisa-d4-13-system-resilience-high-availability.srt",
+  "generated": "2026-07-27",
+  "duration": 219.5,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "System resilience and high availability."
+        },
+        {
+          "t": 2.52,
+          "text": "This lesson keeps two ideas apart that people love to confuse: keeping a system running through a failure, and recovering it after a disaster."
+        },
+        {
+          "t": 11.48,
+          "text": "And it contains one of the most important points in the domain."
+        }
+      ]
+    },
+    {
+      "t": 15.46,
+      "sentences": [
+        {
+          "t": 15.46,
+          "text": "The scene."
+        },
+        {
+          "t": 16.09,
+          "text": "The infrastructure team is proud of the new setup: mirrored disks, clustered servers, real-time replication to a second array."
+        },
+        {
+          "t": 24.09,
+          "text": "When you ask about backups, the answer is that they are not really needed anymore, everything is replicated, so nothing can be lost."
+        },
+        {
+          "t": 32.48,
+          "text": "A week later a user deletes a critical folder, and the deletion replicates to the mirror in seconds."
+        },
+        {
+          "t": 38.83,
+          "text": "There is nothing to restore it from."
+        }
+      ]
+    },
+    {
+      "t": 41.11,
+      "sentences": [
+        {
+          "t": 41.11,
+          "text": "Resilience, and its goal of high availability, is about keeping a system operating through component failures."
+        },
+        {
+          "t": 48.08,
+          "text": "It is achieved by removing single points of failure, so that when one component fails, another carries on and many incidents never become outages."
+        },
+        {
+          "t": 57.33,
+          "text": "It is built-in tolerance, acting continuously, in advance."
+        }
+      ]
+    },
+    {
+      "t": 61.01,
+      "sentences": [
+        {
+          "t": 61.01,
+          "text": "How is it built."
+        },
+        {
+          "t": 62.22,
+          "text": "First, redundancy: duplicate components, power supplies, network paths, disks, so no single one stops the system."
+        }
+      ]
+    },
+    {
+      "t": 70.78,
+      "sentences": [
+        {
+          "t": 70.78,
+          "text": "Second, failover and clustering: a standby component or node takes over automatically when its partner fails."
+        }
+      ]
+    },
+    {
+      "t": 77.57,
+      "sentences": [
+        {
+          "t": 77.57,
+          "text": "And third, load balancing and RAID: work is spread across multiple servers so the loss of one is absorbed, and RAID gives disk redundancy so a failed drive does not lose the data or stop the system."
+        },
+        {
+          "t": 88.93,
+          "text": "A disk dies and its mirror carries on; a server fails and the cluster picks up the load."
+        }
+      ]
+    },
+    {
+      "t": 93.98,
+      "sentences": [
+        {
+          "t": 93.98,
+          "text": "Now the crucial point, and the exam loves it."
+        },
+        {
+          "t": 97.72,
+          "text": "Redundancy is not backup."
+        },
+        {
+          "t": 99.8,
+          "text": "Redundancy protects against a component failing."
+        },
+        {
+          "t": 103.79,
+          "text": "It does not protect the data."
+        }
+      ]
+    },
+    {
+      "t": 106.2,
+      "sentences": [
+        {
+          "t": 106.2,
+          "text": "Why not."
+        },
+        {
+          "t": 106.74,
+          "text": "Because redundancy and replication faithfully copy whatever happens to the data, good or bad."
+        },
+        {
+          "t": 112.97,
+          "text": "If a file is deleted, the deletion replicates."
+        },
+        {
+          "t": 116.06,
+          "text": "If data is corrupted, the corruption mirrors."
+        },
+        {
+          "t": 119.08,
+          "text": "If ransomware encrypts the files, the encryption is dutifully written to the redundant copy too, often within seconds."
+        },
+        {
+          "t": 126.99,
+          "text": "RAID keeps you running when a disk dies; it does nothing when the problem is the data itself."
+        }
+      ]
+    },
+    {
+      "t": 133.22,
+      "sentences": [
+        {
+          "t": 133.22,
+          "text": "A backup is different in kind."
+        },
+        {
+          "t": 135.13,
+          "text": "It is a separate, point-in-time copy that a live change cannot reach."
+        },
+        {
+          "t": 139.5,
+          "text": "That is exactly what lets you go back to before the deletion or the corruption."
+        },
+        {
+          "t": 144.51,
+          "text": "So resilience and backup solve different problems, and one never substitutes for the other."
+        },
+        {
+          "t": 150.28,
+          "text": "When a scenario proposes replacing backups with RAID or replication, that deletion-and-corruption gap is the answer."
+        }
+      ]
+    },
+    {
+      "t": 157.63,
+      "sentences": [
+        {
+          "t": 157.63,
+          "text": "The domain also pairs resilience with disaster recovery, and the exam checks you distinguish them."
+        },
+        {
+          "t": 163.53,
+          "text": "Resilience is built-in tolerance that keeps the system running through a failure, so many incidents never become outages."
+        },
+        {
+          "t": 170.82,
+          "text": "Disaster recovery, the next lessons, is what restores service after a disruption large enough to overwhelm that tolerance, a site loss, a fire, a major failure."
+        }
+      ]
+    },
+    {
+      "t": 180.46,
+      "sentences": [
+        {
+          "t": 180.46,
+          "text": "So the distinction is withstand versus recover."
+        },
+        {
+          "t": 183.32,
+          "text": "Resilience reduces how often you need to invoke recovery; it does not remove the need for it."
+        },
+        {
+          "t": 188.98,
+          "text": "A resilient system still needs a D-R plan for the disaster that redundancy cannot absorb, and it still needs backups for the data that redundancy cannot protect."
+        }
+      ]
+    },
+    {
+      "t": 198.79,
+      "sentences": [
+        {
+          "t": 198.79,
+          "text": "So carry this away."
+        },
+        {
+          "t": 200.09,
+          "text": "RAID and replication protect against hardware failure, not against deletion, corruption or ransomware, which propagate to the redundant copy instantly."
+        },
+        {
+          "t": 210.41,
+          "text": "Only a separate backup can undo those."
+        },
+        {
+          "t": 213.01,
+          "text": "And resilience, withstanding failure, is not the same as disaster recovery, recovering from it."
+        }
+      ]
+    }
+  ]
+}

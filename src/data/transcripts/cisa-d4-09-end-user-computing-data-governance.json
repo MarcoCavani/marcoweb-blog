@@ -1,0 +1,209 @@
+{
+  "lesson": "cisa-d4-09-end-user-computing-data-governance",
+  "title": "End-User Computing and Data Governance",
+  "source": "cisa-d4-09-end-user-computing-data-governance.srt",
+  "generated": "2026-07-27",
+  "duration": 204.62,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "End-user computing and data governance."
+        },
+        {
+          "t": 2.51,
+          "text": "This lesson is about the systems that are not on the system inventory, and about who actually owns the organisation’s data."
+        }
+      ]
+    },
+    {
+      "t": 10.44,
+      "sentences": [
+        {
+          "t": 10.44,
+          "text": "The scene."
+        },
+        {
+          "t": 11.06,
+          "text": "The month-end close depends on a spreadsheet."
+        },
+        {
+          "t": 13.84,
+          "text": "It has grown for years, it contains formulas only one analyst fully understands, and its output drops straight into the financial statements."
+        },
+        {
+          "t": 22.55,
+          "text": "It has never been tested by anyone else, has no version history, and if the analyst is on leave when a figure looks wrong, nobody can safely touch it."
+        },
+        {
+          "t": 31.82,
+          "text": "On the system inventory, it does not appear at all, because a spreadsheet is not considered a system."
+        },
+        {
+          "t": 38.06,
+          "text": "That last assumption is the whole problem."
+        }
+      ]
+    },
+    {
+      "t": 40.66,
+      "sentences": [
+        {
+          "t": 40.66,
+          "text": "Because a spreadsheet can be an application."
+        },
+        {
+          "t": 43.37,
+          "text": "End-user computing is applications built and maintained by business users outside I-T’s control, classically spreadsheets and user-built databases."
+        },
+        {
+          "t": 52.43,
+          "text": "They are enormously useful and often business-critical, and that is exactly why a critical one is a recognised audit risk."
+        }
+      ]
+    },
+    {
+      "t": 59.95,
+      "sentences": [
+        {
+          "t": 59.95,
+          "text": "Here is what it lacks."
+        },
+        {
+          "t": 61.61,
+          "text": "First, change management: anyone can alter a formula with no review, no approval."
+        }
+      ]
+    },
+    {
+      "t": 67.73,
+      "sentences": [
+        {
+          "t": 67.73,
+          "text": "Second, testing and input validation: there is no independent testing, so errors are found by luck if at all, and no validation, so a mistyped or malformed value is simply accepted."
+        }
+      ]
+    },
+    {
+      "t": 78.58,
+      "sentences": [
+        {
+          "t": 78.58,
+          "text": "And third, version control: which copy is authoritative is anyone’s guess, and the knowledge lives in one person’s head, complete key-person dependency."
+        },
+        {
+          "t": 87.41,
+          "text": "So when such a spreadsheet feeds the financial statements, an undetected error, a wrong formula, a dragged cell, a transposed input, flows straight into the accounts."
+        }
+      ]
+    },
+    {
+      "t": 97.06,
+      "sentences": [
+        {
+          "t": 97.06,
+          "text": "So what is the first step to control it."
+        },
+        {
+          "t": 99.51,
+          "text": "Not to ban it, that destroys tools the business relies on, and not to assume I-T already manages it, it does not, by definition."
+        },
+        {
+          "t": 107.34,
+          "text": "It is to identify and inventory the critical ones: which spreadsheets and user-built databases feed financial or otherwise critical processes."
+        }
+      ]
+    },
+    {
+      "t": 116.04,
+      "sentences": [
+        {
+          "t": 116.04,
+          "text": "Because you cannot apply controls to what you have not found."
+        },
+        {
+          "t": 120.08,
+          "text": "This is the same principle as identifying applicable obligations before managing compliance in Domain two: discovery comes first."
+        },
+        {
+          "t": 128.64,
+          "text": "Find the critical ones first."
+        }
+      ]
+    },
+    {
+      "t": 130.56,
+      "sentences": [
+        {
+          "t": 130.56,
+          "text": "Once they are known, apply proportionate controls: access restriction, version control, input validation, independent review of key formulas, and backup, scaled to how critical each one is."
+        },
+        {
+          "t": 142.78,
+          "text": "Not every spreadsheet needs this."
+        },
+        {
+          "t": 144.91,
+          "text": "The ones feeding the accounts do."
+        }
+      ]
+    },
+    {
+      "t": 147.05,
+      "sentences": [
+        {
+          "t": 147.05,
+          "text": "Now data governance, and one distinction the exam tests."
+        },
+        {
+          "t": 150.69,
+          "text": "The data owner is a business role, accountable for the data: its classification, its quality, and decisions about who may access and use it."
+        },
+        {
+          "t": 159.79,
+          "text": "The data custodian, usually I-T, holds, secures and maintains the data on the owner’s behalf."
+        }
+      ]
+    },
+    {
+      "t": 165.84,
+      "sentences": [
+        {
+          "t": 165.84,
+          "text": "So the line is: the business owns, I-T custodies."
+        },
+        {
+          "t": 168.93,
+          "text": "Accountability rests with the business data owner; I-T holds and protects it."
+        },
+        {
+          "t": 173.78,
+          "text": "It is the same shape as Domain three’s point that the business, not I-T, owns what a system is for, applied to the data itself."
+        },
+        {
+          "t": 181.78,
+          "text": "When a question asks who owns a dataset, it is the business data owner, not the team that stores it."
+        }
+      ]
+    },
+    {
+      "t": 188.09,
+      "sentences": [
+        {
+          "t": 188.09,
+          "text": "So carry this away."
+        },
+        {
+          "t": 189.27,
+          "text": "A spreadsheet feeding critical figures carries the risk of an application with none of the controls, and the fix begins with finding and inventorying the critical ones."
+        },
+        {
+          "t": 199.71,
+          "text": "And the business data owner is accountable for data; I-T is only its custodian."
+        }
+      ]
+    }
+  ]
+}

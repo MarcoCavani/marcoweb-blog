@@ -1,0 +1,205 @@
+{
+  "lesson": "cisa-d4-10-business-impact-analysis",
+  "title": "Business Impact Analysis",
+  "source": "cisa-d4-10-business-impact-analysis.srt",
+  "generated": "2026-07-27",
+  "duration": 200.5,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Business impact analysis."
+        },
+        {
+          "t": 1.55,
+          "text": "This is the foundation of the whole business-resilience half of the domain, and skipping it is how you end up recovering the wrong thing."
+        }
+      ]
+    },
+    {
+      "t": 10.03,
+      "sentences": [
+        {
+          "t": 10.03,
+          "text": "Here is the scene."
+        },
+        {
+          "t": 11.14,
+          "text": "An organisation has spent heavily on a disaster recovery site and nightly replication for its email system, the project the I-T team felt most confident scoping."
+        },
+        {
+          "t": 21.06,
+          "text": "When a real disruption hits the order-management system, the one the business actually runs on, it turns out nobody had established how quickly it needed to be back, or that it mattered more than email."
+        },
+        {
+          "t": 33.5,
+          "text": "The recovery capability was real."
+        },
+        {
+          "t": 35.54,
+          "text": "It was pointed at the wrong thing."
+        }
+      ]
+    },
+    {
+      "t": 37.63,
+      "sentences": [
+        {
+          "t": 37.63,
+          "text": "A business impact analysis, a B-I-A, identifies the organisation’s critical business processes and analyses the impact of disrupting them over time."
+        },
+        {
+          "t": 46.69,
+          "text": "From that, it derives the recovery priorities and objectives: which processes must come back first, and how quickly, and with how little data lost."
+        },
+        {
+          "t": 55.7,
+          "text": "It is the foundation everything else rests on."
+        }
+      ]
+    },
+    {
+      "t": 58.51,
+      "sentences": [
+        {
+          "t": 58.51,
+          "text": "What exactly does it establish."
+        },
+        {
+          "t": 60.94,
+          "text": "First, the critical business processes: which ones actually matter."
+        }
+      ]
+    },
+    {
+      "t": 66.19,
+      "sentences": [
+        {
+          "t": 66.19,
+          "text": "Second, the impact of disrupting them, and crucially how that impact grows over time, an hour down versus a day down."
+        }
+      ]
+    },
+    {
+      "t": 73.44,
+      "sentences": [
+        {
+          "t": 73.44,
+          "text": "And third, from those, the recovery priorities and objectives, including the R-P-O and R-T-O we will meet in the next lesson."
+        },
+        {
+          "t": 81.1,
+          "text": "The B-I-A’s output answers the questions any recovery effort must answer first: what must we recover, how fast, and in what order."
+        }
+      ]
+    },
+    {
+      "t": 89.06,
+      "sentences": [
+        {
+          "t": 89.06,
+          "text": "Because it defines the requirements, the B-I-A must come first, before the recovery solution is designed."
+        },
+        {
+          "t": 95.28,
+          "text": "This is the same logic as requirements before build in Domain three: you establish what is needed, then design something to meet it."
+        }
+      ]
+    },
+    {
+      "t": 103.1,
+      "sentences": [
+        {
+          "t": 103.1,
+          "text": "Do it the other way, build a D-R capability and then discover what the business needed, and you protect whatever was easiest to scope, which is exactly how the organisation ended up protecting email while the order system waited."
+        },
+        {
+          "t": 116.37,
+          "text": "The B-I-A tells you the order system needs to be back within hours and email can wait a day."
+        },
+        {
+          "t": 121.7,
+          "text": "When a question asks the first step in continuity or D-R planning, it is the B-I-A."
+        }
+      ]
+    },
+    {
+      "t": 126.5,
+      "sentences": [
+        {
+          "t": 126.5,
+          "text": "And criticality is a business judgement, not a technical one."
+        },
+        {
+          "t": 130.27,
+          "text": "How badly does losing this process hurt, in lost revenue, regulatory breach, safety, or reputation, and how fast does that harm escalate."
+        },
+        {
+          "t": 138.73,
+          "text": "The people best placed to answer are the business process owners, who live with the consequences of the process being down."
+        }
+      ]
+    },
+    {
+      "t": 146.33,
+      "sentences": [
+        {
+          "t": 146.33,
+          "text": "So whose call is it."
+        },
+        {
+          "t": 147.64,
+          "text": "The business process owners determine criticality, because they feel the impact."
+        },
+        {
+          "t": 152.91,
+          "text": "I-T contributes essential technical input, what depends on what, what is feasible, but it does not decide what is critical."
+        },
+        {
+          "t": 161,
+          "text": "A D-R vendor supplies capability, not criticality judgements, and audit evaluates rather than sets it."
+        }
+      ]
+    },
+    {
+      "t": 167.71,
+      "sentences": [
+        {
+          "t": 167.71,
+          "text": "And without the B-I-A, you recover the convenient."
+        },
+        {
+          "t": 170.94,
+          "text": "Skip the analysis and you protect what was easiest to build, not what the business most needs, in the wrong order and to the wrong timescales."
+        },
+        {
+          "t": 180.12,
+          "text": "The B-I-A is what stops that."
+        }
+      ]
+    },
+    {
+      "t": 181.99,
+      "sentences": [
+        {
+          "t": 181.99,
+          "text": "So carry this away."
+        },
+        {
+          "t": 183.31,
+          "text": "The B-I-A identifies critical processes and the impact of disruption over time, and from that sets the recovery objectives."
+        },
+        {
+          "t": 191.87,
+          "text": "It comes first, before the recovery solution."
+        },
+        {
+          "t": 195,
+          "text": "And criticality is the business’s call, made by the process owners, not by I-T."
+        }
+      ]
+    }
+  ]
+}

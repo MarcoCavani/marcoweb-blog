@@ -1,0 +1,229 @@
+{
+  "lesson": "cisa-d4-12-backup-restoration",
+  "title": "Data Backup and Restoration",
+  "source": "cisa-d4-12-backup-restoration.srt",
+  "generated": "2026-07-27",
+  "duration": 209.71,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Data backup and restoration."
+        },
+        {
+          "t": 1.83,
+          "text": "This is the most common, and most preventable, resilience failure there is, and the whole lesson turns on a single word: restoration."
+        }
+      ]
+    },
+    {
+      "t": 10.51,
+      "sentences": [
+        {
+          "t": 10.51,
+          "text": "The scene."
+        },
+        {
+          "t": 11.17,
+          "text": "The backups had been running green every night for two years."
+        },
+        {
+          "t": 15.17,
+          "text": "The reports said success, every time."
+        },
+        {
+          "t": 17.6,
+          "text": "Then a server was lost and the team went to restore, and found the backups were of the wrong volume, missing the database that mattered, and the last usable copy was months old."
+        },
+        {
+          "t": 29.21,
+          "text": "Two years of successful backup jobs, and nothing to recover."
+        },
+        {
+          "t": 33.14,
+          "text": "Nobody had ever tried to restore one."
+        }
+      ]
+    },
+    {
+      "t": 35.57,
+      "sentences": [
+        {
+          "t": 35.57,
+          "text": "Here is the core point."
+        },
+        {
+          "t": 37.01,
+          "text": "A backup job completing successfully tells you one thing: it ran."
+        },
+        {
+          "t": 41.09,
+          "text": "It does not tell you the data is complete, that it is uncorrupted, that it captured the right systems, or that it can actually rebuild a working environment."
+        }
+      ]
+    },
+    {
+      "t": 50.95,
+      "sentences": [
+        {
+          "t": 50.95,
+          "text": "Those are only proven by doing the thing you are keeping the backup for: a test restoration."
+        },
+        {
+          "t": 56.55,
+          "text": "This is the central point of the lesson, and a favourite of the exam."
+        },
+        {
+          "t": 60.74,
+          "text": "Restoration testing is the control that proves recoverability."
+        },
+        {
+          "t": 64.52,
+          "text": "Backups that have never been restored fail with dispiriting regularity, wrong scope, silent corruption, missing dependencies, expired media, and the failure is discovered at the worst possible moment."
+        }
+      ]
+    },
+    {
+      "t": 76.68,
+      "sentences": [
+        {
+          "t": 76.68,
+          "text": "So the question an auditor asks is never do the backups run."
+        },
+        {
+          "t": 81.38,
+          "text": "It is: when did you last successfully restore one?"
+        },
+        {
+          "t": 85.3,
+          "text": "A green backup report is a hope."
+        },
+        {
+          "t": 87.81,
+          "text": "A successful test restore is evidence."
+        },
+        {
+          "t": 90.79,
+          "text": "That difference is the lesson."
+        }
+      ]
+    },
+    {
+      "t": 93.14,
+      "sentences": [
+        {
+          "t": 93.14,
+          "text": "Second point: where you keep them."
+        },
+        {
+          "t": 95.3,
+          "text": "A backup exists to survive whatever destroys the original, so storing it next to the system it protects defeats the purpose."
+        },
+        {
+          "t": 103.14,
+          "text": "A fire, flood, power event or site loss takes out both the system and its only backup at once."
+        },
+        {
+          "t": 109.08,
+          "text": "Backups are therefore stored offsite, or in a geographically separate location, far enough that a disaster at the primary site cannot reach them."
+        },
+        {
+          "t": 118.25,
+          "text": "Convenience of access argues the other way, and convenience is not the goal; survivability is."
+        }
+      ]
+    },
+    {
+      "t": 124.2,
+      "sentences": [
+        {
+          "t": 124.2,
+          "text": "It is the same principle as keeping the old system as a fallback in Domain three: the safety net must not share the fate of the thing it is protecting."
+        },
+        {
+          "t": 132.99,
+          "text": "A backup that dies with the system it protects is no backup at all."
+        }
+      ]
+    },
+    {
+      "t": 136.9,
+      "sentences": [
+        {
+          "t": 136.9,
+          "text": "Now the three backup types, which trade backup size against restore effort."
+        },
+        {
+          "t": 141.64,
+          "text": "A full backup copies everything: simplest to restore, one copy, but the largest and slowest to take."
+        }
+      ]
+    },
+    {
+      "t": 147.96,
+      "sentences": [
+        {
+          "t": 147.96,
+          "text": "An incremental backup copies only what changed since the last backup of any kind."
+        },
+        {
+          "t": 153.16,
+          "text": "Smallest and fastest each day, but a restore needs the last full plus every incremental since, in order."
+        }
+      ]
+    },
+    {
+      "t": 159.84,
+      "sentences": [
+        {
+          "t": 159.84,
+          "text": "And a differential backup copies everything changed since the last full backup."
+        },
+        {
+          "t": 164.82,
+          "text": "It grows each day, but a restore needs only the last full plus the latest differential."
+        },
+        {
+          "t": 170.31,
+          "text": "The exam tests it directly: incremental is since the last backup, differential is since the last full."
+        }
+      ]
+    },
+    {
+      "t": 176.74,
+      "sentences": [
+        {
+          "t": 176.74,
+          "text": "And how often do you back up."
+        },
+        {
+          "t": 178.61,
+          "text": "Frequency comes from the R-P-O in the previous lesson: the less data you can afford to lose, the more often you back up."
+        },
+        {
+          "t": 186.35,
+          "text": "An R-P-O of a day means nightly; an R-P-O of an hour means hourly or continuous."
+        }
+      ]
+    },
+    {
+      "t": 191.52,
+      "sentences": [
+        {
+          "t": 191.52,
+          "text": "So carry this away."
+        },
+        {
+          "t": 192.7,
+          "text": "A successful backup report proves the job ran, nothing more; only a test restoration proves you can actually recover, which is why untested backups are treated as unproven."
+        },
+        {
+          "t": 203.42,
+          "text": "And backups are stored offsite, where the disaster that destroys the system cannot also destroy them."
+        }
+      ]
+    }
+  ]
+}

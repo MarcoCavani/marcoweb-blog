@@ -7,6 +7,7 @@ domain: 4
 order: 3
 minutes: 7
 gated: false
+videoId: "JufD1pT0ly0"
 taskStatement: "Evaluate whether the root causes of recurring incidents are investigated and removed to prevent recurrence."
 objectives:
   - "Distinguish problem management from incident management."

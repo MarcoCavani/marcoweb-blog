@@ -1,0 +1,201 @@
+{
+  "lesson": "cisa-d4-06-release-patch-management",
+  "title": "Release and Patch Management",
+  "source": "cisa-d4-06-release-patch-management.srt",
+  "generated": "2026-07-27",
+  "duration": 191.9,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Release and patch management."
+        },
+        {
+          "t": 1.8,
+          "text": "This lesson is about controlling the path code and fixes take to production: through separated environments, and in the right order."
+        }
+      ]
+    },
+    {
+      "t": 10.01,
+      "sentences": [
+        {
+          "t": 10.01,
+          "text": "Here is the scene."
+        },
+        {
+          "t": 11.14,
+          "text": "A developer needed to fix a bug quickly, so they logged straight into production with the admin access they have always had, edited the live code, and moved on."
+        },
+        {
+          "t": 21.21,
+          "text": "It worked, this time."
+        },
+        {
+          "t": 22.53,
+          "text": "There was no separate test of the fix, no release record, and nothing stopping the next edit from taking the system down."
+        },
+        {
+          "t": 30.14,
+          "text": "The path from a developer’s keyboard to live was a single step."
+        }
+      ]
+    },
+    {
+      "t": 34.1,
+      "sentences": [
+        {
+          "t": 34.1,
+          "text": "The foundation is environment separation."
+        },
+        {
+          "t": 37.19,
+          "text": "First, development: where code is written and changed."
+        }
+      ]
+    },
+    {
+      "t": 41.26,
+      "sentences": [
+        {
+          "t": 41.26,
+          "text": "Second, test, and often a staging environment: where it is verified, against representative, not live, data, as Domain three insisted."
+        }
+      ]
+    },
+    {
+      "t": 50.09,
+      "sentences": [
+        {
+          "t": 50.09,
+          "text": "And third, production: the live system serving the business."
+        },
+        {
+          "t": 54.8,
+          "text": "Three environments, kept apart."
+        }
+      ]
+    },
+    {
+      "t": 57.24,
+      "sentences": [
+        {
+          "t": 57.24,
+          "text": "Keeping them separate does two things."
+        },
+        {
+          "t": 59.51,
+          "text": "It ensures only tested, authorised releases reach production, rather than half-finished code running against real data."
+        },
+        {
+          "t": 66.61,
+          "text": "And it enforces segregation of duties: the people who build changes are not the people who operate production."
+        },
+        {
+          "t": 73.17,
+          "text": "Release management is the controlled process that packages an approved, tested change and deploys it across that boundary."
+        }
+      ]
+    },
+    {
+      "t": 80.45,
+      "sentences": [
+        {
+          "t": 80.45,
+          "text": "Now patch management, and the exam’s key point: how patches are prioritised."
+        },
+        {
+          "t": 85.49,
+          "text": "Not by release order, not alphabetically, not by download size, but by risk and criticality."
+        },
+        {
+          "t": 91.6,
+          "text": "How severe is the vulnerability the patch fixes, and how exposed and how critical is the affected system."
+        }
+      ]
+    },
+    {
+      "t": 98.57,
+      "sentences": [
+        {
+          "t": 98.57,
+          "text": "So a critical flaw on an internet-facing, business-critical system is patched first; a low-severity issue on an isolated internal system can wait."
+        },
+        {
+          "t": 107.02,
+          "text": "This risk-based ranking directs limited effort where exposure is greatest, and it is the same appetite-and-magnitude thinking from Domain two, applied to patching."
+        }
+      ]
+    },
+    {
+      "t": 116.45,
+      "sentences": [
+        {
+          "t": 116.45,
+          "text": "And patches are still changes."
+        },
+        {
+          "t": 118.17,
+          "text": "So they go through change and release management: tested where practical before deployment, and applied through the controlled path."
+        },
+        {
+          "t": 125.76,
+          "text": "Even an urgent security patch for an actively exploited vulnerability follows the emergency change route, expedited, but authorised and recorded, rather than pushed straight to production untested and untracked."
+        }
+      ]
+    },
+    {
+      "t": 137.88,
+      "sentences": [
+        {
+          "t": 137.88,
+          "text": "Which brings us back to the developer."
+        },
+        {
+          "t": 140.13,
+          "text": "The permanent admin access to production is the flaw underneath the whole scene."
+        },
+        {
+          "t": 144.88,
+          "text": "Standing developer access to production lets changes reach live systems outside the release process, untested and unauthorised, and it collapses the segregation between building and operating."
+        }
+      ]
+    },
+    {
+      "t": 156.26,
+      "sentences": [
+        {
+          "t": 156.26,
+          "text": "So production access is restricted, and changes flow only through the controlled release path."
+        },
+        {
+          "t": 161.66,
+          "text": "Where developers genuinely need occasional production access to investigate, it is granted narrowly, temporarily, and logged, not held as a standing right that turns every quick fix into a shortcut past control."
+        }
+      ]
+    },
+    {
+      "t": 173.78,
+      "sentences": [
+        {
+          "t": 173.78,
+          "text": "So carry this away."
+        },
+        {
+          "t": 175.09,
+          "text": "Separate development, test and production so only tested code reaches live."
+        },
+        {
+          "t": 180.24,
+          "text": "Prioritise patches by risk, not by anything else."
+        },
+        {
+          "t": 183.6,
+          "text": "And developers with standing production access are both a release-management failure and a segregation-of-duties finding."
+        }
+      ]
+    }
+  ]
+}

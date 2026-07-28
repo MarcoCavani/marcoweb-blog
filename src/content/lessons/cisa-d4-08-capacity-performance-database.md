@@ -7,6 +7,7 @@ domain: 4
 order: 8
 minutes: 7
 gated: false
+videoId: "ZbAOb5aiEeQ"
 taskStatement: "Evaluate whether capacity and performance are managed proactively and whether privileged database activity is controlled."
 objectives:
   - "Explain why capacity management must be proactive."

@@ -7,6 +7,7 @@ domain: 4
 order: 6
 minutes: 8
 gated: false
+videoId: "-2__cZ_UE-k"
 taskStatement: "Evaluate whether releases and patches reach production through segregated environments and are prioritised and tested according to risk."
 objectives:
   - "Explain why development, test and production environments are kept separate."
