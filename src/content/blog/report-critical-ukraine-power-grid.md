@@ -1,7 +1,7 @@
 ---
 title: "Critical Infrastructure Report: The Ukraine Power Grid Attack, the First Confirmed Cyberattack to Cut Electricity"
 description: "On 23 December 2015, a coordinated cyberattack by the Sandworm group cut power to approximately 225,000 customers in western Ukraine. It was the first confirmed cyberattack to cause an electricity outage. This report examines the attack chain, the operational technology vulnerabilities it exploited, and what it established for the security of power grid infrastructure globally."
-pubDate: 2026-08-25
+pubDate: 2026-07-29
 heroImage: "/images/report-critical-ukraine-power-grid.svg"
 category: "Digital Report"
 industry: "Critical Infrastructure"

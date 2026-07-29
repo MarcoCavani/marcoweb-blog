@@ -1,7 +1,7 @@
 ---
 title: "Healthcare Incident Report: The Medibank Breach and the Weaponisation of Health Data"
 description: "In October 2022, REvil-linked actors exfiltrated the health insurance records of 9.7 million Australians from Medibank Private. When the company refused to pay the ransom, the attackers published customers' most sensitive medical data online. This report examines the breach, the control failures, and what happens when health data becomes a coercion instrument."
-pubDate: 2026-07-30
+pubDate: 2026-07-29
 heroImage: "/images/report-healthcare-medibank.svg"
 category: "Digital Report"
 industry: "Healthcare"

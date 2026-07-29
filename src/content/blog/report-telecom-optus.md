@@ -1,7 +1,7 @@
 ---
 title: "Telecom Incident Report: The Optus Breach and the Unauthenticated API That Exposed 9.8 Million Australians"
 description: "In September 2022, an unauthenticated API endpoint allowed an attacker to systematically enumerate and download the personal records of 9.8 million current and former Optus customers. This report examines the architectural failure, the identity document exposure it created, and what the telecommunications sector's data obligations mean for ITGC controls."
-pubDate: 2026-08-04
+pubDate: 2026-07-29
 heroImage: "/images/report-telecom-optus.svg"
 category: "Digital Report"
 industry: "Telecommunications"

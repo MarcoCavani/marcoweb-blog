@@ -1,7 +1,7 @@
 ---
 title: "Critical Infrastructure Report: WannaCry and the NHS, When Ransomware Hit the National Health Service"
 description: "On 12 May 2017, WannaCry ransomware encrypted devices across 80 NHS organisations in England, forcing the cancellation of at least 19,000 appointments and procedures. This report examines how a nation-state-developed exploit became a criminal weapon and what it exposed about patch management and network segmentation in public health infrastructure."
-pubDate: 2026-08-18
+pubDate: 2026-07-29
 heroImage: "/images/report-critical-nhs-wannacry.svg"
 category: "Digital Report"
 industry: "Critical Infrastructure"

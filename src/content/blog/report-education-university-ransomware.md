@@ -1,7 +1,7 @@
 ---
 title: "Education Incident Report: Why Universities Are the Most Consistently Targeted Sector for Ransomware"
 description: "More than 60 percent of UK universities experienced a ransomware or significant cyberattack between 2019 and 2023. This report examines the structural characteristics that make universities persistent ransomware targets, the ITGC control gaps common across the sector, and the specific cases that illustrate the pattern."
-pubDate: 2026-08-11
+pubDate: 2026-07-29
 heroImage: "/images/report-education-university-ransomware.svg"
 category: "Digital Report"
 industry: "Education"
