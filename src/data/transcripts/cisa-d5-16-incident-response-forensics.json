@@ -1,0 +1,221 @@
+{
+  "lesson": "cisa-d5-16-incident-response-forensics",
+  "title": "Incident Response and Digital Forensics",
+  "source": "cisa-d5-16-incident-response-forensics.srt",
+  "generated": "2026-07-28",
+  "duration": 227.38,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Incident response and digital forensics."
+        },
+        {
+          "t": 2.44,
+          "text": "This is the final lesson of the course, and it draws together threads from every domain: a plan tested in advance, a disciplined order, evidence handled soundly, and learning fed back."
+        }
+      ]
+    },
+    {
+      "t": 13.68,
+      "sentences": [
+        {
+          "t": 13.68,
+          "text": "The scene."
+        },
+        {
+          "t": 14.3,
+          "text": "An alert fires: something is spreading across the network."
+        },
+        {
+          "t": 17.87,
+          "text": "The team’s response is improvised, there is a plan somewhere but no one has run it."
+        },
+        {
+          "t": 22.98,
+          "text": "In the rush, they wipe and rebuild the first infected machine to get it back fast, which destroys the only record of how the attacker got in."
+        },
+        {
+          "t": 31.67,
+          "text": "No one documented what was touched."
+        },
+        {
+          "t": 33.83,
+          "text": "They stopped this machine, maybe, but they cannot say how far it spread, cannot prove what happened, and are no better prepared for next time."
+        }
+      ]
+    },
+    {
+      "t": 42.58,
+      "sentences": [
+        {
+          "t": 42.58,
+          "text": "Incident response follows a sequence, and the exam cares about the order."
+        },
+        {
+          "t": 47.55,
+          "text": "First, preparation: the plan, the team, the tools, in place before anything happens."
+        },
+        {
+          "t": 53.28,
+          "text": "Improvising during an incident is the failure the scenario opens with."
+        }
+      ]
+    },
+    {
+      "t": 58.06,
+      "sentences": [
+        {
+          "t": 58.06,
+          "text": "Second, detection and identification: recognising that an incident is occurring and understanding its scope, the monitoring from the previous lesson."
+        }
+      ]
+    },
+    {
+      "t": 66.79,
+      "sentences": [
+        {
+          "t": 66.79,
+          "text": "And third, containment: stopping the spread and limiting the damage, for example by isolating affected systems."
+        },
+        {
+          "t": 74.08,
+          "text": "This is the immediate priority once an incident is detected."
+        }
+      ]
+    },
+    {
+      "t": 78.02,
+      "sentences": [
+        {
+          "t": 78.02,
+          "text": "The most tested point in the order is containment before eradication: when a breach is spreading, you stop it spreading first, then clean up."
+        },
+        {
+          "t": 86.5,
+          "text": "Chasing attribution, rebuilding everything, or issuing public statements ahead of containment all let the damage grow."
+        },
+        {
+          "t": 93.59,
+          "text": "Stop the bleeding, then treat the wound."
+        }
+      ]
+    },
+    {
+      "t": 96,
+      "sentences": [
+        {
+          "t": 96,
+          "text": "After containment come the rest of the phases."
+        },
+        {
+          "t": 99.16,
+          "text": "Eradication: removing the cause, the malware, the foothold, the vulnerability."
+        },
+        {
+          "t": 104.53,
+          "text": "Recovery: restoring systems to normal, often from the tested backups of Domain four, and confirming they are clean."
+        },
+        {
+          "t": 112.43,
+          "text": "And then the post-incident review."
+        }
+      ]
+    },
+    {
+      "t": 114.77,
+      "sentences": [
+        {
+          "t": 114.77,
+          "text": "Now the team’s forensic failure."
+        },
+        {
+          "t": 116.66,
+          "text": "Their instinct to wipe and rebuild the first machine destroyed the evidence."
+        },
+        {
+          "t": 121.15,
+          "text": "Digital evidence is fragile and easily altered, so forensics rests on preserving the original: work on copies or forensic images, not the live original, and verify integrity with a hash, from the cryptography lesson, so you can prove the copy matches and nothing changed."
+        }
+      ]
+    },
+    {
+      "t": 137.16,
+      "sentences": [
+        {
+          "t": 137.16,
+          "text": "Around this sits the chain of custody: a documented, unbroken record of who collected, held and handled each piece of evidence, and how."
+        },
+        {
+          "t": 145.22,
+          "text": "It preserves the evidence’s integrity and admissibility, so it can be trusted and, if it comes to it, stand up in legal proceedings."
+        },
+        {
+          "t": 153.04,
+          "text": "This is the evidence-reliability discipline from Domain one, made literal: evidence you cannot vouch for the handling of is evidence you may not be able to use."
+        },
+        {
+          "t": 162.51,
+          "text": "Wiping the machine destroyed both the evidence and the chain."
+        }
+      ]
+    },
+    {
+      "t": 166.13,
+      "sentences": [
+        {
+          "t": 166.13,
+          "text": "The final phase, the post-incident review, or lessons learned, is where the incident becomes improvement."
+        },
+        {
+          "t": 172.14,
+          "text": "Once resolved, the team looks back: what allowed this, how did the response go, what should change, and feeds the answers into stronger controls and a better plan."
+        },
+        {
+          "t": 181.48,
+          "text": "It is the same instinct as problem management in Domain four: address the underlying cause so the next incident is prevented or handled better."
+        }
+      ]
+    },
+    {
+      "t": 189.67,
+      "sentences": [
+        {
+          "t": 189.67,
+          "text": "And like every plan in this course, the incident response plan must be tested, not just written, the same lesson as the untested D-R plan and the unexercised continuity plan."
+        },
+        {
+          "t": 200.09,
+          "text": "A plan first run during a real incident is the scenario you do not want."
+        }
+      ]
+    },
+    {
+      "t": 204.41,
+      "sentences": [
+        {
+          "t": 204.41,
+          "text": "So carry this away, and it closes the course."
+        },
+        {
+          "t": 207.44,
+          "text": "Contain before you eradicate, preserve the original with an unbroken chain of custody, and review afterwards so the organisation is stronger next time."
+        },
+        {
+          "t": 217.61,
+          "text": "Across five domains, one habit runs through everything: reason from the control, not the memorised list."
+        },
+        {
+          "t": 224.61,
+          "text": "That completes the CISA course."
+        },
+        {
+          "t": 226.7,
+          "text": "Well done."
+        }
+      ]
+    }
+  ]
+}

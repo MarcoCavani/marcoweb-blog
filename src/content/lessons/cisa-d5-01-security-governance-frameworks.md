@@ -7,6 +7,7 @@ domain: 5
 order: 1
 minutes: 7
 gated: false
+videoId: "WlN9Gno8Z5I"
 taskStatement: "Evaluate whether information security is governed through a program with defined accountability, a policy hierarchy, and a recognised framework."
 objectives:
   - "Identify who is ultimately accountable for information security."

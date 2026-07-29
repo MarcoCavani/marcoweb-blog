@@ -1,0 +1,209 @@
+{
+  "lesson": "cisa-d5-12-pki-key-management",
+  "title": "PKI and Key Management",
+  "source": "cisa-d5-12-pki-key-management.srt",
+  "generated": "2026-07-28",
+  "duration": 211.82,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "P-K-I and key management."
+        },
+        {
+          "t": 1.77,
+          "text": "The previous lesson covered what cryptography does."
+        },
+        {
+          "t": 5.38,
+          "text": "This one covers the infrastructure that makes it trustworthy, and the part that most often fails."
+        }
+      ]
+    },
+    {
+      "t": 12.24,
+      "sentences": [
+        {
+          "t": 12.24,
+          "text": "The scene."
+        },
+        {
+          "t": 12.85,
+          "text": "An organisation is proud of using strong, modern encryption everywhere."
+        },
+        {
+          "t": 17.2,
+          "text": "Then you look closer: the private key for its main certificate is sitting in a shared folder several teams can read, a certificate that expired last month is still in use, and there is no process to revoke a key if it is exposed."
+        },
+        {
+          "t": 31.24,
+          "text": "The algorithm is excellent."
+        },
+        {
+          "t": 32.89,
+          "text": "Everything around the keys is broken, and that is where the security actually lives."
+        }
+      ]
+    },
+    {
+      "t": 38.04,
+      "sentences": [
+        {
+          "t": 38.04,
+          "text": "Public key infrastructure, P-K-I, is the system of certificates, authorities and processes that lets people trust that a public key really belongs to who it claims to."
+        },
+        {
+          "t": 47.74,
+          "text": "At its centre is the certificate authority, the C-A: a trusted third party that verifies an identity and issues a digital certificate binding that identity to a public key."
+        },
+        {
+          "t": 57.74,
+          "text": "You trust the certificate because you trust the C-A that signed it."
+        }
+      ]
+    },
+    {
+      "t": 61.63,
+      "sentences": [
+        {
+          "t": 61.63,
+          "text": "That makes the C-A a critical trust anchor."
+        },
+        {
+          "t": 64.48,
+          "text": "Trust flows from it."
+        },
+        {
+          "t": 65.8,
+          "text": "If a C-A is compromised, every certificate it issued becomes suspect, because the attacker could mint trusted certificates for identities they do not own."
+        }
+      ]
+    },
+    {
+      "t": 75.98,
+      "sentences": [
+        {
+          "t": 75.98,
+          "text": "And note what a C-A is not."
+        },
+        {
+          "t": 77.79,
+          "text": "It issues and vouches for certificates; it does not encrypt your data, and it does not, and must not, hold users’ private keys."
+        },
+        {
+          "t": 86.28,
+          "text": "Private keys stay with their owner, always."
+        }
+      ]
+    },
+    {
+      "t": 89.16,
+      "sentences": [
+        {
+          "t": 89.16,
+          "text": "The exam repeatedly checks that you know which key is used for which purpose, because the two asymmetric operations are mirror images."
+        },
+        {
+          "t": 96.97,
+          "text": "To encrypt for confidentiality, so only the recipient can read it, the sender encrypts with the recipient’s public key; only the recipient’s private key can decrypt."
+        },
+        {
+          "t": 106.58,
+          "text": "To sign for authenticity and non-repudiation, the sender signs with their own private key; anyone verifies with the sender’s public key."
+        }
+      ]
+    },
+    {
+      "t": 114.5,
+      "sentences": [
+        {
+          "t": 114.5,
+          "text": "So the rule of thumb: you sign with your private key; you encrypt to someone with their public key."
+        },
+        {
+          "t": 120.08,
+          "text": "Public keys are shareable and are used to send to someone or to verify them; private keys are secret and are used to read what was sent to you or to sign as yourself."
+        },
+        {
+          "t": 129.43,
+          "text": "Getting the key backwards is a classic wrong answer."
+        }
+      ]
+    },
+    {
+      "t": 132.36,
+      "sentences": [
+        {
+          "t": 132.36,
+          "text": "Now the lesson’s real point, and the scenario’s failure."
+        },
+        {
+          "t": 136.02,
+          "text": "Modern algorithms with adequate key lengths are not realistically broken by brute force."
+        },
+        {
+          "t": 141.77,
+          "text": "Cryptographic systems fail at key management: the generation, distribution, storage, rotation, revocation and destruction of keys."
+        }
+      ]
+    },
+    {
+      "t": 150.26,
+      "sentences": [
+        {
+          "t": 150.26,
+          "text": "So, the key lifecycle, where it actually fails."
+        },
+        {
+          "t": 153.58,
+          "text": "First, protect private keys, this is paramount."
+        },
+        {
+          "t": 156.91,
+          "text": "A private key anyone can copy, like the one in the shared folder, offers no real security however strong the algorithm."
+        }
+      ]
+    },
+    {
+      "t": 165.31,
+      "sentences": [
+        {
+          "t": 165.31,
+          "text": "Second, rotate them, replace keys periodically so a compromise has a limited window."
+        }
+      ]
+    },
+    {
+      "t": 171.05,
+      "sentences": [
+        {
+          "t": 171.05,
+          "text": "And third, revoke and expire: invalidate a compromised or superseded key, published through mechanisms like a revocation list so others stop trusting it, and handle expiry, because an expired certificate still in use is a control that has quietly lapsed."
+        },
+        {
+          "t": 186.26,
+          "text": "No revocation process, as in the scenario, means a stolen key stays trusted indefinitely."
+        }
+      ]
+    },
+    {
+      "t": 191.59,
+      "sentences": [
+        {
+          "t": 191.59,
+          "text": "So carry this away."
+        },
+        {
+          "t": 192.75,
+          "text": "Do not judge cryptographic security by algorithm strength; the algorithm is rarely the weak point, key management is, so protecting private keys and revoking compromised ones is what actually matters."
+        },
+        {
+          "t": 204.9,
+          "text": "And do not confuse the keys: you encrypt to a recipient with their public key, and sign with your own private key."
+        }
+      ]
+    }
+  ]
+}

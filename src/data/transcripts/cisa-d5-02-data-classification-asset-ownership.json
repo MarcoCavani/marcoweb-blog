@@ -1,0 +1,197 @@
+{
+  "lesson": "cisa-d5-02-data-classification-asset-ownership",
+  "title": "Data Classification and Asset Ownership",
+  "source": "cisa-d5-02-data-classification-asset-ownership.srt",
+  "generated": "2026-07-28",
+  "duration": 191.86,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Data classification and asset ownership."
+        },
+        {
+          "t": 2.56,
+          "text": "This lesson is foundational: you cannot protect information appropriately until you know what it is worth."
+        }
+      ]
+    },
+    {
+      "t": 9.34,
+      "sentences": [
+        {
+          "t": 9.34,
+          "text": "The scene."
+        },
+        {
+          "t": 9.94,
+          "text": "Every file in the organisation is treated the same way."
+        },
+        {
+          "t": 13.28,
+          "text": "The public marketing brochure and the board’s confidential merger papers sit under identical controls, because we encrypt everything, so we’re covered."
+        },
+        {
+          "t": 22.45,
+          "text": "Nobody has said which data actually matters, and when you ask who decided the merger papers were confidential, the answer is that I-T set the permissions when the folder was created."
+        },
+        {
+          "t": 33.51,
+          "text": "Two things are wrong here."
+        }
+      ]
+    },
+    {
+      "t": 35.09,
+      "sentences": [
+        {
+          "t": 35.09,
+          "text": "Start with the principle: protect by value."
+        },
+        {
+          "t": 37.74,
+          "text": "Classification sorts information by sensitivity and value, typically into levels such as public, internal, confidential and restricted, so that the level of protection matches the level of risk."
+        },
+        {
+          "t": 49.73,
+          "text": "Highly sensitive data warrants strong protection; public data does not, and spending the same effort on it is waste."
+        }
+      ]
+    },
+    {
+      "t": 56.9,
+      "sentences": [
+        {
+          "t": 56.9,
+          "text": "Which is why classification comes first, before controls are chosen."
+        },
+        {
+          "t": 60.87,
+          "text": "It is the same identify-before-you-control principle that ran through compliance in Domain two and end-user computing in Domain four: you decide what matters, then protect accordingly."
+        }
+      ]
+    },
+    {
+      "t": 71.59,
+      "sentences": [
+        {
+          "t": 71.59,
+          "text": "And when a question asks the purpose of classification, the answer is to make protection proportionate: directing the strongest controls, and the tightest access, to the data whose loss would hurt most, while not burning the same effort on data that does not need it."
+        }
+      ]
+    },
+    {
+      "t": 85.49,
+      "sentences": [
+        {
+          "t": 85.49,
+          "text": "Now the second failure: I-T classified the merger papers."
+        },
+        {
+          "t": 89.17,
+          "text": "Classification is a judgement about business value and sensitivity, so it belongs to the data owner, the business role accountable for the asset."
+        },
+        {
+          "t": 98.53,
+          "text": "I-T can enforce controls, but it is not positioned to judge that the papers are confidential, or how confidential."
+        },
+        {
+          "t": 105.88,
+          "text": "That call is the owner’s."
+        }
+      ]
+    },
+    {
+      "t": 107.5,
+      "sentences": [
+        {
+          "t": 107.5,
+          "text": "So the two roles."
+        },
+        {
+          "t": 108.7,
+          "text": "The data owner is a business role: it assigns the classification and judges the asset’s value and sensitivity."
+        },
+        {
+          "t": 116.5,
+          "text": "The data custodian, usually I-T, protects the data to the level the owner has set, and holds and secures it."
+        },
+        {
+          "t": 124.16,
+          "text": "Owner decides; custodian protects."
+        }
+      ]
+    },
+    {
+      "t": 126.58,
+      "sentences": [
+        {
+          "t": 126.58,
+          "text": "Now, why does treating all data the same fail."
+        },
+        {
+          "t": 129.79,
+          "text": "First, cost, performance and user friction are wasted on public and low-value data."
+        }
+      ]
+    },
+    {
+      "t": 135.6,
+      "sentences": [
+        {
+          "t": 135.6,
+          "text": "And second, more damagingly, uniform treatment means the organisation is not making risk-based decisions about what genuinely needs protecting: the merger papers and the brochure are indistinguishable to the control set, so nothing is prioritised."
+        }
+      ]
+    },
+    {
+      "t": 149.14,
+      "sentences": [
+        {
+          "t": 149.14,
+          "text": "Which points at the trap."
+        },
+        {
+          "t": 150.91,
+          "text": "More protection is not always better."
+        },
+        {
+          "t": 153.53,
+          "text": "Applying maximum controls to everything wastes resources and abandons the risk-based prioritisation classification exists to provide."
+        },
+        {
+          "t": 162.97,
+          "text": "Good protection is proportionate."
+        }
+      ]
+    },
+    {
+      "t": 165.31,
+      "sentences": [
+        {
+          "t": 165.31,
+          "text": "And this whole lesson is an echo of the owner-versus-custodian split from Domain four, applied to protection: the business owns and decides the classification; I-T holds and secures the data to the level the owner sets."
+        }
+      ]
+    },
+    {
+      "t": 176.9,
+      "sentences": [
+        {
+          "t": 176.9,
+          "text": "So carry this away."
+        },
+        {
+          "t": 178.18,
+          "text": "Whether it is a spreadsheet, a brochure, or merger papers, protection follows value."
+        },
+        {
+          "t": 183.81,
+          "text": "Know the value first, set the classification from the business owner, not the custodian, and let the controls follow it."
+        }
+      ]
+    }
+  ]
+}

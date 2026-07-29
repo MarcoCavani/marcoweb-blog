@@ -1,0 +1,201 @@
+{
+  "lesson": "cisa-d5-05-access-control-least-privilege",
+  "title": "Access Control Models and Least Privilege",
+  "source": "cisa-d5-05-access-control-least-privilege.srt",
+  "generated": "2026-07-28",
+  "duration": 188.66,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Access control models and least privilege."
+        },
+        {
+          "t": 3.02,
+          "text": "Reliable authentication proved who someone is."
+        },
+        {
+          "t": 6.32,
+          "text": "This lesson is about what they should then be allowed to do."
+        }
+      ]
+    },
+    {
+      "t": 10.63,
+      "sentences": [
+        {
+          "t": 10.63,
+          "text": "The scene."
+        },
+        {
+          "t": 11.25,
+          "text": "An analyst who has moved from sales to procurement to finance over five years can still do all three jobs in the systems, because each move added access and none ever took any away."
+        },
+        {
+          "t": 22.46,
+          "text": "On paper they are one of the most powerful users in the company, not by design, but by accumulation."
+        },
+        {
+          "t": 28.65,
+          "text": "No one decided they should have this reach; it just built up."
+        }
+      ]
+    },
+    {
+      "t": 32.42,
+      "sentences": [
+        {
+          "t": 32.42,
+          "text": "The governing principle is least privilege: every user, and every process or account, is granted only the minimum access required to perform its function, and nothing more."
+        },
+        {
+          "t": 42.27,
+          "text": "Alongside it sits need-to-know: access to specific information is limited to those who require it for their work."
+        }
+      ]
+    },
+    {
+      "t": 48.74,
+      "sentences": [
+        {
+          "t": 48.74,
+          "text": "The point of both is containment."
+        },
+        {
+          "t": 50.81,
+          "text": "If an account is compromised or misused, the damage is bounded by how little it could do."
+        },
+        {
+          "t": 56.38,
+          "text": "Broad access to be efficient, or in case they need it, inverts this, turning every account into a large blast radius."
+        },
+        {
+          "t": 63.71,
+          "text": "Access should track function, not convenience and not seniority, and the default posture is deny: no access unless a need justifies it."
+        }
+      ]
+    },
+    {
+      "t": 72.17,
+      "sentences": [
+        {
+          "t": 72.17,
+          "text": "The exam expects you to recognise how access decisions are made."
+        },
+        {
+          "t": 76.22,
+          "text": "First, role-based access control, R-BAC: permissions attach to roles, and users get access by being assigned a role matching their job."
+        },
+        {
+          "t": 84.76,
+          "text": "It scales, and it is the most common model in business systems."
+        }
+      ]
+    },
+    {
+      "t": 88.75,
+      "sentences": [
+        {
+          "t": 88.75,
+          "text": "Second, discretionary access control, DAC: the data owner grants access at their discretion, common in file systems."
+        }
+      ]
+    },
+    {
+      "t": 96.5,
+      "sentences": [
+        {
+          "t": 96.5,
+          "text": "And third, mandatory access control, MAC: access is enforced centrally through security labels, such as classification levels, used in high-security environments where users cannot override the rules."
+        }
+      ]
+    },
+    {
+      "t": 108.19,
+      "sentences": [
+        {
+          "t": 108.19,
+          "text": "So the shortcut: by role, owner, or label."
+        },
+        {
+          "t": 111.68,
+          "text": "When a question describes access granted by job role, that is R-BAC."
+        },
+        {
+          "t": 117.32,
+          "text": "By the owner’s choice, DAC."
+        },
+        {
+          "t": 119.56,
+          "text": "By system-enforced labels, MAC."
+        }
+      ]
+    },
+    {
+      "t": 122.14,
+      "sentences": [
+        {
+          "t": 122.14,
+          "text": "Now the analyst is a textbook case of privilege creep: access accumulated across role changes and never removed."
+        },
+        {
+          "t": 128.75,
+          "text": "Each move was reasonable in isolation; the sum is an account that holds far more than the current role needs, breaching least privilege badly."
+        }
+      ]
+    },
+    {
+      "t": 137.14,
+      "sentences": [
+        {
+          "t": 137.14,
+          "text": "And the remedy is to strip it back."
+        },
+        {
+          "t": 139.39,
+          "text": "Not to add to it, not to tidy around it, but to reduce access to what the present role requires."
+        },
+        {
+          "t": 145.58,
+          "text": "Privilege creep is one of the most common findings a periodic access review exists to catch, which is the next lesson."
+        }
+      ]
+    },
+    {
+      "t": 153.19,
+      "sentences": [
+        {
+          "t": 153.19,
+          "text": "So the wrong answer to watch for."
+        },
+        {
+          "t": 155.25,
+          "text": "When a scenario describes someone retaining access from former roles, the answer is that their access is excessive and should be removed, not that they are versatile or due more."
+        },
+        {
+          "t": 166.34,
+          "text": "Accumulated access is a control problem, not a sign of flexibility."
+        }
+      ]
+    },
+    {
+      "t": 170.52,
+      "sentences": [
+        {
+          "t": 170.52,
+          "text": "So carry this away."
+        },
+        {
+          "t": 171.67,
+          "text": "Least privilege is the minimum the role needs, because every excess permission is extra risk if the account is compromised."
+        },
+        {
+          "t": 179.14,
+          "text": "And privilege creep is a real finding: access must be reduced when it is no longer needed, back to what the current role, and need-to-know, actually require."
+        }
+      ]
+    }
+  ]
+}

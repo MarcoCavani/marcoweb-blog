@@ -1,0 +1,225 @@
+{
+  "lesson": "cisa-d5-10-network-security-controls",
+  "title": "Firewalls, IDS/IPS and Secure Access",
+  "source": "cisa-d5-10-network-security-controls.srt",
+  "generated": "2026-07-28",
+  "duration": 216.62,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Firewalls, intrusion systems, and secure access."
+        },
+        {
+          "t": 3.05,
+          "text": "This lesson covers the controls that police the traffic within the network architecture from the previous lesson."
+        }
+      ]
+    },
+    {
+      "t": 10.22,
+      "sentences": [
+        {
+          "t": 10.22,
+          "text": "The scene."
+        },
+        {
+          "t": 10.87,
+          "text": "Three questions surface in a network review."
+        },
+        {
+          "t": 13.69,
+          "text": "The firewall rules have grown into hundreds of allow entries no one can explain."
+        },
+        {
+          "t": 18.81,
+          "text": "The intrusion system logs alerts that no one reads, and it turns out it could never have blocked anything anyway."
+        },
+        {
+          "t": 26.06,
+          "text": "And staff connect to internal systems from airport Wi-Fi with nothing but a password."
+        },
+        {
+          "t": 31.51,
+          "text": "Each is a different control doing less than it should."
+        }
+      ]
+    },
+    {
+      "t": 34.97,
+      "sentences": [
+        {
+          "t": 34.97,
+          "text": "Start with the firewall."
+        },
+        {
+          "t": 36.51,
+          "text": "It enforces a boundary between networks, permitting or denying traffic according to a rule set."
+        },
+        {
+          "t": 42.63,
+          "text": "The strong posture is default deny: nothing passes unless a rule explicitly allows it, so access is granted deliberately rather than by omission."
+        }
+      ]
+    },
+    {
+      "t": 51.96,
+      "sentences": [
+        {
+          "t": 51.96,
+          "text": "And it is the network’s gatekeeper, deciding what may cross."
+        },
+        {
+          "t": 55.67,
+          "text": "It is not an encryption tool, an anti-malware scanner, or a backup, all common wrong answers when a question asks what a firewall does."
+        }
+      ]
+    },
+    {
+      "t": 64.03,
+      "sentences": [
+        {
+          "t": 64.03,
+          "text": "Those hundreds of unexplained allow rules are a real finding."
+        },
+        {
+          "t": 67.89,
+          "text": "A rule base that has accreted permissions no one can justify has drifted far from default-deny, and each stale rule is a hole."
+        },
+        {
+          "t": 75.87,
+          "text": "Firewall rules need periodic review, the same recertification logic as user access."
+        }
+      ]
+    },
+    {
+      "t": 81.12,
+      "sentences": [
+        {
+          "t": 81.12,
+          "text": "Now the most tested distinction here: I-D-S versus I-P-S."
+        },
+        {
+          "t": 84.81,
+          "text": "An intrusion detection system monitors traffic and raises an alert when it sees something suspicious."
+        },
+        {
+          "t": 91.33,
+          "text": "It is a detective control, typically out of band, watching a copy of the traffic."
+        },
+        {
+          "t": 96.57,
+          "text": "It tells you something happened; it does not stop it."
+        },
+        {
+          "t": 100,
+          "text": "An intrusion prevention system sits inline in the traffic path and can actively block or drop malicious traffic in real time."
+        },
+        {
+          "t": 108.08,
+          "text": "It is a preventive control."
+        }
+      ]
+    },
+    {
+      "t": 109.82,
+      "sentences": [
+        {
+          "t": 109.82,
+          "text": "So the whole difference is alert versus block."
+        },
+        {
+          "t": 112.68,
+          "text": "Detect-and-alert is the I-D-S; detect-and-block is the I-P-S."
+        },
+        {
+          "t": 116.48,
+          "text": "The scenario’s system logs alerts no one reads and could never block, so it is an I-D-S, and its value is further undermined because detection with no one responding is detection wasted."
+        }
+      ]
+    },
+    {
+      "t": 128.04,
+      "sentences": [
+        {
+          "t": 128.04,
+          "text": "Next, untrusted networks."
+        },
+        {
+          "t": 129.58,
+          "text": "Staff on airport or hotel Wi-Fi are sending traffic across a network the organisation does not control and cannot trust."
+        },
+        {
+          "t": 136.99,
+          "text": "A V-P-N, a virtual private network, addresses this by creating an encrypted tunnel between the remote device and the organisation, so anything crossing the public network cannot be read or altered in transit."
+        }
+      ]
+    },
+    {
+      "t": 149.83,
+      "sentences": [
+        {
+          "t": 149.83,
+          "text": "The same principle drives secure protocols generally: encrypt in transit."
+        },
+        {
+          "t": 154.94,
+          "text": "HTTPS, using T-L-S, rather than plaintext HTTP; S-S-H rather than Telnet, so credentials and data are not exposed to anyone watching the wire."
+        }
+      ]
+    },
+    {
+      "t": 164.88,
+      "sentences": [
+        {
+          "t": 164.88,
+          "text": "So the clear-text failure is sending sensitive traffic in the open over an untrusted network."
+        },
+        {
+          "t": 170.86,
+          "text": "A firewall or a password does not protect data in transit; a V-P-N and secure protocols do, by encrypting it."
+        }
+      ]
+    },
+    {
+      "t": 177.86,
+      "sentences": [
+        {
+          "t": 177.86,
+          "text": "And one more time, because it matters: an intrusion system that only alerts is useless if no one reads the alerts."
+        },
+        {
+          "t": 184.98,
+          "text": "This is the silent-failure problem from Domain four again, the signal fired, and no one was listening."
+        },
+        {
+          "t": 191.34,
+          "text": "Detection is only a control when someone responds to it."
+        }
+      ]
+    },
+    {
+      "t": 194.83,
+      "sentences": [
+        {
+          "t": 194.83,
+          "text": "So carry this away."
+        },
+        {
+          "t": 196.08,
+          "text": "An I-D-S detects and alerts, while an I-P-S is inline and can block, and the exam turns on which one acts."
+        },
+        {
+          "t": 203.04,
+          "text": "A firewall is a reviewed, default-deny boundary, not an encryption or anti-malware tool."
+        },
+        {
+          "t": 208.81,
+          "text": "And a V-P-N and secure protocols encrypt data in transit so it cannot be read or tampered with over untrusted networks."
+        }
+      ]
+    }
+  ]
+}

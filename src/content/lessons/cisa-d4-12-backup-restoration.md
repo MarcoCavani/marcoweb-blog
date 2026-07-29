@@ -7,6 +7,7 @@ domain: 4
 order: 12
 minutes: 8
 gated: false
+videoId: "fSKg7h474E8"
 taskStatement: "Evaluate whether backups are complete, stored separately from the source, and proven recoverable by restoration testing."
 objectives:
   - "Explain why restoration testing, not a successful backup job, proves recoverability."

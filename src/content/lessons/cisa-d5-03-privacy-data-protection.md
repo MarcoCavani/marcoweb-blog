@@ -7,6 +7,7 @@ domain: 5
 order: 3
 minutes: 7
 gated: false
+videoId: "jFN_QGpoqDQ"
 taskStatement: "Evaluate whether personal data is collected, used and retained in line with privacy principles, distinct from how it is secured."
 objectives:
   - "Distinguish privacy from security."

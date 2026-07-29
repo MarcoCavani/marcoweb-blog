@@ -7,6 +7,7 @@ domain: 5
 order: 2
 minutes: 7
 gated: false
+videoId: "ikPqwY4a6Vw"
 taskStatement: "Evaluate whether information assets are classified by sensitivity and owned, so that protection is proportionate to value."
 objectives:
   - "Explain why data classification precedes applying controls."

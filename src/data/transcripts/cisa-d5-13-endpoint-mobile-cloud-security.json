@@ -1,0 +1,225 @@
+{
+  "lesson": "cisa-d5-13-endpoint-mobile-cloud-security",
+  "title": "Endpoint, Mobile and Cloud Security",
+  "source": "cisa-d5-13-endpoint-mobile-cloud-security.srt",
+  "generated": "2026-07-28",
+  "duration": 240,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Endpoint, mobile and cloud security."
+        },
+        {
+          "t": 2.46,
+          "text": "Data now lives on laptops, on phones, and in the cloud, and each carries a responsibility that is easy to misplace."
+        }
+      ]
+    },
+    {
+      "t": 10.32,
+      "sentences": [
+        {
+          "t": 10.32,
+          "text": "The scene."
+        },
+        {
+          "t": 10.96,
+          "text": "The company has moved its customer data to a cloud platform and considers security handled, the provider takes care of that."
+        },
+        {
+          "t": 18.86,
+          "text": "Staff access it from personal phones with no controls, and a storage bucket has been left open to the internet for months."
+        },
+        {
+          "t": 26.64,
+          "text": "When the exposure is found, the first instinct is to blame the cloud provider."
+        },
+        {
+          "t": 31.61,
+          "text": "But the provider secured the building and the hardware."
+        },
+        {
+          "t": 35.12,
+          "text": "The open door was the organisation’s own."
+        }
+      ]
+    },
+    {
+      "t": 37.73,
+      "sentences": [
+        {
+          "t": 37.73,
+          "text": "Start with endpoints, laptops, desktops, servers, where users and data meet, and a primary target."
+        },
+        {
+          "t": 43.63,
+          "text": "Protecting them combines several controls: anti-malware and endpoint detection, timely patching and hardening, disk encryption so a lost device does not leak its data, and a host firewall."
+        },
+        {
+          "t": 54.96,
+          "text": "Endpoints are not low-risk background devices; they are frequently where an attack begins."
+        }
+      ]
+    },
+    {
+      "t": 60.38,
+      "sentences": [
+        {
+          "t": 60.38,
+          "text": "Mobile extends the endpoint problem to hardware the organisation may not own."
+        },
+        {
+          "t": 64.95,
+          "text": "Bring your own device, B-Y-O-D, is the sharp case: organisational data sitting on an employee’s personal phone, a device the organisation does not fully control."
+        },
+        {
+          "t": 74.48,
+          "text": "The data can be lost with the device, mixed with personal apps, or exposed if the phone is compromised, often with no way to enforce controls or remove the data."
+        }
+      ]
+    },
+    {
+      "t": 84.02,
+      "sentences": [
+        {
+          "t": 84.02,
+          "text": "Mobile device management, M-D-M, and containerisation mitigate this: separating corporate data into a managed container, enforcing encryption and passcodes, and enabling remote wipe of the corporate data if the device is lost."
+        },
+        {
+          "t": 97.35,
+          "text": "The risk to weigh is always the organisational data on an uncontrolled device."
+        }
+      ]
+    },
+    {
+      "t": 101.95,
+      "sentences": [
+        {
+          "t": 101.95,
+          "text": "Now the most tested cloud concept: the shared responsibility model."
+        },
+        {
+          "t": 106.5,
+          "text": "Responsibility is split."
+        },
+        {
+          "t": 108.12,
+          "text": "The provider secures the cloud infrastructure, the physical facilities, hardware, and core platform, security of the cloud."
+        },
+        {
+          "t": 116.46,
+          "text": "The customer is responsible for security in the cloud: their data, its classification, access management, and configuration."
+        }
+      ]
+    },
+    {
+      "t": 124.87,
+      "sentences": [
+        {
+          "t": 124.87,
+          "text": "So who secures what."
+        },
+        {
+          "t": 126.17,
+          "text": "The provider handles the physical facilities, the hardware and core platform."
+        },
+        {
+          "t": 131.16,
+          "text": "The customer handles their data and its classification, their access management, and their configuration."
+        },
+        {
+          "t": 137.97,
+          "text": "The exact line shifts with the service model, but the customer’s own data, access and configuration are always the customer’s responsibility."
+        }
+      ]
+    },
+    {
+      "t": 147.12,
+      "sentences": [
+        {
+          "t": 147.12,
+          "text": "Which makes the open bucket the customer’s."
+        },
+        {
+          "t": 149.87,
+          "text": "A publicly exposed storage bucket is a customer configuration failure, squarely in the customer’s half of the model."
+        },
+        {
+          "t": 157.28,
+          "text": "The provider secured the infrastructure; the organisation misconfigured its own access."
+        },
+        {
+          "t": 162.85,
+          "text": "When a question asks who is responsible for the customer’s data and access in the cloud, it is the customer."
+        }
+      ]
+    },
+    {
+      "t": 169.75,
+      "sentences": [
+        {
+          "t": 169.75,
+          "text": "And underneath the model is a principle straight from Domain two’s third-party lesson: moving to the cloud does not transfer accountability for your data."
+        },
+        {
+          "t": 178.19,
+          "text": "You can outsource the infrastructure and the running of the platform, but the obligation to classify, protect and correctly configure access to your own data stays with you."
+        }
+      ]
+    },
+    {
+      "t": 187.68,
+      "sentences": [
+        {
+          "t": 187.68,
+          "text": "So the provider takes care of security is the wrong answer."
+        },
+        {
+          "t": 191.39,
+          "text": "It is the same wrong answer as we outsourced it, so the risk is theirs."
+        },
+        {
+          "t": 195.86,
+          "text": "The provider secures the cloud; you remain accountable for what you put in it and how you configure it."
+        }
+      ]
+    },
+    {
+      "t": 202.34,
+      "sentences": [
+        {
+          "t": 202.34,
+          "text": "This is the recurring theme of the whole domain, and the course: the work moves, but the accountability stays."
+        },
+        {
+          "t": 208.97,
+          "text": "Endpoints, mobile, cloud, in each, responsibility for the data does not move just because the hardware or platform does."
+        }
+      ]
+    },
+    {
+      "t": 216.19,
+      "sentences": [
+        {
+          "t": 216.19,
+          "text": "So carry this away."
+        },
+        {
+          "t": 217.45,
+          "text": "Under shared responsibility the customer owns their data, access and configuration, and a misconfiguration like an open bucket is the customer’s failure."
+        },
+        {
+          "t": 227.6,
+          "text": "And organisational data on a device the organisation cannot control is the risk, managed by M-D-M, containerisation and remote wipe."
+        },
+        {
+          "t": 236.35,
+          "text": "In both, the accountability for the data does not move."
+        }
+      ]
+    }
+  ]
+}

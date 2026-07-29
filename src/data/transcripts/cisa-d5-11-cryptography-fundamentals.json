@@ -1,0 +1,245 @@
+{
+  "lesson": "cisa-d5-11-cryptography-fundamentals",
+  "title": "Cryptography Fundamentals",
+  "source": "cisa-d5-11-cryptography-fundamentals.srt",
+  "generated": "2026-07-28",
+  "duration": 233.06,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Cryptography fundamentals."
+        },
+        {
+          "t": 1.79,
+          "text": "This is a heavily tested area, and most of the marks come from keeping a few distinctions straight."
+        }
+      ]
+    },
+    {
+      "t": 8.59,
+      "sentences": [
+        {
+          "t": 8.59,
+          "text": "The scene."
+        },
+        {
+          "t": 9.17,
+          "text": "A developer tells you the passwords in the database are encrypted, and that the same system provides message integrity and proves who sent what, all with one shared key everyone has."
+        },
+        {
+          "t": 19.72,
+          "text": "Three different cryptographic ideas have been blurred into one."
+        },
+        {
+          "t": 23.37,
+          "text": "Passwords should be hashed, not reversibly encrypted; integrity and sender-proof come from different mechanisms; and a key everyone shares cannot prove who did anything."
+        }
+      ]
+    },
+    {
+      "t": 33.17,
+      "sentences": [
+        {
+          "t": 33.17,
+          "text": "So what does cryptography provide."
+        },
+        {
+          "t": 35.56,
+          "text": "Three different things, and it helps to name them."
+        },
+        {
+          "t": 39.09,
+          "text": "Confidentiality, keeping data secret, through encryption."
+        },
+        {
+          "t": 43.1,
+          "text": "Integrity, detecting whether data has changed, through hashing."
+        },
+        {
+          "t": 47.54,
+          "text": "And authentication and non-repudiation, proving who sent something, through digital signatures."
+        },
+        {
+          "t": 54.23,
+          "text": "No single mechanism provides all of these."
+        }
+      ]
+    },
+    {
+      "t": 57.19,
+      "sentences": [
+        {
+          "t": 57.19,
+          "text": "Encryption comes in two forms."
+        },
+        {
+          "t": 59.24,
+          "text": "Symmetric encryption uses one shared secret key to both encrypt and decrypt."
+        },
+        {
+          "t": 64.44,
+          "text": "It is fast, which suits bulk data, but it has a key-distribution problem: the secret has to be shared with every party securely."
+        },
+        {
+          "t": 73.19,
+          "text": "Asymmetric encryption uses a public-private key pair."
+        },
+        {
+          "t": 76.81,
+          "text": "What one key locks, only the other can unlock."
+        },
+        {
+          "t": 79.96,
+          "text": "This solves distribution, the public key can be published openly, but it is slower."
+        }
+      ]
+    },
+    {
+      "t": 85.63,
+      "sentences": [
+        {
+          "t": 85.63,
+          "text": "So the shortcut is: one shared key, or a key pair."
+        },
+        {
+          "t": 89.01,
+          "text": "In practice systems combine them, asymmetric to exchange a key securely, then symmetric for the bulk of the data."
+        },
+        {
+          "t": 96.64,
+          "text": "When a question contrasts them, symmetric is one shared key, asymmetric is a key pair."
+        }
+      ]
+    },
+    {
+      "t": 102.46,
+      "sentences": [
+        {
+          "t": 102.46,
+          "text": "Now the most reliable trap in this area: hashing is not encryption."
+        },
+        {
+          "t": 106.96,
+          "text": "A hash is a one-way function."
+        },
+        {
+          "t": 108.91,
+          "text": "It turns any input into a fixed-length value, the same input always produces the same hash, and any change to the input changes the hash."
+        },
+        {
+          "t": 118.11,
+          "text": "That lets you detect alteration, which is integrity."
+        }
+      ]
+    },
+    {
+      "t": 121.61,
+      "sentences": [
+        {
+          "t": 121.61,
+          "text": "But a hash is not encryption."
+        },
+        {
+          "t": 123.31,
+          "text": "You cannot reverse it to recover the original data, and it provides no confidentiality, the hash is not a hidden version of the input."
+        },
+        {
+          "t": 131.15,
+          "text": "This is precisely why passwords are hashed, not encrypted: the system never needs to recover the password, only to check whether a login attempt hashes to the same value."
+        },
+        {
+          "t": 141.1,
+          "text": "When a question asks what hashing provides, it is integrity, and the giveaway that it is not encryption is that it cannot be reversed."
+        }
+      ]
+    },
+    {
+      "t": 148.94,
+      "sentences": [
+        {
+          "t": 148.94,
+          "text": "Non-repudiation, a sender being unable to deny they sent something, comes from a digital signature created with the sender’s private key."
+        },
+        {
+          "t": 156.59,
+          "text": "Because only the sender holds that key, only they could have produced the signature, so they cannot credibly deny it, and the recipient, verifying with the sender’s public key, also confirms the message is authentic and unaltered."
+        }
+      ]
+    },
+    {
+      "t": 169.44,
+      "sentences": [
+        {
+          "t": 169.44,
+          "text": "And a shared symmetric key cannot provide non-repudiation, because both parties hold the same key, so either could have produced the result and neither is uniquely bound to it."
+        },
+        {
+          "t": 180.1,
+          "text": "This is why the developer’s single shared key fails at proving who sent what."
+        },
+        {
+          "t": 184.76,
+          "text": "It cannot prove who."
+        }
+      ]
+    },
+    {
+      "t": 185.98,
+      "sentences": [
+        {
+          "t": 185.98,
+          "text": "So the developer’s one-thing-does-everything is wrong."
+        },
+        {
+          "t": 189.37,
+          "text": "Confidentiality, integrity and non-repudiation come from different tools, and non-repudiation in particular needs a private key only one party holds."
+        }
+      ]
+    },
+    {
+      "t": 198.72,
+      "sentences": [
+        {
+          "t": 198.72,
+          "text": "Think of the three properties as hide, verify, bind."
+        },
+        {
+          "t": 202.95,
+          "text": "Encryption hides data."
+        },
+        {
+          "t": 204.74,
+          "text": "Hashing verifies integrity."
+        },
+        {
+          "t": 206.94,
+          "text": "Signatures bind an action to one identity."
+        },
+        {
+          "t": 210.35,
+          "text": "Match the mechanism to the goal, and the questions get easy."
+        }
+      ]
+    },
+    {
+      "t": 215.23,
+      "sentences": [
+        {
+          "t": 215.23,
+          "text": "So carry this away."
+        },
+        {
+          "t": 216.4,
+          "text": "Hashing is one-way and gives integrity, encryption is reversible and gives confidentiality, and passwords are hashed precisely because they should never be recoverable."
+        },
+        {
+          "t": 226.77,
+          "text": "And non-repudiation comes from a private-key digital signature, never from a key that everyone shares."
+        }
+      ]
+    }
+  ]
+}

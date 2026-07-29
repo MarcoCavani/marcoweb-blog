@@ -1,0 +1,205 @@
+{
+  "lesson": "cisa-d5-08-physical-environmental-controls",
+  "title": "Physical and Environmental Controls",
+  "source": "cisa-d5-08-physical-environmental-controls.srt",
+  "generated": "2026-07-28",
+  "duration": 209.09,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Physical and environmental controls."
+        },
+        {
+          "t": 2.7,
+          "text": "Most of Domain five is logical."
+        },
+        {
+          "t": 5.03,
+          "text": "This lesson is the physical and environmental layer that everything logical sits on."
+        }
+      ]
+    },
+    {
+      "t": 11.33,
+      "sentences": [
+        {
+          "t": 11.33,
+          "text": "The scene."
+        },
+        {
+          "t": 11.96,
+          "text": "The data centre has a badge reader, and access to it is treated as solved."
+        },
+        {
+          "t": 16.63,
+          "text": "But you watch someone hold the door open for a colleague whose hands are full, and a second person walks in unbadged."
+        },
+        {
+          "t": 24.01,
+          "text": "Inside, there is no water detection under the raised floor, the air conditioning is a single unit, and the uninterruptible power supply has not been tested in years."
+        },
+        {
+          "t": 34.42,
+          "text": "Every login to those servers is strongly controlled."
+        },
+        {
+          "t": 37.71,
+          "text": "Getting to the servers is not."
+        }
+      ]
+    },
+    {
+      "t": 39.6,
+      "sentences": [
+        {
+          "t": 39.6,
+          "text": "Here is the core point."
+        },
+        {
+          "t": 41.09,
+          "text": "Logical controls, passwords, permissions, encryption, protect data through the system."
+        },
+        {
+          "t": 46.68,
+          "text": "Physical access goes around them."
+        },
+        {
+          "t": 48.82,
+          "text": "Someone who can reach the hardware can remove a disk, walk off with a device, plug into a port, or simply destroy equipment, and none of the logical controls stop them."
+        }
+      ]
+    },
+    {
+      "t": 59.74,
+      "sentences": [
+        {
+          "t": 59.74,
+          "text": "That is why physical security is part of protecting information assets: it is a layer of defence in depth, and without it the logical layer can be bypassed entirely."
+        },
+        {
+          "t": 69.56,
+          "text": "So secure facilities use layered physical controls: perimeter security, guards and C-C-T-V, badge or biometric access, visitor logs and escorts, and locked cabinets for the most sensitive equipment."
+        }
+      ]
+    },
+    {
+      "t": 81.36,
+      "sentences": [
+        {
+          "t": 81.36,
+          "text": "Now the badge gap, the exam’s favourite physical point."
+        },
+        {
+          "t": 84.68,
+          "text": "A badge reader authenticates one person, but it does nothing to stop a second person tailgating, or piggybacking, through on that entry, exactly what you watched happen."
+        },
+        {
+          "t": 94.89,
+          "text": "The control that addresses this is a mantrap, or access-control vestibule: a small enclosure that admits one authenticated person at a time."
+        }
+      ]
+    },
+    {
+      "t": 103.34,
+      "sentences": [
+        {
+          "t": 103.34,
+          "text": "So when a question describes unauthorised entry behind an authorised person, a stronger password or a longer badge number is never the answer, those do not address a human following another through a door."
+        },
+        {
+          "t": 115.64,
+          "text": "The mantrap, admitting one person per authentication, is."
+        },
+        {
+          "t": 119.05,
+          "text": "Turnstiles and anti-passback controls serve the same purpose."
+        }
+      ]
+    },
+    {
+      "t": 122.71,
+      "sentences": [
+        {
+          "t": 122.71,
+          "text": "Physical threats are not only intruders."
+        },
+        {
+          "t": 125.33,
+          "text": "Fire, heat, humidity, water and power loss can destroy equipment, so environmental controls protect it."
+        },
+        {
+          "t": 132.05,
+          "text": "First, fire detection and suppression appropriate to a computer room, so a fire is caught without destroying the equipment."
+        }
+      ]
+    },
+    {
+      "t": 140.09,
+      "sentences": [
+        {
+          "t": 140.09,
+          "text": "Second, climate control, keeping temperature and humidity within the range hardware tolerates."
+        }
+      ]
+    },
+    {
+      "t": 146.21,
+      "sentences": [
+        {
+          "t": 146.21,
+          "text": "And third, uninterruptible power plus backup generators, so a power cut does not drop systems, and water detection, especially under raised floors, so a leak is caught before it reaches equipment."
+        }
+      ]
+    },
+    {
+      "t": 157.34,
+      "sentences": [
+        {
+          "t": 157.34,
+          "text": "What do these protect."
+        },
+        {
+          "t": 158.8,
+          "text": "They protect availability and integrity."
+        },
+        {
+          "t": 161.45,
+          "text": "Fire, heat, humidity, water and power loss can destroy equipment and take systems down, so these controls connect directly to the continuity and availability themes of Domain four."
+        }
+      ]
+    },
+    {
+      "t": 173.38,
+      "sentences": [
+        {
+          "t": 173.38,
+          "text": "And the data centre in the scenario fails several of them: no water detection, a single air-conditioning unit, an untested U-P-S."
+        },
+        {
+          "t": 181.43,
+          "text": "Each is a route to an outage or data loss that no logical control would prevent."
+        }
+      ]
+    },
+    {
+      "t": 186.43,
+      "sentences": [
+        {
+          "t": 186.43,
+          "text": "So carry this away."
+        },
+        {
+          "t": 187.65,
+          "text": "Physical access bypasses logical controls, so a mantrap against tailgating and controlled facility access are real, necessary controls."
+        },
+        {
+          "t": 196.26,
+          "text": "And the environmental layer, fire, climate, power, water, protects the availability and integrity of the systems, and therefore the information, which is squarely part of protecting information assets."
+        }
+      ]
+    }
+  ]
+}

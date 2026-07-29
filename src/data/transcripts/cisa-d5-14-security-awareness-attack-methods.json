@@ -1,0 +1,209 @@
+{
+  "lesson": "cisa-d5-14-security-awareness-attack-methods",
+  "title": "Security Awareness and Attack Methods",
+  "source": "cisa-d5-14-security-awareness-attack-methods.srt",
+  "generated": "2026-07-28",
+  "duration": 207.79,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Security awareness and attack methods."
+        },
+        {
+          "t": 3,
+          "text": "Most of Domain five is technology."
+        },
+        {
+          "t": 5.68,
+          "text": "This lesson is about the human, who is often the way in."
+        }
+      ]
+    },
+    {
+      "t": 10.1,
+      "sentences": [
+        {
+          "t": 10.1,
+          "text": "The scene."
+        },
+        {
+          "t": 10.77,
+          "text": "The organisation has spent years hardening its technology: firewalls, encryption, patching, monitoring."
+        },
+        {
+          "t": 17.63,
+          "text": "Then an attacker phones the service desk, claims to be a stressed executive locked out before a board meeting, and is given a password reset over the phone."
+        },
+        {
+          "t": 28.03,
+          "text": "No control was broken."
+        },
+        {
+          "t": 29.49,
+          "text": "A person was persuaded."
+        },
+        {
+          "t": 31.02,
+          "text": "Every technical defence was intact, and none of them was aimed at the point that failed."
+        }
+      ]
+    },
+    {
+      "t": 36.89,
+      "sentences": [
+        {
+          "t": 36.89,
+          "text": "Attackers go where the defences are thinnest, and that is often the person, not the system."
+        },
+        {
+          "t": 42.53,
+          "text": "Social engineering manipulates people into divulging information or taking actions that compromise security, deliberately bypassing technical controls by exploiting trust, urgency, fear or authority."
+        },
+        {
+          "t": 54.87,
+          "text": "The service-desk call is a classic: the technology never came into it."
+        }
+      ]
+    },
+    {
+      "t": 59.21,
+      "sentences": [
+        {
+          "t": 59.21,
+          "text": "Because the target is human, the primary control is human: security awareness training."
+        },
+        {
+          "t": 64.63,
+          "text": "Training helps people recognise manipulation, verify identities, resist pressure, and report suspicious approaches."
+        },
+        {
+          "t": 71.79,
+          "text": "Another firewall does nothing here; teaching the service desk to verify a caller before resetting a password does."
+        }
+      ]
+    },
+    {
+      "t": 78.89,
+      "sentences": [
+        {
+          "t": 78.89,
+          "text": "So when a question asks the most effective control against phishing or social engineering, it is awareness training, because these attacks aim at people rather than technology."
+        },
+        {
+          "t": 90.35,
+          "text": "Not another firewall."
+        },
+        {
+          "t": 91.72,
+          "text": "Training."
+        }
+      ]
+    },
+    {
+      "t": 92.3,
+      "sentences": [
+        {
+          "t": 92.3,
+          "text": "The exam expects you to recognise the common methods and what they target."
+        },
+        {
+          "t": 96.94,
+          "text": "First, phishing, and targeted spear-phishing: fraudulent messages that trick people into revealing credentials or clicking malicious links."
+        },
+        {
+          "t": 105.65,
+          "text": "The most common entry point."
+        }
+      ]
+    },
+    {
+      "t": 107.4,
+      "sentences": [
+        {
+          "t": 107.4,
+          "text": "Second, malware and ransomware: malicious software; ransomware encrypts data and demands payment, attacking availability."
+        }
+      ]
+    },
+    {
+      "t": 115.25,
+      "sentences": [
+        {
+          "t": 115.25,
+          "text": "And then denial of service, flooding a system to make it unavailable; man-in-the-middle, intercepting communications, defeated by encryption in transit; and credential theft and insider threat, stolen or misused legitimate access, which least privilege and monitoring contain."
+        }
+      ]
+    },
+    {
+      "t": 130.46,
+      "sentences": [
+        {
+          "t": 130.46,
+          "text": "A useful skill: match the attack to the security property it undermines."
+        },
+        {
+          "t": 135.06,
+          "text": "Phishing and credential theft threaten confidentiality and access; ransomware and denial of service threaten availability."
+        },
+        {
+          "t": 142.86,
+          "text": "Naming the property is often what a question is really testing."
+        }
+      ]
+    },
+    {
+      "t": 146.88,
+      "sentences": [
+        {
+          "t": 146.88,
+          "text": "Ransomware deserves a moment because it ties back to Domain four."
+        },
+        {
+          "t": 150.91,
+          "text": "Its primary impact is on availability, it denies access to data by encrypting it."
+        },
+        {
+          "t": 155.94,
+          "text": "The control that most directly enables recovery without paying is reliable, tested, offsite backups the ransomware cannot reach, exactly the restoration-tested, geographically separated backups from the resilience lessons."
+        }
+      ]
+    },
+    {
+      "t": 169.7,
+      "sentences": [
+        {
+          "t": 169.7,
+          "text": "So two controls, two jobs."
+        },
+        {
+          "t": 171.4,
+          "text": "Awareness training reduces the chance of the initial infection; good backups mean that if it happens, the organisation can restore rather than pay."
+        },
+        {
+          "t": 181.01,
+          "text": "Stronger encryption does not help, the problem is not secrecy but access."
+        }
+      ]
+    },
+    {
+      "t": 185.78,
+      "sentences": [
+        {
+          "t": 185.78,
+          "text": "So carry this away."
+        },
+        {
+          "t": 186.87,
+          "text": "Social engineering targets people and is countered by awareness training, not another technical layer, because the human is part of the attack surface."
+        },
+        {
+          "t": 195.5,
+          "text": "And connect each attack to the property it undermines and the control that answers it: ransomware attacks availability and is answered by tested backups; social engineering attacks trust and is answered by training."
+        }
+      ]
+    }
+  ]
+}

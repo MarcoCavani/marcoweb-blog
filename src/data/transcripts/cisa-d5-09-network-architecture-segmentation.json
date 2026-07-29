@@ -1,0 +1,209 @@
+{
+  "lesson": "cisa-d5-09-network-architecture-segmentation",
+  "title": "Network Architecture and Segmentation",
+  "source": "cisa-d5-09-network-architecture-segmentation.srt",
+  "generated": "2026-07-28",
+  "duration": 224.69,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Network architecture and segmentation."
+        },
+        {
+          "t": 2.57,
+          "text": "This lesson is about a common failure: a hard shell around a soft centre, and how to correct it."
+        }
+      ]
+    },
+    {
+      "t": 9.07,
+      "sentences": [
+        {
+          "t": 9.07,
+          "text": "The scene."
+        },
+        {
+          "t": 9.67,
+          "text": "The organisation has invested heavily in its perimeter: a strong firewall, monitored gateway, the works."
+        },
+        {
+          "t": 15.93,
+          "text": "Inside, though, the network is flat, every server, workstation and printer sits in one zone with nothing between them."
+        },
+        {
+          "t": 23.04,
+          "text": "When a single laptop is compromised by a phishing email, the attacker finds they can reach the finance servers, the domain controller and the backups directly, because once you are inside, there are no more walls."
+        }
+      ]
+    },
+    {
+      "t": 35.86,
+      "sentences": [
+        {
+          "t": 35.86,
+          "text": "Good network security is built in layers, defence in depth, so that no single control is the only thing standing between an attacker and everything."
+        },
+        {
+          "t": 44.88,
+          "text": "A strong perimeter is one layer, but if it is the only layer, breaching it once, or a malicious insider starting inside, means unrestricted access."
+        },
+        {
+          "t": 53.85,
+          "text": "The flat internal network is exactly that failure."
+        }
+      ]
+    },
+    {
+      "t": 56.9,
+      "sentences": [
+        {
+          "t": 56.9,
+          "text": "Segmentation divides the internal network into zones with controlled boundaries between them, so traffic between zones is filtered and a compromise in one cannot spread freely to the others."
+        },
+        {
+          "t": 67.67,
+          "text": "It limits lateral movement: the attacker who lands on a laptop is confined, not handed the finance servers and the domain controller."
+        },
+        {
+          "t": 75.2,
+          "text": "This is the containment principle from least privilege, applied to the network."
+        }
+      ]
+    },
+    {
+      "t": 79.68,
+      "sentences": [
+        {
+          "t": 79.68,
+          "text": "So picture the difference."
+        },
+        {
+          "t": 81.27,
+          "text": "A flat network is one zone with no internal walls: a foothold reaches everything, and the attacker moves freely."
+        },
+        {
+          "t": 88.13,
+          "text": "A segmented network has zones with filtered boundaries: a breach is bounded, and movement hits a wall."
+        },
+        {
+          "t": 94.38,
+          "text": "Had the network in the scenario been segmented, the compromised laptop would have hit a boundary long before the backups."
+        }
+      ]
+    },
+    {
+      "t": 101.78,
+      "sentences": [
+        {
+          "t": 101.78,
+          "text": "A specific, heavily tested piece of architecture is the D-M-Z, the demilitarised zone: a buffer zone between the internet and the internal network where internet-facing servers, web, mail, public applications, are placed."
+        },
+        {
+          "t": 114.4,
+          "text": "They must be reachable from the internet, which makes them exposed, so isolating them in the D-M-Z means compromising one does not directly reach the internal network."
+        }
+      ]
+    },
+    {
+      "t": 123.94,
+      "sentences": [
+        {
+          "t": 123.94,
+          "text": "And the exam’s trap here is to suggest the D-M-Z is where sensitive data lives."
+        },
+        {
+          "t": 129.11,
+          "text": "It is the opposite."
+        },
+        {
+          "t": 130.36,
+          "text": "The most sensitive data belongs deep inside, and the D-M-Z holds only what must be exposed, kept away from everything that must not."
+        }
+      ]
+    },
+    {
+      "t": 139.01,
+      "sentences": [
+        {
+          "t": 139.01,
+          "text": "The flat-network failure reflects an old assumption: that being inside the network means being trusted."
+        },
+        {
+          "t": 145.42,
+          "text": "Zero trust discards that."
+        },
+        {
+          "t": 146.97,
+          "text": "Its principle is that no user or device is trusted based on network location; every request is authenticated, authorised and verified on its own merits, wherever it comes from."
+        }
+      ]
+    },
+    {
+      "t": 157.92,
+      "sentences": [
+        {
+          "t": 157.92,
+          "text": "Why."
+        },
+        {
+          "t": 158.2,
+          "text": "Because attackers breach perimeters and insiders are already inside, so network position is treated as no evidence of trustworthiness at all."
+        },
+        {
+          "t": 168.03,
+          "text": "Zero trust replaces inside equals safe with continuous verification."
+        },
+        {
+          "t": 172.77,
+          "text": "It is the modern answer to the soft-centre problem."
+        }
+      ]
+    },
+    {
+      "t": 176.33,
+      "sentences": [
+        {
+          "t": 176.33,
+          "text": "Together, segmentation and zero trust fix the hard-shell, soft-centre network."
+        },
+        {
+          "t": 181.2,
+          "text": "Segmentation ensures even a trusted-looking foothold cannot roam the whole network, and zero trust verifies every request regardless of origin."
+        }
+      ]
+    },
+    {
+      "t": 190.13,
+      "sentences": [
+        {
+          "t": 190.13,
+          "text": "And the benefit to name is limiting the blast radius."
+        },
+        {
+          "t": 193.28,
+          "text": "When a question asks the security benefit of segmentation, it is containing a compromise, so one breach does not become total, not making the network faster and not reducing the device count."
+        }
+      ]
+    },
+    {
+      "t": 204.62,
+      "sentences": [
+        {
+          "t": 204.62,
+          "text": "So carry this away."
+        },
+        {
+          "t": 205.83,
+          "text": "A strong perimeter around a flat internal network means one compromise reaches everything, which is why segmentation and defence in depth exist."
+        },
+        {
+          "t": 214.97,
+          "text": "Segmentation contains the breach, the D-M-Z isolates the internet-facing servers, and zero trust refuses to trust anything based on its network location."
+        }
+      ]
+    }
+  ]
+}

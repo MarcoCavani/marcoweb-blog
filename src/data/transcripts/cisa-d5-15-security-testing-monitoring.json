@@ -1,0 +1,225 @@
+{
+  "lesson": "cisa-d5-15-security-testing-monitoring",
+  "title": "Security Testing and Monitoring",
+  "source": "cisa-d5-15-security-testing-monitoring.srt",
+  "generated": "2026-07-28",
+  "duration": 232.37,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Security testing and monitoring."
+        },
+        {
+          "t": 2.25,
+          "text": "These are how an organisation finds its weaknesses before attackers do, and detects them when they try."
+        },
+        {
+          "t": 9.47,
+          "text": "Both are easy to have in name only."
+        }
+      ]
+    },
+    {
+      "t": 11.93,
+      "sentences": [
+        {
+          "t": 11.93,
+          "text": "The scene."
+        },
+        {
+          "t": 12.54,
+          "text": "The security team runs a monthly vulnerability scan and files the report, and calls it their penetration test."
+        },
+        {
+          "t": 19.29,
+          "text": "Separately, every system ships its logs to a central store that has grown to terabytes, which no one has ever queried."
+        },
+        {
+          "t": 26.54,
+          "text": "So the organisation believes it both tests and monitors its security, when in truth it does neither as intended: a scan is not a pen test, and logs no one reads are not monitoring."
+        }
+      ]
+    },
+    {
+      "t": 37.58,
+      "sentences": [
+        {
+          "t": 37.58,
+          "text": "The exam draws a firm line between two activities people conflate."
+        },
+        {
+          "t": 41.8,
+          "text": "A vulnerability scan is largely automated and breadth-first."
+        },
+        {
+          "t": 45.63,
+          "text": "It enumerates known vulnerabilities across many systems, missing patches, weak configurations, exposed services, and reports them."
+        },
+        {
+          "t": 53.93,
+          "text": "It is fast and good at coverage, but it reports potential issues without proving they can be exploited."
+        },
+        {
+          "t": 60.5,
+          "text": "A penetration test is deeper and often manual."
+        },
+        {
+          "t": 63.44,
+          "text": "A skilled tester attempts to actually exploit weaknesses, and chain them together, to demonstrate what a real attacker could achieve."
+        }
+      ]
+    },
+    {
+      "t": 71.93,
+      "sentences": [
+        {
+          "t": 71.93,
+          "text": "So the difference is: find broadly, or exploit to prove."
+        },
+        {
+          "t": 75.45,
+          "text": "A scan tells you what weaknesses might exist; a pen test shows what an attacker could do with them."
+        },
+        {
+          "t": 81.69,
+          "text": "They are complementary, but they are not the same, and a scan report is not a penetration test."
+        }
+      ]
+    },
+    {
+      "t": 87.67,
+      "sentences": [
+        {
+          "t": 87.67,
+          "text": "They complement each other: scanning gives breadth across many systems, testing gives depth by proving real risk."
+        },
+        {
+          "t": 94.44,
+          "text": "You want both, but one does not substitute for the other."
+        },
+        {
+          "t": 97.85,
+          "text": "When a question contrasts them, scanning is automated identification of known issues, and penetration testing is active exploitation to demonstrate real impact."
+        }
+      ]
+    },
+    {
+      "t": 107.42,
+      "sentences": [
+        {
+          "t": 107.42,
+          "text": "Finding weaknesses is one half; detecting attacks as they happen is the other."
+        },
+        {
+          "t": 112.03,
+          "text": "A S-I-E-M, security information and event management, is the common tool: it aggregates logs and events from across the estate, correlates them, and alerts on patterns that indicate an attack, detection that individual system logs cannot give."
+        }
+      ]
+    },
+    {
+      "t": 126.36,
+      "sentences": [
+        {
+          "t": 126.36,
+          "text": "Correlation is the point."
+        },
+        {
+          "t": 127.94,
+          "text": "An attack often shows up as small, unremarkable events on several systems, a failed login here, an odd connection there, that only reveal themselves when brought together."
+        },
+        {
+          "t": 138.72,
+          "text": "Individual system logs, viewed in isolation, miss this; a S-I-E-M is what turns scattered records into a detection."
+        }
+      ]
+    },
+    {
+      "t": 145.97,
+      "sentences": [
+        {
+          "t": 145.97,
+          "text": "Which brings us to the terabytes no one queries."
+        },
+        {
+          "t": 149.07,
+          "text": "Logs are a detective control only if they are actually reviewed and acted upon, by people, by a S-I-E-M, or both."
+        },
+        {
+          "t": 156.37,
+          "text": "Collected and never examined, they faithfully record an attack that nobody sees, so detection never happens."
+        }
+      ]
+    },
+    {
+      "t": 163.34,
+      "sentences": [
+        {
+          "t": 163.34,
+          "text": "It is the same silent-failure problem as the unmonitored batch job in Domain four: the event occurred, the record exists, and no one is watching."
+        },
+        {
+          "t": 172.24,
+          "text": "So the finding in the scenario is not the storage cost; it is that logging without monitoring provides no detection."
+        },
+        {
+          "t": 179.35,
+          "text": "The value was never in generating the logs."
+        },
+        {
+          "t": 181.99,
+          "text": "It is in the monitoring and the response that logs make possible."
+        }
+      ]
+    },
+    {
+      "t": 185.98,
+      "sentences": [
+        {
+          "t": 185.98,
+          "text": "So detection needs response."
+        },
+        {
+          "t": 187.81,
+          "text": "You can only respond to what you see, and logging without monitoring provides no detection."
+        },
+        {
+          "t": 193.75,
+          "text": "The finding is not the disk the logs consume; it is that nothing is watching them."
+        }
+      ]
+    },
+    {
+      "t": 199.1,
+      "sentences": [
+        {
+          "t": 199.1,
+          "text": "And why test at all: testing and monitoring are how an organisation finds its weaknesses before attackers do, and detects them when they try."
+        },
+        {
+          "t": 207.65,
+          "text": "A scan filed and forgotten, and logs collected and ignored, are both security in name only."
+        }
+      ]
+    },
+    {
+      "t": 213.17,
+      "sentences": [
+        {
+          "t": 213.17,
+          "text": "So carry this away."
+        },
+        {
+          "t": 214.35,
+          "text": "A vulnerability scan identifies known weaknesses broadly; a penetration test exploits them to prove real impact, and one does not substitute for the other."
+        },
+        {
+          "t": 223.98,
+          "text": "And logs are only a control when something reviews them and can raise an alarm; unread, they detect nothing, however complete they are."
+        }
+      ]
+    }
+  ]
+}

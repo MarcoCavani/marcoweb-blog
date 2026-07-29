@@ -1,0 +1,189 @@
+{
+  "lesson": "cisa-d5-06-privileged-access-management",
+  "title": "Privileged Access Management",
+  "source": "cisa-d5-06-privileged-access-management.srt",
+  "generated": "2026-07-28",
+  "duration": 185.14,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Privileged access management."
+        },
+        {
+          "t": 2.12,
+          "text": "The previous lessons controlled ordinary access."
+        },
+        {
+          "t": 5.64,
+          "text": "Privileged access is a category of its own, because it can undo everything else."
+        }
+      ]
+    },
+    {
+      "t": 11.5,
+      "sentences": [
+        {
+          "t": 11.5,
+          "text": "The scene."
+        },
+        {
+          "t": 12.08,
+          "text": "Every administrator shares one domain-admin account, they use it all day for email and browsing as well as administration, and no one reviews what it does."
+        },
+        {
+          "t": 21.18,
+          "text": "The reasoning is that admins are trusted senior staff and the password is strong."
+        },
+        {
+          "t": 25.93,
+          "text": "Then one of them clicks a phishing link while logged in as domain admin, and the attacker inherits control of the entire environment in a single step."
+        }
+      ]
+    },
+    {
+      "t": 34.73,
+      "sentences": [
+        {
+          "t": 34.73,
+          "text": "Why are privileged accounts the priority."
+        },
+        {
+          "t": 37.3,
+          "text": "Because a privileged account, an administrator, domain admin, root, or database administrator, can do what ordinary accounts cannot: change configurations, disable logging, grant itself more access, and reach almost any data."
+        },
+        {
+          "t": 51.45,
+          "text": "A compromised one can dismantle the whole control environment."
+        }
+      ]
+    },
+    {
+      "t": 55.34,
+      "sentences": [
+        {
+          "t": 55.34,
+          "text": "And the consequence is asymmetric."
+        },
+        {
+          "t": 57.3,
+          "text": "A compromised standard account is a contained problem; a compromised privileged account can turn off the very monitoring that would catch it, and reach everything."
+        },
+        {
+          "t": 66.7,
+          "text": "Attackers know this, so privileged credentials are what they hunt for first."
+        },
+        {
+          "t": 71.08,
+          "text": "When a question asks why administrator accounts warrant the tightest control, it is their capability, not their password or their frequency of use."
+        }
+      ]
+    },
+    {
+      "t": 79.56,
+      "sentences": [
+        {
+          "t": 79.56,
+          "text": "Because the power is extreme, the control is correspondingly tight."
+        },
+        {
+          "t": 84.07,
+          "text": "First, minimise: the number of privileged accounts and the scope of each."
+        }
+      ]
+    },
+    {
+      "t": 88.99,
+      "sentences": [
+        {
+          "t": 88.99,
+          "text": "Second, elevate just in time: grant privileged access only when needed, for as long as needed, rather than as a standing right."
+        }
+      ]
+    },
+    {
+      "t": 96.74,
+      "sentences": [
+        {
+          "t": 96.74,
+          "text": "And third, no shared admin accounts, so privileged actions are attributable; M-F-A on privileged access, always; and record and review the sessions, exactly the discipline applied to the D-B-A in Domain four."
+        }
+      ]
+    },
+    {
+      "t": 108.84,
+      "sentences": [
+        {
+          "t": 108.84,
+          "text": "A strong password alone does none of this."
+        },
+        {
+          "t": 111.59,
+          "text": "The power of the access is matched by minimising it, elevating it only when required, and watching how it is used."
+        },
+        {
+          "t": 119.04,
+          "text": "That is what privileged access management means."
+        }
+      ]
+    },
+    {
+      "t": 122.18,
+      "sentences": [
+        {
+          "t": 122.18,
+          "text": "Which brings us to the phishing click, the scenario the exam loves."
+        },
+        {
+          "t": 125.97,
+          "text": "Everyday email and web browsing are where phishing and malware land, so performing them under a privileged account means a routine compromise becomes a full-environment compromise in one move."
+        }
+      ]
+    },
+    {
+      "t": 136.82,
+      "sentences": [
+        {
+          "t": 136.82,
+          "text": "So the fix is that administrators hold a separate standard account for daily work and use the privileged account only for administrative tasks, so the powerful credential is exposed as little as possible."
+        },
+        {
+          "t": 148.65,
+          "text": "You do not live in the privileged account."
+        }
+      ]
+    },
+    {
+      "t": 151.08,
+      "sentences": [
+        {
+          "t": 151.08,
+          "text": "And for genuine emergencies, a controlled break-glass procedure grants access when truly needed, and it is reviewed afterwards."
+        },
+        {
+          "t": 159.11,
+          "text": "Powerful access stays accountable even when it is urgent."
+        }
+      ]
+    },
+    {
+      "t": 162.72,
+      "sentences": [
+        {
+          "t": 162.72,
+          "text": "So carry this away."
+        },
+        {
+          "t": 163.85,
+          "text": "Privileged accounts warrant the tightest control because their compromise is catastrophic: minimise them, elevate just in time, never share, use M-F-A, and monitor the sessions."
+        },
+        {
+          "t": 174.37,
+          "text": "And daily work belongs in a standard account; the privileged one is used only when the task genuinely requires it, so a single phishing click cannot hand over the whole environment."
+        }
+      ]
+    }
+  ]
+}

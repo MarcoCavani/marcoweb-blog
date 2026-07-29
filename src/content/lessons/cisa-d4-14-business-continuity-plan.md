@@ -7,6 +7,7 @@ domain: 4
 order: 14
 minutes: 7
 gated: false
+videoId: "NXZooQDsCus"
 taskStatement: "Evaluate whether a business continuity plan keeps the whole organisation operating through disruption and is owned, maintained and tested."
 objectives:
   - "Distinguish the business continuity plan from the disaster recovery plan."

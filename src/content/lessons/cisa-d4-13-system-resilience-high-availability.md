@@ -7,6 +7,7 @@ domain: 4
 order: 13
 minutes: 7
 gated: false
+videoId: "ELOIBQsMOlU"
 taskStatement: "Evaluate whether systems are designed to withstand component failure, and distinguish resilience from recovery."
 objectives:
   - "Explain how redundancy and failover eliminate single points of failure."

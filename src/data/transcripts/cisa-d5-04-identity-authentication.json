@@ -1,0 +1,217 @@
+{
+  "lesson": "cisa-d5-04-identity-authentication",
+  "title": "Identity and Access Management: Authentication",
+  "source": "cisa-d5-04-identity-authentication.srt",
+  "generated": "2026-07-28",
+  "duration": 197.18,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Identity and access management, and authentication."
+        },
+        {
+          "t": 3.4,
+          "text": "Access control is the heart of Domain five, and it begins with reliably knowing, and proving, who someone is."
+        }
+      ]
+    },
+    {
+      "t": 10.66,
+      "sentences": [
+        {
+          "t": 10.66,
+          "text": "The scene."
+        },
+        {
+          "t": 11.27,
+          "text": "The finance team logs into the reconciliation system with a single shared account, finance-one, because it is convenient."
+        },
+        {
+          "t": 18.68,
+          "text": "Its password is strong and changed regularly, so the team considers access well controlled."
+        },
+        {
+          "t": 24.26,
+          "text": "Then a fraudulent transaction is traced back to that account, and there is no way to tell which of the eight people who use it was responsible."
+        },
+        {
+          "t": 33.02,
+          "text": "The password was never the weak point."
+        }
+      ]
+    },
+    {
+      "t": 35.35,
+      "sentences": [
+        {
+          "t": 35.35,
+          "text": "The identity model has four parts, and the exam expects you to keep them straight."
+        },
+        {
+          "t": 40.89,
+          "text": "Identification: the user claims an identity, entering a username."
+        },
+        {
+          "t": 45.27,
+          "text": "Authentication: the user proves that claim, with a password, token, or biometric."
+        },
+        {
+          "t": 50.74,
+          "text": "Authorisation: the system determines what that authenticated user is permitted to do."
+        },
+        {
+          "t": 56.48,
+          "text": "And accountability: the user’s actions are logged and attributable to them."
+        }
+      ]
+    },
+    {
+      "t": 61.54,
+      "sentences": [
+        {
+          "t": 61.54,
+          "text": "The most common slip is confusing authentication, proving who you are, with authorisation, what you are allowed to do."
+        },
+        {
+          "t": 68.99,
+          "text": "Proving identity comes first; granting permissions comes after."
+        },
+        {
+          "t": 72.97,
+          "text": "The exam swaps these constantly, so read which one the question is describing."
+        }
+      ]
+    },
+    {
+      "t": 77.9,
+      "sentences": [
+        {
+          "t": 77.9,
+          "text": "Authentication draws on three categories of factor."
+        },
+        {
+          "t": 81.33,
+          "text": "Something you know: a password, a P-I-N."
+        },
+        {
+          "t": 84.03,
+          "text": "Something you have: a hardware token, a phone receiving a one-time code."
+        },
+        {
+          "t": 88.87,
+          "text": "And something you are: a biometric, a fingerprint or a face."
+        },
+        {
+          "t": 92.91,
+          "text": "Multi-factor authentication means combining two or more different categories."
+        }
+      ]
+    },
+    {
+      "t": 98.09,
+      "sentences": [
+        {
+          "t": 98.09,
+          "text": "So what counts."
+        },
+        {
+          "t": 99.11,
+          "text": "A password plus a one-time code from a token is genuine M-F-A: something you know plus something you have."
+        }
+      ]
+    },
+    {
+      "t": 106.34,
+      "sentences": [
+        {
+          "t": 106.34,
+          "text": "But two passwords are both something you know, a single factor used twice, not multi-factor."
+        }
+      ]
+    },
+    {
+      "t": 112.18,
+      "sentences": [
+        {
+          "t": 112.18,
+          "text": "And a password plus a security question is still two knowledge factors; two biometrics are two of something-you-are."
+        },
+        {
+          "t": 119.49,
+          "text": "Same category twice is still single-factor, however many steps it takes."
+        }
+      ]
+    },
+    {
+      "t": 124.03,
+      "sentences": [
+        {
+          "t": 124.03,
+          "text": "So the rule is: two different categories."
+        },
+        {
+          "t": 126.89,
+          "text": "When a question asks which option is true M-F-A, look for two different kinds of factor, not the same kind twice."
+        },
+        {
+          "t": 134.77,
+          "text": "That is the trap, set over and over."
+        }
+      ]
+    },
+    {
+      "t": 137.28,
+      "sentences": [
+        {
+          "t": 137.28,
+          "text": "Now back to the shared account, because that is the real finding."
+        },
+        {
+          "t": 141.06,
+          "text": "The finance team’s strong password was never the issue."
+        },
+        {
+          "t": 144.26,
+          "text": "Their shared account is, because it collapses accountability: when eight people use one login, no action can be traced to an individual, so the fraudulent transaction cannot be pinned to anyone."
+        },
+        {
+          "t": 155.53,
+          "text": "A strong password protects against outsiders guessing it; it does nothing about telling your own people apart."
+        }
+      ]
+    },
+    {
+      "t": 161.93,
+      "sentences": [
+        {
+          "t": 161.93,
+          "text": "Accountability depends on unique identities, one account per person, so that every action is attributable."
+        },
+        {
+          "t": 168.17,
+          "text": "This is why shared and generic accounts are a standard finding, and why a shared privileged account, like a common admin login, is worse still."
+        }
+      ]
+    },
+    {
+      "t": 176.59,
+      "sentences": [
+        {
+          "t": 176.59,
+          "text": "So carry this away."
+        },
+        {
+          "t": 177.76,
+          "text": "It is only multi-factor if the factors come from different categories, know, have, are; two of the same kind is single-factor dressed up."
+        },
+        {
+          "t": 186.15,
+          "text": "And a shared account breaks the accountability the entire identity model exists to provide, and a strong password does not fix it, because the weakness is attribution, not secrecy."
+        }
+      ]
+    }
+  ]
+}

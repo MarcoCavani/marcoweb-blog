@@ -1,0 +1,217 @@
+{
+  "lesson": "cisa-d5-01-security-governance-frameworks",
+  "title": "Information Security Governance and Frameworks",
+  "source": "cisa-d5-01-security-governance-frameworks.srt",
+  "generated": "2026-07-28",
+  "duration": 207.77,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Information security governance and frameworks."
+        },
+        {
+          "t": 3.1,
+          "text": "Domain five is the largest and most technical on the exam, and it opens exactly where Domain two did: with governance."
+        },
+        {
+          "t": 10.9,
+          "text": "Because protection without direction is just a pile of tools."
+        }
+      ]
+    },
+    {
+      "t": 14.93,
+      "sentences": [
+        {
+          "t": 14.93,
+          "text": "Here is the situation."
+        },
+        {
+          "t": 16.3,
+          "text": "You ask who owns information security, and the answer is, IT does, it’s their systems."
+        },
+        {
+          "t": 21.64,
+          "text": "The security policy is a two-year-old document nobody has read, there is no distinction between what is mandatory and what is advice, and when a control is missing, each team assumes another was handling it."
+        },
+        {
+          "t": 34.52,
+          "text": "Security here is treated as a technical chore, not something the organisation governs."
+        }
+      ]
+    },
+    {
+      "t": 39.86,
+      "sentences": [
+        {
+          "t": 39.86,
+          "text": "So who is actually accountable."
+        },
+        {
+          "t": 41.85,
+          "text": "Information security is a governance responsibility."
+        },
+        {
+          "t": 45.18,
+          "text": "Senior management and the board are ultimately accountable: they set the tone from the top, approve the security policy, and allocate the resources."
+        },
+        {
+          "t": 54.65,
+          "text": "A security function, often led by a C-I-S-O, and the I-T teams implement and operate the controls, but they do so within a mandate management owns."
+        }
+      ]
+    },
+    {
+      "t": 64.06,
+      "sentences": [
+        {
+          "t": 64.06,
+          "text": "This is the same shape as risk appetite in Domain two."
+        },
+        {
+          "t": 67.45,
+          "text": "When a question asks who is ultimately accountable for security, the answer is not I-T and not the security team; it is senior management."
+        },
+        {
+          "t": 76.11,
+          "text": "Treating security as purely I-T’s problem is the governance failure that leaves gaps no one owns."
+        }
+      ]
+    },
+    {
+      "t": 82.2,
+      "sentences": [
+        {
+          "t": 82.2,
+          "text": "Now the policy hierarchy, because the exam expects you to tell the layers apart."
+        },
+        {
+          "t": 87.33,
+          "text": "A policy without standards is aspiration with nothing to test against; standards without a policy are rules with no authority behind them."
+        },
+        {
+          "t": 96.17,
+          "text": "So keep them straight."
+        }
+      ]
+    },
+    {
+      "t": 97.58,
+      "sentences": [
+        {
+          "t": 97.58,
+          "text": "First, a policy states management’s high-level intent and direction: information must be protected in line with its classification."
+        },
+        {
+          "t": 106.17,
+          "text": "It is the mandate."
+        }
+      ]
+    },
+    {
+      "t": 107.35,
+      "sentences": [
+        {
+          "t": 107.35,
+          "text": "Second, a standard turns that intent into mandatory, measurable requirements: a minimum encryption strength, a password length, an approved configuration."
+        },
+        {
+          "t": 117.32,
+          "text": "Standards are not optional."
+        }
+      ]
+    },
+    {
+      "t": 119.06,
+      "sentences": [
+        {
+          "t": 119.06,
+          "text": "And third, a procedure gives the step-by-step instructions to meet a standard, while a guideline offers optional advice and good practice."
+        },
+        {
+          "t": 127.53,
+          "text": "Four layers, each doing a different job."
+        }
+      ]
+    },
+    {
+      "t": 129.98,
+      "sentences": [
+        {
+          "t": 129.98,
+          "text": "So the shortcut is: intent, mandatory, how, advice."
+        },
+        {
+          "t": 134.08,
+          "text": "When a question describes high-level intent, that is a policy."
+        },
+        {
+          "t": 139.06,
+          "text": "A mandatory specific requirement is a standard."
+        },
+        {
+          "t": 142.83,
+          "text": "Step by step is a procedure."
+        },
+        {
+          "t": 145.08,
+          "text": "Optional good practice is a guideline."
+        }
+      ]
+    },
+    {
+      "t": 148.13,
+      "sentences": [
+        {
+          "t": 148.13,
+          "text": "Organisations do not invent security from scratch; they adopt recognised frameworks."
+        },
+        {
+          "t": 153.36,
+          "text": "I-S-O twenty-seven thousand and one defines an information security management system; the NIST Cybersecurity Framework and COBIT are others."
+        },
+        {
+          "t": 162.15,
+          "text": "Their value is a structured, repeatable way to identify risks, select and apply controls, and monitor and improve them."
+        }
+      ]
+    },
+    {
+      "t": 169.56,
+      "sentences": [
+        {
+          "t": 169.56,
+          "text": "And the exam’s angle mirrors compliance in Domain two: a framework is an ongoing management system, not a one-off certificate."
+        },
+        {
+          "t": 177,
+          "text": "Achieving I-S-O twenty-seven thousand and one certification once and never maintaining the system is the same stale-certificate problem in new clothes."
+        },
+        {
+          "t": 185.92,
+          "text": "And no framework guarantees you cannot be breached; it manages risk, it does not abolish it."
+        }
+      ]
+    },
+    {
+      "t": 191.35,
+      "sentences": [
+        {
+          "t": 191.35,
+          "text": "So carry this away."
+        },
+        {
+          "t": 192.59,
+          "text": "Security is governed by senior management, who are accountable for it, exactly as they are for risk."
+        },
+        {
+          "t": 199.13,
+          "text": "Policy is intent, standards are mandatory, procedures are the how, and a framework is the ongoing system that holds it all together."
+        }
+      ]
+    }
+  ]
+}

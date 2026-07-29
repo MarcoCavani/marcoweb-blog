@@ -1,0 +1,213 @@
+{
+  "lesson": "cisa-d5-07-access-provisioning-review",
+  "title": "User Access Provisioning and Review",
+  "source": "cisa-d5-07-access-provisioning-review.srt",
+  "generated": "2026-07-28",
+  "duration": 195.77,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "User access provisioning and review."
+        },
+        {
+          "t": 2.73,
+          "text": "Provisioning gets attention because someone is waiting for it."
+        },
+        {
+          "t": 7.44,
+          "text": "Deprovisioning gets forgotten because no one is."
+        },
+        {
+          "t": 11.09,
+          "text": "That gap is this lesson."
+        }
+      ]
+    },
+    {
+      "t": 12.91,
+      "sentences": [
+        {
+          "t": 12.91,
+          "text": "The scene."
+        },
+        {
+          "t": 13.59,
+          "text": "A review of active accounts turns up three people who left the company months ago and can still log in, one of them dismissed."
+        },
+        {
+          "t": 22.13,
+          "text": "It also finds a contractor whose engagement ended in spring."
+        },
+        {
+          "t": 26.2,
+          "text": "Every one of these accounts was created properly, with an approval and a ticket."
+        },
+        {
+          "t": 31.62,
+          "text": "The failure was never in granting the access."
+        },
+        {
+          "t": 34.67,
+          "text": "It was in nobody ever taking it away."
+        }
+      ]
+    },
+    {
+      "t": 37.18,
+      "sentences": [
+        {
+          "t": 37.18,
+          "text": "Access tracks employment through three events."
+        },
+        {
+          "t": 40.1,
+          "text": "First, the joiner: a new person is granted the access their role needs, ideally provisioned from an approved request tied to H-R."
+        }
+      ]
+    },
+    {
+      "t": 48.31,
+      "sentences": [
+        {
+          "t": 48.31,
+          "text": "Second, the mover: someone changes role, and their access should change with it, gaining what the new role needs and, critically, losing what the old role needed."
+        },
+        {
+          "t": 57.87,
+          "text": "Skipping the removal is how privilege creep sets in."
+        }
+      ]
+    },
+    {
+      "t": 60.94,
+      "sentences": [
+        {
+          "t": 60.94,
+          "text": "And third, the leaver: someone departs, and all their access must be promptly revoked."
+        },
+        {
+          "t": 67.36,
+          "text": "Joiner, mover, leaver."
+        }
+      ]
+    },
+    {
+      "t": 69,
+      "sentences": [
+        {
+          "t": 69,
+          "text": "The most acute risk in the whole lifecycle is a leaver whose access is not removed."
+        },
+        {
+          "t": 73.97,
+          "text": "A former employee retaining active credentials, or an attacker using them, has legitimate-looking access they should no longer hold."
+        }
+      ]
+    },
+    {
+      "t": 81.89,
+      "sentences": [
+        {
+          "t": 81.89,
+          "text": "And it is sharpest for an involuntary termination, where the person may be aggrieved and motivated to cause harm, and where access should be cut at, or before, the moment of departure."
+        },
+        {
+          "t": 92.2,
+          "text": "So deprovisioning is treated as a time-critical control, ideally triggered automatically by H-R when employment ends, not left to someone remembering to raise a ticket."
+        }
+      ]
+    },
+    {
+      "t": 101.62,
+      "sentences": [
+        {
+          "t": 101.62,
+          "text": "Why do the mover and leaver steps fail so quietly."
+        },
+        {
+          "t": 104.99,
+          "text": "Because nothing is blocked when access lingers."
+        },
+        {
+          "t": 108.16,
+          "text": "The joiner step is self-correcting, the person is present and expecting access."
+        },
+        {
+          "t": 113.49,
+          "text": "But lingering access blocks nothing, so no one notices until a review, or a breach, finds it."
+        }
+      ]
+    },
+    {
+      "t": 119.76,
+      "sentences": [
+        {
+          "t": 119.76,
+          "text": "Which is why a periodic access review, or recertification, backstops the process."
+        },
+        {
+          "t": 124.6,
+          "text": "At an interval, the business or data owner and the user’s manager re-confirm that each person’s access is still appropriate for their current role, and revoke what is not."
+        },
+        {
+          "t": 134.82,
+          "text": "It catches the movers who accumulated access, the leavers who slipped through, and orphaned accounts."
+        }
+      ]
+    },
+    {
+      "t": 140.86,
+      "sentences": [
+        {
+          "t": 140.86,
+          "text": "And who does the review matters."
+        },
+        {
+          "t": 142.89,
+          "text": "It must be done by someone who knows what the role should permit, which is the business owner and the manager, not I-T."
+        },
+        {
+          "t": 150.47,
+          "text": "I-T provides the access listing and executes the changes; it cannot judge appropriateness."
+        },
+        {
+          "t": 156.2,
+          "text": "And a user reviewing their own access is no review at all."
+        }
+      ]
+    },
+    {
+      "t": 159.89,
+      "sentences": [
+        {
+          "t": 159.89,
+          "text": "This is the same independence logic that runs through the course: the person who decides must be positioned to judge, and must not be marking their own homework."
+        },
+        {
+          "t": 169.18,
+          "text": "An access review where users approve their own access is a conflict, not a control."
+        }
+      ]
+    },
+    {
+      "t": 173.98,
+      "sentences": [
+        {
+          "t": 173.98,
+          "text": "So carry this away."
+        },
+        {
+          "t": 175.1,
+          "text": "Pour less attention into granting access and more into removing it: the terminated user who still has access is the classic finding, and the leaver, especially an involuntary one, is the highest risk in the lifecycle."
+        },
+        {
+          "t": 187.95,
+          "text": "And the periodic review is a business owner’s recertification of what each role should hold, not an I-T task and not a rubber stamp."
+        }
+      ]
+    }
+  ]
+}

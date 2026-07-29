@@ -7,6 +7,7 @@ domain: 5
 order: 5
 minutes: 7
 gated: false
+videoId: "fGsaYEpBOHI"
 taskStatement: "Evaluate whether access is granted on least privilege and need-to-know, using an appropriate access-control model."
 objectives:
   - "State the principle of least privilege and need-to-know."

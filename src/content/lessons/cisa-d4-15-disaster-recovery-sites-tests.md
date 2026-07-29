@@ -7,6 +7,7 @@ domain: 4
 order: 15
 minutes: 8
 gated: false
+videoId: "OP4xCG2dF4w"
 taskStatement: "Evaluate whether the recovery site strategy fits the recovery objectives and whether disaster recovery testing gives genuine assurance."
 objectives:
   - "Rank hot, warm and cold recovery sites by cost and recovery speed."

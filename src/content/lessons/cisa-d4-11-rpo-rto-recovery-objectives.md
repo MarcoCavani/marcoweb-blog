@@ -7,6 +7,7 @@ domain: 4
 order: 11
 minutes: 7
 gated: false
+videoId: "tAdZpFMWS-c"
 taskStatement: "Distinguish the recovery point objective from the recovery time objective and relate each to the recovery solution it drives."
 objectives:
   - "Define RPO as the maximum tolerable data loss."

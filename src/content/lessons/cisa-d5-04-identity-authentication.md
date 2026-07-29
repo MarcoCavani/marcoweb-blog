@@ -7,6 +7,7 @@ domain: 5
 order: 4
 minutes: 8
 gated: false
+videoId: "gqkpAf6TqO8"
 taskStatement: "Evaluate whether users are uniquely identified, reliably authenticated, and held accountable for their actions."
 objectives:
   - "Distinguish identification, authentication, authorisation and accountability."

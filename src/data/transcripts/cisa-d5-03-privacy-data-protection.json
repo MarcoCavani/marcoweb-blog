@@ -1,0 +1,189 @@
+{
+  "lesson": "cisa-d5-03-privacy-data-protection",
+  "title": "Privacy and Data Protection Principles",
+  "source": "cisa-d5-03-privacy-data-protection.srt",
+  "generated": "2026-07-28",
+  "duration": 184.39,
+  "paragraphs": [
+    {
+      "t": 0,
+      "sentences": [
+        {
+          "t": 0,
+          "text": "Privacy and data protection principles."
+        },
+        {
+          "t": 2.58,
+          "text": "Most of Domain five is about security controls, but this lesson draws a line the exam insists on: privacy is not the same problem as security."
+        }
+      ]
+    },
+    {
+      "t": 11.98,
+      "sentences": [
+        {
+          "t": 11.98,
+          "text": "The scene."
+        },
+        {
+          "t": 12.58,
+          "text": "A privacy review finds the sign-up form collects date of birth, home address and marital status for a service that needs only an email."
+        },
+        {
+          "t": 20.73,
+          "text": "The team is unconcerned: it’s all encrypted, so privacy is covered."
+        },
+        {
+          "t": 24.77,
+          "text": "They have protected data they had no business collecting, and they think the lock on the drawer settles the question of what is in it."
+        }
+      ]
+    },
+    {
+      "t": 32.86,
+      "sentences": [
+        {
+          "t": 32.86,
+          "text": "So, two different questions."
+        },
+        {
+          "t": 34.73,
+          "text": "Security protects information: keeping it confidential, intact, and available, safe from unauthorised access."
+        },
+        {
+          "t": 42.05,
+          "text": "Privacy governs whether personal data is collected, used, shared and retained appropriately and lawfully."
+        },
+        {
+          "t": 49.1,
+          "text": "One protects the data; the other governs whether you should have it."
+        }
+      ]
+    },
+    {
+      "t": 53.66,
+      "sentences": [
+        {
+          "t": 53.66,
+          "text": "And that distinction matters because you can do one without the other."
+        },
+        {
+          "t": 57.96,
+          "text": "You can secure data you had no right to collect, and you can collect data lawfully but fail to protect it."
+        },
+        {
+          "t": 64.47,
+          "text": "Security is a means; privacy is a set of obligations about personal data specifically."
+        },
+        {
+          "t": 69.74,
+          "text": "When a question contrasts the two, security is about protecting data, and privacy is about the appropriate handling of personal information."
+        }
+      ]
+    },
+    {
+      "t": 78.34,
+      "sentences": [
+        {
+          "t": 78.34,
+          "text": "The core privacy idea is data minimisation: collect and retain only the personal data actually necessary for the stated purpose."
+        },
+        {
+          "t": 85.95,
+          "text": "The form’s date of birth and marital status fail this, they are not needed to deliver the service."
+        }
+      ]
+    },
+    {
+      "t": 91.78,
+      "sentences": [
+        {
+          "t": 91.78,
+          "text": "Privacy regimes differ in detail but share a common core the exam expects you to recognise."
+        },
+        {
+          "t": 98.07,
+          "text": "Let me name the main ones."
+        }
+      ]
+    },
+    {
+      "t": 99.86,
+      "sentences": [
+        {
+          "t": 99.86,
+          "text": "First, purpose limitation: personal data is collected for a specified purpose and not used for unrelated ones."
+        }
+      ]
+    },
+    {
+      "t": 107.02,
+      "sentences": [
+        {
+          "t": 107.02,
+          "text": "Second, data minimisation: collect and retain only what is necessary for that purpose."
+        }
+      ]
+    },
+    {
+      "t": 112.9,
+      "sentences": [
+        {
+          "t": 112.9,
+          "text": "And then retention limits, keep data only as long as the purpose requires; data-subject rights, individuals can access and correct their data; and accountability, the organisation can demonstrate compliance, echoing the continuous-compliance theme from Domain two."
+        }
+      ]
+    },
+    {
+      "t": 127.63,
+      "sentences": [
+        {
+          "t": 127.63,
+          "text": "Now the point the team missed."
+        },
+        {
+          "t": 129.46,
+          "text": "Encrypting the excess data is a security control; it protects that data from unauthorised access."
+        },
+        {
+          "t": 135.36,
+          "text": "It does nothing about the privacy failure, which is that the data should not have been collected or retained in the first place."
+        },
+        {
+          "t": 143.16,
+          "text": "Minimisation is breached the moment you hold personal data you do not need, however strong the encryption around it."
+        }
+      ]
+    },
+    {
+      "t": 150.22,
+      "sentences": [
+        {
+          "t": 150.22,
+          "text": "The right approach is privacy by design: building privacy in from the start rather than bolting it on, the same principle as designing controls in during development in Domain three."
+        },
+        {
+          "t": 160.37,
+          "text": "So the fix is not more security on the excess data; it is to stop collecting what is unnecessary and dispose of what should not be kept."
+        }
+      ]
+    },
+    {
+      "t": 167.95,
+      "sentences": [
+        {
+          "t": 167.95,
+          "text": "So carry this away."
+        },
+        {
+          "t": 169.19,
+          "text": "Security protects data; privacy governs whether collecting and using it is appropriate, and the two are assessed separately."
+        },
+        {
+          "t": 177.28,
+          "text": "Data you do not hold cannot be misused or breached, and holding it, encrypted or not, is the privacy failure."
+        }
+      ]
+    }
+  ]
+}
