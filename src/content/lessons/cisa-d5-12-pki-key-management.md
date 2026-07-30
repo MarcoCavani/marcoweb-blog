@@ -7,6 +7,7 @@ domain: 5
 order: 12
 minutes: 8
 gated: false
+videoId: "mdp0dh2iRgI"
 taskStatement: "Evaluate whether public key infrastructure and key management establish and preserve trust in encryption and signatures."
 objectives:
   - "State the role of a certificate authority in PKI."

@@ -7,6 +7,7 @@ domain: 5
 order: 13
 minutes: 8
 gated: false
+videoId: "p7fyfgQog-8"
 taskStatement: "Evaluate whether endpoints, mobile devices and cloud services are secured, with responsibility clearly understood."
 objectives:
   - "Explain the cloud shared responsibility model."

@@ -7,6 +7,7 @@ domain: 5
 order: 7
 minutes: 7
 gated: false
+videoId: "bHUwscYvdJk"
 taskStatement: "Evaluate whether access is granted, changed and removed in step with employment and periodically recertified by owners."
 objectives:
   - "Describe the joiner, mover and leaver access lifecycle."

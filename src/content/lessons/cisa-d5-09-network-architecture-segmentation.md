@@ -7,6 +7,7 @@ domain: 5
 order: 9
 minutes: 7
 gated: false
+videoId: "hAJ8S-JqGVU"
 taskStatement: "Evaluate whether the network is layered and segmented so that a compromise is contained rather than total."
 objectives:
   - "Explain how segmentation limits the blast radius of a breach."

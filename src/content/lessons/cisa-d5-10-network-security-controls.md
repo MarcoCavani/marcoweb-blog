@@ -7,6 +7,7 @@ domain: 5
 order: 10
 minutes: 7
 gated: false
+videoId: "Pl7ASbKU5bQ"
 taskStatement: "Evaluate the network controls that filter traffic, detect or prevent intrusions, and secure access over untrusted networks."
 objectives:
   - "State what a firewall does."

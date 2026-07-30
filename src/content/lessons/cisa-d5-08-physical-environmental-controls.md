@@ -7,6 +7,7 @@ domain: 5
 order: 8
 minutes: 7
 gated: false
+videoId: "Cc6VG-GDofo"
 taskStatement: "Evaluate whether physical access to facilities and environmental threats to equipment are adequately controlled."
 objectives:
   - "Identify the control that prevents tailgating into a secure area."

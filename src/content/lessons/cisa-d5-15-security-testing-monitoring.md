@@ -7,6 +7,7 @@ domain: 5
 order: 15
 minutes: 7
 gated: false
+videoId: "gvxAwbGrlYc"
 taskStatement: "Evaluate whether security weaknesses are tested for and whether monitoring can actually detect an attack."
 objectives:
   - "Distinguish vulnerability scanning from penetration testing."

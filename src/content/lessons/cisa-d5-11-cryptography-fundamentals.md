@@ -7,6 +7,7 @@ domain: 5
 order: 11
 minutes: 8
 gated: false
+videoId: "DMQMM6XKFT8"
 taskStatement: "Evaluate whether cryptography is used appropriately for confidentiality, integrity, authentication and non-repudiation."
 objectives:
   - "Distinguish symmetric from asymmetric encryption."

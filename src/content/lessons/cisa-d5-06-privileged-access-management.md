@@ -7,6 +7,7 @@ domain: 5
 order: 6
 minutes: 7
 gated: false
+videoId: "Rtp2C5XP_Fo"
 taskStatement: "Evaluate whether privileged accounts are minimised, tightly controlled, and their use monitored."
 objectives:
   - "Explain why privileged accounts carry the greatest risk."
