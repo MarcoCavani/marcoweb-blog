@@ -54,7 +54,7 @@ On **September 12th, 2023**, MGM announced the breach in a [K-8 SEC filing](http
 
 For a comprehensive deep-dive into Scattered Spider's tactics, techniques, and procedures, including their attack on Caesars Entertainment, read the full intelligence report:
 
-→ [Scattered Spider: The Casino Hacks Full Report](/blog/scattered-spider-casino-hacks)
+→ [Scattered Spider: The Casino Hacks Full Report](/reports/scattered-spider-casino-hacks/)
 
 ---
 
