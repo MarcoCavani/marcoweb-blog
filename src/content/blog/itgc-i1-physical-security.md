@@ -1,5 +1,6 @@
 ---
 title: "The US Veteran Affairs Laptop Breach: Physical Security Is a Data Control"
+seoTitle: "Physical Security as a Data Control"
 description: "In May 2006, a Veterans Affairs employee took home a laptop containing the names, dates of birth, and Social Security numbers of 26.5 million US military veterans. The laptop was stolen from the employee's home. Physical security is not separate from data security: the data is only as secure as the physical device containing it."
 pubDate: 2026-09-21
 heroImage: "/images/itgc-i1-physical-security.svg"

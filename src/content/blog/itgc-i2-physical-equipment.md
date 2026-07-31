@@ -1,5 +1,6 @@
 ---
 title: "74,000 People's Data Walked Out the Door on Unsanitised Laptops"
+seoTitle: "Equipment Disposal and Media Sanitisation"
 description: "In 2014, a former Coca-Cola employee stole 55 company laptops over a period of years. The laptops contained personal information on 74,000 employees, contractors, and partners. The data was not encrypted. Equipment management controls, from asset inventory to secure disposal, are the controls that prevent a hardware theft from becoming a data breach."
 pubDate: 2026-09-23
 heroImage: "/images/itgc-i2-physical-equipment.svg"

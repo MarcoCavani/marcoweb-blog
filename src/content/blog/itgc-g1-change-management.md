@@ -1,5 +1,6 @@
 ---
 title: "Knight Capital Lost $440 Million in 45 Minutes Because One Server Was Not Updated"
+seoTitle: "Change Management: Knight Capital's $440M"
 description: "On 1 August 2012, a software deployment error at Knight Capital Group triggered an automated trading loop that generated $440 million in losses before humans could stop it. The failure was not in the code. It was in the change management process that allowed eight production servers to be updated without confirming all eight had been updated."
 pubDate: 2026-09-04
 heroImage: "/images/itgc-g1-change-management.svg"

@@ -1,5 +1,6 @@
 ---
 title: "SaaS, OS and Database: Auditing the Full Stack of an e-Gaming Platform"
+seoTitle: "SaaS, OS and Database: e-Gaming Audit"
 description: "An e-gaming platform is a stack, not a single system. Audit only the application and you have checked the shop window. Here is how to scope the full three layers, application, operating system and database, in the cloud."
 pubDate: 2026-07-30
 category: "IT Audit"

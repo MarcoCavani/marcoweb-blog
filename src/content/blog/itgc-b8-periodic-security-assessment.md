@@ -1,5 +1,6 @@
 ---
 title: "LastPass Proves That Penetration Testing Must Cover Your Cloud Environment"
+seoTitle: "Penetration Testing and Cloud Assessment"
 description: "LastPass was breached twice in 2022. The second breach exploited a DevOps engineer's home computer to reach cloud backups that held encrypted vaults for 33 million users. Periodic security assessments of the cloud environment should have identified the path. They did not."
 pubDate: 2026-07-27
 heroImage: "/images/itgc-b8-periodic-security-assessment.svg"

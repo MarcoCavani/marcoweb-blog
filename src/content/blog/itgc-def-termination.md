@@ -1,5 +1,6 @@
 ---
 title: "Five Months After He Left Cisco, He Deleted 16,000 WebEx Accounts"
+seoTitle: "Termination Controls: The Cisco WebEx Case"
 description: "A former Cisco engineer's cloud application access was never revoked after his resignation. Five months later, he logged in to AWS and deleted virtual machines serving 16,000 WebEx Teams customers. Application termination controls are not optional. They are the last line of defence against the access you forgot to close."
 pubDate: 2026-08-21
 heroImage: "/images/itgc-def-termination.svg"

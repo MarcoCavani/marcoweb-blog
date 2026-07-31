@@ -1,5 +1,6 @@
 ﻿---
 title: "Australia's New Privacy Act: A Wake-Up Call for Businesses"
+seoTitle: "Australia’s New Privacy Act: What It Means"
 description: "Australia's revised Privacy Act hands consumers new powers and puts businesses on the hook for data breaches. With AI lowering the bar for cybercriminals, here's what organisations must do now."
 pubDate: 2025-01-18
 heroImage: "/images/privacy-act-cover.svg"

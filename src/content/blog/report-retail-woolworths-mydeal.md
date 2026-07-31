@@ -1,5 +1,6 @@
 ---
 title: "Retail Incident Report: The Woolworths MyDeal Breach and the Post-Acquisition Security Gap"
+seoTitle: "Woolworths MyDeal Breach: Retail Report"
 description: "In October 2022, 2.2 million customer records were stolen from Woolworths' MyDeal e-commerce subsidiary using a compromised employee credential. This report examines how post-acquisition security integration failures create breach conditions, and what the retail sector's credential-based breach pattern means for ITGC controls."
 pubDate: 2026-07-28
 heroImage: "/images/report-retail-woolworths-mydeal.svg"

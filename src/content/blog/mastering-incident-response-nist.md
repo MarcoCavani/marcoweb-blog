@@ -1,5 +1,6 @@
 ﻿---
 title: "Mastering Incident Response: Key Insights from the NIST Guide"
+seoTitle: "Incident Response: Insights from NIST"
 description: "A strategic deep-dive into NIST's Computer Security Incident Handling Guide, covering the full IR lifecycle, team structure, detection methods, prioritisation frameworks, and the power of post-incident learning."
 pubDate: 2026-06-15
 heroImage: "/images/incident-response-cover.svg"

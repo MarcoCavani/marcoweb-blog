@@ -1,5 +1,6 @@
 ---
 title: "DORA for a Fintech: Turning Operational Resilience into a Legal Duty"
+seoTitle: "DORA for Fintechs: Operational Resilience"
 description: "The EU's Digital Operational Resilience Act makes surviving an IT disruption a matter of law for financial firms, and fintechs are squarely in scope. Here are the five pillars, the third-party trap, and where the accountability actually sits."
 pubDate: 2026-07-30
 category: "Information Security"

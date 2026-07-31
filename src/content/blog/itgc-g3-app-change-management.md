@@ -1,5 +1,6 @@
 ---
 title: "TSB's IT Migration Left 1.9 Million Customers Unable to Bank for Weeks"
+seoTitle: "Application Change Management: TSB"
 description: "In April 2018, TSB Bank attempted to migrate 5.4 million customer accounts from a legacy platform to a new system. The migration failed. 1.9 million customers were locked out of their accounts. Some saw other customers' balances. The failures traced back to application change management controls that were inadequate for the scale and complexity of the migration."
 pubDate: 2026-09-09
 heroImage: "/images/itgc-g3-app-change-management.svg"

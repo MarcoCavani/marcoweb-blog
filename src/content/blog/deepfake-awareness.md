@@ -1,5 +1,6 @@
 ﻿---
 title: "Deepfake Awareness: The AI Threat You Can't Always See"
+seoTitle: "Deepfake Awareness: The AI Threat"
 description: "How Generative Adversarial Networks are being weaponised by cybercriminals, why regulators are scrambling to catch up, and what individuals and organisations can do to protect themselves."
 pubDate: 2024-06-14
 heroImage: "/images/deepfake-cover.svg"

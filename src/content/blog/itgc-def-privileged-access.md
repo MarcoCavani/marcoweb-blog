@@ -1,5 +1,6 @@
 ---
 title: "The Sage Insider Used an Internal Login to Steal 280 Businesses' Payroll Data"
+seoTitle: "Privileged Access: The Sage Payroll Breach"
 description: "In 2016, a Sage Group employee used unauthorised internal application credentials to access the payroll and HR data of approximately 280 UK businesses. Application privileged access controls, specifically who holds superuser and administrator roles in finance and HR systems, are the controls that determine whether a single malicious insider can reach every record in the system."
 pubDate: 2026-08-26
 heroImage: "/images/itgc-def-privileged-access.svg"

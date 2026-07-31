@@ -1,5 +1,6 @@
 ---
 title: "The Ubiquiti Insider Used the Company's Own Admin Credentials to Rob It"
+seoTitle: "Generic Accounts: The Ubiquiti Insider"
 description: "A Ubiquiti employee used shared cloud admin credentials to steal gigabytes of data, then posed as an anonymous hacker demanding a ransom. When everyone knows the password, nobody can be held accountable. Generic and shared accounts are the accountability gap that auditors close."
 pubDate: 2026-08-07
 heroImage: "/images/itgc-c4-generic-accounts.svg"

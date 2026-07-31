@@ -1,5 +1,6 @@
 ﻿---
 title: "The Crucial Role of Information Security in Critical Infrastructure"
+seoTitle: "Information Security in Critical Infrastructure"
 description: "An in-depth analysis of why information security is vital for critical infrastructure operators, covering CIA triad principles, classification frameworks, and the real-world consequences of cyber disruptions."
 pubDate: 2023-10-05
 heroImage: "/images/infosec-critical-cover.svg"

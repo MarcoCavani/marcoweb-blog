@@ -1,5 +1,6 @@
 ---
 title: "Why IT Governance Is the Control That Governs All Controls"
+seoTitle: "IT Governance: The Control Over Controls"
 description: "IT Governance sets the tone from the top. When boards and executives treat cybersecurity as someone else's problem, attackers treat your organisation as their next target. The Colonial Pipeline breach proved it."
 pubDate: 2026-07-12
 heroImage: "/images/itgc-a1-it-governance.svg"

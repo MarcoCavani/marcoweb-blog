@@ -1,5 +1,6 @@
 ---
 title: "Critical Infrastructure Report: Shamoon and Saudi Aramco, the Largest Targeted Wiper Attack in History"
+seoTitle: "Shamoon and Saudi Aramco: Wiper Attack"
 description: "On 15 August 2012, the Shamoon malware wiped the master boot records and overwrote data on approximately 30,000 Saudi Aramco workstations. The attack took the world's most valuable oil company offline for weeks and established the wiper attack as a nation-state weapon against energy infrastructure."
 pubDate: 2026-07-29
 heroImage: "/images/report-critical-saudi-aramco.svg"

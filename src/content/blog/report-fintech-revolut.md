@@ -1,5 +1,6 @@
 ---
 title: "Fintech Incident Report: The Revolut Data Breach and What It Reveals About Third-Party Risk"
+seoTitle: "Revolut Breach: Fintech Incident Report"
 description: "In September 2022, a social engineering attack targeting a third-party database provider exposed the personal data of 50,150 Revolut customers. This report examines the incident, the ITGC control failures that enabled it, and the systemic risk facing fintech firms that aggregate sensitive customer data at scale."
 pubDate: 2026-07-21
 heroImage: "/images/report-fintech-revolut.svg"

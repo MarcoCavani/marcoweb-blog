@@ -1,5 +1,6 @@
 ---
 title: "Network Segmentation and VPN for Critical Infrastructure"
+seoTitle: "Network Segmentation and VPN for OT"
 description: "In critical infrastructure a network breach is not a data problem, it is a physical one. Here is why segmentation is the control that keeps a compromised laptop away from a turbine, and why the VPN meant to protect the network is so often the way in."
 pubDate: 2026-07-30
 category: "Cybersecurity"

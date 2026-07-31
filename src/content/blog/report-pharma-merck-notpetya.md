@@ -1,5 +1,6 @@
 ---
 title: "Pharmaceutical Incident Report: Merck, NotPetya, and the $1.3 Billion Cost of an Uninsured Cyberwar"
+seoTitle: "Merck, NotPetya and a $1.3 Billion Loss"
 description: "In June 2017, the NotPetya wiper destroyed 30,000 of Merck's computer systems, halted pharmaceutical manufacturing, and resulted in estimated losses of USD $1.3 billion. This report examines the incident, its specific implications for regulated pharmaceutical environments, and the ITGC control failures that amplified the damage."
 pubDate: 2026-07-21
 heroImage: "/images/report-pharma-merck-notpetya.svg"

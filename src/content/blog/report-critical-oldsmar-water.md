@@ -1,5 +1,6 @@
 ---
 title: "Critical Infrastructure Report: The Oldsmar Water Treatment Attack and the Sodium Hydroxide Near-Miss"
+seoTitle: "Oldsmar Water Treatment Attack Report"
 description: "On 5 February 2021, an attacker remotely accessed the control system of the Oldsmar, Florida water treatment plant and raised the sodium hydroxide concentration to 111 times the safe level. An alert operator noticed the cursor moving and reversed the change. This near-miss exposed the open remote access vulnerabilities common in small water utilities across the US."
 pubDate: 2026-07-29
 heroImage: "/images/report-critical-oldsmar-water.svg"

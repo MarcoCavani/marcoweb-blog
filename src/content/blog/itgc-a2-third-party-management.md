@@ -1,5 +1,6 @@
 ---
 title: "The Vendor in Your Network: Why Third Party Management Is an ITGC Control"
+seoTitle: "Third Party Management as an ITGC Control"
 description: "Attackers do not always break through your front door. Sometimes they walk in through a vendor's access. The Target breach is the textbook case, and the lessons still apply a decade later."
 pubDate: 2026-07-19
 heroImage: "/images/itgc-a2-third-party-management.svg"

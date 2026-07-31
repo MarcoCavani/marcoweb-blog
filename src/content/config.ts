@@ -4,6 +4,11 @@ const blog = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
+    // Shorter title for the <title> tag only. The narrative headlines that make
+    // good H1s ("The Equifax Breach Was On the Risk Register: ...") run well past
+    // the ~60 characters Google shows, so they truncate mid-sentence in results.
+    // When set, this drives the <title> and the on-page H1 keeps the full headline.
+    seoTitle: z.string().optional(),
     description: z.string(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),

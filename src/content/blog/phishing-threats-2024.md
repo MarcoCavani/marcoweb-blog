@@ -1,5 +1,6 @@
 ﻿---
 title: "The Growing Threat of Phishing in 2024: A Gateway Crime"
+seoTitle: "Phishing in 2024: A Gateway Crime"
 description: "Nearly 1.9 million phishing attacks in a single year, $4.5M average breach recovery cost, and seniors losing $3.4B. The data on phishing in 2024 is staggering. Here's what organisations must do."
 pubDate: 2024-12-28
 heroImage: "/images/phishing-cover.svg"

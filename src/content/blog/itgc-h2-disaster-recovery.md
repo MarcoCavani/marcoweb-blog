@@ -1,5 +1,6 @@
 ---
 title: "British Airways Stranded 75,000 Passengers Because a Power Unit Was Switched Off Incorrectly"
+seoTitle: "Disaster Recovery: British Airways Outage"
 description: "In May 2017, a power supply failure at British Airways' data centre in Heathrow triggered a cascading IT failure that grounded all flights for 30 hours, affected 75,000 passengers, and cost the airline approximately 185 million pounds. The failure was not in the power system. It was in the disaster recovery architecture that was supposed to make a single power failure survivable."
 pubDate: 2026-09-18
 heroImage: "/images/itgc-h2-disaster-recovery.svg"

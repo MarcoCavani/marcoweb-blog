@@ -1,5 +1,6 @@
 ﻿---
 title: "The Casino Hack: How Scattered Spider Took Down MGM Resorts"
+seoTitle: "The MGM Casino Hack: Scattered Spider"
 description: "MGM Resorts International suffered a $100M cyberattack in 2023; slot machines went dark, room keys failed, booking systems crashed. Here's exactly how Scattered Spider did it."
 pubDate: 2024-09-03
 heroImage: "/images/casino-hack-cover.svg"

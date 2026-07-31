@@ -1,5 +1,6 @@
 ---
 title: "SOC 1 for iGaming: Auditing the Financial Database in the Cloud"
+seoTitle: "SOC 1 for iGaming: The Cloud Database"
 description: "In an online gaming platform the financial truth lives in a database, and that database increasingly lives in the cloud on infrastructure the operator does not run. Here is how a SOC 1 gives assurance over it, and what an auditor actually tests."
 pubDate: 2026-07-30
 category: "IT Audit"
