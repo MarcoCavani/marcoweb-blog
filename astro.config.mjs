@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config'
-import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
 import remarkControlLinks from './src/lib/remark-control-links.mjs'
 
@@ -10,7 +9,8 @@ const NOINDEX_PATHS = ['/threat-report-2026']
 export default defineConfig({
   site: 'https://marcoweb.org',
   integrations: [
-    tailwind(),
+    // Tailwind is applied via PostCSS (postcss.config.mjs) since @astrojs/tailwind
+    // does not support Astro 6+. Directives live in src/styles/global.css.
     // Pre-launch pages are noindex; listing them in the sitemap too would send
     // Google a contradictory signal. Keep the two sets in sync.
     sitemap({

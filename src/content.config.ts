@@ -1,7 +1,11 @@
 import { defineCollection, z } from 'astro:content'
+import { glob } from 'astro/loaders'
 
+// Astro 6 removed the legacy collection API, so each collection declares a
+// loader. The glob loader derives `id` from the filename without its extension,
+// which matches the old `slug` exactly, so every published URL is unchanged.
 const blog = defineCollection({
-  type: 'content',
+  loader: glob({ base: './src/content/blog', pattern: '**/*.md' }),
   schema: z.object({
     title: z.string(),
     // Shorter title for the <title> tag only. The narrative headlines that make
@@ -30,7 +34,7 @@ const blog = defineCollection({
 // Training lessons. Kept separate from `blog` so course structure (module order,
 // quizzes, gating) does not leak into article frontmatter.
 const lessons = defineCollection({
-  type: 'content',
+  loader: glob({ base: './src/content/lessons', pattern: '**/*.md' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
