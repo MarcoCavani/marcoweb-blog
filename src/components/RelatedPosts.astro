@@ -18,7 +18,7 @@ const tagSet = new Set(tags)
 
 const candidates = (await getCollection('blog'))
   .filter((p) => {
-    if (p.slug === currentSlug) return false
+    if (p.id === currentSlug) return false
     if (p.data.pubDate > today || p.data.draft) return false
     return isReport
       ? p.data.category === 'Digital Report'
@@ -46,7 +46,7 @@ const basePath = isReport ? '/reports' : '/blog'
         <PostCard
           title={post.data.title}
           description={post.data.description}
-          slug={post.slug}
+          slug={post.id}
           pubDate={post.data.pubDate}
           category={post.data.category}
           readTime={post.data.readTime}

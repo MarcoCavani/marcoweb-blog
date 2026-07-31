@@ -30,7 +30,7 @@ export async function getStaticPaths() {
         ...q,
         // Domain 1 lesson 1 is exam technique, not a domain topic; label it so.
         topic: l.data.title.replace(/^How CISA Questions Are Written$/, 'Exam technique'),
-        lessonSlug: l.slug,
+        lessonSlug: l.id,
         lessonTitle: l.data.title,
       }))
     )

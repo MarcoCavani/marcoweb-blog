@@ -7,7 +7,7 @@ import LessonVideo from '../../components/LessonVideo.astro'
 import TranscriptPlayer from '../../components/TranscriptPlayer.astro'
 import CourseSidebar from '../../components/CourseSidebar.astro'
 import NewsletterSignup from '../../components/NewsletterSignup.astro'
-import { getCollection } from 'astro:content'
+import { getCollection, render } from 'astro:content'
 
 // The training videos live in their own YouTube playlist.
 // Two playlists, because they are two different things. The CISA course has its
@@ -23,19 +23,19 @@ export async function getStaticPaths() {
     const siblings = lessons
       .filter(l => l.data.course === lesson.data.course)
       .sort((a, b) => a.data.order - b.data.order)
-    const i = siblings.findIndex(l => l.slug === lesson.slug)
+    const i = siblings.findIndex(l => l.id === lesson.id)
     return {
-      params: { slug: lesson.slug },
+      params: { slug: lesson.id },
       props: { lesson, siblings, prev: siblings[i - 1], next: siblings[i + 1], position: i + 1, total: siblings.length },
     }
   })
 }
 
 const { lesson, siblings, prev, next, position, total } = Astro.props
-const { Content } = await lesson.render()
+const { Content } = await render(lesson)
 
 const playlistItems = siblings.map(l => ({
-  slug: l.slug,
+  slug: l.id,
   title: l.data.title,
   minutes: l.data.minutes,
   hasVideo: !!l.data.videoId,
@@ -62,14 +62,14 @@ const transcripts = import.meta.glob('../../data/transcripts/*.json', { eager: t
   string,
   { default: { paragraphs: { t: number; sentences: { t: number; text: string }[] }[] } }
 >
-const transcript = transcripts[`../../data/transcripts/${lesson.slug}.json`]?.default ?? null
+const transcript = transcripts[`../../data/transcripts/${lesson.id}.json`]?.default ?? null
 const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?.length)
 ---
 
 <Layout title={`${lesson.data.title} | IT Audit Training`} description={lesson.data.description}>
   <Header />
 
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12" data-current-lesson={lesson.slug}>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12" data-current-lesson={lesson.id}>
     <nav class="text-xs text-gray-400 mb-5">
       <a href="/training" class="hover:text-brand-blue">Courses</a>
       <span class="mx-2">›</span>
@@ -180,7 +180,7 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
         )}
 
         {lesson.data.quiz && lesson.data.quiz.length > 0 && (
-          <Quiz questions={lesson.data.quiz} id={`quiz-${lesson.slug}`} />
+          <Quiz questions={lesson.data.quiz} id={`quiz-${lesson.id}`} />
         )}
 
         {isExamCourse && (
@@ -194,11 +194,11 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
         <nav
           class="mt-12 pt-8 border-t border-gray-200 flex justify-between gap-4"
           data-lesson-nav
-          data-quiz-id={lesson.data.quiz?.length ? `quiz-${lesson.slug}` : undefined}
-          data-lesson-slug={lesson.slug}
+          data-quiz-id={lesson.data.quiz?.length ? `quiz-${lesson.id}` : undefined}
+          data-lesson-slug={lesson.id}
         >
           {prev ? (
-            <a href={`/training/${prev.slug}/`} class="group flex-1 text-left">
+            <a href={`/training/${prev.id}/`} class="group flex-1 text-left">
               <div class="text-xs text-gray-400 mb-1">← Previous</div>
               <div class="text-sm font-semibold text-gray-700 group-hover:text-brand-blue transition-colors">{prev.data.title}</div>
             </a>
@@ -209,7 +209,7 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
                   by script on load, so the link still works for anyone without
                   JavaScript rather than becoming a dead end. */}
               <a
-                href={`/training/${next.slug}/`}
+                href={`/training/${next.id}/`}
                 data-next-link
                 class="group block"
               >
@@ -231,7 +231,7 @@ const hasFollowingTranscript = !!(lesson.data.videoId && transcript?.paragraphs?
 
       <CourseSidebar
         items={playlistItems}
-        currentSlug={lesson.slug}
+        currentSlug={lesson.id}
         module={lesson.data.module}
         playlistUrl={courseHasVideo
           ? `https://www.youtube.com/playlist?list=${isExamCourse ? CISA_PLAYLIST : TRAINING_PLAYLIST}`

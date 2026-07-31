@@ -2,6 +2,11 @@
   command = "npm run build"
   publish = "dist"
 
+# Astro 6+ requires Node >= 22.12. Netlify's default image node can lag behind
+# that, and the failure mode is a broken production deploy, so pin it here.
+[build.environment]
+  NODE_VERSION = "22.20.0"
+
 # Security headers. Deliberately scoped to the directives that add real
 # protection without risking the third parties the site depends on (AdSense,
 # Netlify Identity, YouTube embeds) or the inline scripts Astro emits.

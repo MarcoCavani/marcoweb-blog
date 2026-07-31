@@ -1,6 +1,6 @@
 ---
 import BlogPost from '../../layouts/BlogPost.astro'
-import { getCollection } from 'astro:content'
+import { getCollection, render } from 'astro:content'
 import type { CollectionEntry } from 'astro:content'
 
 export async function getStaticPaths() {
@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   return posts
     .filter(p => p.data.category === 'Digital Report' && p.data.pubDate <= today)
     .map(post => ({
-      params: { slug: post.slug },
+      params: { slug: post.id },
       props: post,
     }))
 }
@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'blog'>
 
 const post = Astro.props
-const { Content } = await post.render()
+const { Content } = await render(post)
 ---
 
 <BlogPost
@@ -34,7 +34,7 @@ const { Content } = await post.render()
   tags={post.data.tags}
   section="reports"
   gated={post.data.gated ?? true}
-  slug={post.slug}
+  slug={post.id}
 >
   <Content />
 </BlogPost>

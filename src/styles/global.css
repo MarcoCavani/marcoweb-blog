@@ -1,0 +1,5 @@
+/* The @astrojs/tailwind integration used to inject these directives. It does not
+   support Astro 6+, so the entry point is explicit now and imported from Layout.astro. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
