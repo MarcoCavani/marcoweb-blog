@@ -7,6 +7,7 @@ domain: 5
 order: 16
 minutes: 8
 gated: false
+videoId: "7abnzzP8oBs"
 taskStatement: "Evaluate whether the organisation can respond to security incidents in a controlled order and preserve evidence soundly."
 objectives:
   - "Order the phases of incident response."

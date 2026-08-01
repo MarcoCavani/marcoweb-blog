@@ -3,10 +3,12 @@ title: "SaaS, OS and Database: Auditing the Full Stack of an e-Gaming Platform"
 seoTitle: "SaaS, OS and Database: e-Gaming Audit"
 description: "An e-gaming platform is a stack, not a single system. Audit only the application and you have checked the shop window. Here is how to scope the full three layers, application, operating system and database, in the cloud."
 pubDate: 2026-07-30
+heroImage: "/images/three-layers-full-scope-audit-egaming.png"
 category: "IT Audit"
 author: "Marco Cavani"
 tags: ["e-Gaming", "IT Audit", "SaaS", "Database", "Cloud", "ITGC", "Full Scope", "Shared Responsibility"]
 readTime: "8 min read"
+youtubeId: "c6lz1BKJxo8"
 ---
 
 Ask where an e-gaming platform "is" and you will get three answers, all correct. It is the **application**, the gaming engine, the wallet, the bonus logic, the reporting, delivered as software. It is the **operating system and infrastructure** that application runs on, the servers, containers and cloud compute beneath it. And it is the **database**, where every balance, wager and revenue figure is finally recorded. Three layers, stacked, each depending on the ones below.

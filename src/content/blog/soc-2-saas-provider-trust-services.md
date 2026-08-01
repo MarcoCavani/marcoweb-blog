@@ -3,10 +3,12 @@ title: "SOC 2 for a SaaS Provider: The Report Your Customers Ask For"
 seoTitle: "SOC 2 for SaaS: Trust Services Criteria"
 description: "For a SaaS company, a SOC 2 is the report a serious customer wants before they trust you with their data. Here is what the Trust Services Criteria actually mean, how SOC 2 differs from SOC 1, and how to read one properly."
 pubDate: 2026-07-30
+heroImage: "/images/soc-2-saas-provider-trust-services.png"
 category: "IT Audit"
 author: "Marco Cavani"
 tags: ["SOC 2", "SaaS", "Trust Services Criteria", "Assurance", "Cloud", "Security", "ITGC", "Vendor Risk"]
 readTime: "8 min read"
+youtubeId: "sPDTYkR6cAc"
 ---
 
 Sell software as a service for long enough and the same question starts arriving in every enterprise deal: *"Can we see your SOC 2?"* For a SaaS provider it has become the default proof that you can be trusted with a customer's data, the report that unblocks procurement and shortens the security questionnaire. It is also widely misunderstood, treated as a badge to display rather than an opinion to read. This article is about what a SOC 2 actually says, how it differs from the SOC 1 covered earlier, and how both a provider and its customers should treat it.

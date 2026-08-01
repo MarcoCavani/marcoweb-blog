@@ -3,10 +3,12 @@ title: "SOC 1 for iGaming: Auditing the Financial Database in the Cloud"
 seoTitle: "SOC 1 for iGaming: The Cloud Database"
 description: "In an online gaming platform the financial truth lives in a database, and that database increasingly lives in the cloud on infrastructure the operator does not run. Here is how a SOC 1 gives assurance over it, and what an auditor actually tests."
 pubDate: 2026-07-30
+heroImage: "/images/soc-1-igaming-financial-assurance.png"
 category: "IT Audit"
 author: "Marco Cavani"
 tags: ["SOC 1", "iGaming", "Cloud", "Database", "ISAE 3402", "SSAE 18", "ITGC", "Assurance"]
 readTime: "8 min read"
+youtubeId: "NjAOA05h0fs"
 ---
 
 Strip away the graphics and the jackpots, and an iGaming platform is a financial-transaction engine. Every spin, deposit, withdrawal and bonus is a movement of money, and every one of those movements is recorded, reconciled and reported from one place: the **database**. Player balances, the transaction ledger, gross gaming revenue, bonus liabilities, that is the financial truth of the whole operation, and it sits in a set of tables.

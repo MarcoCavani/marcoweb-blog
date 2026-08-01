@@ -3,10 +3,12 @@ title: "Network Segmentation and VPN for Critical Infrastructure"
 seoTitle: "Network Segmentation and VPN for OT"
 description: "In critical infrastructure a network breach is not a data problem, it is a physical one. Here is why segmentation is the control that keeps a compromised laptop away from a turbine, and why the VPN meant to protect the network is so often the way in."
 pubDate: 2026-07-30
+heroImage: "/images/network-segmentation-vpn-critical-infrastructure.png"
 category: "Cybersecurity"
 author: "Marco Cavani"
 tags: ["Critical Infrastructure", "Network Segmentation", "VPN", "OT Security", "IEC 62443", "Zero Trust", "ICS", "Cybersecurity"]
 readTime: "8 min read"
+youtubeId: "vEdWr_qUVCQ"
 ---
 
 When an attacker breaches an ordinary corporate network, the worst case is stolen data or a ransom. When an attacker breaches the network of a power station, a water utility or a pipeline, the worst case is a physical one: a pump that stops, a valve that opens, a safety system that lies about its own state. Critical infrastructure runs on **operational technology (OT)**, the industrial control systems that move electricity, water and fuel, and the consequences of a compromise are measured in outages and safety, not just records.

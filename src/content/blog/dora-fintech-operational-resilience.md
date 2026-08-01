@@ -3,10 +3,12 @@ title: "DORA for a Fintech: Turning Operational Resilience into a Legal Duty"
 seoTitle: "DORA for Fintechs: Operational Resilience"
 description: "The EU's Digital Operational Resilience Act makes surviving an IT disruption a matter of law for financial firms, and fintechs are squarely in scope. Here are the five pillars, the third-party trap, and where the accountability actually sits."
 pubDate: 2026-07-30
+heroImage: "/images/dora-fintech-operational-resilience.png"
 category: "Information Security"
 author: "Marco Cavani"
 tags: ["DORA", "Fintech", "Operational Resilience", "ICT Risk", "Third-Party Risk", "TLPT", "EU Regulation", "Compliance"]
 readTime: "8 min read"
+youtubeId: "HgeNIhjpjNI"
 ---
 
 For years, operational resilience in finance was a matter of good practice: sensible firms invested in it, others hoped they would never be tested. The European Union's **Digital Operational Resilience Act (DORA)**, Regulation (EU) 2022/2554, ends that discretion. Since it began to apply on **17 January 2025**, the ability of a financial firm to withstand, respond to and recover from an information and communication technology (ICT) disruption is a **legal obligation**, supervised and enforceable (European Union, 2022).
