@@ -12,13 +12,14 @@ export type Plan = 'free' | 'pro'
 export type Entitlement = {
   signedIn: boolean
   email: string | null
+  name: string | null
   admin: boolean
   plan: Plan
   planExpiresAt: string | null
 }
 
 export const ANONYMOUS: Entitlement = {
-  signedIn: false, email: null, admin: false, plan: 'free', planExpiresAt: null,
+  signedIn: false, email: null, name: null, admin: false, plan: 'free', planExpiresAt: null,
 }
 
 // Free mock-exam attempts before Pro is required. Admins and Pro are unlimited.
@@ -29,6 +30,8 @@ export async function getEntitlement(): Promise<Entitlement> {
   const { data: { session } } = await supabase.auth.getSession()
   if (!session) return ANONYMOUS
   const email = session.user.email ?? null
+  const meta = session.user.user_metadata || {}
+  const name = meta.full_name || meta.name || (email ? email.split('@')[0] : null)
 
   const { data, error } = await supabase
     .from('profiles')
@@ -39,13 +42,14 @@ export async function getEntitlement(): Promise<Entitlement> {
   // If the profile row is missing (e.g. schema not applied yet), fall back to a
   // safe free / non-admin default rather than throwing.
   if (error || !data) {
-    return { signedIn: true, email, admin: false, plan: 'free', planExpiresAt: null }
+    return { signedIn: true, email, name, admin: false, plan: 'free', planExpiresAt: null }
   }
 
   const expired = data.plan_expires_at ? new Date(data.plan_expires_at) < new Date() : false
   return {
     signedIn: true,
     email,
+    name,
     admin: data.role === 'admin',
     plan: expired ? 'free' : (data.plan as Plan),
     planExpiresAt: data.plan_expires_at ?? null,
@@ -72,9 +76,16 @@ export async function recordMockAttempt(
 
 // ---- auth actions -----------------------------------------------------------
 
-export function signUpWithPassword(email: string, password: string) {
+export function signUpWithPassword(email: string, password: string, fullName?: string) {
   return supabase.auth.signUp({
-    email, password, options: { emailRedirectTo: siteUrl('/account') },
+    email,
+    password,
+    options: {
+      emailRedirectTo: siteUrl('/account'),
+      // Stored on the auth user's metadata so the nav can greet them by name
+      // without a database round-trip.
+      data: fullName ? { full_name: fullName } : undefined,
+    },
   })
 }
 
