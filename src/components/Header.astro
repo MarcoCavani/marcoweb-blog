@@ -28,6 +28,9 @@ const links = [
             {l.label}
           </a>
         ))}
+        <a data-auth-link href="/account" class={`transition-colors hover:text-brand-blue ${isActive('/account') ? 'text-brand-blue' : 'text-gray-500'}`}>
+          Account
+        </a>
         <a
           href="https://itgc.marcoweb.org"
           target="_blank"
@@ -77,6 +80,15 @@ const links = [
             </a>
           </li>
         ))}
+        <li>
+          <a
+            data-auth-link
+            href="/account"
+            class={`block py-3 text-base font-medium border-b border-gray-50 transition-colors ${isActive('/account') ? 'text-brand-blue' : 'text-gray-700 hover:text-brand-blue'}`}
+          >
+            Account
+          </a>
+        </li>
       </ul>
       <a
         href="https://itgc.marcoweb.org"
@@ -124,4 +136,18 @@ const links = [
       if (window.innerWidth >= 768) setOpen(false)
     })
   })()
+</script>
+
+<script>
+  // The nav link defaults to "Account" -> /account (that page handles both
+  // states). For signed-out visitors, relabel it to "Log in" -> /login. Uses
+  // getSession, which is a local read, so there is no network round-trip.
+  import { supabase } from '../lib/supabase'
+  supabase.auth.getSession().then(({ data }) => {
+    if (data.session) return
+    document.querySelectorAll<HTMLAnchorElement>('[data-auth-link]').forEach((a) => {
+      a.href = '/login'
+      a.textContent = 'Log in'
+    })
+  })
 </script>

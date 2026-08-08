@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+---
+
+<Layout title="Set a new password | MarcoWeb Training" noindex={true}>
+  <Header />
+  <main class="max-w-md mx-auto px-4 py-16">
+    <h1 class="text-2xl font-extrabold text-gray-900 mb-1">Set a new password</h1>
+    <p class="text-gray-500 mb-6 text-sm">Choose a new password for your account.</p>
+
+    <div id="err" class="hidden mb-4 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3"></div>
+    <div id="ok" class="hidden mb-4 rounded-lg bg-green-50 border border-green-200 text-green-700 text-sm px-4 py-3"></div>
+
+    <form id="form" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1" for="password">New password</label>
+        <input id="password" name="password" type="password" required minlength="8" autocomplete="new-password"
+          class="w-full rounded-xl border border-gray-200 px-4 py-2.5 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none" />
+        <p class="text-xs text-gray-400 mt-1">At least 8 characters.</p>
+      </div>
+      <button type="submit" id="submit"
+        class="w-full bg-brand-blue hover:bg-brand-navy text-white font-semibold rounded-xl px-4 py-2.5 transition-colors">
+        Update password
+      </button>
+    </form>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  import { supabase } from '../lib/supabase'
+  import { updatePassword } from '../lib/auth'
+
+  const err = document.getElementById('err') as HTMLDivElement
+  const ok = document.getElementById('ok') as HTMLDivElement
+  const form = document.getElementById('form') as HTMLFormElement
+  const show = (m: string) => { err.textContent = m; err.classList.remove('hidden') }
+
+  let ready = false
+  // The recovery link drops a token in the URL; supabase picks it up and fires
+  // PASSWORD_RECOVERY. Until then, block the form so we do not try to update a
+  // password with no recovery session.
+  supabase.auth.onAuthStateChange((event) => { if (event === 'PASSWORD_RECOVERY') ready = true })
+  supabase.auth.getSession().then(({ data }) => { if (data.session) ready = true })
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+    err.classList.add('hidden'); ok.classList.add('hidden')
+    if (!ready) { show('This reset link is invalid or has expired. Request a new one.'); return }
+    const password = (document.getElementById('password') as HTMLInputElement).value
+    const btn = document.getElementById('submit') as HTMLButtonElement
+    btn.disabled = true; btn.textContent = 'Updating...'
+    const { error } = await updatePassword(password)
+    if (error) { show(error.message); btn.disabled = false; btn.textContent = 'Update password'; return }
+    ok.textContent = 'Password updated. Redirecting to your account...'
+    ok.classList.remove('hidden')
+    setTimeout(() => { location.href = '/account' }, 1200)
+  })
+</script>

@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+---
+
+<Layout title="Your account | MarcoWeb Training" noindex={true}>
+  <Header />
+  <main class="max-w-md mx-auto px-4 py-16">
+    <div id="loading" class="text-gray-400 text-sm">Loading...</div>
+
+    <!-- Signed out -->
+    <div id="anon" class="hidden">
+      <h1 class="text-2xl font-extrabold text-gray-900 mb-2">You are not signed in</h1>
+      <p class="text-gray-500 mb-6 text-sm">Log in to save your progress and take mock exams.</p>
+      <div class="flex gap-3">
+        <a href="/login" class="bg-brand-blue hover:bg-brand-navy text-white font-semibold rounded-xl px-5 py-2.5 transition-colors">Log in</a>
+        <a href="/signup" class="border border-gray-200 text-gray-700 font-semibold rounded-xl px-5 py-2.5 hover:bg-gray-50 transition-colors">Create account</a>
+      </div>
+    </div>
+
+    <!-- Signed in -->
+    <div id="account" class="hidden">
+      <h1 class="text-2xl font-extrabold text-gray-900 mb-1">Your account</h1>
+      <p id="email" class="text-gray-500 mb-6 text-sm"></p>
+
+      <div class="rounded-2xl border border-gray-100 bg-white p-6 mb-4">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-sm font-medium text-gray-700">Plan</span>
+          <span id="plan" class="text-xs font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full"></span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-medium text-gray-700">Mock exams used</span>
+          <span id="mocks" class="text-sm text-gray-500">…</span>
+        </div>
+        <div id="adminRow" class="hidden mt-3 pt-3 border-t border-gray-100">
+          <span class="text-xs font-semibold uppercase tracking-widest text-brand-blue">Admin, unlimited access</span>
+        </div>
+      </div>
+
+      <div class="flex gap-3">
+        <a href="/training" class="bg-brand-blue hover:bg-brand-navy text-white font-semibold rounded-xl px-5 py-2.5 transition-colors">Go to training</a>
+        <button id="signout" class="border border-gray-200 text-gray-700 font-semibold rounded-xl px-5 py-2.5 hover:bg-gray-50 transition-colors">Sign out</button>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  import { getEntitlement, mockAttemptsUsed, signOut, FREE_MOCK_LIMIT } from '../lib/auth'
+
+  const el = (id: string) => document.getElementById(id) as HTMLElement
+
+  ;(async () => {
+    const ent = await getEntitlement()
+    el('loading').classList.add('hidden')
+
+    if (!ent.signedIn) { el('anon').classList.remove('hidden'); return }
+
+    el('account').classList.remove('hidden')
+    el('email').textContent = ent.email ?? ''
+
+    const plan = el('plan')
+    const isPro = ent.plan === 'pro' || ent.admin
+    plan.textContent = ent.admin ? 'Admin' : ent.plan
+    plan.classList.add(isPro ? 'bg-green-50' : 'bg-blue-50', isPro ? 'text-green-700' : 'text-brand-blue')
+
+    if (ent.admin) el('adminRow').classList.remove('hidden')
+
+    const used = await mockAttemptsUsed()
+    el('mocks').textContent = (ent.admin || ent.plan === 'pro')
+      ? `${used} (unlimited)`
+      : `${used} / ${FREE_MOCK_LIMIT}`
+  })()
+
+  el('signout').addEventListener('click', async () => {
+    await signOut()
+    location.href = '/'
+  })
+</script>
