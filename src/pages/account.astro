@@ -30,7 +30,7 @@ import Footer from '../components/Footer.astro'
           <span id="plan" class="text-xs font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full"></span>
         </div>
         <div class="flex items-center justify-between">
-          <span class="text-sm font-medium text-gray-700">Mock exams used</span>
+          <span class="text-sm font-medium text-gray-700">Mock exams</span>
           <span id="mocks" class="text-sm text-gray-500">…</span>
         </div>
         <div id="adminRow" class="hidden mt-3 pt-3 border-t border-gray-100">
@@ -51,7 +51,7 @@ import Footer from '../components/Footer.astro'
 </Layout>
 
 <script>
-  import { getEntitlement, mockAttemptsUsed, signOut, FREE_MOCK_LIMIT } from '../lib/auth'
+  import { getEntitlement, mockAttemptsUsed, signOut } from '../lib/auth'
 
   const el = (id: string) => document.getElementById(id) as HTMLElement
 
@@ -73,10 +73,12 @@ import Footer from '../components/Footer.astro'
     if (ent.admin) el('adminRow').classList.remove('hidden')
     if (!ent.admin && ent.plan !== 'pro') el('upgrade').classList.remove('hidden')
 
-    const used = await mockAttemptsUsed()
-    el('mocks').textContent = (ent.admin || ent.plan === 'pro')
-      ? `${used} (unlimited)`
-      : `${used} / ${FREE_MOCK_LIMIT}`
+    if (ent.admin || ent.plan === 'pro') {
+      const used = await mockAttemptsUsed()
+      el('mocks').textContent = `${used} taken · unlimited`
+    } else {
+      el('mocks').textContent = 'Pro only'
+    }
   })()
 
   el('signout').addEventListener('click', async () => {

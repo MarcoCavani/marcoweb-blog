@@ -150,12 +150,11 @@ const examHref = (d: number) => (d === 1 ? '/training/exam/' : `/training/exam/d
 </Layout>
 
 <script>
-  // Gates the mock exam. Lessons stay free and open; this is the paid step.
-  // Anonymous -> log in. Free -> 5 attempts, then unlock. Pro/admin -> unlimited.
-  // Enforcement is soft (questions come from the free lessons, so nothing secret
-  // is hidden); the attempt count is server-side so clearing the browser cannot
-  // reset it.
-  import { getEntitlement, mockAttemptsUsed, recordMockAttempt, FREE_MOCK_LIMIT } from '../../../lib/auth'
+  // Gates the mock exam. Lessons stay free and open; the mock exams are Pro-only.
+  // Not signed in -> log in first. Signed-in free -> unlock (/pricing).
+  // Pro / admin -> unlimited. Questions come from the free lessons, so nothing
+  // secret is hidden; what is gated is the timed exam experience.
+  import { getEntitlement, recordMockAttempt } from '../../../lib/auth'
 
   const area = document.getElementById('exam-area')
   const gate = document.getElementById('exam-gate')
@@ -176,46 +175,33 @@ const examHref = (d: number) => (d === 1 ? '/training/exam/' : `/training/exam/d
     const ent = await getEntitlement()
     const unlimited = ent.admin || ent.plan === 'pro'
 
-    if (!ent.signedIn) {
-      showGate(
-        'Log in to take a mock exam',
-        'Mock exams come with a free account: five to try, then unlimited with Pro. Log in or create a free account to start.',
-        'Log in',
-        '/login?next=' + encodeURIComponent(location.pathname),
-      )
-      return
-    }
-
-    if (unlimited) {
-      setNote(ent.admin ? 'Admin, unlimited mock exams' : 'Pro, unlimited mock exams')
-    } else {
-      const used = await mockAttemptsUsed()
-      if (used >= FREE_MOCK_LIMIT) {
+    // Mock exams are a paid (Pro) feature. Only Pro / admin get in; everyone else
+    // is sent to unlock, after logging in first if needed. Lessons stay free.
+    if (!unlimited) {
+      if (!ent.signedIn) {
         showGate(
-          'You have used your 5 free mock exams',
-          'Unlock unlimited timed mock exams, scored by domain, with a single one-time payment. No subscription, no auto-renew.',
+          'Log in, then unlock the mock exams',
+          'Timed mock exams are a Pro feature. Log in or create a free account, then unlock them. The lessons stay free.',
+          'Log in',
+          '/login?next=' + encodeURIComponent(location.pathname),
+        )
+      } else {
+        showGate(
+          'Unlock the mock exams',
+          'Timed mock exams, scored by domain, are a Pro feature: a single one-time payment, no subscription. The lessons stay free.',
           'Unlock mock exams',
           '/pricing',
         )
-        return
       }
-      setNote(`${FREE_MOCK_LIMIT - used} of ${FREE_MOCK_LIMIT} free mock exams remaining`)
+      return
     }
 
-    // Entitled to sit it. Record each completed attempt, and for free users close
-    // the door once this attempt reaches the cap (covers the in-page "Sit it again").
+    // Pro / admin: unlimited access. Record each completed attempt for analytics.
+    setNote(ent.admin ? 'Admin, unlimited mock exams' : 'Pro, unlimited mock exams')
     document.querySelectorAll('[data-exam]').forEach((root) => {
       root.addEventListener('exam:submitted', async (e) => {
         const d = (e as CustomEvent).detail || {}
         await recordMockAttempt((root as HTMLElement).id, d.correct ?? 0, d.total ?? 0)
-        if (unlimited) return
-        const used = await mockAttemptsUsed()
-        const left = FREE_MOCK_LIMIT - used
-        setNote(left > 0 ? `${left} of ${FREE_MOCK_LIMIT} free mock exams remaining` : 'That was your last free mock exam.')
-        if (used >= FREE_MOCK_LIMIT) {
-          const retry = root.querySelector('[data-exam-retry]') as HTMLElement | null
-          if (retry) retry.style.display = 'none'
-        }
       })
     })
   })()
