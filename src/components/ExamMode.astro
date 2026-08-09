@@ -368,6 +368,13 @@ const totalMinutes = Math.round(totalSeconds / 60)
         buildReview()
         show(resultPane)
         resultPane.scrollIntoView({ behavior: 'smooth', block: 'start' })
+
+        // Announce a completed attempt so the page can record it server-side
+        // (used for the free-tier cap and analytics). The component itself stays
+        // auth-unaware; the exam page listens for this.
+        root.dispatchEvent(new CustomEvent('exam:submitted', {
+          detail: { correct: correct, total: QS.length },
+        }))
       }
 
       function buildReview() {
