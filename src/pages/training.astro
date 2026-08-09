@@ -12,76 +12,145 @@ const domains = buildDomains(all)
 const totalBuilt = domains.reduce((s, d) => s + d.built, 0)
 const totalQuestions = domains.reduce((s, d) => s + d.quizCount, 0)
 const firstReady = domains.find(d => d.ready)
+const startHref = firstReady ? domainHref(firstReady.n) : '#domains'
 ---
 
 <Layout
-  title="CISA Courses | Free Exam Preparation | MarcoWeb"
-  description="Free CISA exam preparation for working IS auditors, one course per exam domain. Video lessons, scenario questions and timed practice exams. CRISC, CISM and CGEIT to follow."
+  title="CISA Exam Prep | Learn Free, Test When Ready | MarcoWeb"
+  description="Free CISA exam preparation for working IS auditors: video lessons and scenario questions across all five domains. Unlock realistic timed mock exams when you are ready to test yourself."
 >
   <Header />
 
-  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-    <div class="max-w-3xl mb-10">
-      <div class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1.5 rounded-full mb-4">
-        Free CISA preparation
-      </div>
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-        Courses
-      </h1>
-      <p class="text-lg text-gray-500 leading-relaxed">
-        Exam preparation for auditors who already do this work and now have to answer questions about
-        it the way the exam expects. Organised as one course per exam domain. Choose where to start.
-      </p>
-      <div class="flex flex-wrap gap-8 sm:gap-10 mt-8">
-        <div>
-          <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{totalBuilt}</div>
-          <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">lessons free</div>
+  <main>
+    <!-- Hero -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-16 pb-6">
+      <div class="max-w-3xl">
+        <div class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1.5 rounded-full mb-4">
+          Free CISA exam prep
         </div>
-        <div>
-          <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{totalQuestions}</div>
-          <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">exam questions</div>
-        </div>
-        {firstReady && (
-          <div>
-            <a href={examHref(firstReady.n)} class="text-2xl font-extrabold text-brand-blue hover:text-brand-navy tabular-nums">Sit →</a>
-            <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">a practice exam</div>
-          </div>
-        )}
-      </div>
-    </div>
-
-    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">CISA, the five exam domains</h2>
-    <ul class="grid gap-4 sm:grid-cols-2">
-      {domains.map(d => (
-        <li>
-          <a href={domainHref(d.n)}
-             class="flex h-full flex-col rounded-2xl border border-gray-100 bg-white p-6 shadow-sm hover:shadow-md transition-shadow group">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="shrink-0 w-8 h-8 rounded-lg bg-blue-50 text-brand-blue text-sm font-bold flex items-center justify-center tabular-nums">
-                {d.n}
-              </span>
-              <span class:list={[
-                'text-[11px] font-semibold uppercase tracking-wider tabular-nums px-2 py-1 rounded-full',
-                d.ready ? 'text-brand-blue bg-blue-50' : 'text-gray-400 bg-gray-100',
-              ]}>
-                {d.ready ? (d.complete ? 'Available now' : `${d.built} of ${d.planned} live`) : 'In development'}
-              </span>
-              <span class="ml-auto text-xs text-gray-400 tabular-nums">{d.weight}% of exam</span>
-            </div>
-            <h3 class="font-bold text-gray-900 leading-snug group-hover:text-brand-blue transition-colors">
-              Domain {d.n}: {d.title}
-            </h3>
-            <p class="text-sm text-gray-500 mt-2 leading-relaxed flex-1">{d.blurb}</p>
-            <span class="mt-4 text-sm font-semibold text-brand-blue inline-flex items-center gap-1">
-              {d.ready ? 'Open the course' : 'See what it covers'}
-              <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">→</span>
-            </span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+          Learn CISA free.<br class="hidden sm:block" /> Test yourself when you are ready.
+        </h1>
+        <p class="text-lg text-gray-500 leading-relaxed">
+          Study all five exam domains at no cost, video lessons and scenario questions written for
+          auditors who already do this work. When you want to know you are ready, unlock realistic
+          timed mock exams.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8">
+          <a href={startHref} class="px-6 py-3 bg-brand-blue hover:bg-brand-navy text-white font-semibold rounded-xl transition-colors">
+            Start learning, free
           </a>
-        </li>
-      ))}
-    </ul>
+          <a href="/pricing" class="px-6 py-3 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-50 transition-colors">
+            See plans
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-8 sm:gap-10 mt-8">
+          <div>
+            <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{totalBuilt}</div>
+            <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">lessons free</div>
+          </div>
+          <div>
+            <div class="text-2xl font-extrabold text-brand-blue tabular-nums">{totalQuestions}</div>
+            <div class="text-xs uppercase tracking-wider text-gray-400 mt-1">exam questions</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="mt-14 pt-10 border-t border-gray-200">
+    <!-- The three steps -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <ol class="grid gap-5 sm:grid-cols-3">
+        <li class="rounded-2xl border border-gray-100 bg-white p-6">
+          <div class="w-9 h-9 rounded-xl bg-blue-50 text-brand-blue font-extrabold flex items-center justify-center mb-3">1</div>
+          <h3 class="font-bold text-gray-900 mb-1">Learn</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Work through all five domains free: video lessons and knowledge checks that teach the reasoning, not a checklist.</p>
+        </li>
+        <li class="rounded-2xl border border-brand-blue/30 bg-blue-50/40 p-6">
+          <div class="flex items-center justify-between mb-3">
+            <div class="w-9 h-9 rounded-xl bg-brand-blue text-white font-extrabold flex items-center justify-center">2</div>
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-brand-blue bg-white px-2 py-0.5 rounded-full">Pro</span>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1">Unlock the mock exams</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Sit realistic, timed exams scored by domain, as many attempts as you need. Free includes five to try.</p>
+        </li>
+        <li class="rounded-2xl border border-gray-100 bg-white p-6">
+          <div class="w-9 h-9 rounded-xl bg-blue-50 text-brand-blue font-extrabold flex items-center justify-center mb-3">3</div>
+          <h3 class="font-bold text-gray-900 mb-1">Pass</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Walk into the exam knowing you are ready, because you have already answered under the clock.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Step 1: the domains -->
+    <section id="domains" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-7 h-7 rounded-lg bg-blue-50 text-brand-blue text-sm font-bold flex items-center justify-center">1</span>
+        <h2 class="text-lg font-bold text-gray-900">Study the five domains, free</h2>
+      </div>
+      <ul class="grid gap-4 sm:grid-cols-2">
+        {domains.map(d => (
+          <li>
+            <a href={domainHref(d.n)}
+               class="flex h-full flex-col rounded-2xl border border-gray-100 bg-white p-6 shadow-sm hover:shadow-md transition-shadow group">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="shrink-0 w-8 h-8 rounded-lg bg-blue-50 text-brand-blue text-sm font-bold flex items-center justify-center tabular-nums">
+                  {d.n}
+                </span>
+                <span class:list={[
+                  'text-[11px] font-semibold uppercase tracking-wider tabular-nums px-2 py-1 rounded-full',
+                  d.ready ? 'text-brand-blue bg-blue-50' : 'text-gray-400 bg-gray-100',
+                ]}>
+                  {d.ready ? (d.complete ? 'Available now' : `${d.built} of ${d.planned} live`) : 'In development'}
+                </span>
+                <span class="ml-auto text-xs text-gray-400 tabular-nums">{d.weight}% of exam</span>
+              </div>
+              <h3 class="font-bold text-gray-900 leading-snug group-hover:text-brand-blue transition-colors">
+                Domain {d.n}: {d.title}
+              </h3>
+              <p class="text-sm text-gray-500 mt-2 leading-relaxed flex-1">{d.blurb}</p>
+              <span class="mt-4 text-sm font-semibold text-brand-blue inline-flex items-center gap-1">
+                {d.ready ? 'Open the course' : 'See what it covers'}
+                <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">→</span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Step 2: unlock the mock exams -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="rounded-2xl bg-gradient-to-br from-brand-navy to-brand-blue text-white p-8 sm:p-10">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="w-7 h-7 rounded-lg bg-white/15 text-white text-sm font-bold flex items-center justify-center">2</span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-blue-100">Ready to test yourself?</span>
+        </div>
+        <div class="md:flex md:items-end md:justify-between gap-8">
+          <div class="max-w-xl">
+            <h2 class="text-2xl sm:text-3xl font-extrabold leading-tight mb-3">Unlock unlimited mock exams</h2>
+            <p class="text-blue-100 leading-relaxed">
+              Timed and scored by domain, at the real exam's pace, so weak areas surface before exam
+              day, not on it. The free tier includes five attempts; Pro removes the limit.
+            </p>
+            <ul class="mt-5 space-y-2 text-sm text-blue-50">
+              <li class="flex items-center gap-2"><span class="text-white">✓</span> Unlimited timed mock exams</li>
+              <li class="flex items-center gap-2"><span class="text-white">✓</span> Scored by domain, so you know where to revise</li>
+              <li class="flex items-center gap-2"><span class="text-white">✓</span> One payment, no subscription</li>
+            </ul>
+          </div>
+          <div class="shrink-0 mt-6 md:mt-0 md:text-right">
+            <div class="text-3xl font-extrabold">€39</div>
+            <div class="text-xs text-blue-100 mb-4">one-time · 90 days access</div>
+            <a href="/pricing" class="inline-block px-6 py-3 rounded-xl bg-white text-brand-navy font-semibold hover:bg-blue-50 transition-colors">
+              Unlock mock exams
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- More certifications -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 pt-10 border-t border-gray-200">
       <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">More certifications, in the pipeline</h2>
       <p class="text-sm text-gray-500 leading-relaxed max-w-2xl mb-5">
         The same course machine, aimed at the next ISACA certifications. Join the list to hear when
@@ -98,17 +167,17 @@ const firstReady = domains.find(d => d.ready)
           </li>
         ))}
       </ul>
+
+      <p class="mt-14 pt-8 border-t border-gray-200 text-xs text-gray-400 leading-relaxed">
+        Independent training produced by Marco Cavani. Not affiliated with, endorsed by, or sponsored
+        by ISACA. CISA, CRISC, CISM and CGEIT are registered trademarks of ISACA. Course structure
+        reflects the published exam content outlines and is not reproduced from ISACA materials.
+      </p>
+
+      <div class="mt-14">
+        <NewsletterSignup />
+      </div>
     </section>
-
-    <p class="mt-14 pt-8 border-t border-gray-200 text-xs text-gray-400 leading-relaxed">
-      Independent training produced by Marco Cavani. Not affiliated with, endorsed by, or sponsored
-      by ISACA. CISA, CRISC, CISM and CGEIT are registered trademarks of ISACA. Course structure
-      reflects the published exam content outlines and is not reproduced from ISACA materials.
-    </p>
-
-    <div class="mt-14">
-      <NewsletterSignup />
-    </div>
   </main>
 
   <Footer />

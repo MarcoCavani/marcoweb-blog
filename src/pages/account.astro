@@ -36,6 +36,9 @@ import Footer from '../components/Footer.astro'
         <div id="adminRow" class="hidden mt-3 pt-3 border-t border-gray-100">
           <span class="text-xs font-semibold uppercase tracking-widest text-brand-blue">Admin, unlimited access</span>
         </div>
+        <a id="upgrade" href="/pricing" class="hidden block mt-4 text-center px-4 py-2.5 bg-brand-blue hover:bg-brand-navy text-white font-semibold rounded-xl transition-colors">
+          Unlock unlimited mock exams · €39
+        </a>
       </div>
 
       <div class="flex gap-3">
@@ -68,6 +71,7 @@ import Footer from '../components/Footer.astro'
     plan.classList.add(isPro ? 'bg-green-50' : 'bg-blue-50', isPro ? 'text-green-700' : 'text-brand-blue')
 
     if (ent.admin) el('adminRow').classList.remove('hidden')
+    if (!ent.admin && ent.plan !== 'pro') el('upgrade').classList.remove('hidden')
 
     const used = await mockAttemptsUsed()
     el('mocks').textContent = (ent.admin || ent.plan === 'pro')
