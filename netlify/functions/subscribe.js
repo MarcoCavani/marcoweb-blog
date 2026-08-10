@@ -29,6 +29,22 @@ function brevoRequest(method, path, payload, apiKey) {
   })
 }
 
+// Verify a Cloudflare Turnstile token. Only used when TURNSTILE_SECRET_KEY is
+// set; otherwise the honeypot is the sole bot check.
+async function verifyTurnstile(secret, token, ip) {
+  try {
+    var res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ secret: secret, response: token, remoteip: ip }),
+    })
+    var out = await res.json()
+    return !!out.success
+  } catch (e) {
+    return false
+  }
+}
+
 export const handler = async function (event) {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' }
@@ -39,6 +55,25 @@ export const handler = async function (event) {
     body = JSON.parse(event.body)
   } catch (e) {
     return { statusCode: 400, body: JSON.stringify({ error: 'Invalid request' }) }
+  }
+
+  // Honeypot: real people leave this empty; bots fill it. Pretend success so the
+  // bot gets no signal, but never add it to Brevo.
+  if (body.company) {
+    return { statusCode: 200, body: JSON.stringify({ ok: true }) }
+  }
+
+  // Turnstile (optional): verify when a token is supplied and a secret is set.
+  // Forms that only use the honeypot keep working.
+  if (body.turnstileToken && process.env.TURNSTILE_SECRET_KEY) {
+    var human = await verifyTurnstile(
+      process.env.TURNSTILE_SECRET_KEY,
+      body.turnstileToken,
+      event.headers['x-forwarded-for'] || ''
+    )
+    if (!human) {
+      return { statusCode: 400, body: JSON.stringify({ error: 'Verification failed' }) }
+    }
   }
 
   var email = body.email

@@ -7,6 +7,7 @@ const { compact = false } = Astro.props
 
 {compact ? (
   <form id="compact-nl-form" class="flex gap-2" novalidate>
+    <input type="text" name="company" id="compact-nl-company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
     <input
       type="email"
       id="compact-nl-email"
@@ -32,6 +33,7 @@ const { compact = false } = Astro.props
     form.addEventListener('submit', async function (e) {
       e.preventDefault()
       var email = document.getElementById('compact-nl-email').value.trim()
+      var company = document.getElementById('compact-nl-company').value
       var btn = document.getElementById('compact-nl-btn')
       var msg = document.getElementById('compact-nl-msg')
       if (!email || !email.includes('@')) {
@@ -46,7 +48,7 @@ const { compact = false } = Astro.props
         var res = await fetch('/.netlify/functions/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email }),
+          body: JSON.stringify({ email: email, company: company }),
         })
         if (res.ok) {
           form.style.display = 'none'
@@ -75,6 +77,7 @@ const { compact = false } = Astro.props
 
     <div id="nl-form-wrap">
       <form id="nl-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" novalidate>
+        <input type="text" name="company" id="nl-company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
         <input
           type="email"
           id="nl-email"
@@ -113,6 +116,7 @@ const { compact = false } = Astro.props
   form.addEventListener('submit', async function (e) {
     e.preventDefault()
     var email = document.getElementById('nl-email').value.trim()
+    var company = document.getElementById('nl-company').value
     var btn = document.getElementById('nl-btn')
     var errorEl = document.getElementById('nl-error')
 
@@ -130,7 +134,7 @@ const { compact = false } = Astro.props
       var res = await fetch('/.netlify/functions/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email }),
+        body: JSON.stringify({ email: email, company: company }),
       })
 
       if (res.ok) {
