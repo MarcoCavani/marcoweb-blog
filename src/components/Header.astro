@@ -29,7 +29,7 @@ const links = [
           </a>
         ))}
         <a data-auth-login href="/login" class="transition-colors hover:text-brand-blue text-gray-500">Log in</a>
-        <a data-auth-name href="/account" class="hidden transition-colors hover:text-brand-blue text-gray-800 font-semibold"></a>
+        <a data-auth-name href="/account" class="hidden transition-colors hover:text-brand-blue text-gray-800 font-semibold">Account</a>
         <button data-auth-logout type="button" class="hidden transition-colors hover:text-brand-blue text-gray-500">Log out</button>
         <a
           href="https://itgc.marcoweb.org"
@@ -84,7 +84,7 @@ const links = [
           <a data-auth-login href="/login" class="block py-3 text-base font-medium border-b border-gray-50 text-gray-700 hover:text-brand-blue transition-colors">Log in</a>
         </li>
         <li>
-          <a data-auth-name href="/account" class="hidden py-3 text-base font-semibold border-b border-gray-50 text-gray-800 hover:text-brand-blue transition-colors"></a>
+          <a data-auth-name href="/account" class="hidden py-3 text-base font-semibold border-b border-gray-50 text-gray-800 hover:text-brand-blue transition-colors">Account</a>
         </li>
         <li>
           <button data-auth-logout type="button" class="hidden w-full text-left py-3 text-base font-medium border-b border-gray-50 text-gray-700 hover:text-brand-blue transition-colors">Log out</button>
@@ -139,14 +139,9 @@ const links = [
 </script>
 
 <script>
-  // Nav auth state. The markup defaults to the signed-out view ("Log in" shown,
-  // name + "Log out" hidden). getSession is a local read, so no network hop.
+  // Nav auth state. Signed out shows "Log in"; signed in shows "Account" and
+  // "Log out". getSession is a local read, so no network hop.
   import { supabase } from '../lib/supabase'
-
-  function displayName(user: { user_metadata?: Record<string, any>; email?: string | null }) {
-    const m = user.user_metadata || {}
-    return m.full_name || m.name || (user.email ? user.email.split('@')[0] : 'Account')
-  }
 
   supabase.auth.getSession().then(({ data }) => {
     const session = data.session
@@ -155,9 +150,8 @@ const links = [
     const logouts = document.querySelectorAll('[data-auth-logout]')
 
     if (session) {
-      const name = displayName(session.user)
       logins.forEach((e) => e.classList.add('hidden'))
-      names.forEach((e) => { e.textContent = name; e.classList.remove('hidden') })
+      names.forEach((e) => e.classList.remove('hidden'))
       logouts.forEach((e) => e.classList.remove('hidden'))
     }
 
