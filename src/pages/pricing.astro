@@ -98,10 +98,26 @@ import Footer from '../components/Footer.astro'
       note.textContent = 'Mock exams are unlocked on your account.'
       return
     }
-    // Signed in, free tier. Checkout is not wired yet (Stripe is the next step).
-    cta.addEventListener('click', () => {
-      disable('Coming soon')
-      note.textContent = 'Checkout is opening shortly. Thanks for the interest, you will be able to unlock here very soon.'
+    // Signed in, free tier -> start Stripe checkout for the one-time Pro unlock.
+    cta.addEventListener('click', async () => {
+      const original = cta.textContent
+      cta.disabled = true
+      cta.textContent = 'Redirecting...'
+      note.textContent = ''
+      try {
+        const res = await fetch('/.netlify/functions/create-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ userId: ent.id, email: ent.email, origin: location.origin }),
+        })
+        const data = await res.json()
+        if (data.url) { window.location.href = data.url; return }
+        throw new Error(data.error || 'Checkout failed')
+      } catch (e) {
+        cta.disabled = false
+        cta.textContent = original
+        note.textContent = 'Could not start checkout. Please try again.'
+      }
     })
   })
 </script>

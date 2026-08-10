@@ -11,6 +11,7 @@ export type Plan = 'free' | 'pro'
 
 export type Entitlement = {
   signedIn: boolean
+  id: string | null
   email: string | null
   name: string | null
   admin: boolean
@@ -19,7 +20,7 @@ export type Entitlement = {
 }
 
 export const ANONYMOUS: Entitlement = {
-  signedIn: false, email: null, name: null, admin: false, plan: 'free', planExpiresAt: null,
+  signedIn: false, id: null, email: null, name: null, admin: false, plan: 'free', planExpiresAt: null,
 }
 
 // Free mock-exam attempts before Pro is required. Admins and Pro are unlimited.
@@ -29,6 +30,7 @@ export const FREE_MOCK_LIMIT = 5
 export async function getEntitlement(): Promise<Entitlement> {
   const { data: { session } } = await supabase.auth.getSession()
   if (!session) return ANONYMOUS
+  const id = session.user.id
   const email = session.user.email ?? null
   const meta = session.user.user_metadata || {}
   const name = meta.full_name || meta.name || (email ? email.split('@')[0] : null)
@@ -42,12 +44,13 @@ export async function getEntitlement(): Promise<Entitlement> {
   // If the profile row is missing (e.g. schema not applied yet), fall back to a
   // safe free / non-admin default rather than throwing.
   if (error || !data) {
-    return { signedIn: true, email, name, admin: false, plan: 'free', planExpiresAt: null }
+    return { signedIn: true, id, email, name, admin: false, plan: 'free', planExpiresAt: null }
   }
 
   const expired = data.plan_expires_at ? new Date(data.plan_expires_at) < new Date() : false
   return {
     signedIn: true,
+    id,
     email,
     name,
     admin: data.role === 'admin',
