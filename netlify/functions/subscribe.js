@@ -63,10 +63,10 @@ export const handler = async function (event) {
     return { statusCode: 200, body: JSON.stringify({ ok: true }) }
   }
 
-  // Turnstile (optional): verify when a token is supplied and a secret is set.
-  // Forms that only use the honeypot keep working.
-  if (body.turnstileToken && process.env.TURNSTILE_SECRET_KEY) {
-    var human = await verifyTurnstile(
+  // Turnstile: once the secret is set, a valid token is REQUIRED, so a direct POST
+  // with no token is rejected. Before the secret exists, the honeypot alone applies.
+  if (process.env.TURNSTILE_SECRET_KEY) {
+    var human = body.turnstileToken && await verifyTurnstile(
       process.env.TURNSTILE_SECRET_KEY,
       body.turnstileToken,
       event.headers['x-forwarded-for'] || ''

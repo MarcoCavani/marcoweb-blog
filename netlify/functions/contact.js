@@ -5,6 +5,20 @@
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL || 'marco@marcoweb.org'
 const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || 'marco@marcoweb.org'
 
+async function verifyTurnstile(secret, token, ip) {
+  try {
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ secret, response: token, remoteip: ip }),
+    })
+    const out = await res.json()
+    return !!out.success
+  } catch (e) {
+    return false
+  }
+}
+
 export const handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' }
@@ -20,6 +34,17 @@ export const handler = async (event) => {
   // Honeypot: bots fill this; humans never see it. Silent success, no email sent.
   if (body['bot-field']) {
     return { statusCode: 200, body: JSON.stringify({ ok: true }) }
+  }
+
+  // Turnstile: once the secret is set, a valid token is REQUIRED. A direct POST
+  // with no token (or a fake one) is rejected, so bots cannot send email.
+  const turnstileSecret = process.env.TURNSTILE_SECRET_KEY
+  if (turnstileSecret) {
+    const passed = body.turnstileToken &&
+      (await verifyTurnstile(turnstileSecret, body.turnstileToken, event.headers['x-forwarded-for'] || ''))
+    if (!passed) {
+      return { statusCode: 400, body: JSON.stringify({ error: 'Verification failed' }) }
+    }
   }
 
   const name = (body.name || '').trim()

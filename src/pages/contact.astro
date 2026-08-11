@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+import { TURNSTILE_SITE_KEY } from '../lib/turnstile'
 ---
 
 <Layout
@@ -87,6 +88,8 @@ import Footer from '../components/Footer.astro'
         ></textarea>
       </div>
 
+      <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY}></div>
+
       <button
         type="submit"
         class="w-full bg-brand-blue hover:bg-brand-navy text-white font-semibold px-6 py-3 rounded-xl transition-colors"
@@ -105,6 +108,8 @@ import Footer from '../components/Footer.astro'
   </main>
 
   <Footer />
+
+  <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
   <script>
     const form = document.getElementById('contact-form') as HTMLFormElement | null
@@ -140,6 +145,7 @@ import Footer from '../components/Footer.astro'
             subject: val('subject'),
             message: val('message'),
             'bot-field': (document.getElementById('bot-field') as HTMLInputElement | null)?.value || '',
+            turnstileToken: (form.querySelector('[name="cf-turnstile-response"]') as HTMLInputElement | null)?.value || '',
           }),
         })
         if (!res.ok) throw new Error('failed')
@@ -147,8 +153,9 @@ import Footer from '../components/Footer.astro'
       } catch {
         btn.disabled = false
         btn.textContent = label
+        ;(window as any).turnstile?.reset()
         if (errorEl) {
-          errorEl.textContent = 'Something went wrong. Please email marco@marcoweb.org directly.'
+          errorEl.textContent = 'Something went wrong. Complete the check and retry, or email marco@marcoweb.org directly.'
           errorEl.classList.remove('hidden')
         }
       }
