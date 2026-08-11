@@ -7,14 +7,14 @@ import Stripe from 'stripe'
 // Trusting the client-supplied userId is safe here: the webhook only ever runs on
 // a real, Stripe-signed payment, so nobody can grant themselves Pro for free. The
 // worst case is paying to upgrade someone else's account, which is not an attack.
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_COURSE)
 
 export const handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' }
   }
 
-  if (!process.env.STRIPE_SECRET_KEY || !process.env.STRIPE_PRICE_ID) {
+  if (!process.env.STRIPE_SECRET_KEY_COURSE || !process.env.STRIPE_PRICE_ID_COURSE) {
     return { statusCode: 500, body: JSON.stringify({ error: 'Checkout not configured' }) }
   }
 
@@ -28,7 +28,7 @@ export const handler = async (event) => {
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       payment_method_types: ['card'],
-      line_items: [{ price: process.env.STRIPE_PRICE_ID, quantity: 1 }],
+      line_items: [{ price: process.env.STRIPE_PRICE_ID_COURSE, quantity: 1 }],
       allow_promotion_codes: true,
       customer_email: email || undefined,
       client_reference_id: userId,

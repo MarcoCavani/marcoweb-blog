@@ -4,11 +4,11 @@ import { createClient } from '@supabase/supabase-js'
 // Stripe webhook for the course. On a completed one-time checkout it grants the
 // buyer Pro for 90 days by setting profiles.plan / plan_expires_at. Uses the
 // service-role key (server-only) because users cannot write those columns.
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_COURSE)
 
 const supabase = createClient(
   process.env.PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
+  process.env.SUPABASE_SERVICE_ROLE_KEY_COURSE
 )
 
 const PRO_DAYS = 90
@@ -21,7 +21,7 @@ export const handler = async (event) => {
 
   let webhookEvent
   try {
-    webhookEvent = stripe.webhooks.constructEvent(rawBody, sig, process.env.STRIPE_WEBHOOK_SECRET)
+    webhookEvent = stripe.webhooks.constructEvent(rawBody, sig, process.env.STRIPE_WEBHOOK_SECRET_COURSE)
   } catch (err) {
     return { statusCode: 400, body: `Webhook Error: ${err.message}` }
   }
