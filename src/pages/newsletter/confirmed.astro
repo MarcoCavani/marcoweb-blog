@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.astro'
+import Footer from '../../components/Footer.astro'
+---
+
+<Layout title="Subscription confirmed | MarcoWeb" description="Your newsletter subscription is confirmed." noindex={true}>
+  <Header />
+  <main class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+    <div class="mx-auto w-14 h-14 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center text-2xl mb-6">
+      ✓
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-3">
+      You're confirmed
+    </h1>
+    <p class="text-lg text-gray-500 leading-relaxed mb-8">
+      Thanks for confirming. You're on the list now, and you'll get new security reports and
+      CISA study material straight to your inbox. No spam, unsubscribe any time.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a href="/training" class="px-6 py-3 bg-brand-blue hover:bg-brand-navy text-white font-semibold rounded-xl transition-colors">
+        Start the free CISA course
+      </a>
+      <a href="/" class="px-6 py-3 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-50 transition-colors">
+        Read the latest reports
+      </a>
+    </div>
+  </main>
+  <Footer />
+</Layout>

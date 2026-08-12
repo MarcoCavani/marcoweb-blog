@@ -81,29 +81,60 @@ export const handler = async function (event) {
     return { statusCode: 400, body: JSON.stringify({ error: 'Valid email required' }) }
   }
 
+  // Intent captured at signup, mapped to a clean stored value so the list can be
+  // segmented later (send the CISA funnel only to CISA-intent people, etc.).
+  var GOALS = { cisa: 'CISA', cert: 'Other ISACA cert', reports: 'Reports only' }
+  var goal = GOALS[String(body.goal || '').toLowerCase()] || ''
+
   var apiKey = process.env.BREVO_API_KEY
   var listId = parseInt(process.env.BREVO_LIST_ID || '2', 10)
+  var doiTemplateId = parseInt(process.env.BREVO_DOI_TEMPLATE_ID || '0', 10)
+  var siteUrl = (process.env.SITE_URL || 'https://marcoweb.org').replace(/\/+$/, '')
 
   if (!apiKey) {
     return { statusCode: 500, body: JSON.stringify({ error: 'Server not configured' }) }
   }
 
   try {
-    var result = await brevoRequest(
-      'POST',
-      '/v3/contacts',
-      { email: email, listIds: [listId], updateEnabled: true },
-      apiKey
-    )
+    // Preferred path: double opt-in. Brevo emails a confirmation link and only
+    // adds the contact to the list once they click it, so bots that never open
+    // mail never land on the list and the count stays honest. Turns on the
+    // moment BREVO_DOI_TEMPLATE_ID is set.
+    if (doiTemplateId) {
+      var doiPayload = {
+        email: email,
+        includeListIds: [listId],
+        templateId: doiTemplateId,
+        redirectionUrl: siteUrl + '/newsletter/confirmed/',
+      }
+      if (goal) doiPayload.attributes = { GOAL: goal }
+
+      var doi = await brevoRequest('POST', '/v3/contacts/doubleOptinConfirmation', doiPayload, apiKey)
+
+      if (doi.status === 201 || doi.status === 204) {
+        return { statusCode: 200, body: JSON.stringify({ success: true, pending: true }) }
+      }
+      var dparsed = {}
+      try { dparsed = JSON.parse(doi.body) } catch (e) {}
+      // Already a confirmed contact: nothing to send, report success quietly.
+      if (dparsed.code === 'duplicate_parameter') {
+        return { statusCode: 200, body: JSON.stringify({ success: true, pending: false }) }
+      }
+      return { statusCode: 500, body: JSON.stringify({ error: 'Brevo error', detail: doi.body }) }
+    }
+
+    // Fallback (no DOI template configured yet): single opt-in, but still store
+    // the GOAL attribute so intent is captured from day one.
+    var contactPayload = { email: email, listIds: [listId], updateEnabled: true }
+    if (goal) contactPayload.attributes = { GOAL: goal }
+    var result = await brevoRequest('POST', '/v3/contacts', contactPayload, apiKey)
 
     var sendWelcome = false
-
     if (result.status === 201 || result.status === 204) {
       sendWelcome = true
     } else {
       var parsed = {}
       try { parsed = JSON.parse(result.body) } catch (e) {}
-
       if (parsed.code === 'duplicate_parameter') {
         // already subscribed, no welcome email
       } else {
@@ -116,10 +147,7 @@ export const handler = async function (event) {
       await brevoRequest(
         'POST',
         '/v3/smtp/email',
-        {
-          to: [{ email: email }],
-          templateId: BREVO_WELCOME_TEMPLATE_ID,
-        },
+        { to: [{ email: email }], templateId: BREVO_WELCOME_TEMPLATE_ID },
         apiKey
       )
     }
