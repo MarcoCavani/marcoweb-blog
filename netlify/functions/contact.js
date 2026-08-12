@@ -3,7 +3,10 @@
 // Brevo transactional email, with the sender's address as reply-to so he can
 // reply straight from his inbox. Same Brevo + honeypot pattern as subscribe.js.
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL || 'marco@marcoweb.org'
-const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || 'marco@marcoweb.org'
+// Send FROM a different address than TO. An email addressed from marco@marcoweb.org
+// to marco@marcoweb.org is a strong spam signal (it landed in spam for exactly
+// that). noreply@ is still on the DKIM-signed domain, so it stays authenticated.
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || 'noreply@marcoweb.org'
 
 async function verifyTurnstile(secret, token, ip) {
   try {
