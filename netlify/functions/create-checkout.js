@@ -1,13 +1,36 @@
 import Stripe from 'stripe'
 
-// Starts a Stripe Checkout for the one-time "CISA Pro" purchase (EUR 39, 90 days).
-// Adapted from the ITGC tool's create-template-checkout. On success the webrehook
+// Starts a Stripe Checkout for the one-time "CISA Pro" purchase (AU$39, 90 days).
+// Adapted from the ITGC tool's create-template-checkout. On success the webhook
 // (stripe-webhook.js) flips the user's profiles.plan to 'pro'.
 //
 // Trusting the client-supplied userId is safe here: the webhook only ever runs on
 // a real, Stripe-signed payment, so nobody can grant themselves Pro for free. The
 // worst case is paying to upgrade someone else's account, which is not an attack.
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY_COURSE)
+
+// STRIPE_PRICE_ID_COURSE should be a price_ id, but the Stripe UI makes it easy to
+// copy a prod_ id by mistake (the Products list only shows those). Accept either:
+// a prod_ id is resolved to that product's live price, so a paste slip still works.
+let cachedPrice = null
+async function resolvePriceId(configured) {
+  if (!configured) throw new Error('STRIPE_PRICE_ID_COURSE is not set')
+  if (configured.startsWith('price_')) return configured
+  if (cachedPrice && cachedPrice.from === configured) return cachedPrice.id
+  if (configured.startsWith('prod_')) {
+    const product = await stripe.products.retrieve(configured)
+    let id = product.default_price
+    id = typeof id === 'object' && id ? id.id : id
+    if (!id) {
+      const prices = await stripe.prices.list({ product: configured, active: true, limit: 1 })
+      id = prices.data[0] && prices.data[0].id
+    }
+    if (!id) throw new Error(`No active price found for product ${configured}`)
+    cachedPrice = { from: configured, id }
+    return id
+  }
+  return configured // unknown format: let Stripe surface the error
+}
 
 export const handler = async (event) => {
   if (event.httpMethod !== 'POST') {
@@ -25,10 +48,11 @@ export const handler = async (event) => {
     }
 
     const base = origin || 'https://marcoweb.org'
+    const price = await resolvePriceId(process.env.STRIPE_PRICE_ID_COURSE)
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       payment_method_types: ['card'],
-      line_items: [{ price: process.env.STRIPE_PRICE_ID_COURSE, quantity: 1 }],
+      line_items: [{ price, quantity: 1 }],
       allow_promotion_codes: true,
       customer_email: email || undefined,
       client_reference_id: userId,
