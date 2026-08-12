@@ -111,6 +111,13 @@ export const handler = async function (event) {
 
       var doi = await brevoRequest('POST', '/v3/contacts/doubleOptinConfirmation', doiPayload, apiKey)
 
+      // If GOAL is not defined in Brevo yet, the attribute is rejected. Retry
+      // without it so the confirmation still sends (intent is best-effort).
+      if (goal && doi.status >= 400 && /attribut/i.test(doi.body || '')) {
+        delete doiPayload.attributes
+        doi = await brevoRequest('POST', '/v3/contacts/doubleOptinConfirmation', doiPayload, apiKey)
+      }
+
       if (doi.status === 201 || doi.status === 204) {
         return { statusCode: 200, body: JSON.stringify({ success: true, pending: true }) }
       }
@@ -128,6 +135,13 @@ export const handler = async function (event) {
     var contactPayload = { email: email, listIds: [listId], updateEnabled: true }
     if (goal) contactPayload.attributes = { GOAL: goal }
     var result = await brevoRequest('POST', '/v3/contacts', contactPayload, apiKey)
+
+    // Brevo rejects a contact carrying an attribute that is not defined in the
+    // account yet. If GOAL is not set up, retry without it so the signup still
+    // succeeds (intent capture is best-effort until the attribute exists).
+    if (goal && result.status >= 400 && /attribut/i.test(result.body || '')) {
+      result = await brevoRequest('POST', '/v3/contacts', { email: email, listIds: [listId], updateEnabled: true }, apiKey)
+    }
 
     var sendWelcome = false
     if (result.status === 201 || result.status === 204) {
