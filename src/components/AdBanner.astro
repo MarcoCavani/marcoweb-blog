@@ -1,8 +1,40 @@
 ---
-// Ad placements are handled by Google Auto ads.
-// To add manual ad units: create an ad unit in AdSense > Ads > By ad unit,
-// then replace this component with a proper <ins> tag using the slot ID.
+// Renders a manual AdSense unit for the given placement. Slot IDs live in
+// src/lib/adsense.ts; a placement with no slot ID renders nothing (so the site
+// stays clean until the units exist in AdSense). The 'rectangle' placement uses
+// the higher-yield in-article format; the others are responsive display units.
+import { ADSENSE_CLIENT, AD_SLOTS } from '../lib/adsense'
+
 interface Props {
   slot?: 'leaderboard' | 'rectangle' | 'sidebar'
 }
+const { slot = 'leaderboard' } = Astro.props
+const slotId = AD_SLOTS[slot]
+const inArticle = slot === 'rectangle'
 ---
+
+{slotId && (
+  <div class="ad-slot my-8 text-center" aria-hidden="true">
+    <span class="block text-[10px] uppercase tracking-widest text-gray-300 mb-1">Advertisement</span>
+    {inArticle ? (
+      <ins
+        class="adsbygoogle"
+        style="display:block;text-align:center"
+        data-ad-client={ADSENSE_CLIENT}
+        data-ad-slot={slotId}
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+      ></ins>
+    ) : (
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client={ADSENSE_CLIENT}
+        data-ad-slot={slotId}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+    )}
+    <script is:inline>(adsbygoogle = window.adsbygoogle || []).push({})</script>
+  </div>
+)}

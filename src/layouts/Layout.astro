@@ -82,6 +82,12 @@ const siteSchema = {
 
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3362770372572725" crossorigin="anonymous"></script>
+    <style is:global>
+      /* Collapse an ad unit (and its "Advertisement" label) when it does not
+         fill, so no empty labelled box is left behind. */
+      ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
+      .ad-slot:has(ins.adsbygoogle[data-ad-status="unfilled"]) { display: none; }
+    </style>
   </head>
   <body class="bg-gray-50 text-gray-900 antialiased">
     <slot />
