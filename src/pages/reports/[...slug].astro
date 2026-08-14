@@ -33,7 +33,7 @@ const { Content } = await render(post)
   readTime={post.data.readTime}
   tags={post.data.tags}
   section="reports"
-  gated={post.data.gated ?? true}
+  gated={post.data.gated ?? false}
   slug={post.id}
 >
   <Content />
