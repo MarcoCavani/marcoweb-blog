@@ -1,0 +1,35 @@
+name: Supabase keep-alive
+
+# Free Supabase projects pause after 7 days of inactivity. A paused project's
+# hostname stops resolving, which breaks the app that depends on it (the ITGC
+# tool login and the marcoweb.org course auth both went down this way). This
+# workflow makes one tiny request to each project a few times a week so they
+# never idle out, and therefore never hit the 90-day-paused auto-deletion.
+#
+# It uses only the PUBLIC anon keys. Those are designed to be public (they ship
+# in the client JS bundles of both sites) and every table is protected by RLS,
+# so embedding them here exposes nothing. The request just has to reach the
+# database to count as activity; RLS returning an empty result is fine.
+
+on:
+  schedule:
+    - cron: '0 7 * * 1,3,5'   # Mon, Wed, Fri at 07:00 UTC (max gap 3 days, well under 7)
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping CISA (marcoweb.org course) project
+        run: |
+          curl -s -o /dev/null -w "course project -> HTTP %{http_code}\n" \
+            "https://mtaqjcnwpgzslbkpqjsp.supabase.co/rest/v1/profiles?select=id&limit=1" \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im10YXFqY253cGd6c2xia3BxanNwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxOTgxNzcsImV4cCI6MjEwMTc3NDE3N30.X5DgwjDBDQdeYhFWNvhPAHZ0j6E1e8J3LpdCQsNToa4" \
+            -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im10YXFqY253cGd6c2xia3BxanNwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxOTgxNzcsImV4cCI6MjEwMTc3NDE3N30.X5DgwjDBDQdeYhFWNvhPAHZ0j6E1e8J3LpdCQsNToa4" || true
+
+      - name: Ping RACM ITGC SaaS project
+        run: |
+          curl -s -o /dev/null -w "itgc project -> HTTP %{http_code}\n" \
+            "https://lgyblltyytfmoovigdrj.supabase.co/rest/v1/templates?select=id&limit=1" \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxneWJsbHR5eXRmbW9vdmlnZHJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI4MDY3MTksImV4cCI6MjA5ODM4MjcxOX0.oF8Rv0eVAAUebtDhmSDmG_ANdXFM_uDk6XzISLkGLGA" \
+            -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxneWJsbHR5eXRmbW9vdmlnZHJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI4MDY3MTksImV4cCI6MjA5ODM4MjcxOX0.oF8Rv0eVAAUebtDhmSDmG_ANdXFM_uDk6XzISLkGLGA" || true
